@@ -18,8 +18,7 @@
 
 <body>
     <header>
-        <!-- ! Verificar porque o login não está retornando para a index ! -->
-<!-- Navbar -->
+        <!-- Navbar -->
 <nav class="navbar">
         <ul class="nav-list">
             <div id="menu">
@@ -85,7 +84,8 @@
 <section class="hero">
     <div class="hero__content">
         <div class="hero__text">
-            <h1 class="hero__text-title">Reliable cleaning services for spotless spaces in California</h1>
+            <h1 class="hero__text-title">Reliable cleaning services for <span class="highlight-text">spotless spaces in
+                    California</span></h1>
             <p class="hero__text-description">Experience a professional and personalized cleaning service that suits
                 your lifestyle. From homes to offices, we've got it covered!</p>
             <ul class="list">
@@ -141,25 +141,49 @@
     </div>
 </section>
 
-
 <!-- * Testimonials Section *> -->
-<!-- ! Descobrir como renderizar o conteúdo dinâmico .Json em estático com 11ty ! -->
-<section>
+<section class="section-wrapper">
     <div class="container">
-        <h2>What our clients say</h2>
-        <button class="button button--secondary button--small">Make a review</button>
-        <div id="testimonials-container">
-            <!-- *Conteúdo dinâmico: 'assets/scripts/testimonialsData.js * -->
+        <div class="testimonials__title">
+            <h2>What our clients say</h2>
+            <button class="button button--secondary button--small">Make a review</button>
         </div>
-        <!-- Modal Overlay -->
-        <div id="testimonial-modal" class="modal hidden">
-            <div class="modal-content">
-                <span id="close-modal" class="close-button">&times;</span>
-                <div id="modal-body"></div>
+        <!-- Horizontal Scroll -->
+        <div class="scroll">
+            <div id="testimonials-container-wrapper" class="testimonials-container-wrapper">
+                <button class="scroll-button left" id="scroll-left">
+                    <span class="material-symbols-rounded">arrow_back</span>
+                </button>
+                <button class="scroll-button right" id="scroll-right">
+                    <span class="material-symbols-rounded">arrow_forward</span>
+                </button>
+                <div id="testimonials-container" class="testimonials-container">
+                    <!-- *Conteúdo dinâmico: 'assets/scripts/testimonialsData.js * -->
+                </div>
             </div>
+
+            <!-- Modal Overlay -->
+            <div id="testimonial-modal" class="modal hidden">
+                <div class="modal-content">
+                    <span id="close-modal" class="close-button">&times;</span>
+                    <div id="modal-body"></div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonials__logos">
+            <div class="testimonials__logos__description">
+                <p><strong>4,9 overall rating</strong></p>
+                <p>in over 2000 reviews</p>
+            </div>
+            <ul class="testimonials__logos__images">
+                <li><img src="assets/images/icons/social/bark.svg" alt="Bark company logo"></li>
+                <li><img src="assets/images/icons/social/google.svg" alt="Google company logo"></li>
+                <li><img src="assets/images/icons/social/thumbtack.svg" alt="Thumbtack company logo"></li>
+            </ul>
         </div>
     </div>
 </section>
+
 
 <!-- * Why Choose Us Section * -->
 <section class="container">
@@ -862,6 +886,7 @@ src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/shoelace-a
 <script type="module" src="/assets/scripts/main.js"></script>
 <script type="module" src="/assets/scripts/pre-form.js"></script>
 <script type="module" src="/assets/scripts/toggle.js"></script>
+<script type="module" src="/assets/scripts/scroll.js"></script>
 
 
 </html>

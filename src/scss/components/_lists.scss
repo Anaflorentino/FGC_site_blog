@@ -1,9 +1,10 @@
 .list {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 1.4rem;    
     li {
-        font-size: 1rem;
+    font-size: 1rem;
+    letter-spacing: -1.2%;
         img, span {
             vertical-align: middle;
             margin-right: .2rem;

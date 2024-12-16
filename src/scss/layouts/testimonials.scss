@@ -1,22 +1,76 @@
+@use '../abstracts/variables' as vars;
+
+
+.section-wrapper {
+    background: -webkit-linear-gradient(rgba(255, 70, 192, 0.05) 0%, rgba(21, 165, 246, 0.05) 100%);
+    padding: 48px 0;
+}
+
 
 #testimonials-container {
     display: flex;
-    gap: 1em;
+    gap: 1.5em;
     padding: 48px 0;
+    overflow: auto;
 }
 
 // Testimonial Card
 .testimonials {
+    min-width: 320px;
     max-width: 400px;
-    border: 1px solid black;
+    background-color: vars.$bg-color;
     display: flex;
+    box-shadow: 0px 17px 45.6px -30px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
     flex-direction: column;
     row-gap: 1rem;
-    padding: 1.4rem 1.8rem;
+    padding: 1.4rem 1.2rem;
+    cursor: pointer;
+
+    &__logos {
+        display: flex;
+        &__description {
+            margin-right: 1rem;
+            p, strong {
+                color: vars.$text-200;
+                font-size: 1.2rem;
+            }
+
+            
+        }
+        &__images {
+            display: flex;
+            gap: 1.2rem;
+        }
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    p {
+        font-size: .8rem;
+    }
+
 
     &__header {
+        h2 {
+            font-size: 1rem;
+        }
+
+        &-details {
+            font-size: .8rem;
+            text-align: end;
+            color: vars.$text-200;
+        }
+
         &--rating {
             display: inline-flex;
+            gap: 0;
+            padding: 0;
+            margin: 0;
         }
     }
 
@@ -26,17 +80,31 @@
         align-items: center;
 
         &__initials {
-            background-color: red;
             min-width: 38px;
             height: 38px;
             border-radius: 100%;
             justify-content: center;
+
+            span {
+                color: white;
+            }
         }
 
         &__description {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+        }
+    }
+
+    &__reply {
+        background-color: vars.$neutrals-50;
+        padding: 12px;
+        border-radius: 4px;
+
+        span {
+            font-size: .8rem;
+            color: vars.$text-300;
         }
     }
 }
@@ -53,19 +121,25 @@
 
 .testimonials__reply__logo {
     margin-left: 0rem;
+    margin-bottom: .8rem;
 }
 
 .testimonials__pictures {
     display: flex;
-    gap: .4rem;
+    gap: .5rem;
 
     div {
         flex: 1 1;
+        max-height: 80px;
+        width: 100%;
     }
 
     img {
-        max-width: 100%;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
+        border-radius: 4px;
+
     }
 }
 
@@ -99,9 +173,86 @@
     /* Remove fundo branco */
     padding: 0;
     /* Remove padding extra */
-    border-radius: 0;
+    border-radius: 12px;
     /* Remove bordas arredondadas */
     box-shadow: none;
     /* Remove sombra */
     position: relative;
+    height: 80vh;
+    overflow: auto;
+}
+
+/* Limitar o comentário a 4 linhas */
+.testimonials p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* Limita a 4 linhas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Adiciona "..." no final se o texto for cortado */
+}
+
+/* Limitar a resposta a 2 linhas */
+.testimonials__reply p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Limita a 2 linhas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Adiciona "..." no final se o texto for cortado */
+}
+
+/* Remover line-clamp quando o modal estiver aberto */
+.modal .testimonials p,
+.modal .testimonials__reply p {
+    -webkit-line-clamp: unset;
+    /* Remove o limite de linha */
+    display: block;
+    /* Remove o display -webkit-box */
+    overflow: visible;
+    /* Permite que o texto ocupe todo o espaço disponível */
+    text-overflow: unset;
+    /* Remove o "..." */
+}
+
+/* Estilos para o overlay da imagem expandida */
+.image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* Fundo escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expanded-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.close-overlay-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
 }

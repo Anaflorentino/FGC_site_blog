@@ -1,16 +1,25 @@
 // base/_typography.scss
-@use '../abstracts/mixins';
 @use '../abstracts/variables' as vars;
 
+.highlight-text {
+  color: vars.$primary-500;
+}
 
 h1 {
-  @include mixins.responsive-font-map(h1);
+  line-height: 1.2;
+  letter-spacing: -2%;
 }
 
 p {
-  @include mixins.responsive-font-map(p);
+  line-height: 1.5;
+  letter-spacing: -1.4%;
+  font-size: 1rem;
 }
 
-.text-highlight {
-  color: vars.$primary-500;
+ul {
+  li {
+    line-height: 1;
+    letter-spacing: 0;
+    font-size: 1rem;
+  }
 }

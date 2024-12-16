@@ -1,0 +1,28 @@
+@use '../abstracts/variables' as vars;
+
+.scroll {
+    display: block;
+    text-align: end;
+    margin-top: 1rem;
+
+    h2, p {
+        text-align: start;
+    }
+}
+
+.scroll-button {
+    background-color: transparent;
+    border: none;
+    border: 1.6px solid vars.$text-500;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: .35rem;
+
+    &:hover {
+        opacity: .7;
+    }
+
+    span {
+        vertical-align: middle;
+    }
+}

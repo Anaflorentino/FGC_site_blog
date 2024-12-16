@@ -19,7 +19,7 @@
 .hero__text {
     width: 50%;
     padding-right: 3.5rem;
-    margin-top: 4rem;
+    margin-top: 3.5rem;
 }
 
 .hero__text-title {
@@ -28,7 +28,6 @@
 }
 
 .hero__text-description {
-    font-size: 1.1rem;
     margin-bottom: 1.5rem;
 }
 
@@ -52,7 +51,7 @@
     width: 80%;
     max-width: 320px;
     padding: 20px;
-    background-color: #fffffff6;
+    background-color: vars.$bg-color;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.103);
     border-radius: 10px;
 

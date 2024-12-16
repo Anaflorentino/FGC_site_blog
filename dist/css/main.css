@@ -16,20 +16,25 @@
   height: auto;
 }
 
+.highlight-text {
+  color: #ff4667;
+}
+
 h1 {
-  font-size: clamp(1.8rem, 4vw, 3rem);
   line-height: 1.2;
-  letter-spacing: -0.005em;
+  letter-spacing: -2%;
 }
 
 p {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
   line-height: 1.5;
-  letter-spacing: 0em;
+  letter-spacing: -1.4%;
+  font-size: 1rem;
 }
 
-.text-highlight {
-  color: #ff4667;
+ul li {
+  line-height: 1;
+  letter-spacing: 0;
+  font-size: 1rem;
 }
 
 /* Adicionando preenchimento aos ícones com a classe 'fill' */
@@ -328,13 +333,13 @@ p {
 }
 
 .cta {
-  margin-top: 1rem;
+  margin-top: 1.4rem;
   display: flex;
   gap: 0.5rem;
 }
 
 .link {
-  color: #0f89cd;
+  color: #3fa1d7;
   text-decoration: none;
   font-weight: 600;
   cursor: pointer;
@@ -353,20 +358,45 @@ p {
 }
 .menu-link:hover {
   color: #344051;
-  background-color: #f2f3f4;
+  background-color: #f8f8f8;
 }
 
 .list {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1.4rem;
 }
 .list li {
   font-size: 1rem;
+  letter-spacing: -1.2%;
 }
 .list li img, .list li span {
   vertical-align: middle;
   margin-right: 0.2rem;
+}
+
+.scroll {
+  display: block;
+  text-align: end;
+  margin-top: 1rem;
+}
+.scroll h2, .scroll p {
+  text-align: start;
+}
+
+.scroll-button {
+  background-color: transparent;
+  border: none;
+  border: 1.6px solid #344051;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0.35rem;
+}
+.scroll-button:hover {
+  opacity: 0.7;
+}
+.scroll-button span {
+  vertical-align: middle;
 }
 
 .container {
@@ -407,7 +437,7 @@ p {
 .hero__text {
   width: 50%;
   padding-right: 3.5rem;
-  margin-top: 4rem;
+  margin-top: 3.5rem;
 }
 
 .hero__text-title {
@@ -416,7 +446,6 @@ p {
 }
 
 .hero__text-description {
-  font-size: 1.1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -440,7 +469,7 @@ p {
   width: 80%;
   max-width: 320px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9647058824);
+  background-color: white;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.103);
   border-radius: 10px;
 }
@@ -462,7 +491,7 @@ p {
   cursor: pointer;
   border-radius: 8px;
   appearance: none;
-  background-color: #f2f3f4;
+  background-color: #f8f8f8;
   font-size: 0.9rem;
   color: #344051;
   text-indent: 10px;
@@ -576,38 +605,92 @@ p {
     top: 10%;
   }
 }
-#testimonials-container {
-  display: flex;
-  gap: 1em;
+.section-wrapper {
+  background: -webkit-linear-gradient(rgba(255, 70, 192, 0.05) 0%, rgba(21, 165, 246, 0.05) 100%);
   padding: 48px 0;
 }
 
-.testimonials {
-  max-width: 400px;
-  border: 1px solid black;
+#testimonials-container {
   display: flex;
+  gap: 1.5em;
+  padding: 48px 0;
+  overflow: auto;
+}
+
+.testimonials {
+  min-width: 320px;
+  max-width: 400px;
+  background-color: white;
+  display: flex;
+  box-shadow: 0px 17px 45.6px -30px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
   flex-direction: column;
   row-gap: 1rem;
-  padding: 1.4rem 1.8rem;
+  padding: 1.4rem 1.2rem;
+  cursor: pointer;
+}
+.testimonials__logos {
+  display: flex;
+}
+.testimonials__logos__description {
+  margin-right: 1rem;
+}
+.testimonials__logos__description p, .testimonials__logos__description strong {
+  color: #a2a7af;
+  font-size: 1.2rem;
+}
+.testimonials__logos__images {
+  display: flex;
+  gap: 1.2rem;
+}
+.testimonials__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.testimonials p {
+  font-size: 0.8rem;
+}
+.testimonials__header h2 {
+  font-size: 1rem;
+}
+.testimonials__header-details {
+  font-size: 0.8rem;
+  text-align: end;
+  color: #a2a7af;
 }
 .testimonials__header--rating {
   display: inline-flex;
+  gap: 0;
+  padding: 0;
+  margin: 0;
 }
 .testimonials__header, .testimonials__header__initials {
   display: flex;
   align-items: center;
 }
 .testimonials__header__initials, .testimonials__header__initials__initials {
-  background-color: red;
   min-width: 38px;
   height: 38px;
   border-radius: 100%;
   justify-content: center;
 }
+.testimonials__header__initials span, .testimonials__header__initials__initials span {
+  color: white;
+}
 .testimonials__header__description, .testimonials__header__initials__description {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+.testimonials__reply {
+  background-color: #f8f8f8;
+  padding: 12px;
+  border-radius: 4px;
+}
+.testimonials__reply span {
+  font-size: 0.8rem;
+  color: #777f8a;
 }
 
 .testimonials__header-wrapper,
@@ -621,18 +704,23 @@ p {
 
 .testimonials__reply__logo {
   margin-left: 0rem;
+  margin-bottom: 0.8rem;
 }
 
 .testimonials__pictures {
   display: flex;
-  gap: 0.4rem;
+  gap: 0.5rem;
 }
 .testimonials__pictures div {
   flex: 1 1;
+  max-height: 80px;
+  width: 100%;
 }
 .testimonials__pictures img {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 4px;
 }
 
 /* Modal Overlay Testimonials */
@@ -664,11 +752,88 @@ p {
   /* Remove fundo branco */
   padding: 0;
   /* Remove padding extra */
-  border-radius: 0;
+  border-radius: 12px;
   /* Remove bordas arredondadas */
   box-shadow: none;
   /* Remove sombra */
   position: relative;
+  height: 80vh;
+  overflow: auto;
+}
+
+/* Limitar o comentário a 4 linhas */
+.testimonials p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  /* Limita a 4 linhas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Adiciona "..." no final se o texto for cortado */
+}
+
+/* Limitar a resposta a 2 linhas */
+.testimonials__reply p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* Limita a 2 linhas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Adiciona "..." no final se o texto for cortado */
+}
+
+/* Remover line-clamp quando o modal estiver aberto */
+.modal .testimonials p,
+.modal .testimonials__reply p {
+  -webkit-line-clamp: unset;
+  /* Remove o limite de linha */
+  display: block;
+  /* Remove o display -webkit-box */
+  overflow: visible;
+  /* Permite que o texto ocupe todo o espaço disponível */
+  text-overflow: unset;
+  /* Remove o "..." */
+}
+
+/* Estilos para o overlay da imagem expandida */
+.image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* Fundo escuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expanded-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.close-overlay-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
 }
 
 .why__content {
