@@ -1,9 +1,8 @@
 .container {
-    max-width: 1250px;
+    padding: 0 7%;
     margin: 0 auto;
-    padding: 0 1em;
 
-    // @media (min-width: 1250px) {
-    //     max-width: 2000px;
-    // }
+    @media (min-width: 1400px) {
+        padding: 0 10%;
+    }
 }

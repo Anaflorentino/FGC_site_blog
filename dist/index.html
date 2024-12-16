@@ -21,34 +21,36 @@
         <!-- ! Verificar porque o login não está retornando para a index ! -->
 <!-- Navbar -->
 <nav class="navbar">
-    <ul class="nav-list">
-        <div id="menu">
-            <span class="material-symbols-rounded">
-                menu
-            </span>
-        </div>
-        <a class="logo" href="/"><img
-                src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
-                alt=""></a>
-        <div class="nav-list-links">
-            <li><a class="menu-link" href="#">Services</a></li>
-            <li><a class="menu-link" href="#">Subscription</a></li>
-            <li><a class="menu-link" href="#">Support</a></li>
-            <li><a class="menu-link" href="#">Coupons</a></li>
-            <li><a class="menu-link" href="#">About us</a></li>
-            <li><a class="menu-link" href="#">FAQ</a></li>
-            <li><a class="menu-link" href="/blog">Blog</a></li>
-            <li><a href="#"><button id="book-now">Book now</button></a></li>
-        </div>
-    </ul>
+        <ul class="nav-list">
+            <div id="menu">
+                <span class="material-symbols-rounded">
+                    menu
+                </span>
+            </div>
+            <a class="logo" href="/"><img
+                    src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
+                    alt=""></a>
+            <div class="nav-list-links">
+                <li><a class="menu-link" href="#">Services</a></li>
+                <li><a class="menu-link" href="#">Subscription</a></li>
+                <li><a class="menu-link" href="#">Support</a></li>
+                <li><a class="menu-link" href="#">Coupons</a></li>
+                <li><a class="menu-link" href="#">About us</a></li>
+                <li><a class="menu-link" href="#">FAQ</a></li>
+                <li><a class="menu-link" href="/blog">Blog</a></li>
+                <li><a href="#"><button id="book-now">Book now</button></a></li>
+            </div>
+        </ul>
 
-    <!-- Login e Signup -->
-    <div class="navbar-buttons">
-        <button class="dashboard-button button button--secondary button--small" id="dashboardButton">Dashboard</button>
-        <div class="auth-container" id="authContainer">
-            <!-- Content dynamically injected by JS -->
+        <!-- Login e Signup -->
+        <div class="navbar-buttons">
+            <button class="dashboard-button button button--secondary button--small"
+                id="dashboardButton">Dashboard</button>
+            <div class="auth-container" id="authContainer">
+                <!-- Content dynamically injected by JS -->
+            </div>
+            <button class="book-now button button--primary button--small">Book now</button>
         </div>
-        <button class="book-now button button--primary button--small">Book now</button>
     </div>
 </nav>
 
@@ -82,76 +84,63 @@
 <!-- * Hero Section * -->
 <section class="hero">
     <div class="hero__content">
-        <div class="container">
-            <h1>Reliable cleaning services for <span class="text-highlight">spotless spaces in California</span></h1>
-            <p>Experience a professional and personalized cleaning service that suits your lifestyle. From homes to
-                offices, we've got it covered!</p>
-
-            <!-- <span>Soon in San Francisco & San Diego</span> -->
-            <!-- Benefits -->
-            <ul role="list" class="list">
-                <li><img src="assets/images/icons/outline/check-color.svg" alt="Check icon representing benefits">$1M in
-                    Insurance Protection</li>
-                <li><img src="assets/images/icons/outline/check-color.svg" alt="Check icon representing benefits">+5000
-                    cleanings in 4 years</li>
-                <li><img src="assets/images/icons/outline/check-color.svg" alt="Check icon representing benefits">24h
-                    professional team</li>
+        <div class="hero__text">
+            <h1 class="hero__text-title">Reliable cleaning services for spotless spaces in California</h1>
+            <p class="hero__text-description">Experience a professional and personalized cleaning service that suits
+                your lifestyle. From homes to offices, we've got it covered!</p>
+            <ul class="list">
+                <li>$1M in Insurance Protection</li>
+                <li>+5000 cleanings in 4 years</li>
+                <li>24h professional team</li>
             </ul>
-            <!-- CTA -->
             <div class="cta">
                 <a href="#" class="button button--secondary">Free estimate</a>
                 <a href="#" class="button button--primary">Book now</a>
             </div>
         </div>
-    </div>
-    <div class="hero__image">
-        <img src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F3e05e1059faef26605a551bdc8638217.cdn.bubble.io%2Ff1714452283463x938766090336881300%2Finterior-shot-modern-house-kitchen-with-large-windows_181624-24368.jpg"
-            alt="Modern kitchen interior with large windows" loading="lazy" decoding="async">
-    </div>
-    <div class="hero__form">
-        <form action="#">
-            <!-- Seletor de Quartos -->
-            <div class="custom-select">
-                <div class="select-box">
-                    <span class="selected-icon material-symbols-rounded">bed</span> <!-- Ícone fixo -->
-                    <span class="selected-option">How many bedrooms?</span>
-                    <span class="material-symbols-rounded arrow">arrow_drop_down</span>
-                </div>
-                <ul class="select-options">
-                    <li class="option" data-value="name1">1</li>
-                    <li class="option" data-value="name2">2</li>
-                    <li class="option" data-value="name3">3</li>
-                    <li class="option" data-value="name4">4</li>
-                    <li class="option" data-value="name5">5+</li>
-                </ul>
+        <div class="hero__image">
+            <img src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2F3e05e1059faef26605a551bdc8638217.cdn.bubble.io%2Ff1714452283463x938766090336881300%2Finterior-shot-modern-house-kitchen-with-large-windows_181624-24368.jpg"
+                alt="Imagem Hero">
+
+            <!-- Pre-form -->
+            <div class="hero__form-container">
+                <form action="#">
+                    <div class="hero__form-select-container">
+                        <div class="hero__form-select-left-icon bedroom"></div> <!-- Ícone à esquerda -->
+                        <select class="hero__form-select">
+                            <option value="" disabled selected>Number of bedrooms</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5+</option>
+                        </select>
+                        <div class="hero__form-select-arrow-icon"></div> <!-- Ícone à direita -->
+                    </div>
+                    <div class="hero__form-select-container">
+                        <div class="hero__form-select-left-icon bathroom"></div> <!-- Ícone à esquerda -->
+                        <select class="hero__form-select">
+                            <option value="" disabled selected>Number of bathrooms</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5+</option>
+                        </select>
+                        <div class="hero__form-select-arrow-icon"></div> <!-- Ícone à direita -->
+                    </div>
+                    <!-- Toggle "Pet friendly" -->
+                    <div class="hero__toggle-container">
+                        <div class="hero__toggle" id="pet-friendly-toggle"></div>
+                        <span class="hero__toggle-text" id="pet-friendly-text">Pet friendly</span>
+                    </div>
+                    <button class="button button--primary" type="submit">Free estimate</button>
+                </form>
             </div>
-            <!-- Seletor de Quartos -->
-            <div class="custom-select">
-                <div class="select-box">
-                    <span class="selected-icon material-symbols-rounded">bathroom</span> <!-- Ícone fixo -->
-                    <span class="selected-option">How many bathrooms?</span>
-                    <span class="material-symbols-rounded arrow">arrow_drop_down</span>
-                </div>
-                <ul class="select-options">
-                    <li class="option" data-value="name1">1</li>
-                    <li class="option" data-value="name2">2</li>
-                    <li class="option" data-value="name3">3</li>
-                    <li class="option" data-value="name4">4</li>
-                    <li class="option" data-value="name5">5+</li>
-                </ul>
-            </div>
-            <!-- Toggle -->
-            <div class="toggle-container">
-                <label class="toggle-label">
-                    <input type="checkbox" class="toggle-input">
-                    <span class="toggle-slider"></span>
-                    <span class="toggle-text">Eco friendly</span>
-                </label>
-            </div>
-            <button type="submit" class="button button--primary">Free Estimate</button>
-        </form>
+        </div>
     </div>
 </section>
+
 
 <!-- * Testimonials Section *> -->
 <!-- ! Descobrir como renderizar o conteúdo dinâmico .Json em estático com 11ty ! -->
