@@ -1,0 +1,29 @@
+@use '../abstracts/variables' as vars;
+
+input, textarea {
+    background-color: vars.$bg-color;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 8px 12px 12px;
+    border: 1px solid vars.$neutrals-200;
+    align-self: stretch;
+
+    &:hover {
+        background-color: vars.$neutrals-50;
+    }
+
+    &:focus {
+        outline: none; /* Remove o contorno padrão de foco */
+        border: 2px solid vars.$primary-500;
+        background-color: vars.$bg-color;
+    }
+}
+
+input::placeholder, textarea::placeholder {
+    color: vars.$neutrals-400; /* Cor do placeholder */
+    font-size: .8rem;
+}
+
+textarea {
+    min-height: 120px;
+}

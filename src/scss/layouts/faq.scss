@@ -16,9 +16,10 @@
         justify-content: space-between;
 
         form {
+            margin-top: 1rem;
             display: flex;
             flex-direction: column;
-            gap: .4rem;
+            gap: .5rem;
             width: 60%;
             min-width: 80%;
         }
