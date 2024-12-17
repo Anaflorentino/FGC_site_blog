@@ -1,68 +1,103 @@
-
 @use '../abstracts/variables' as vars;
 
 
 // * Our Services *
-.services {
+&__nav,
+&__included {
+    display: flex;
+}
 
-    &__nav,
-    &__included {
+&__cleaning {
+    h3 {
+        margin-bottom: .5rem;
+    }
+}
+
+&__nav {
+    gap: .6rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+    button {
+        background-color: transparent;
+        border: none;
+        border: 1px solid vars.$neutrals-100;
+        border-radius: 12px;
         display: flex;
-    }
+        font-size: .8rem;
+        gap: .4rem;
+        align-items: center;
+        line-height: 1;
+        cursor: pointer;
+        padding: 14px 20px;
 
-    &__nav {
-        gap: .6rem;
-        flex-wrap: wrap;
-        margin-bottom: 2rem;
-
-        button {
-            background-color: transparent;
-            border: none;
-            border: 1px solid vars.$neutrals-100;
-            border-radius: 12px;
-            display: flex;
-            font-size: .8rem;
-            gap: .4rem;
-            align-items: center;
-            line-height: 1;
-            cursor: pointer;
-            padding: 14px 20px;
-
-            &:hover {
-                background-color: vars.$neutrals-50;
-                border: vars.$accent-400 1px solid;
-            }
-
-
+        &:hover {
+            background-color: vars.$neutrals-50;
+            border: vars.$accent-400 1px solid;
         }
+
+
     }
 }
-
-.services__cleaning li {
-    display: none;
-}
-
-.services__cleaning li:not([hidden]) {
-    display: block;
-}
-
-.hidden {
-    display: none;
-}
-.view-more-btn {
-    margin-top: 10px;
-    padding: 5px 10px;
-    cursor: pointer;
 }
 
 .services__included {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    button {
+        white-space: pre;
+    }
+
+    ul {
+        margin-top: .5rem;
+        display: flex;
+        max-width: 80%;
+    }
+
     li {
+        display: flex;
+        word-spacing: .2rem;
         font-size: .9rem;
         color: vars.$text-200;
+        line-height: 1.2;
     }
 }
 
 #included-services li {
-    display: inline-block;
-    margin-right: 8px; /* Espaço entre os itens */
+    margin-right: 8px;
+    /* Espaço entre os itens */
+}
+
+
+@media (max-width: 780px) {
+
+    .services__included {
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    .services__nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        /* Permite rolar lateralmente, mas esconde a barra quando não necessário */
+        overflow-y: hidden;
+        /* Esconde a barra de rolagem vertical */
+        -ms-overflow-style: none;
+        /* Para ocultar a barra de rolagem no Internet Explorer */
+        scrollbar-width: none;
+        /* Para ocultar a barra de rolagem em Firefox */
+        width: 150%;
+        /* Aumenta a largura para garantir o transbordo */
+    }
+
+    .services__nav::-webkit-scrollbar {
+        display: none;
+        /* Esconde a barra de rolagem no WebKit (Chrome, Safari, etc.) */
+    }
+
+    button {
+        white-space: pre;
+    }
 }
