@@ -449,15 +449,17 @@ ul li {
 }
 
 .item {
-  flex: 0 0 42%; /* Exibe 3 imagens por vez por padrão */
+  flex: 0 0 44%; /* Exibe 3 imagens por vez por padrão */
   padding: 10px;
+  height: 348px;
 }
 
 .item img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 /* Navegação */
@@ -1054,20 +1056,45 @@ ul li {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 4rem;
+  padding-top: 48px;
+  padding-bottom: 48px;
   flex-wrap: wrap;
+}
+.extreme button {
+  display: inline-flex;
+}
+.extreme img {
+  border-radius: 12px;
 }
 .extreme__image, .extreme__content {
   flex: 1 1;
+}
+.extreme__content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.extreme__content p {
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
 }
 .extreme__list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-bottom: 2rem;
+}
+.extreme__list li {
+  line-height: 1.5;
 }
 .extreme__list__item {
   display: flex;
-  gap: 0.2rem;
+  gap: 0.4rem;
+  align-items: flex-start;
+  font-size: 0.8rem;
+}
+.extreme__list__item strong {
+  display: contents;
 }
 @media (max-width: 768px) {
   .extreme {
@@ -1206,6 +1233,70 @@ ul li {
   -webkit-line-clamp: 4; /* Número máximo de linhas antes de truncar */
   overflow: hidden; /* Oculta o texto que exceder o limite */
   text-overflow: ellipsis; /* Adiciona a elipse (...) */
+}
+
+.promotions__list, .coupons__list {
+  display: flex;
+  gap: 1rem;
+}
+.promotions__list__item, .coupons__list__item {
+  flex: 1 1;
+  position: relative;
+  width: max-content;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.promotions__list__item h3, .coupons__list__item h3 {
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+.promotions__list__item p, .coupons__list__item p {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+.promotions__list__item .save, .coupons__list__item .save {
+  position: absolute;
+  background-color: #4BFFCC;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-weight: 600;
+  top: 2%;
+  right: 4%;
+}
+
+.promotions__list__item {
+  border-radius: 12px;
+  background-color: #f8f8f8;
+  overflow: hidden;
+}
+.promotions__item__content {
+  padding: 16px 28px;
+}
+
+.promotions__image {
+  height: 148px;
+  width: 100%;
+}
+.promotions__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Container do conteúdo do cupom */
+.coupon-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 20px;
+  gap: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  height: 300px;
+  transition: opacity 0.3s ease;
+  overflow: hidden;
 }
 
 .section-scroll {
@@ -1351,84 +1442,6 @@ ul li {
 .subscriptions h2,
 .subscriptions p {
   text-align: center;
-}
-
-/* Estilos gerais */
-.promotions__list, .coupons__list {
-  display: flex;
-  gap: 1rem;
-}
-.promotions__list__item, .coupons__list__item {
-  flex: 1 1;
-  position: relative;
-  width: max-content;
-  transition: all 0.3s ease;
-}
-.promotions__list__item .save, .coupons__list__item .save {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-/* Container do conteúdo do cupom */
-.coupon-content {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding: 20px;
-  gap: 0.4rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: white;
-  height: 300px;
-  transition: opacity 0.3s ease;
-  overflow: hidden;
-}
-
-/* Efeito de Hover - cor sólida */
-.coupons__list__item:hover .coupon-content {
-  color: transparent; /* Torna o texto invisível */
-}
-
-/* Adicionando a cor sólida com ::before */
-.coupons__list__item:hover .coupon-content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8); /* Cor sólida */
-  z-index: 1; /* Coloca a cor sólida acima do conteúdo */
-}
-
-/* Botão */
-.coupon-btn {
-  position: relative;
-  z-index: 2; /* Coloca o botão acima da cor sólida */
-  opacity: 0;
-  background-color: #FF9800;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-/* Efeito de hover para o botão */
-.coupons__list__item:hover .coupon-btn {
-  opacity: 1; /* Torna o botão visível */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centraliza o botão */
-}
-
-/* Estilos adicionais do botão */
-.coupon-btn:hover {
-  background-color: #e68900;
 }
 
 .featured__list {

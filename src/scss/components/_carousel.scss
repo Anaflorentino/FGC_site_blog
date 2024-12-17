@@ -16,15 +16,17 @@
 }
 
 .item {
-    flex: 0 0 42%; /* Exibe 3 imagens por vez por padrão */
+    flex: 0 0 44%; /* Exibe 3 imagens por vez por padrão */
     padding: 10px;
+    height: 348px;
 }
 
 .item img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     border-radius: 8px;
+    object-fit: cover;
 }
 
 /* Navegação */

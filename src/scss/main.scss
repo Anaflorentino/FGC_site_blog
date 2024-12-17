@@ -30,6 +30,7 @@
 @use './layouts/faq.scss';
 @use './layouts/work.scss';
 @use './layouts/team.scss';
+@use './layouts/coupons.scss';
 
 
 
@@ -203,89 +204,6 @@
     p {
         text-align: center;
     }
-}
-
-
-
-
-/* Estilos gerais */
-.promotions, .coupons {
-    &__list {
-        display: flex;
-        gap: 1rem;
-        &__item {
-            flex: 1 1;
-            position: relative;
-            width: max-content;
-            transition: all 0.3s ease;
-            .save {
-                position: absolute;
-                top: 0;
-                right: 0;
-            }
-        }
-    }
-}
-
-/* Container do conteúdo do cupom */
-.coupon-content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 20px;
-    gap: .4rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: white;
-    height: 300px;
-    transition: opacity 0.3s ease;
-    overflow: hidden;
-}
-
-/* Efeito de Hover - cor sólida */
-.coupons__list__item:hover .coupon-content {
-    color: transparent; /* Torna o texto invisível */
-}
-
-/* Adicionando a cor sólida com ::before */
-.coupons__list__item:hover .coupon-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8); /* Cor sólida */
-    z-index: 1; /* Coloca a cor sólida acima do conteúdo */
-}
-
-/* Botão */
-.coupon-btn {
-    position: relative;
-    z-index: 2; /* Coloca o botão acima da cor sólida */
-    opacity: 0;
-    background-color: #FF9800;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* Efeito de hover para o botão */
-.coupons__list__item:hover .coupon-btn {
-    opacity: 1; /* Torna o botão visível */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza o botão */
-}
-
-/* Estilos adicionais do botão */
-.coupon-btn:hover {
-    background-color: #e68900;
 }
 
 

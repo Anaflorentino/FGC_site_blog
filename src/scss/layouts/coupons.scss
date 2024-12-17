@@ -1,0 +1,77 @@
+@use '../abstracts/variables' as vars;
+
+.promotions, .coupons {
+    &__list {
+        display: flex;
+        gap: 1rem;
+        &__item {
+            flex: 1 1;
+            position: relative;
+            width: max-content;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            h3 {
+                font-size: 18px;
+                margin-bottom: .5rem;
+            }
+            p {
+                font-size: .8rem;
+                margin-bottom: 1rem;
+            }
+
+            .save {
+                position: absolute;
+                background-color: #4BFFCC;
+                border-radius: 999px;
+                padding: 6px 12px;
+                font-weight: 600;
+                top: 2%;
+                right: 4%;
+            }
+        }
+    }
+}
+
+.promotions {
+    &__list {
+        &__item {
+            border-radius: 12px;
+            background-color: vars.$neutrals-50;
+            overflow: hidden;
+        }
+    }
+
+    &__item__content {
+        padding: 16px 28px;
+    }
+}
+
+.promotions__image {
+    height: 148px;
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Container do conteúdo do cupom */
+.coupon-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    gap: .4rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    height: 300px;
+    transition: opacity 0.3s ease;
+    overflow: hidden;
+}
+
+
