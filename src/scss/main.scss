@@ -27,80 +27,14 @@
 @use './layouts/services.scss';
 @use './layouts/extreme.scss';
 @use './layouts/included.scss';
+@use './layouts/faq.scss';
+@use './layouts/work.scss';
+@use './layouts/team.scss';
 
 
 
 
 // ! Colocar tudo em arquivos próprios como componentes !
-.team {
-    background-color: yellow;
-    padding: 48px 0;
-    width: 100%;
-
-    @media (max-width: 1117px) {
-        .team__cards {
-            justify-content: flex-start;
-        }
-    }
-
-    &__cards {
-        /* Permite scroll horizontal */
-        overflow-x: auto;
-        /* Scroll suave */
-        scroll-behavior: smooth;
-
-        display: flex;
-        margin: 0 auto;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        border: 1px solid tomato;
-        padding: 1rem;
-
-
-        /* Estiliza a barra de rolagem para uma aparência melhor */
-        &::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background: tomato;
-            border-radius: 4px;
-        }
-
-        &::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-
-
-        &__item {
-            max-width: 348px;
-            min-width: 340px;
-            border: 1px solid navy;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding: 1rem 1.4rem;
-            flex-shrink: 0;
-        }
-
-        &__image {
-            width: 48px;
-            height: 48px;
-            /* Certifique-se de que a altura é igual à largura */
-            border-radius: 50%;
-            overflow: hidden;
-
-            img {
-                display: block;
-                max-width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-    }
-
-}
 
 // * Scroll Horizontal // Para todas as seções *
 .section-scroll {
@@ -367,22 +301,6 @@
     }
 }
 
-// *FAQ
-.faq {
-    display: flex;
-    justify-content: space-between;
-
-    &__left {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: .4rem;
-        }
-    }
-}
 
 // * Foooter
 .footer {

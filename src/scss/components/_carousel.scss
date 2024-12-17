@@ -1,18 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@use '../abstracts/variables' as vars;
 
-body {
-    font-family: Arial, sans-serif;
-}
-
+/* Carrossel */
 .carrossel {
     position: relative;
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
+    padding: 24px 0;
     overflow: hidden;
 }
 
@@ -22,7 +16,7 @@ body {
 }
 
 .item {
-    flex: 0 0 33.33%; /* Exibe 3 imagens por vez */
+    flex: 0 0 42%; /* Exibe 3 imagens por vez por padrão */
     padding: 10px;
 }
 
@@ -33,6 +27,7 @@ body {
     border-radius: 8px;
 }
 
+/* Navegação */
 .navegacao {
     position: absolute;
     bottom: 10px;
@@ -46,12 +41,27 @@ body {
 .bolinha {
     width: 12px;
     height: 12px;
-    background-color: #fff;
+    background-color: vars.$neutrals-200;
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .bolinha.active {
-    background-color: #3498db;
+    background-color: vars.$primary-500;
+}
+
+/* Responsividade para Tablets */
+@media (max-width: 768px) {
+    .item {
+        flex: 0 0 54%; /* Exibe 2 imagens por vez */
+        padding: 1%;
+    }
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 480px) {
+    .item {
+        flex: 0 0 89%; /* Exibe 1 imagem por vez */
+    }
 }

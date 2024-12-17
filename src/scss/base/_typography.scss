@@ -22,3 +22,9 @@ ul {
     font-size: 1rem;
   }
 }
+
+.section__title {
+  &--center {
+    text-align: center;
+  }
+}
