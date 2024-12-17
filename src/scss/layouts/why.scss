@@ -1,11 +1,35 @@
 // * Why Choose Us
-.why {
-    &__content {
-        display: flex;
-        align-items: flex-start;
-        gap: 2rem;
-        &__accordions, &__carousel {
-            flex: 1 1;
-        }
+.why__content {
+    display: flex;
+    gap: 10%;
+
+    &__left, &__right {
+        flex: 1 1;
     }
 }
+
+
+/* Media query para telas menores */
+@media (max-width: 998px) {
+    .why__content {
+        gap: 2rem; /* Reduz o espaço entre os itens quando empilhados */
+    }
+}
+@media (max-width: 720px) {
+    .why__content {
+        flex-direction: column; /* Empilha os itens em uma coluna */
+        align-items: center; /* Centraliza os itens */
+        gap: 2rem; /* Reduz o espaço entre os itens quando empilhados */
+    }
+
+    .why__content__left, .why__content__right {
+        flex: none; /* Remove a flexibilidade para que eles ocupem toda a largura */
+        width: 100%; /* Garante que as seções ocupem toda a largura disponível */
+    }
+}
+
+    .why__content__right {
+        img {
+            border-radius: 12px;
+        }
+    }

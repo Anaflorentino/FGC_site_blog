@@ -1,15 +1,5 @@
 @use '../abstracts/variables' as vars;
 
-.link {
-    color: vars.$accent-400;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: pointer;
-    &:hover {
-        color: vars.$accent-600;
-
-    }
-}
 
 .menu-link {
     text-decoration: none;
@@ -17,7 +7,7 @@
     font-size: .8rem;
     font-weight: 500;
     border-radius: 0.25rem;
-    color: vars.$text-400;
+    color: vars.$text-300;
 
     &:hover {
     color: vars.$text-500;

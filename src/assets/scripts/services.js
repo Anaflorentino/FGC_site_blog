@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Adiciona o botão "View More/Less"
         if (includedServices.length > maxVisibleItems) {
             const viewMoreButton = document.createElement('button');
-            viewMoreButton.textContent = "Show More";
+            viewMoreButton.textContent = "View More";
             viewMoreButton.className = "button button--small link";
             viewMoreButton.addEventListener('click', () => toggleViewMore(includedServices));
             includedServicesList.appendChild(viewMoreButton);
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const button = includedServicesList.querySelector('.link');
-        button.textContent = expanded ? "Show Less" : "Show More";
+        button.textContent = expanded ? "View Less" : "View More";
     };
 
     // Função para atualizar o conteúdo exibido
