@@ -1,4 +1,4 @@
-// JavaScript para controlar a rolagem horizontal dos testimonials
+// Controlar a rolagem horizontal dos testimonials
 
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.getElementById('testimonials-container');

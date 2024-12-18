@@ -1,13 +1,15 @@
 @use '../abstracts/variables' as vars;
 
-.promotions, .coupons {
+
+/* Container dos cupons */
+.coupons {
     &__list {
         display: flex;
         gap: 1rem;
+        
         &__item {
             flex: 1 1;
             position: relative;
-            width: max-content;
             transition: all 0.3s ease;
             cursor: pointer;
 
@@ -29,49 +31,78 @@
                 top: 2%;
                 right: 4%;
             }
+
+            /* Efeito de hover no item da lista */
+            .coupon-content {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                padding: 48px 32px;
+                gap: 1.2rem;
+                border-radius: 8px;
+                background-color: vars.$primary-50;
+                transition: opacity 0.3s ease;
+                overflow: hidden;
+                position: relative;
+                box-sizing: border-box; /* Garantir que padding não afete o tamanho do card */
+            }
+
+            /* Overlay de cor sólida - animação de baixo para cima */
+            .coupon-content::after {
+                content: "";
+                position: absolute;
+                bottom: 0; /* Começa de baixo */
+                left: 0;
+                width: 100%;
+                height: 0%; /* Inicia com 0% de altura */
+                background-color: vars.$primary-500;
+                opacity: 0; /* Inicia invisível */
+                transition: height 0.3s ease, opacity 0.3s ease; /* Transições para altura e opacidade */
+            }
+
+            /* Efeito de hover: cor sólida e centralização do botão */
+            &:hover .coupon-content::after {
+                height: 100%; /* Quando o hover ocorre, a altura do overlay aumenta */
+                opacity: 1; /* Torna o overlay visível */
+            }
+
+            /* Desaparecer o conteúdo (opacidade) no hover */
+            .coupon-content:hover {
+                opacity: 1;
+            }
+
+            /* Iniciar o botão invisível */
+            .coupon-btn {
+                background-color: vars.$text-500;
+                border: none;
+                width: 80%;
+                padding: 12px 20px;
+                border-radius: 8px;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                position: absolute;
+                top: 50%; /* Centraliza verticalmente */
+                left: 50%; /* Centraliza horizontalmente */
+                z-index: 20;
+                transform: translate(-50%, -50%); /* Ajusta a posição para garantir que o botão esteja no centro */
+                opacity: 0; /* Botão invisível no início */
+                transition: opacity 0.3s ease, transform 0.3s ease;
+                visibility: hidden; /* Também usamos visibility para garantir que o botão não interaja */
+            }
+
+            /* Quando o hover é aplicado, o botão aparece */
+            &:hover .coupon-btn {
+                opacity: 1; /* Torna o botão visível */
+                visibility: visible; /* Torna o botão interativo */
+                transform: translate(-50%, -50%); /* Centraliza ainda mais caso tenha alterado */
+            }
         }
     }
 }
 
-.promotions {
-    &__list {
-        &__item {
-            border-radius: 12px;
-            background-color: vars.$neutrals-50;
-            overflow: hidden;
-        }
-    }
-
-    &__item__content {
-        padding: 16px 28px;
-    }
+/* Efeito de hover no botão */
+.coupon-btn:hover {
+    background-color: vars.$text-400;
 }
-
-.promotions__image {
-    height: 148px;
-    width: 100%;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-/* Container do conteúdo do cupom */
-.coupon-content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 20px;
-    gap: .4rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: white;
-    height: 300px;
-    transition: opacity 0.3s ease;
-    overflow: hidden;
-}
-
-

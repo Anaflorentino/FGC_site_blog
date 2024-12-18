@@ -535,8 +535,10 @@
 
 <!-- * Our Work Section * -->
 <section class="our-work container">
-    <h2>Our work</h2>
-    <p>Commited to making spaces sparkle, everytime.</p>
+    <div class="section__title--center">
+        <h2>Our work</h2>
+        <p>Commited to making spaces sparkle, everytime.</p>
+    </div>
     <div class="caroussel-wrapper">
         <div class="carrossel">
             <div class="carrossel-conteudo">
@@ -560,189 +562,134 @@
     </div>
 </section>
 
-<!-- * Subscriptions Section* -->
-<section class="subscriptions">
-    <div class="container">
+<!-- * Subscriptions Section * -->
+<section class="subscription">
+    <div class="section__title--center">
         <h2>Discover our subscription plans</h2>
-        <p>For every lifestyle, a customized and flexible plan that suits you</p>
-        <ul role="list" class="subscriptions__list">
-            <li role="article" class="subscriptions__list__item">
-                <header>
-                    <div>
-                        <p>Weekly plan</p>
-                        <span>Save 10%</span>
-                    </div>
-                    <div>
-                        <h3>$90.00</h3>
-                        <div>Starting price</div>
-                    </div>
-                    <p>Every week visit</p>
-                </header>
-                <ul role="list">
-                    <li role="listitem">Cancel anytime</li>
-                    <li role="listitem">Choose your cleaners</li>
-                    <li role="listitem">4 Cleaning visits per month</li>
-                    <li role="listitem">4 extras additional per month</li>
-                    <li role="listitem">Guaranteed recall</li>
-                </ul>
-                <a href="#" class="button button--primary">Subscribe</a>
-                <footer>
-                    <span>Charged for each cleaning*</span>
-                </footer>
-            </li>
-            <li role="article" class="subscriptions__list__item">
-                <header>
-                    <div>
-                        <p>Weekly plan</p>
-                        <span>Save 10%</span>
-                    </div>
-                    <div>
-                        <h3>$90.00</h3>
-                        <div>Starting price</div>
-                    </div>
-                    <p>Every week visit</p>
-                </header>
-                <ul role="list">
-                    <li role="listitem">Cancel anytime</li>
-                    <li role="listitem">Choose your cleaners</li>
-                    <li role="listitem">4 Cleaning visits per month</li>
-                    <li role="listitem">4 extras additional per month</li>
-                    <li role="listitem">Guaranteed recall</li>
-                </ul>
-                <a href="#" class="button button--primary">Subscribe</a>
-                <footer>
-                    <span>Charged for each cleaning*</span>
-                </footer>
-            </li>
-            <li role="article" class="subscriptions__list__item">
-                <header>
-                    <div>
-                        <p>Weekly plan</p>
-                        <span>Save 10%</span>
-                    </div>
-                    <div>
-                        <h3>$90.00</h3>
-                        <div>Starting price</div>
-                    </div>
-                    <p>Every week visit</p>
-                </header>
-                <ul role="list">
-                    <li role="listitem">Cancel anytime</li>
-                    <li role="listitem">Choose your cleaners</li>
-                    <li role="listitem">4 Cleaning visits per month</li>
-                    <li role="listitem">4 extras additional per month</li>
-                    <li role="listitem">Guaranteed recall</li>
-                </ul>
-                <a href="#" class="button button--primary">Subscribe</a>
-                <footer>
-                    <span>Charged for each cleaning*</span>
-                </footer>
-            </li>
-        </ul>
+        For every lifestyle, a customized and flexible plan that suits you
     </div>
+    <!-- Lista de planos -->
+    <ul class="subscription__cards">
+        <li class="subscription__cards__item">
+            <div class="plan__header">
+                <h3>Weekly Plan</h3>
+                <span>20%OFF</span>
+            </div>
+            <div class="plan__pricing">
+                <span class="plan__price">$120.84</span>
+                <span>Starting price</span>
+            </div>
+            <h4>Every week visit</h4>
+            <ul class="plan__benefits">
+                <li><img src="assets/images/icons/outline/check.svg" alt="Check icon representing plan's benefit">Cancel
+                    anytime</li>
+                <li><img src="assets/images/icons/outline/check.svg" alt="Check icon representing plan's benefit">Choose
+                    your cleaners</li>
+                <li><img src="assets/images/icons/outline/check.svg" alt="Check icon representing plan's benefit">4
+                    Cleaning visits per month</li>
+                <li><img src="assets/images/icons/outline/check.svg" alt="Check icon representing plan's benefit">4
+                    extras additional per month</li>
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit">Guaranteed recall</li>
+            </ul>
+            <button class="button button--primary button--full">Subscribe</button>
+            <span class="plan__disclaimer">Charged for each cleaning*</span>
+        </li>
+        <li class="subscription__cards__item">
+            <div class="plan__header">
+                <h3>Biweekly Plan</h3>
+                <span>10%OFF</span>
+            </div>
+            <div class="plan__pricing">
+                <span class="plan__price">$148.74</span>
+                <span>Starting price</span>
+            </div>
+            <h4>Biweekly visit</h4>
+            <ul class="plan__benefits">
+                <li><img src="assets/images/icons/outline/check.svg" alt="Check icon representing plan's benefit">Cancel
+                    anytime</li>
+                <li><img src="assets/images/icons/outline/check.svg" alt="Check icon representing plan's benefit">Choose
+                    your cleaners</li>
+                <li><img src="assets/images/icons/outline/check.svg" alt="Check icon representing plan's benefit">2
+                    Cleaning visits per month</li>
+                <li><img src="assets/images/icons/outline/check.svg" alt="Check icon representing plan's benefit">2
+                    extras additional per month</li>
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit">Guaranteed recall</li>
+            </ul>
+            <button class="button button--primary button--full">Subscribe</button>
+            <span class="plan__disclaimer">Charged for each cleaning*</span>
+        </li>
+        <li class="subscription__cards__item">
+            <div class="plan__header">
+                <h3>Monthly Plan</h3>
+                <span>5%OFF</span>
+            </div>
+            <div class="plan__pricing">
+                <span class="plan__price">$164.25</span>
+                <span>Starting price</span>
+            </div>
+            <h4>Monthly visit</h4>
+            <ul class="plan__benefits">
+                <li><img src="assets/images/icons/outline/check.svg" alt="Check icon representing plan's benefit">Cancel
+                    anytime</li>
+                <li><img src="assets/images/icons/outline/check.svg" alt="Check icon representing plan's benefit">Choose
+                    your cleaners</li>
+                <li><img src="assets/images/icons/outline/check.svg" alt="Check icon representing plan's benefit">1
+                    Cleaning visits per month</li>
+                <li><img src="assets/images/icons/outline/check.svg" alt="Check icon representing plan's benefit">1
+                    extras additional per month</li>
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit">Guaranteed recall</li>
+            </ul>
+            <button class="button button--primary button--full">Subscribe</button>
+            <span class="plan__disclaimer">Charged for each cleaning*</span>
+        </li>
+    </ul>
 </section>
 
 <!-- * Coupons and Promotions Section * -->
- <!-- ! Criar modal overlay ! -->
 <section class="container">
-    <h2>Exclusive cleaning promotions for a sparkling, fresh makeover</h2>
-    <div class="promotions">
-        <ul class="promotions__list">
-            <li class="promotions__list__item">
-                <!-- <span class="save">Save $48.00</span> -->
-                <div class="promotions__image">
-                    <img src="assets/images/coupons/img-1.jpg" alt="Placeholder">
-                </div>
-                <div class="promotions__item__content">
-                    <h3>Dream Kitchen</h3>
-                    <p>It's never been easier to have the kitchen of your dreams!</p>
-                    <a href="#" class="button button--primary">Book from $190</a>
-                </div>
-
-            </li>
-            <li class="promotions__list__item">
-                <!-- <span class="save">Save $48.00</span> -->
-                <div class="promotions__image">
-                    <img src="assets/images/coupons/img-2.jpg" alt="Placeholder">
-                </div>
-                <div class="promotions__item__content">
-                    <h3>Baby Arrive</h3>
-                    <p>New family member? Create a safe & sptoless space, free of allergens.</p>
-                    <a href="#" class="button button--primary">Book from $190</a>
-                </div>
-
-            </li>
-            <li class="promotions__list__item">
-                <!-- <span class="save">Save $48.00</span> -->
-                <div class="promotions__image">
-                    <img src="assets/images/coupons/img-3.png" alt="Placeholder">
-                </div>
-                <div class="promotions__item__content">
-                    <h3>Special Care</h3>
-                    <p>Because we all need a little extra support from time to time.</p>
-                    <a href="#" class="button button--primary">Book from $190</a>
-                </div>
-
-            </li>
-            <li class="promotions__list__item">
-                <!-- <span class="save">Save $48.00</span> -->
-                <div class="promotions__image">
-                    <img src="assets/images/coupons/img-4.jpg" alt="Placeholder">
-                </div>
-                <div class="promotions__item__content">
-                    <h3>Furry friend</h3>
-                    <p>For every pet owner who treat their furry friends like family!</p>
-                    <a href="#" class="button button--primary">Book from $190</a>
-                </div>
-
-            </li>
-        </ul>
-    </div>
-
+    <h2 class="section__title section__title--center">Exclusive cleaning promotions for a sparkling, fresh makeover</h2>
     <div class="coupons">
         <ul class="coupons__list">
             <li class="coupons__list__item">
                 <div class="coupon-content">
-                    <span class="material-symbols-rounded">event_available</span>
+                    <span> <img src="assets/images/icons/coupons/calendar.svg" alt="Calendar icon representing first cleaning discount"></span>
                     <h3>10% discount</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ut eius quibusdam distinctio
-                        natus, quisquam sit nihil tenetur rerum maxime.</p>
+                    <p>Using the welcome coupon for your first cleaning</p>
                     <button class="coupon-btn">Use this coupon</button>
                 </div>
             </li>
             <li class="coupons__list__item">
                 <div class="coupon-content">
-                    <span class="material-symbols-rounded">event_available</span>
-                    <h3>10% discount</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ut eius quibusdam distinctio
-                        natus, quisquam sit nihil tenetur rerum maxime.</p>
+                    <span> <img src="assets/images/icons/coupons/return.svg" alt="Return icon representing recurrent cleanings discount"> </span>
+                    <h3>Up to 15% discount</h3>
+                    <p>On recurrent cleanings</p>
                     <button class="coupon-btn">Use this coupon</button>
                 </div>
             </li>
             <li class="coupons__list__item">
                 <div class="coupon-content">
-                    <span class="material-symbols-rounded">event_available</span>
+                    <span> <img src="assets/images/icons/coupons/member.svg" alt="Loyalty icon representing Member Get Member discount"> </span>
                     <h3>10% discount</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ut eius quibusdam distinctio
-                        natus, quisquam sit nihil tenetur rerum maxime.</p>
+                    <p>Referring a friend -- your friend gets 20%OFF</p>
                     <button class="coupon-btn">Use this coupon</button>
                 </div>
             </li>
             <li class="coupons__list__item">
                 <div class="coupon-content">
-                    <span class="material-symbols-rounded">event_available</span>
-                    <h3>10% discount</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ut eius quibusdam distinctio
-                        natus, quisquam sit nihil tenetur rerum maxime.</p>
+                    <span> <img src="assets/images/icons/coupons/couch.svg" alt="Couch icon representing Carpet & Upholstery service discount"> </span>
+                    <h3>15% discount</h3>
+                    <p>On our new Carpet & Upholstery additionals</p>
                     <button class="coupon-btn">Use this coupon</button>
                 </div>
             </li>
             <li class="coupons__list__item">
                 <div class="coupon-content">
-                    <span class="material-symbols-rounded">event_available</span>
-                    <h3>10% discount</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor ut eius quibusdam distinctio
-                        natus, quisquam sit nihil tenetur rerum maxime.</p>
+                    <span> <img src="assets/images/icons/coupons/standard.svg" alt="Mop icon representing Standard Cleaning discount"> </span>
+                    <h3>$140 cleaning</h3>
+                    <p>On the basic standard package</p>
                     <button class="coupon-btn">Use this coupon</button>
                 </div>
             </li>
@@ -768,13 +715,18 @@
             <p><strong>Is your place overwhelmed by clutter, damage, or neglect?</strong> Our new Extreme Cleaning
                 service is designed to handle the toughest and most critical cleaning challenges.</p>
             <ul class="extreme__list">
-                <li class="extreme__list__item"><span class="material-symbols-rounded">check</span><strong>Disaster cleanup:</strong> Fire, flood, and mold remediation.
+                <li class="extreme__list__item"><span class="material-symbols-rounded">check</span><strong>Disaster
+                        cleanup:</strong> Fire, flood, and mold remediation.
                 </li>
-                <li class="extreme__list__item"><span class="material-symbols-rounded">check</span><strong>Hoarding cleanup:</strong> Safe and compassionate removal of excessive belongings.
+                <li class="extreme__list__item"><span class="material-symbols-rounded">check</span><strong>Hoarding
+                        cleanup:</strong> Safe and compassionate removal of excessive belongings.
                 </li>
-                <li class="extreme__list__item"><span class="material-symbols-rounded">check</span><strong>Vacant property cleanup:</strong> Deep cleaning and restoration of unoccupied spaces.
+                <li class="extreme__list__item"><span class="material-symbols-rounded">check</span><strong>Vacant
+                        property cleanup:</strong> Deep cleaning and restoration of unoccupied spaces.
                 </li>
-                <li class="extreme__list__item"><span class="material-symbols-rounded">check</span><strong>Absolute Privacy:</strong> We are committed to protecting your personal information with care and discretion.
+                <li class="extreme__list__item"><span class="material-symbols-rounded">check</span><strong>Absolute
+                        Privacy:</strong> We are committed to protecting your personal information with care and
+                    discretion.
                 </li>
             </ul>
             <a href="#"><button class="button button--primary">Contact us for sales</button></a>
@@ -934,41 +886,75 @@
 <footer class="footer">
     <div class="footer__content container">
         <div class="footer__content__column">
-            <h3>Title</h3>
+            <div class="footer__content__logo">
+                <img src="assets/images/logos/brand-logo-icon.svg" alt="Brand logo icon">
+            </div>
             <ul>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Policy Privacy</a></li>
+            </ul>
+            <ul class="footer__content__socials">
+                <li><img src="assets/images/icons/social/facebook.svg" alt="Facebook brand logo"></li>
+                <li><img src="assets/images/icons/social/youtube.svg" alt="YouTube brand logo"></li>
+                <li><img src="assets/images/icons/social/instagram.svg" alt="instagram brand logo"></li>
             </ul>
         </div>
         <div class="footer__content__column">
-            <h3>Title</h3>
+            <h3>Flash Guys</h3>
             <ul>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
+                <li><a href="#">Professionals</a></li>
+                <li><a href="#">Subscription</a></li>
+                <li><a href="#">Promotions</a></li>
             </ul>
         </div>
         <div class="footer__content__column">
-            <h3>Title</h3>
+            <h3>Services</h3>
             <ul>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
+                <li><a href="#">Deep Cleaning</a></li>
+                <li><a href="#">Standard Cleaning</a></li>
+                <li><a href="#">Commercial Cleaning</a></li>
+                <li><a href="#">Post Construction Cleaning</a></li>
+                <li><a href="#">Move-in/out Cleaning</a></li>
+                <li><a href="#">Airbnb Cleaning</a></li>
+                <li><a href="#">Extreme Cleaning</a></li>
+                <li><a href="#">Carpets & Upholstery</a></li>
             </ul>
         </div>
         <div class="footer__content__column">
-            <h3>Title</h3>
+            <h3>Areas served</h3>
             <ul>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
+                <li>Los Angeles and area</li>
+                <li>South Bay, CA</li>
+                <li>South L.A, CA</li>
+                <li>Southheast, CA</li>
+                <li>Westside, CA</li>
+                <li>San Francisco (soon)</li>
+                <li>San Diego (soon)</li>
             </ul>
         </div>
+        <div class="footer__content__column">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Get updates and promotions</h3>
+            <div>Subscribe now to stay tuned</div>
+            <form>
+                <input type="text" placeholder="Email">
+                <button type="submit" class="button button--primary">Subscribe</button>
+                <div><span>By subscribing you agree to our <a href="#">Privacy Policy</a>.</span></div>
+            </form>
+        </div>
+    </div>
+    <div id="copy">
+        <div id="separator"></div>
+        <span>© 2024 All Rights Reserved, Flash Guys Cleaning</span>
     </div>
 </footer>
     </main>

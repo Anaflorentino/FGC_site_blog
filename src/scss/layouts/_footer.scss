@@ -1,0 +1,117 @@
+/* * Footer */
+.footer {
+    padding-top: 56px;
+    padding-bottom: 48px;
+    background-color: #ececec; /* Defina a cor de fundo do seu footer, se necessário */
+    color: white; /* Cor do texto */
+
+    #copy {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 80%;
+
+        span {
+            font-size: .8rem;
+        }
+    }
+
+    #separator {
+        border-top: 0.1px solid rgb(206, 206, 206);
+        display: flex;
+        margin: 2rem 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    &__content__logo {
+        margin-bottom: .5rem;
+    }
+    
+    &__content {
+        display: flex;
+        flex-wrap: wrap; /* Para garantir que os elementos se ajustem */
+        gap: 1rem;
+        justify-content: space-between; /* Para espaçar os itens quando necessário */
+
+        .footer__content__socials { 
+            display: flex;
+            margin-top: 1.5rem;
+            flex-direction: row;
+        }
+        &__column {
+            flex: 1 1; /* Tamanho base para as colunas. Isso garante que as colunas não fiquem menores que 300px */
+            padding: 0 1rem; /* Espaçamento interno nas colunas */
+
+            h3 {
+                margin-bottom: 1.5rem;
+                line-height: 1.2;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: .8rem;
+
+                li {
+                    font-size: .9rem;
+                }
+            }
+
+            span {
+                font-size: .8rem;
+            }
+            button, input {
+                width: 100%;
+                margin-bottom: .4rem;
+            }
+
+        }
+    }
+}
+
+div.footer__content__column:nth-child(6) {
+    min-width: 205px;
+    }
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .footer {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+    .footer__content {
+        gap: 0.5rem;
+    }
+
+    .footer__content__column {
+        flex: 1 1 45%; /* Colunas em 2 para telas médias */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .footer__content__column {
+        flex: 1 1 100%; /* As colunas ficam empilhadas em telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .footer__content__column {
+        flex: 1 1 100%; /* Colunas continuam empilhadas */
+        padding: 0.5rem; /* Reduz o padding em telas muito pequenas */
+    }
+}
+
+

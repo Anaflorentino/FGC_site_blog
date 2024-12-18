@@ -36,7 +36,6 @@ p {
 ul li {
   line-height: 1;
   letter-spacing: 0;
-  font-size: 1rem;
 }
 
 .section__title--center {
@@ -1114,6 +1113,7 @@ textarea {
   line-height: 1.5;
 }
 .extreme__list__item {
+  text-align: start;
   display: flex;
   gap: 0.4rem;
   align-items: flex-start;
@@ -1125,15 +1125,12 @@ textarea {
 @media (max-width: 768px) {
   .extreme {
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     gap: 1.5rem;
   }
   .extreme__image, .extreme__content {
     flex: 0 0 100%;
     max-width: 100%;
-  }
-  .extreme__content {
-    text-align: center;
   }
   .extreme__list {
     padding: 0 1rem;
@@ -1174,6 +1171,81 @@ textarea {
     width: 100%;
   }
 }
+.subscription {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.subscription__cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  flex: 1 1;
+  padding: 48px 0;
+  margin: 0 5%;
+}
+.subscription__cards__item {
+  min-width: 326px;
+  border: 1px solid #EBEBEB;
+  box-shadow: 0px 17px 45.6px -30px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 36px 48px 40px 48px;
+}
+.subscription__cards__item .plan__header {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.subscription__cards__item .plan__header h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.subscription__cards__item .plan__header span {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 12px;
+  background: #4BFFCC;
+  border-radius: 999px;
+}
+.subscription__cards__item .plan__pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.8rem;
+}
+.subscription__cards__item .plan__pricing span.plan__price {
+  font-size: 23px;
+  font-weight: 700;
+}
+.subscription__cards__item .plan__pricing span {
+  font-size: 13px;
+}
+.subscription__cards__item .plan__benefits {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.subscription__cards__item .plan__benefits li {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 14px;
+}
+.subscription__cards__item h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.subscription__cards__item .plan__disclaimer {
+  font-size: 13px;
+  font-weight: 400;
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+}
+
 .our-work {
   padding-top: 48px;
   padding-bottom: 48px;
@@ -1262,26 +1334,32 @@ textarea {
   text-overflow: ellipsis; /* Adiciona a elipse (...) */
 }
 
-.promotions__list, .coupons__list {
+/* Container dos cupons */
+.coupons__list {
   display: flex;
   gap: 1rem;
 }
-.promotions__list__item, .coupons__list__item {
+.coupons__list__item {
   flex: 1 1;
   position: relative;
-  width: max-content;
   transition: all 0.3s ease;
   cursor: pointer;
+  /* Efeito de hover no item da lista */
+  /* Overlay de cor sólida - animação de baixo para cima */
+  /* Efeito de hover: cor sólida e centralização do botão */
+  /* Desaparecer o conteúdo (opacidade) no hover */
+  /* Iniciar o botão invisível */
+  /* Quando o hover é aplicado, o botão aparece */
 }
-.promotions__list__item h3, .coupons__list__item h3 {
+.coupons__list__item h3 {
   font-size: 18px;
   margin-bottom: 0.5rem;
 }
-.promotions__list__item p, .coupons__list__item p {
+.coupons__list__item p {
   font-size: 0.8rem;
   margin-bottom: 1rem;
 }
-.promotions__list__item .save, .coupons__list__item .save {
+.coupons__list__item .save {
   position: absolute;
   background-color: #4BFFCC;
   border-radius: 999px;
@@ -1290,42 +1368,164 @@ textarea {
   top: 2%;
   right: 4%;
 }
-
-.promotions__list__item {
-  border-radius: 12px;
-  background-color: #f8f8f8;
-  overflow: hidden;
-}
-.promotions__item__content {
-  padding: 16px 28px;
-}
-
-.promotions__image {
-  height: 148px;
-  width: 100%;
-}
-.promotions__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Container do conteúdo do cupom */
-.coupon-content {
+.coupons__list__item .coupon-content {
   text-align: center;
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 20px;
-  gap: 0.4rem;
-  border: 1px solid #ccc;
+  padding: 48px 32px;
+  gap: 1.2rem;
   border-radius: 8px;
-  background-color: white;
-  height: 300px;
+  background-color: #ffedf0;
   transition: opacity 0.3s ease;
   overflow: hidden;
+  position: relative;
+  box-sizing: border-box; /* Garantir que padding não afete o tamanho do card */
+}
+.coupons__list__item .coupon-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* Começa de baixo */
+  left: 0;
+  width: 100%;
+  height: 0%; /* Inicia com 0% de altura */
+  background-color: #ff4667;
+  opacity: 0; /* Inicia invisível */
+  transition: height 0.3s ease, opacity 0.3s ease; /* Transições para altura e opacidade */
+}
+.coupons__list__item:hover .coupon-content::after {
+  height: 100%; /* Quando o hover ocorre, a altura do overlay aumenta */
+  opacity: 1; /* Torna o overlay visível */
+}
+.coupons__list__item .coupon-content:hover {
+  opacity: 1;
+}
+.coupons__list__item .coupon-btn {
+  background-color: #344051;
+  border: none;
+  width: 80%;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  z-index: 20;
+  transform: translate(-50%, -50%); /* Ajusta a posição para garantir que o botão esteja no centro */
+  opacity: 0; /* Botão invisível no início */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  visibility: hidden; /* Também usamos visibility para garantir que o botão não interaja */
+}
+.coupons__list__item:hover .coupon-btn {
+  opacity: 1; /* Torna o botão visível */
+  visibility: visible; /* Torna o botão interativo */
+  transform: translate(-50%, -50%); /* Centraliza ainda mais caso tenha alterado */
 }
 
+/* Efeito de hover no botão */
+.coupon-btn:hover {
+  background-color: #5d6674;
+}
+
+/* * Footer */
+.footer {
+  padding-top: 56px;
+  padding-bottom: 48px;
+  background-color: #ececec; /* Defina a cor de fundo do seu footer, se necessário */
+  color: white; /* Cor do texto */
+}
+.footer #copy {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 80%;
+}
+.footer #copy span {
+  font-size: 0.8rem;
+}
+.footer #separator {
+  border-top: 0.1px solid rgb(206, 206, 206);
+  display: flex;
+  margin: 2rem 0;
+}
+.footer a {
+  text-decoration: none;
+}
+.footer__content__logo {
+  margin-bottom: 0.5rem;
+}
+.footer__content {
+  display: flex;
+  flex-wrap: wrap; /* Para garantir que os elementos se ajustem */
+  gap: 1rem;
+  justify-content: space-between; /* Para espaçar os itens quando necessário */
+}
+.footer__content .footer__content__socials {
+  display: flex;
+  margin-top: 1.5rem;
+  flex-direction: row;
+}
+.footer__content__column {
+  flex: 1 1; /* Tamanho base para as colunas. Isso garante que as colunas não fiquem menores que 300px */
+  padding: 0 1rem; /* Espaçamento interno nas colunas */
+}
+.footer__content__column h3 {
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+.footer__content__column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.footer__content__column ul li {
+  font-size: 0.9rem;
+}
+.footer__content__column span {
+  font-size: 0.8rem;
+}
+.footer__content__column button, .footer__content__column input {
+  width: 100%;
+  margin-bottom: 0.4rem;
+}
+
+div.footer__content__column:nth-child(6) {
+  min-width: 205px;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .footer {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  .footer__content {
+    gap: 0.5rem;
+  }
+  .footer__content__column {
+    flex: 1 1 45%; /* Colunas em 2 para telas médias */
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .footer__content__column {
+    flex: 1 1 100%; /* As colunas ficam empilhadas em telas pequenas */
+  }
+}
+@media (max-width: 480px) {
+  .footer {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .footer__content__column {
+    flex: 1 1 100%; /* Colunas continuam empilhadas */
+    padding: 0.5rem; /* Reduz o padding em telas muito pequenas */
+  }
+}
 .section-scroll {
   display: none;
 }
@@ -1447,43 +1647,11 @@ textarea {
   gap: 0.4rem;
 }
 
-.subscriptions__list div {
-  display: flex;
-  justify-content: space-between;
-}
-.subscriptions__list {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-.subscriptions__list__item {
-  min-width: 300px;
-  border: 1px solid navy;
-  padding: 1rem;
-}
-
-.our-work h2,
-.our-work p,
-.subscriptions h2,
-.subscriptions p {
-  text-align: center;
-}
-
 .featured__list {
   display: flex;
   gap: 1rem;
 }
 .featured__list__tem {
-  flex: 1 1;
-}
-
-.footer__content {
-  display: flex;
-  gap: 1rem;
-}
-.footer__content__column {
   flex: 1 1;
 }
 

@@ -29,9 +29,11 @@
 @use './layouts/extreme.scss';
 @use './layouts/included.scss';
 @use './layouts/faq.scss';
+@use './layouts/subscriptions.scss';
 @use './layouts/work.scss';
 @use './layouts/team.scss';
 @use './layouts/coupons.scss';
+@use './layouts/footer.scss';
 
 
 
@@ -174,39 +176,6 @@
 }
 
 
-// Subscriptions
-.subscriptions {
-    &__list div {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__list {
-        display: flex;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-
-        &__item {
-            min-width: 300px;
-            border: 1px solid navy;
-            padding: 1rem;
-        }
-    }
-
-}
-
-
-.our-work,
-.subscriptions {
-
-    h2,
-    p {
-        text-align: center;
-    }
-}
-
 
 //* Featured Articles
 .featured {
@@ -215,18 +184,6 @@
         gap: 1rem;
 
         &__tem {
-            flex: 1 1;
-        }
-    }
-}
-
-
-// * Foooter
-.footer {
-    &__content {
-        display: flex;
-        gap: 1rem;
-        &__column {
             flex: 1 1;
         }
     }
