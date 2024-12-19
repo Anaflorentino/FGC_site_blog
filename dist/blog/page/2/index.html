@@ -1,14 +1,16 @@
+<!-- Template de Base -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <!-- Basehead -->
+    <!-- Basehead -->
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Latest posts</title>
 <link rel="stylesheet" href="/css/main.css">
 
 <!-- Material Symbols Rounded -->
-<!-- ! Trocar por svg embedados para otimizar performance ! -->
 <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <!-- Shoelace Library -->
@@ -17,39 +19,38 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header>
         <!-- Navbar -->
 <nav class="navbar">
-        <ul class="nav-list">
-            <div id="menu">
-                <span class="material-symbols-rounded">
-                    menu
-                </span>
-            </div>
-            <a class="logo" href="/"><img
-                    src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
-                    alt=""></a>
-            <div class="nav-list-links">
-                <li><a class="menu-link" href="#">Services</a></li>
-                <li><a class="menu-link" href="#">Subscription</a></li>
-                <li><a class="menu-link" href="#">Support</a></li>
-                <li><a class="menu-link" href="#">Coupons</a></li>
-                <li><a class="menu-link" href="#">About us</a></li>
-                <li><a class="menu-link" href="#">FAQ</a></li>
-                <li><a class="menu-link" href="/blog">Blog</a></li>
-                <li><a href="#"><button id="book-now">Book now</button></a></li>
-            </div>
-        </ul>
-
-        <!-- Login e Signup -->
-        <div class="navbar-buttons">
-            <button class="dashboard-button button button--secondary button--small"
-                id="dashboardButton">Dashboard</button>
-            <div class="auth-container" id="authContainer">
-                <!-- Content dynamically injected by JS -->
-            </div>
-            <button class="book-now button button--primary button--small">Book now</button>
+    <ul class="nav-list">
+        <button id="menu">
+            <span class="material-symbols-rounded">
+                menu
+            </span>
+        </button>
+        <a class="logo" href="/"><img
+                src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
+                alt=""></a>
+        <div class="nav-list-links">
+            <li><a class="menu-link" href="#">Services</a></li>
+            <li><a class="menu-link" href="#">Subscription</a></li>
+            <li><a class="menu-link" href="#">Support</a></li>
+            <li><a class="menu-link" href="#">Coupons</a></li>
+            <li><a class="menu-link" href="#">About us</a></li>
+            <li><a class="menu-link" href="#">FAQ</a></li>
+            <li><a class="menu-link" href="/blog">Blog</a></li>
         </div>
+    </ul>
+
+    <!-- Login e Signup -->
+    <div class="navbar-buttons">
+        <button class="dashboard-button button button--secondary button--small" id="dashboardButton">Dashboard</button>
+        <button class="book-now button button--primary button--small">Book now</button>
+        <div class="auth-container" id="authContainer">
+            <!-- Content dynamically injected by JS -->
+        </div>
+    </div>
     </div>
 </nav>
 
@@ -61,7 +62,7 @@
         <input type="email" id="modalEmail" placeholder="Email" required>
         <input type="password" id="modalPassword" placeholder="Password" required>
         <button id="modalLoginButton">Log In</button>
-        <button class="google-login-button" id="googleLoginButton">Log In with Google</button>
+        <button class="google-login-button" id="googleLoginButton"><img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">Log In with Google</button>
     </div>
 </div>
 
@@ -74,152 +75,233 @@
         <input type="tel" id="signupPhone" placeholder="Phone Number" required>
         <input type="password" id="signupPassword" placeholder="Password" required>
         <button id="signupModalButton">Sign Up</button>
-        <button class="google-login-button" id="googleSignupButton">Sign Up with Google</button>
+        <button class="google-login-button" id="googleSignupButton"><img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">Sign Up with Google</button>
     </div>
 </div>
     </header>
+    <!-- Main -->
     <main>
         
-
 <div class="container">
-<nav class="pagination-links">
-  <ol class="pagination-links__list">
-    <li class="pagination-links__list__item"><a href="/">Home ></a></li>
-    <li class="pagination-links__list__item"><a href="#">Blog</a></li>
-  </ol>
-</nav>
-<h1>Latest posts</h1>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque cum distinctio earum, libero similique rerum assumenda eius esse sit impedit quae cumque, laborum ratione hic! Nam animi nesciunt excepturi dicta.</p>
 
-<!--! Featured Articles -- Adicionar loop !-->
-<div class="featured-container">
-  
-  <div class="column left">
-    <div class="image-container">
-      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
-    </div>
-  </div>
-  <div class="column right">
-    <div class="image-container">
-      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
-    </div>
-    <div class="image-container">
-      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
-    </div>
-  </div>
-  
-  <div class="column left">
-    <div class="image-container">
-      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
-    </div>
-  </div>
-  <div class="column right">
-    <div class="image-container">
-      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
-    </div>
-    <div class="image-container">
-      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
-    </div>
-  </div>
-  
-  <div class="column left">
-    <div class="image-container">
-      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
-    </div>
-  </div>
-  <div class="column right">
-    <div class="image-container">
-      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
-    </div>
-    <div class="image-container">
-      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
-    </div>
-  </div>
-  
-</div>
-
-
-<!-- Ler todos os artigos -->
-<section class="articles">
-  <h2>All articles</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae commodi facilis mollitia, earum porro veniam consequuntur eos et, eaque consequatur sit veritatis corporis placeat at excepturi iusto ipsum. Molestias, cumque.</p>
-  <button>View all</button>
-  <ol role="list" class="articles__list">
-    
-    <!-- * Loop de Conteúdo de Todos os Posts do Site * -->
-    
-      <li role="article" class="articles__list__item">
-        <a href="/blog/posts/post-4/">
-        <article>
-          <div class="articles__image">
-            <img src="/assets/images/blog/img-1.jpg" alt="">
-          </div>
-          <h3>Post de Exemplo 4</h3>
-          <span>Tutorials,Tips and Tricks</span>
-          <p>A descrição do meu post vai aqui</p>
-        </article>
-      </a>
-      </li>
-      
-      <li role="article" class="articles__list__item">
-        <a href="/blog/posts/post-5/">
-        <article>
-          <div class="articles__image">
-            <img src="/assets/images/blog/img-1.jpg" alt="">
-          </div>
-          <h3>Post de Exemplo 5</h3>
-          <span>Tutorials,Tips and Tricks</span>
-          <p>A descrição do meu post vai aqui</p>
-        </article>
-      </a>
-      </li>
-      
-      <li role="article" class="articles__list__item">
-        <a href="/blog/posts/post-6/">
-        <article>
-          <div class="articles__image">
-            <img src="/assets/images/blog/img-1.jpg" alt="">
-          </div>
-          <h3>Post de Exemplo 6</h3>
-          <span>Tutorials,Tips and Tricks</span>
-          <p>A descrição do meu post vai aqui</p>
-        </article>
-      </a>
-      </li>
-      
-  
+  <!-- Pages Index -->
+  <nav class="pagination-links section__title">
+    <ol class="pagination-links__list">
+      <li class="pagination-links__list__item"><a href="/">Home ></a></li>
+      <li class="pagination-links__list__item"><a href="#">Blog</a></li>
     </ol>
-</section>
+  </nav>
 
-<!-- Paginação funcionando! -->
-<div class="pagination">
-  <!-- Link para página anterior -->
-  
-    <a href="/blog/" class="enabled">← Página Anterior</a>
-  
+  <div class="section__title">
+    <h1>Latest posts</h1>
+    <p>Stay updated with the latest tips and news in residential cleaning. Here you'll find practical advice, detailed guides, and the newest trends to help you keep your home spotless and healthy.</p>
+  </div>
 
-  <!-- Números das páginas -->
-  
+  <!-- Loop para Artigos Recentes (Recent Articles) -->
+  <div class="featured-container section__title">
     
-      <a href="/blog/">1</a>
+      <div class="column left">
+        <div class="image-container">
+          <img src="/assets/images/blog/img-1.jpg" alt="" />
+        </div>
+      </div>
+      <div class="column right">
+        <div class="image-container">
+          <img src="/assets/images/blog/img-1.jpg" alt="" />
+        </div>
+        <div class="image-container">
+          <img src="/assets/images/blog/img-1.jpg" alt="" />
+        </div>
+      </div>
     
-  
+      <div class="column left">
+        <div class="image-container">
+          <img src="/assets/images/blog/img-1.jpg" alt="" />
+        </div>
+      </div>
+      <div class="column right">
+        <div class="image-container">
+          <img src="/assets/images/blog/img-1.jpg" alt="" />
+        </div>
+        <div class="image-container">
+          <img src="/assets/images/blog/img-1.jpg" alt="" />
+        </div>
+      </div>
     
-      <a href="/blog/page/2/">2</a>
+      <div class="column left">
+        <div class="image-container">
+          <img src="/assets/images/blog/img-1.jpg" alt="" />
+        </div>
+      </div>
+      <div class="column right">
+        <div class="image-container">
+          <img src="/assets/images/blog/img-1.jpg" alt="" />
+        </div>
+        <div class="image-container">
+          <img src="/assets/images/blog/img-1.jpg" alt="" />
+        </div>
+      </div>
     
-  
+  </div>
 
-  <!-- Link para próxima página -->
-  
-    <span class="disabled">Próxima Página →</span>
-  
-</div>
+  <!-- Seção de preview para todos os Artigos -->
+  <section class="articles">
+    <div class="section__title">
+      <h2>Cleaning tips</h2>
+      <p>Transform your cleaning routine! Discover our curated cleaning tips that make maintaining a spotless home a breeze. Click now to discover the secrets that will save you time and energy.</p>
+      <a href="all-articles/"><button class="button button--secondary button--small">View all</button></a>
+    </div>
+    <ol role="list" class="articles__list">
+      
+        <li role="article" class="articles__list__item">
+          <a href="/blog/posts/post-6/">
+            <article>
+              <div class="articles__image">
+                <img src="/assets/images/blog/img-1.jpg" alt="">
+              </div>
+              <h3 class="articles__title">Post de Exemplo 6</h3>
+              <span class="articles__categorie">Tutorials,Tips and Tricks</span>
+              <p class="articles__description">A descrição do meu post vai aqui</p>
+            </article>
+          </a>
+        </li>
+      
+        <li role="article" class="articles__list__item">
+          <a href="/blog/posts/post-5/">
+            <article>
+              <div class="articles__image">
+                <img src="/assets/images/blog/img-1.jpg" alt="">
+              </div>
+              <h3 class="articles__title">Post de Exemplo 5</h3>
+              <span class="articles__categorie">Tutorials,Tips and Tricks</span>
+              <p class="articles__description">A descrição do meu post vai aqui</p>
+            </article>
+          </a>
+        </li>
+      
+        <li role="article" class="articles__list__item">
+          <a href="/blog/posts/post-4/">
+            <article>
+              <div class="articles__image">
+                <img src="/assets/images/blog/img-1.jpg" alt="">
+              </div>
+              <h3 class="articles__title">Post de Exemplo 4</h3>
+              <span class="articles__categorie">Tutorials,Tips and Tricks</span>
+              <p class="articles__description">A descrição do meu post vai aqui</p>
+            </article>
+          </a>
+        </li>
+      
+    </ol>
+  </section>
+
+  <!-- Paginação de posts -->
+<!--   
+   <div class="pagination"> 
+    
+      <a href="/blog/" class="enabled">← Página Anterior</a>
+    
+
+    
+      
+        <a href="/blog/">1</a>
+      
+    
+      
+        <a href="/blog/page/2/">2</a>
+      
+    
+
+    
+      <span class="disabled">Próxima Página →</span>
+    
+  </div>  -->
+
+
 </div>
 
     </main>
+    <!-- Footer -->
+    <footer>
+        <!-- Footer -->
+<div class="container footer__content">
+    <div class="footer__content__column">
+        <div class="footer__content__logo">
+            <img src="/assets/images/logos/brand-logo-icon.svg" alt="Brand logo icon">
+        </div>
+        <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">Policy Privacy</a></li>
+        </ul>
+        <ul class="footer__content__socials">
+            <li><img src="/assets/images/icons/social/facebook.svg" alt="Facebook brand logo"></li>
+            <li><img src="/assets/images/icons/social/youtube.svg" alt="YouTube brand logo"></li>
+            <li><img src="/assets/images/icons/social/instagram.svg" alt="instagram brand logo"></li>
+        </ul>
+    </div>
+    <div class="footer__content__column">
+        <h3>Flash Guys</h3>
+        <ul>
+            <li><a href="#">Professionals</a></li>
+            <li><a href="#">Subscription</a></li>
+            <li><a href="#">Promotions</a></li>
+        </ul>
+    </div>
+    <div class="footer__content__column">
+        <h3>Services</h3>
+        <ul>
+            <li><a href="#">Deep Cleaning</a></li>
+            <li><a href="#">Standard Cleaning</a></li>
+            <li><a href="#">Commercial Cleaning</a></li>
+            <li><a href="#">Post Construction Cleaning</a></li>
+            <li><a href="#">Move-in/out Cleaning</a></li>
+            <li><a href="#">Airbnb Cleaning</a></li>
+            <li><a href="#">Extreme Cleaning</a></li>
+            <li><a href="#">Carpets & Upholstery</a></li>
+        </ul>
+    </div>
+    <div class="footer__content__column">
+        <h3>Areas served</h3>
+        <ul>
+            <li>Los Angeles and area</li>
+            <li>South Bay, CA</li>
+            <li>South L.A, CA</li>
+            <li>Southheast, CA</li>
+            <li>Westside, CA</li>
+            <li>San Francisco (soon)</li>
+            <li>San Diego (soon)</li>
+        </ul>
+    </div>
+    <div class="footer__content__column">
+        <h3>Support</h3>
+        <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </div>
+    <div class="footer__content__column">
+        <h3>Get updates and promotions</h3>
+        <div>Subscribe now to stay tuned</div>
+        <form>
+            <input type="text" placeholder="Email">
+            <button type="submit" class="button button--primary">Subscribe</button>
+            <div><span>By subscribing you agree to our <a href="#">Privacy Policy</a>.</span></div>
+        </form>
+    </div>
+</div>
+<div id="copy">
+    <div id="separator"></div>
+    <span>© 2024 All Rights Reserved, Flash Guys Cleaning</span>
+</div>
+    </footer>
+
 </body>
 
-<!--* Scripts *-->
+<!-- Scripts -->
+
 <!-- Menu Nav -->
 <script src="/assets/scripts/navbar.js"></script>
 <script src="/assets/scripts/menu-nav.js"></script>
@@ -227,9 +309,11 @@
 <script src="/assets/scripts/services.js"></script>
 <script src="/assets/scripts/scroll-x.js"></script>
 <script src="/assets/scripts/included.json"></script>
+
 <!-- Shoelace -->
 <script type="module"
-src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/shoelace-autoloader.js"></script>
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/shoelace-autoloader.js"></script>
+
 <!-- Testimonials -->
 <script type="module" src="/assets/scripts/main.js"></script>
 <script type="module" src="/assets/scripts/pre-form.js"></script>

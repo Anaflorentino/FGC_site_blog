@@ -1,17 +1,18 @@
 @use '../abstracts/variables' as vars;
 
-
 /* Container dos cupons */
 .coupons {
     &__list {
         display: flex;
         gap: 1rem;
+        overflow: auto;
         
         &__item {
             flex: 1 1;
             position: relative;
             transition: all 0.3s ease;
             cursor: pointer;
+            min-width: 225px;
 
             h3 {
                 font-size: 18px;
@@ -44,6 +45,7 @@
                 background-color: vars.$primary-50;
                 transition: opacity 0.3s ease;
                 overflow: hidden;
+                height: 280px;
                 position: relative;
                 box-sizing: border-box; /* Garantir que padding não afete o tamanho do card */
             }
@@ -104,5 +106,5 @@
 
 /* Efeito de hover no botão */
 .coupon-btn:hover {
-    background-color: vars.$text-400;
+    background-color: vars.$text-700;
 }

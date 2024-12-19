@@ -1,11 +1,10 @@
 @use '../abstracts/variables' as vars;
-
+@use '../abstracts/mixins' as mixin;
 
 .section-wrapper {
     background: -webkit-linear-gradient(rgba(255, 70, 192, 0.05) 0%, rgba(21, 165, 246, 0.05) 100%);
     padding: 48px 0;
 }
-
 
 #testimonials-container {
     display: flex;
@@ -29,15 +28,18 @@
 
     &__logos {
         display: flex;
+
         &__description {
             margin-right: 1rem;
-            p, strong {
+
+            p,
+            strong {
                 color: vars.$text-200;
                 font-size: 1rem;
             }
 
-            
         }
+
         &__images {
             display: flex;
             gap: 1.2rem;
@@ -54,14 +56,15 @@
         font-size: .8rem;
     }
 
-
     &__header {
+        text-align: start;
         h2 {
             font-size: 1rem;
+            width: max-content;
         }
 
         &-details {
-            font-size: .8rem;
+            font-size: .7rem;
             text-align: end;
             color: vars.$text-200;
         }
@@ -170,51 +173,26 @@
 
 .modal-content {
     background: white;
-    /* Remove fundo branco */
     padding: 0;
-    /* Remove padding extra */
     border-radius: 12px;
-    /* Remove bordas arredondadas */
     box-shadow: none;
-    /* Remove sombra */
     position: relative;
     height: 80vh;
     overflow: auto;
 }
 
-/* Limitar o comentário a 4 linhas */
 .testimonials p {
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    /* Limita a 4 linhas */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    /* Adiciona "..." no final se o texto for cortado */
+    @include mixin.truncate(4)
 }
 
-/* Limitar a resposta a 2 linhas */
 .testimonials__reply p {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    /* Limita a 2 linhas */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    /* Adiciona "..." no final se o texto for cortado */
+    @include mixin.truncate(2)
 }
 
-/* Remover line-clamp quando o modal estiver aberto */
+// Desabilitar line-clamp para a modal aberta
 .modal .testimonials p,
 .modal .testimonials__reply p {
-    -webkit-line-clamp: unset;
-    /* Remove o limite de linha */
-    display: block;
-    /* Remove o display -webkit-box */
-    overflow: visible;
-    /* Permite que o texto ocupe todo o espaço disponível */
-    text-overflow: unset;
-    /* Remove o "..." */
+    @include mixin.truncate-disabled
 }
 
 /* Estilos para o overlay da imagem expandida */

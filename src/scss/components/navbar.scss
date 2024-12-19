@@ -8,15 +8,20 @@
   background-color: vars.$bg-color;
   color: rgb(27, 27, 27);
   padding: 2% 7%;
+  position: sticky;
+  width: 100%;
+  z-index: 999;
 
   .logo {
     font-size: 1.5em;
     font-weight: bold;
     margin-right: 1rem;
+    flex-shrink: 0; // Impede que o logo encolha
   }
 
   .navbar-buttons {
     display: flex;
+    gap: .5rem;
   }
 
   .nav-list,
@@ -49,9 +54,13 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: vars.$bg-color;
+  background-color: vars.$neutrals-300;
   font-weight: bold;
+  vertical-align: baseline;
   font-size: 16px;
+  color: vars.$bg-color;
+  line-height: 1;
+  font-size: 20px;
   cursor: pointer;
   overflow: hidden;
 
@@ -68,26 +77,22 @@
   right: 0;
   background: vars.$bg-color;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  padding: 24px 24px 12px 24px;
   display: none;
   z-index: 10;
   font-size: 14px;
-  border-radius: 5px;
+  border-radius: 12px;
 
   &.visible {
     display: block;
   }
 
-  div {
-    margin-bottom: 10px;
-  }
-
-  button  {
+  button {
     padding: 5px 10px;
-    background-color: vars.$primary-500;
-    color: white;
     border: none;
+    background-color: transparent;
     cursor: pointer;
+    text-align: start;
     width: 100%;
 
     &:hover {
@@ -96,6 +101,20 @@
   }
 }
 
+#dropdownMenu>button {
+  display: flex;
+  gap: .4rem;
+  color: vars.$text-300;
+  align-items: center;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: vars.$neutrals-50;
+  }
+}
+
+
+// Modal de login
 .nav-modal {
   position: fixed;
   top: 0;
@@ -117,6 +136,7 @@
     padding: 20px;
     border-radius: 8px;
     width: 300px;
+    height: auto;
 
     input {
       width: 100%;
@@ -128,7 +148,9 @@
   }
 }
 
-.google-login-button, #modalLoginButton, #signupModalButton   {
+.google-login-button,
+#modalLoginButton,
+#signupModalButton {
   width: 100%;
   padding: 10px;
   background-color: vars.$primary-500;
@@ -143,6 +165,25 @@
   }
 }
 
+
+.google-login-button {
+  display: flex;
+  gap: .4rem;
+  align-items: center;
+  justify-content: center;
+  background-color: vars.$neutrals-50;
+  color: vars.$text-500;
+
+  &:hover {
+    background-color: vars.$neutrals-100;
+  }
+
+  img {
+    width: 24px;
+  }
+}
+
+
 // Estilos para menu em telas pequenas
 #menu,
 #login,
@@ -153,7 +194,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1202px) {
 
   .nav-list-links li,
   .dashboard,
@@ -167,6 +208,13 @@
   #book-now {
     display: block; // Exibe o ícone do menu
   }
+
+  #menu {
+    margin-right: .5rem;
+    background-color: transparent;
+    border: none;
+  }
+
 }
 
 // Estilos para o menu de navegação (em telas pequenas)
@@ -174,7 +222,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 60px; // Ajuste para a altura da navbar
+  top: 50px; // Ajuste para a altura da navbar
   background-color: vars.$bg-color;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
@@ -195,5 +243,43 @@
         background-color: transparent;
       }
     }
+  }
+}
+
+@media (max-width: 590px) {
+  .navbar {
+    display: block;
+
+  }
+
+}
+
+#user-email {
+  color: vars.$neutrals-300;
+  font-size: .8rem;
+  padding-bottom: .5rem;
+}
+
+#user-name {
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.dropdownDivider {
+  border-top: 1px solid vars.$neutrals-100;
+  padding: .4rem 0;
+  margin-top: .5rem;
+}
+
+#profileDropdown {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: .35rem;
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
   }
 }

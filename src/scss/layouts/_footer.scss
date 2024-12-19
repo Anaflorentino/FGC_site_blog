@@ -1,18 +1,7 @@
 /* * Footer */
-.footer {
+.footer__content {
     padding-top: 56px;
     padding-bottom: 48px;
-    background-color: #ececec; /* Defina a cor de fundo do seu footer, se necessário */
-    color: white; /* Cor do texto */
-
-    #copy {
-        text-align: center;
-        margin: 0 auto;
-        max-width: 80%;
-
-        span {
-            font-size: .8rem;
-        }
     }
 
     #separator {
@@ -25,49 +14,60 @@
         text-decoration: none;
     }
 
-    &__content__logo {
+    .footer__content__logo {
         margin-bottom: .5rem;
     }
-    
-    &__content {
+
+.footer__content {
+    display: flex;
+    flex-wrap: wrap; /* Para garantir que os elementos se ajustem */
+    gap: 1rem;
+    justify-content: space-between; /* Para espaçar os itens quando necessário */
+
+    .footer__content__socials { 
         display: flex;
-        flex-wrap: wrap; /* Para garantir que os elementos se ajustem */
-        gap: 1rem;
-        justify-content: space-between; /* Para espaçar os itens quando necessário */
+        margin-top: 1.5rem;
+        flex-direction: row;
+    }
+    &__column {
+        flex: 1 1; /* Tamanho base para as colunas. Isso garante que as colunas não fiquem menores que 300px */
+        padding: 0 1rem; /* Espaçamento interno nas colunas */
 
-        .footer__content__socials { 
+        h3 {
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        ul {
             display: flex;
-            margin-top: 1.5rem;
-            flex-direction: row;
+            flex-direction: column;
+            gap: .8rem;
+
+            li {
+                font-size: .9rem;
+            }
         }
-        &__column {
-            flex: 1 1; /* Tamanho base para as colunas. Isso garante que as colunas não fiquem menores que 300px */
-            padding: 0 1rem; /* Espaçamento interno nas colunas */
 
-            h3 {
-                margin-bottom: 1.5rem;
-                line-height: 1.2;
-            }
-
-            ul {
-                display: flex;
-                flex-direction: column;
-                gap: .8rem;
-
-                li {
-                    font-size: .9rem;
-                }
-            }
-
-            span {
-                font-size: .8rem;
-            }
-            button, input {
-                width: 100%;
-                margin-bottom: .4rem;
-            }
-
+        span {
+            font-size: .8rem;
         }
+        button, input {
+            width: 100%;
+            margin-bottom: .4rem;
+        }
+
+    }
+}
+
+
+#copy {
+    text-align: center;
+    margin: .4rem auto;
+    max-width: 80%;
+
+    span {
+        font-size: .8rem;
+        margin: 0 auto;
     }
 }
 

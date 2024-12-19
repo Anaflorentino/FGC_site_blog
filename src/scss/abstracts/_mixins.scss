@@ -1,0 +1,15 @@
+// Truncar texto por número de linhas
+@mixin truncate($linhas: 3) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: $linhas;
+}
+
+// Desabilitar truncate
+@mixin truncate-disabled {
+    -webkit-line-clamp: unset;
+    display: block;
+    overflow: visible;
+    text-overflow: unset;
+}

@@ -45,16 +45,21 @@ async function checkAuth() {
           <div class="profile-button" id="profileButton">
             ${userPhoto ? `<img src="${userPhoto}" alt="Profile Photo">` : userInitial}
           </div>
+          <div><span><button id="profileButton"><img src="../assets/images/icons/outline/arrow-down.svg" alt="Arrow-down icon"></button></span></div>
           <div class="dropdown" id="dropdownMenu">
-            <div><strong>Name:</strong> ${userInfo.nome}</div>
-            <div><strong>Email:</strong> ${userInfo.email}</div>
-            <div><strong>Subscription:</strong> ${userInfo.plan}</div>
-            <button id="logoutButton">Log Out</button>
+            <div id="user-name">${userInfo.nome}</div>
+            <div id="user-email">${userInfo.email}</div>
+            <div class="dropdownDivider"></div>
+            <button id="profileButton"><img src="../assets/images/icons/outline/profile.svg" alt="Profile icon">Profile</button>
+            <button id="cleaningsButton"><img src="../assets/images/icons/outline/cleanings.svg" alt="Calendar icon">Cleanings</button>
+            <div class="dropdownDivider"></div>
+            <button id="helpButton"><img src="../assets/images/icons/outline/help.svg" alt="Help icon">Help</button>
+            <button id="logoutButton"><img src="../assets/images/icons/outline/logout.svg" alt="Logout icon">Logout</button>
           </div>
         </div>
       `;
 
-      const profileButton = document.getElementById("profileButton");
+      const profileButton = document.getElementById("profileDropdown");
       const dropdownMenu = document.getElementById("dropdownMenu");
 
       profileButton.addEventListener("click", () => {

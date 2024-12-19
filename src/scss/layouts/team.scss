@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixin;
 
 
 .team {
@@ -91,9 +92,6 @@
 .team__cards__content {
     font-size: .9rem;
     margin: 1.5rem 0;
-    display: -webkit-box;          /* Usado para o comportamento de "caixa flexível" no Webkit */
-    -webkit-box-orient: vertical;  /* Define a orientação das linhas do texto (vertical) */
-    -webkit-line-clamp: 4;         /* Número máximo de linhas antes de truncar */
-    overflow: hidden;              /* Oculta o texto que exceder o limite */
-    text-overflow: ellipsis;       /* Adiciona a elipse (...) */
+    @include mixin.truncate(3)
+    
 }

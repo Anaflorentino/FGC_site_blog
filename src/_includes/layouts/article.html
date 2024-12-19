@@ -1,3 +1,4 @@
+<!-- Template de Artigo -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,43 +15,25 @@
 
         <!-- Título dinâmico -->
         <article class="article">
+            <div class="section__title">
             <h1>{{ title }}</h1>
             <p>{{ description }}</p>
+            </div>
 
             <!-- Imagem dinâmica -->
-            <div class="article__image">
+            <div class="article__image section__title">
                 <img src="{{ image }}" alt="Imagem do post">
             </div>
 
             <!-- Conteúdo dinâmico -->
+             <div class="section__title">
             {{ content | safe }}
+        </div>
         </article>
 
+        <!-- ? Adicionar lógica para os relacionados ? -->
         <section class="featured">
-            <h2>Related articles</h2>
-            <ul class="featured__list">
-                {% for post in collections.featured %}
-                {% if post.url != page.url %}
-                <li role="article" class="featured__list__item">
-                    <a href="{{ post.url }}">
-                        <article>
-                            <div class="featured__image">
-                                <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}">
-                            </div>
-                            <h3>{{ post.data.title }}</h3>
-                            <span>
-                                {% if post.data.categories %}
-                                {{ post.data.categories | join(", ") }}
-                                {% else %}
-                                Sem categorias
-                                {% endif %}
-                            </span>
-                            <p>{{ post.data.description }}</p>
-                        </article>
-                    </a>
-                </li>
-                {% endif %}
-                {% endfor %}
+            <!-- <h2>Related articles</h2> -->
             </ul>
         </section>
 

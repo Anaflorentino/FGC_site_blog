@@ -1,21 +1,31 @@
+<!-- Template de Base -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Basehead -->
     {% include "basehead.html" %}
     {%block head %}{% endblock %}
 </head>
 
 <body>
+    <!-- Header -->
     <header>
         {% include "navbar.html" %}
     </header>
+    <!-- Main -->
     <main>
         {{ content | safe }}
     </main>
+    <!-- Footer -->
+    <footer>
+        {% include "footer.html" %}
+    </footer>
+
 </body>
 
-<!--* Scripts *-->
+<!-- Scripts -->
+
 <!-- Menu Nav -->
 <script src="/assets/scripts/navbar.js"></script>
 <script src="/assets/scripts/menu-nav.js"></script>
@@ -23,9 +33,11 @@
 <script src="/assets/scripts/services.js"></script>
 <script src="/assets/scripts/scroll-x.js"></script>
 <script src="/assets/scripts/included.json"></script>
+
 <!-- Shoelace -->
 <script type="module"
-src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/shoelace-autoloader.js"></script>
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/shoelace-autoloader.js"></script>
+
 <!-- Testimonials -->
 <script type="module" src="/assets/scripts/main.js"></script>
 <script type="module" src="/assets/scripts/pre-form.js"></script>

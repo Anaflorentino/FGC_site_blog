@@ -1,0 +1,86 @@
+---
+pagination:
+    data: collections.posts
+    size: 4
+    alias: paginatedPosts
+    permalink: "/blog/all-articles{% if pagination.pageNumber > 0 %}/{{ pagination.pageNumber + 1 }}{% endif %}.html"
+layout: layouts/base.html
+title: All Articles
+---
+
+
+<div class="container">
+
+    <!-- Pages Index -->
+    <nav class="pagination-links section__title">
+        <ol class="pagination-links__list">
+            <li class="pagination-links__list__item"><a href="/">Home ></a></li>
+            <li class="pagination-links__list__item"><a href="/blog">Blog ></a></li>
+            <li class="pagination-links__list__item"><a href="/blog/all-articles">All articles ></a></li>
+
+            <!-- Exibe o número da página atual -->
+            {% if pagination.pageNumber %}
+            <li class="pagination-links__list__item current-page">
+                Page {{ pagination.pageNumber + 1 }}
+            </li>
+            {% else %}
+            <li class="pagination-links__list__item current-page">
+                Page 1
+            </li>
+            {% endif %}
+
+        </ol>
+    </nav>
+
+    <div class="section__title">
+        <h1>{{ title }}</h1>
+        <p>Stay updated with the latest tips and news in residential cleaning. Here you'll find practical advice,
+            detailed guides, and the newest trends to help you keep your home spotless and healthy.</p>
+    </div>
+
+    <!-- Exibindo os posts -->
+    <div class="articles">
+        <ol role="list">
+            {% for post in paginatedPosts %}
+            <li role="article" class="articles__list__item">
+                <a href="{{ post.url }}">
+                    <article>
+                        <div>
+                            <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}">
+                        </div>
+                        <h3>{{ post.data.title }}</h3>
+                        <span>{{ post.data.categories }}</span>
+                        <p>{{ post.data.description }}</p>
+                    </article>
+                </a>
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
+
+
+    <!-- Pagination -->
+    <div class="pagination">
+        {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous }}" class="enabled">← Página Anterior</a>
+        {% else %}
+        <span class="disabled">← Página Anterior</span>
+        {% endif %}
+
+        <!-- Correção: Acessando corretamente os números das páginas -->
+        {% for page in pagination.pages %}
+        {% if page.url == pagination.href %}
+        <span class="current-page">{{ loop.index }}</span> <!-- Exibe o número da página atual -->
+        {% else %}
+        <a href="{{ page.url }}" class="page-link">{{ loop.index }}</a> <!-- Links para outras páginas -->
+        {% endif %}
+        {% endfor %}
+
+        {% if pagination.href.next %}
+        <a href="{{ pagination.href.next }}" class="enabled">Próxima Página →</a>
+        {% else %}
+        <span class="disabled">Próxima Página →</span>
+        {% endif %}
+    </div>
+
+</div>

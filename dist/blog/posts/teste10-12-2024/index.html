@@ -1,14 +1,15 @@
+<!-- Template de Artigo -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <!-- Basehead -->
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>teste</title>
 <link rel="stylesheet" href="/css/main.css">
 
 <!-- Material Symbols Rounded -->
-<!-- ! Trocar por svg embedados para otimizar performance ! -->
 <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <!-- Shoelace Library -->
@@ -20,36 +21,34 @@
     <header>
         <!-- Navbar -->
 <nav class="navbar">
-        <ul class="nav-list">
-            <div id="menu">
-                <span class="material-symbols-rounded">
-                    menu
-                </span>
-            </div>
-            <a class="logo" href="/"><img
-                    src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
-                    alt=""></a>
-            <div class="nav-list-links">
-                <li><a class="menu-link" href="#">Services</a></li>
-                <li><a class="menu-link" href="#">Subscription</a></li>
-                <li><a class="menu-link" href="#">Support</a></li>
-                <li><a class="menu-link" href="#">Coupons</a></li>
-                <li><a class="menu-link" href="#">About us</a></li>
-                <li><a class="menu-link" href="#">FAQ</a></li>
-                <li><a class="menu-link" href="/blog">Blog</a></li>
-                <li><a href="#"><button id="book-now">Book now</button></a></li>
-            </div>
-        </ul>
-
-        <!-- Login e Signup -->
-        <div class="navbar-buttons">
-            <button class="dashboard-button button button--secondary button--small"
-                id="dashboardButton">Dashboard</button>
-            <div class="auth-container" id="authContainer">
-                <!-- Content dynamically injected by JS -->
-            </div>
-            <button class="book-now button button--primary button--small">Book now</button>
+    <ul class="nav-list">
+        <button id="menu">
+            <span class="material-symbols-rounded">
+                menu
+            </span>
+        </button>
+        <a class="logo" href="/"><img
+                src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
+                alt=""></a>
+        <div class="nav-list-links">
+            <li><a class="menu-link" href="#">Services</a></li>
+            <li><a class="menu-link" href="#">Subscription</a></li>
+            <li><a class="menu-link" href="#">Support</a></li>
+            <li><a class="menu-link" href="#">Coupons</a></li>
+            <li><a class="menu-link" href="#">About us</a></li>
+            <li><a class="menu-link" href="#">FAQ</a></li>
+            <li><a class="menu-link" href="/blog">Blog</a></li>
         </div>
+    </ul>
+
+    <!-- Login e Signup -->
+    <div class="navbar-buttons">
+        <button class="dashboard-button button button--secondary button--small" id="dashboardButton">Dashboard</button>
+        <button class="book-now button button--primary button--small">Book now</button>
+        <div class="auth-container" id="authContainer">
+            <!-- Content dynamically injected by JS -->
+        </div>
+    </div>
     </div>
 </nav>
 
@@ -61,7 +60,7 @@
         <input type="email" id="modalEmail" placeholder="Email" required>
         <input type="password" id="modalPassword" placeholder="Password" required>
         <button id="modalLoginButton">Log In</button>
-        <button class="google-login-button" id="googleLoginButton">Log In with Google</button>
+        <button class="google-login-button" id="googleLoginButton"><img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">Log In with Google</button>
     </div>
 </div>
 
@@ -74,7 +73,7 @@
         <input type="tel" id="signupPhone" placeholder="Phone Number" required>
         <input type="password" id="signupPassword" placeholder="Password" required>
         <button id="signupModalButton">Sign Up</button>
-        <button class="google-login-button" id="googleSignupButton">Sign Up with Google</button>
+        <button class="google-login-button" id="googleSignupButton"><img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">Sign Up with Google</button>
     </div>
 </div>
     </header>
@@ -82,80 +81,26 @@
 
         <!-- Título dinâmico -->
         <article class="article">
+            <div class="section__title">
             <h1>teste</h1>
             <p>teste</p>
+            </div>
 
             <!-- Imagem dinâmica -->
-            <div class="article__image">
+            <div class="article__image section__title">
                 <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1733864717501x600151463502277400/Luuk_de_Jong_2022.jpg" alt="Imagem do post">
             </div>
 
             <!-- Conteúdo dinâmico -->
+             <div class="section__title">
             <p>adasdsadasdsadasa</p>
 
+        </div>
         </article>
 
+        <!-- ? Adicionar lógica para os relacionados ? -->
         <section class="featured">
-            <h2>Related articles</h2>
-            <ul class="featured__list">
-                
-                
-                <li role="article" class="featured__list__item">
-                    <a href="/blog/featured/post-1 copy/">
-                        <article>
-                            <div class="featured__image">
-                                <img src="/assets/images/blog/img-1.jpg" alt="">
-                            </div>
-                            <h3>Post de Exemplo 1</h3>
-                            <span>
-                                
-                                Tutorials, Tips and Tricks
-                                
-                            </span>
-                            <p>A descrição do meu post vai aqui</p>
-                        </article>
-                    </a>
-                </li>
-                
-                
-                
-                <li role="article" class="featured__list__item">
-                    <a href="/blog/featured/post-2 copy/">
-                        <article>
-                            <div class="featured__image">
-                                <img src="/assets/images/blog/img-1.jpg" alt="">
-                            </div>
-                            <h3>Post de Exemplo 2</h3>
-                            <span>
-                                
-                                Tutorials, Tips and Tricks
-                                
-                            </span>
-                            <p>A descrição do meu post vai aqui</p>
-                        </article>
-                    </a>
-                </li>
-                
-                
-                
-                <li role="article" class="featured__list__item">
-                    <a href="/blog/featured/post-3 copy/">
-                        <article>
-                            <div class="featured__image">
-                                <img src="/assets/images/blog/img-1.jpg" alt="">
-                            </div>
-                            <h3>Post de Exemplo 3</h3>
-                            <span>
-                                
-                                Tutorials, Tips and Tricks
-                                
-                            </span>
-                            <p>A descrição do meu post vai aqui</p>
-                        </article>
-                    </a>
-                </li>
-                
-                
+            <!-- <h2>Related articles</h2> -->
             </ul>
         </section>
 

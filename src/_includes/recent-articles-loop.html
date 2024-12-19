@@ -1,0 +1,16 @@
+<!-- Template para Loop de Recent Articles -->
+{% for post in collections.recent %}
+  <div class="column left">
+    <div class="image-container">
+      <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" />
+    </div>
+  </div>
+  <div class="column right">
+    <div class="image-container">
+      <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" />
+    </div>
+    <div class="image-container">
+      <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" />
+    </div>
+  </div>
+{% endfor %}

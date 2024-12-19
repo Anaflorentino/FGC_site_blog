@@ -4,20 +4,27 @@ module.exports = function (eleventyConfig) {
 
     // Configurando coleção "posts" - Todos os posts no blog
     eleventyConfig.addCollection("posts", function (collectionApi) {
-        console.log(collectionApi.getFilteredByGlob("src/blog/posts/**/*.md"));  // Apenas para debugging, pode ser removido
         return collectionApi.getFilteredByGlob("src/blog/posts/**/*.md");
     });
 
     // Criando uma coleção "featured" - Posts destacados
-    eleventyConfig.addCollection("featured", function(collectionApi) {
+    eleventyConfig.addCollection("featured", function (collectionApi) {
         // Filtra todos os arquivos dentro da pasta "featured"
         return collectionApi.getFilteredByGlob("src/blog/featured/*.md");
     });
+
+    // Criando uma coleção "featured" - Posts destacados
+    eleventyConfig.addCollection("recent", function (collectionApi) {
+        // Filtra todos os arquivos dentro da pasta "featured"
+        return collectionApi.getFilteredByGlob("src/blog/recent/*.md");
+    });
+
 
     // Filtro personalizado para repetir caracteres (como "*****")
     eleventyConfig.addFilter("repeat", function (string, times) {
         return string.repeat(times);
     });
+    
 
     return {
         dir: {

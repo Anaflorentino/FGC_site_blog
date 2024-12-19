@@ -10,8 +10,44 @@
     color: vars.$text-300;
 
     &:hover {
-    color: vars.$text-500;
-    background-color: vars.$neutrals-50;
+        color: vars.$text-500;
+        background-color: vars.$neutrals-50;
 
     }
+}
+
+.link-text {
+    color: vars.$accent-500;
+    font-size: 14px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 600;
+
+    &:hover {
+        color: vars.$accent-600;
+    }
+}
+
+.pagination-links {
+    &__list {
+        display: flex;
+        align-items: baseline;
+        list-style: none;
+        gap: .4rem;
+    }
+}
+
+/* Estilo geral para os links */
+.pagination-links__list__item a {
+    color: vars.$text-300;
+
+    &:hover {
+        color: vars.$text-500;
+    }
+}
+
+/* Estilo para o último link */
+.pagination-links__list__item:last-child a {
+    color: vars.$text-500;
 }

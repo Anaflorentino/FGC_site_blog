@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: Axiforma;
     color: #344051;
+    
     ul {
         li {
             list-style: none;
@@ -20,3 +21,11 @@
         resize: none
     }
 }
+
+/* Desabilitar a seleção de texto em dispositivos móveis e tablets */
+@media (max-width: 768px) {
+    * {
+        user-select: none;
+    }
+}
+

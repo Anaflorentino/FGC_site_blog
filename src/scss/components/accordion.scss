@@ -30,33 +30,40 @@
 /* Elemento do conteúdo do acordeão */
 .accordion__content {
   display: none;
-  padding: 15px;
+  padding: 0.8rem;
   background-color: vars.$neutrals-50;
   border-radius: 0 0 12px 12px;
-  position: relative; /* Necessário para posicionar a borda */
+  position: relative;
+  /* Necessário para posicionar a borda */
 
+a {
+  padding: 0 0.8rem;
 
+}
 
   p {
     margin-bottom: 1rem;
     font-size: .8rem;
+    padding: 0 0.8rem;
+
   }
 }
 
 .material-symbols-rounded.add {
-  color: vars.$primary-500; /* Cor rosa */
+  color: vars.$primary-500;
+  /* Cor rosa */
 }
 
 .accordion__button.open {
-  border-radius: 12px 12px  0 0; /* Novo valor do border-radius quando aberto */
+  border-radius: 12px 12px 0 0;
+  /* Novo valor do border-radius quando aberto */
 }
 
 .accordion__content::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    transform: translateX(-40%);
-    width: 42%;
-    border-bottom: 2.5px solid vars.$primary-500;
-    overflow: hidden;
-  }
+  content: "";
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-40%);
+  width: 40%;
+  overflow: hidden;
+}

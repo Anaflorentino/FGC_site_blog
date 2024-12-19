@@ -8,86 +8,88 @@ layout: layouts/base.html
 title: Latest posts
 ---
 
-
 <div class="container">
-<nav class="pagination-links">
-  <ol class="pagination-links__list">
-    <li class="pagination-links__list__item"><a href="/">Home ></a></li>
-    <li class="pagination-links__list__item"><a href="#">Blog</a></li>
-  </ol>
-</nav>
-<h1>{{ title }}</h1>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque cum distinctio earum, libero similique rerum assumenda eius esse sit impedit quae cumque, laborum ratione hic! Nam animi nesciunt excepturi dicta.</p>
 
-<!--! Featured Articles -- Adicionar loop !-->
-<div class="featured-container">
-  {% for post in paginatedPosts %}
-  <div class="column left">
-    <div class="image-container">
-      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
-    </div>
-  </div>
-  <div class="column right">
-    <div class="image-container">
-      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
-    </div>
-    <div class="image-container">
-      <img src="/assets/images/blog/img-1.jpg" alt="Image Placeholder" />
-    </div>
-  </div>
-  {% endfor %}
-</div>
-
-
-<!-- Ler todos os artigos -->
-<section class="articles">
-  <h2>All articles</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae commodi facilis mollitia, earum porro veniam consequuntur eos et, eaque consequatur sit veritatis corporis placeat at excepturi iusto ipsum. Molestias, cumque.</p>
-  <button>View all</button>
-  <ol role="list" class="articles__list">
-    
-    <!-- * Loop de Conteúdo de Todos os Posts do Site * -->
-    {% for post in paginatedPosts %}
-      <li role="article" class="articles__list__item">
-        <a href="{{  post.url }}">
-        <article>
-          <div class="articles__image">
-            <img src="{{ post.data.image}}" alt="{{ post.data.imageAlt}}">
-          </div>
-          <h3>{{ post.data.title }}</h3>
-          <span>{{ post.data.categories }}</span>
-          <p>{{ post.data.description }}</p>
-        </article>
-      </a>
-      </li>
-      {% endfor %}
-  
+  <!-- Pages Index -->
+  <nav class="pagination-links section__title">
+    <ol class="pagination-links__list">
+      <li class="pagination-links__list__item"><a href="/">Home ></a></li>
+      <li class="pagination-links__list__item"><a href="#">Blog</a></li>
     </ol>
-</section>
+  </nav>
 
-<!-- Paginação funcionando! -->
-<div class="pagination">
-  <!-- Link para página anterior -->
-  {% if pagination.href.previous %}
-    <a href="{{ pagination.href.previous }}" class="enabled">← Página Anterior</a>
-  {% else %}
-    <span class="disabled">← Página Anterior</span>
-  {% endif %}
+  <div class="section__title">
+    <h1>{{ title }}</h1>
+    <p>Stay updated with the latest tips and news in residential cleaning. Here you'll find practical advice, detailed guides, and the newest trends to help you keep your home spotless and healthy.</p>
+  </div>
 
-  <!-- Números das páginas -->
-  {% for pageNumber in pagination.pages %}
-    {% if pageNumber === pagination.pageNumber %}
-      <span class="current-page">{{ loop.index }}</span>
+  <!-- Loop para Artigos Recentes (Recent Articles) -->
+  <div class="featured-container section__title">
+    {% for post in collections.recent | reverse %}
+      <div class="column left">
+        <div class="image-container">
+          <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" />
+        </div>
+      </div>
+      <div class="column right">
+        <div class="image-container">
+          <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" />
+        </div>
+        <div class="image-container">
+          <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" />
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Seção de preview para todos os Artigos -->
+  <section class="articles">
+    <div class="section__title">
+      <h2>Cleaning tips</h2>
+      <p>Transform your cleaning routine! Discover our curated cleaning tips that make maintaining a spotless home a breeze. Click now to discover the secrets that will save you time and energy.</p>
+      <a href="all-articles/"><button class="button button--secondary button--small">View all</button></a>
+    </div>
+    <ol role="list" class="articles__list">
+      {% for post in paginatedPosts | reverse %}
+        <li role="article" class="articles__list__item">
+          <a href="{{ post.url }}">
+            <article>
+              <div class="articles__image">
+                <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}">
+              </div>
+              <h3 class="articles__title">{{ post.data.title }}</h3>
+              <span class="articles__categorie">{{ post.data.categories }}</span>
+              <p class="articles__description">{{ post.data.description }}</p>
+            </article>
+          </a>
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <!-- Paginação de posts -->
+<!--   
+   <div class="pagination"> 
+    {% if pagination.href.previous %}
+      <a href="{{ pagination.href.previous }}" class="enabled">← Página Anterior</a>
     {% else %}
-      <a href="{{ pagination.hrefs[loop.index0] }}">{{ loop.index }}</a>
+      <span class="disabled">← Página Anterior</span>
     {% endif %}
-  {% endfor %}
 
-  <!-- Link para próxima página -->
-  {% if pagination.href.next %}
-    <a href="{{ pagination.href.next }}" class="enabled">Próxima Página →</a>
-  {% else %}
-    <span class="disabled">Próxima Página →</span>
-  {% endif %}
-</div>
+    {% for pageNumber in pagination.pages %}
+      {% if pageNumber === pagination.pageNumber %}
+        <span class="current-page">{{ loop.index }}</span>
+      {% else %}
+        <a href="{{ pagination.hrefs[loop.index0] }}">{{ loop.index }}</a>
+      {% endif %}
+    {% endfor %}
+
+    {% if pagination.href.next %}
+      <a href="{{ pagination.href.next }}" class="enabled">Próxima Página →</a>
+    {% else %}
+      <span class="disabled">Próxima Página →</span>
+    {% endif %}
+  </div>  -->
+
+
 </div>

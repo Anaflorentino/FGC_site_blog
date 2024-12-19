@@ -81,19 +81,22 @@
 
     .services__nav {
         flex-wrap: nowrap;
-        overflow-x: auto; /* Permite rolar lateralmente, mas esconde a barra quando não necessário */
-        overflow-y: hidden; /* Esconde a barra de rolagem vertical */
-        -ms-overflow-style: none; /* Para ocultar a barra de rolagem no Internet Explorer */
-        scrollbar-width: none; /* Para ocultar a barra de rolagem em Firefox */
-        width: 150%; /* Aumenta a largura para garantir o transbordo */
+        overflow-x: auto; 
+        overflow-y: hidden;
+        -ms-overflow-style: none; 
+        scrollbar-width: none;
+        width: 105%;
+        padding-right: 5%;
+
+        button {
+            white-space: pre;
+        }
     }
 
     .services__nav::-webkit-scrollbar {
         display: none; /* Esconde a barra de rolagem no WebKit (Chrome, Safari, etc.) */
     }
     
-    button {
-        white-space: pre;
-    }
+    
 }
 
