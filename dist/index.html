@@ -63,6 +63,8 @@
         <input type="password" id="modalPassword" placeholder="Password" required>
         <button id="modalLoginButton">Log In</button>
         <button class="google-login-button" id="googleLoginButton"><img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">Log In with Google</button>
+        <span id="privacyPolicy"><p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="#">Privacy Policy</a>.</p></span>
+        <span class="account">Don't have an account?<button id="sign-btn">Create an account</button></span>
     </div>
 </div>
 
@@ -76,6 +78,7 @@
         <input type="password" id="signupPassword" placeholder="Password" required>
         <button id="signupModalButton">Sign Up</button>
         <button class="google-login-button" id="googleSignupButton"><img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">Sign Up with Google</button>
+        <span class="account">Already have an account?<button id="login-btn">Log in</button></span>
     </div>
 </div>
     </header>
@@ -84,6 +87,7 @@
         
 <!-- ? Head em '_includes/basehead.html' ? -->
 <!-- ? Header em '_includes/navbar' ? -->
+
 
 <!-- * Hero Section * -->
 <section class="hero">
@@ -575,6 +579,7 @@
 </section>
 
 <!-- * Subscriptions Section * -->
+ <!-- ! Bater os valores ! -->
 <section class="subscription">
     <div class="section__title section__title--center">
         <h2>Discover our subscription plans</h2>
@@ -589,7 +594,7 @@
             </div>
             <div class="plan__pricing">
                 <span class="plan__price">$120.84</span>
-                <span>Starting price</span>
+                <span class="starting">Starting price</span>
             </div>
             <h4>Every week visit</h4>
             <ul class="plan__benefits">
@@ -614,7 +619,7 @@
             </div>
             <div class="plan__pricing">
                 <span class="plan__price">$148.74</span>
-                <span>Starting price</span>
+                <span class="starting">Starting price</span>
             </div>
             <h4>Biweekly visit</h4>
             <ul class="plan__benefits">
@@ -639,7 +644,7 @@
             </div>
             <div class="plan__pricing">
                 <span class="plan__price">$164.25</span>
-                <span>Starting price</span>
+                <span class="starting">Starting price</span>
             </div>
             <h4>Monthly visit</h4>
             <ul class="plan__benefits">
@@ -755,15 +760,13 @@
 <!-- ! Criar What's Included ! -->
 
 <!-- * Featured Articles * -->
+<!-- ? Arquivos do blog em 'blog/' e templates em '_includes/' ? -->
 <div class="container">
     <section class="articles">
         <div class="section__title section__title--button">
             <div>
-                <h2>All articles</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae commodi facilis mollitia, earum porro
-                    veniam consequuntur eos et, eaque consequatur sit veritatis corporis placeat at excepturi iusto
-                    ipsum.
-                    Molestias, cumque.</p>
+                <h2>Cleaning tips</h2>
+                <p>Find simple, helpful tips to make cleaning easy and keep your home always sparkling clean</p>
             </div>
             <div><button class="button button--secondary button--small"><a href="/blog">View all</a></button></div>
         </div>
@@ -771,57 +774,57 @@
         <!-- 4 divs para receber os posts -->
         <div class="articles__list">
             <div class="articles__list__item">
-                <a href="/blog/featured/post-1 copy/">
+                <a href="">
                     <article>
                         <div class="articles__image">
-                            <img src="/assets/images/blog/img-1.jpg"
+                            <img src=""
                                 alt="">
                         </div>
-                        <h3 class="articles__title">Post de Exemplo 1</h3>
-                        <span class="articles__categories">Tutorials,Tips and Tricks</span>
-                        <p class="articles__description">A descrição do meu post vai aqui</p>
+                        <h3 class="articles__title"></h3>
+                        <span class="articles__categories"></span>
+                        <p class="articles__description"></p>
                     </article>
                 </a>
             </div>
 
             <div class="articles__list__item">
-                <a href="/blog/featured/post-2 copy 2/">
+                <a href="">
                     <article>
                         <div class="articles__image">
-                            <img src="/assets/images/blog/img-1.jpg"
+                            <img src=""
                                 alt="">
                         </div>
-                        <h3 class="articles__title">Post de Exemplo 2</h3>
-                        <span class="articles__categories">Tutorials,Tips and Tricks</span>
-                        <p class="articles__description">A descrição do meu post vai aqui</p>
+                        <h3 class="articles__title"></h3>
+                        <span class="articles__categories"></span>
+                        <p class="articles__description"></p>
                     </article>
                 </a>
             </div>
 
             <div class="articles__list__item">
-                <a href="/blog/featured/post-2 copy 3/">
+                <a href="">
                     <article>
                         <div class="articles__image">
-                            <img src="/assets/images/blog/img-1.jpg"
+                            <img src=""
                                 alt="">
                         </div>
-                        <h3 class="articles__title">Post de Exemplo 2</h3>
-                        <span class="articles__categories">Tutorials,Tips and Tricks</span>
-                        <p class="articles__description">A descrição do meu post vai aqui</p>
+                        <h3 class="articles__title"></h3>
+                        <span class="articles__categories"></span>
+                        <p class="articles__description"></p>
                     </article>
                 </a>
             </div>
 
             <div class="articles__list__item">
-                <a href="/blog/featured/post-2 copy 4/">
+                <a href="">
                     <article>
                         <div class="articles__image">
-                            <img src="/assets/images/blog/img-1.jpg"
+                            <img src=""
                                 alt="">
                         </div>
-                        <h3 class="articles__title">Post de Exemplo 2</h3>
-                        <span class="articles__categories">Tutorials,Tips and Tricks</span>
-                        <p class="articles__description">A descrição do meu post vai aqui</p>
+                        <h3 class="articles__title"></h3>
+                        <span class="articles__categories"></span>
+                        <p class="articles__description"></p>
                     </article>
                 </a>
             </div>
@@ -912,6 +915,7 @@
     </div>
 </section>
 
+
 <!-- ? Footer em '_includes/footer.html' ? -->
     </main>
     <!-- Footer -->
@@ -929,9 +933,9 @@
             <li><a href="#">Policy Privacy</a></li>
         </ul>
         <ul class="footer__content__socials">
-            <li><img src="/assets/images/icons/social/facebook.svg" alt="Facebook brand logo"></li>
-            <li><img src="/assets/images/icons/social/youtube.svg" alt="YouTube brand logo"></li>
-            <li><img src="/assets/images/icons/social/instagram.svg" alt="instagram brand logo"></li>
+            <li><a href=""><img src="/assets/images/icons/social/facebook.svg" alt="Facebook brand logo"></a></li>
+            <li><a href="#"><img src="/assets/images/icons/social/youtube.svg" alt="YouTube brand logo"></a></li>
+            <li><a href="#"><img src="/assets/images/icons/social/instagram.svg" alt="Instagram brand logo"></a></li>
         </ul>
     </div>
     <div class="footer__content__column">

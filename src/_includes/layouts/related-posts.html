@@ -1,0 +1,23 @@
+<!-- * Seção de preview para todos os Artigos -->
+<section class="articles">
+    <div class="section__title">
+      <h2>Cleaning tips</h2>
+      <p>Transform your cleaning routine! Discover our curated cleaning tips that make maintaining a spotless home a breeze. Click now to discover the secrets that will save you time and energy.</p>
+      <a href="all-articles/"><button class="button button--secondary button--small">View all</button></a>
+    </div>
+    <ol role="list" class="articles__list">
+      {% for post in collections.posts | reverse %}
+        <li role="article" class="articles__list__item">
+          <a href="{{ post.url }}">
+            <article>
+              <div class="articles__image">
+                <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}">
+              </div>
+              <h3 class="articles__title">{{ post.data.title }}</h3>
+              <span class="articles__categories">{{ post.data.tags }}</span>
+              <p class="articles__description">{{ post.data.description }}</p>
+            </article>
+          </a>
+        </li>
+      {% endfor %}
+    </ol>

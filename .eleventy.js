@@ -1,11 +1,10 @@
 module.exports = function (eleventyConfig) {
-    // Adicionando os assets ao build (arquivos estáticos)
-    eleventyConfig.addPassthroughCopy("src/assets/");
 
     // Configurando coleção "posts" - Todos os posts no blog
     eleventyConfig.addCollection("posts", function (collectionApi) {
         return collectionApi.getFilteredByGlob("src/blog/posts/**/*.md");
     });
+
 
     // Criando uma coleção "featured" - Posts destacados
     eleventyConfig.addCollection("featured", function (collectionApi) {
@@ -24,7 +23,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("repeat", function (string, times) {
         return string.repeat(times);
     });
-    
+
 
     return {
         dir: {

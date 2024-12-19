@@ -1,9 +1,4 @@
 ---
-pagination:
-  data: collections.posts
-  size: 4
-  alias: paginatedPosts
-permalink: /blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}
 layout: layouts/base.html
 title: Latest posts
 ---
@@ -23,73 +18,56 @@ title: Latest posts
     <p>Stay updated with the latest tips and news in residential cleaning. Here you'll find practical advice, detailed guides, and the newest trends to help you keep your home spotless and healthy.</p>
   </div>
 
-  <!-- Loop para Artigos Recentes (Recent Articles) -->
-  <div class="featured-container section__title">
-    {% for post in collections.recent | reverse %}
-      <div class="column left">
-        <div class="image-container">
-          <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" />
-        </div>
-      </div>
-      <div class="column right">
-        <div class="image-container">
-          <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" />
-        </div>
-        <div class="image-container">
-          <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" />
-        </div>
-      </div>
+<!-- * Loop para recentes | Posts -->
+<div class="featured-container section__title">
+  <div>
+    {% for post in collections.posts | sort(attribute='date', reverse=true) %}
+      {% if loop.index <= 3 %}
+        {% if loop.index is divisibleby(2) %}
+          <div class="column left">
+            <span>{{ post.data.tags }}</span>
+            <div class="image-container">
+              <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" />
+            </div>
+          </div>
+        {% else %}
+          <div class="column right">
+            <span>{{ post.data.tags }}</span>
+            <div class="image-container">
+              <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" />
+
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
     {% endfor %}
   </div>
+</div
 
-  <!-- Seção de preview para todos os Artigos -->
+
+  <!-- * Seção de preview para todos os Artigos -->
   <section class="articles">
     <div class="section__title">
       <h2>Cleaning tips</h2>
       <p>Transform your cleaning routine! Discover our curated cleaning tips that make maintaining a spotless home a breeze. Click now to discover the secrets that will save you time and energy.</p>
       <a href="all-articles/"><button class="button button--secondary button--small">View all</button></a>
     </div>
+    
     <ol role="list" class="articles__list">
-      {% for post in paginatedPosts | reverse %}
-        <li role="article" class="articles__list__item">
-          <a href="{{ post.url }}">
-            <article>
-              <div class="articles__image">
-                <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}">
-              </div>
-              <h3 class="articles__title">{{ post.data.title }}</h3>
-              <span class="articles__categorie">{{ post.data.categories }}</span>
-              <p class="articles__description">{{ post.data.description }}</p>
-            </article>
-          </a>
-        </li>
+      {% for post in collections.posts | sort(attribute='date', reverse=true) %}
+        {% if loop.index <= 4 %}
+          <li role="article" class="articles__list__item">
+            <a href="{{ post.url }}">
+              <article>
+                <div class="articles__image">
+                  <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}">
+                </div>
+                <h3 class="articles__title">{{ post.data.title }}</h3>
+                <span class="articles__categories">{{ post.data.tags }}</span>
+                <p class="articles__description">{{ post.data.description }}</p>
+              </article>
+            </a>
+          </li>
+        {% endif %}
       {% endfor %}
     </ol>
-  </section>
-
-  <!-- Paginação de posts -->
-<!--   
-   <div class="pagination"> 
-    {% if pagination.href.previous %}
-      <a href="{{ pagination.href.previous }}" class="enabled">← Página Anterior</a>
-    {% else %}
-      <span class="disabled">← Página Anterior</span>
-    {% endif %}
-
-    {% for pageNumber in pagination.pages %}
-      {% if pageNumber === pagination.pageNumber %}
-        <span class="current-page">{{ loop.index }}</span>
-      {% else %}
-        <a href="{{ pagination.hrefs[loop.index0] }}">{{ loop.index }}</a>
-      {% endif %}
-    {% endfor %}
-
-    {% if pagination.href.next %}
-      <a href="{{ pagination.href.next }}" class="enabled">Próxima Página →</a>
-    {% else %}
-      <span class="disabled">Próxima Página →</span>
-    {% endif %}
-  </div>  -->
-
-
-</div>

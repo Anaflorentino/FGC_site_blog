@@ -15,8 +15,27 @@ const formatDate = (date) => {
   return `${year}-${month}-${day}`;
 };
 
+// Função para converter BBCode para Markdown
+const bbcodeToMarkdown = (content) => {
+  // Substitui a tag [size=4] para títulos de nível 2 (##)
+  content = content.replace(/\[size=\d+\](.*?)\[\/size\]/g, '## $1');
+  
+  // Substitui as tags de negrito [b] para ** em Markdown
+  content = content.replace(/\[b\](.*?)\[\/b\]/g, '**$1**');
+  
+  // Substitui as tags de itálico [i] para * em Markdown
+  content = content.replace(/\[i\](.*?)\[\/i\]/g, '*$1*');
+  
+  // Adicione mais substituições conforme necessário, como [url], [img], etc.
+  
+  return content;
+};
+
 // Função para gerar o conteúdo do Markdown
 const generateMarkdown = (data) => {
+  const contentWithMarkdown = bbcodeToMarkdown(data.content); // Converte BBCode para Markdown
+  const tags = data.tags ? data.tags.split(',').map(tag => tag.trim()).join(', ') : ''; // Trata as tags
+
   return `
 ---
 layout: ${data.layout}
@@ -25,9 +44,10 @@ date: ${formatDate(data.date)}
 author: ${data.author}
 description: ${data.description}
 image: "${data.image}"
+tags: ${tags}
 ---
 
-${data.content}
+${contentWithMarkdown}
   `.trim();
 };
 
