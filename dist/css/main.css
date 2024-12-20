@@ -114,11 +114,8 @@ ul li {
   border-radius: 50%;
   background-color: #a5adb5;
   font-weight: bold;
-  vertical-align: baseline;
-  font-size: 16px;
-  color: white;
-  line-height: 1;
   font-size: 20px;
+  color: white;
   cursor: pointer;
   overflow: hidden;
 }
@@ -134,7 +131,7 @@ ul li {
   right: 0;
   background: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 24px 24px 12px 24px;
+  padding: 24px 24px 12px;
   display: none;
   z-index: 10;
   font-size: 14px;
@@ -167,13 +164,13 @@ ul li {
 }
 
 .nav-modal {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  display: none;
   z-index: 999;
   justify-content: center;
   align-items: center;
@@ -223,8 +220,7 @@ ul li {
   margin-bottom: 24px;
 }
 .google-login-button:hover {
-  background-color: #d5d9dd;
-  opacity: 0.8;
+  background-color: rgba(224, 217, 217, 0.685);
 }
 .google-login-button img {
   width: 24px;
@@ -325,7 +321,7 @@ ul li {
   text-decoration: underline;
 }
 #forgotPassword:hover {
-  color: #555e67;
+  color: #6d7984;
 }
 
 #modalPassword {
@@ -352,7 +348,8 @@ ul li {
 .account {
   font-size: 14px;
 }
-.account #sign-btn, .account #login-btn {
+.account #sign-btn,
+.account #login-btn {
   margin-left: 4px;
   border: none;
   font-size: 14px;
@@ -361,8 +358,33 @@ ul li {
   font-weight: 700;
   color: #ff4667;
 }
-.account #sign-btn:hover, .account #login-btn:hover {
+.account #sign-btn:hover,
+.account #login-btn:hover {
   color: #e8405e;
+}
+
+.button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Inicialmente, escondemos as modais */
+.nav-modal {
+  display: none;
+}
+
+.nav-modal.visible {
+  display: block;
+}
+
+/* Algumas melhorias na aparência */
+.modal-content {
+  padding: 20px;
+  background-color: #fff;
+  width: 400px;
+  margin: 100px auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .featured-articles__list {
