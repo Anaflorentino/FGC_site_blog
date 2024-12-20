@@ -15,26 +15,39 @@ const formatDate = (date) => {
   return `${year}-${month}-${day}`;
 };
 
-// Função para converter BBCode para Markdown
+// Função para converter BBCode ou HTML para Markdown
 const bbcodeToMarkdown = (content) => {
-  // Substitui a tag [size=4] para títulos de nível 2 (##)
-  content = content.replace(/\[size=\d+\](.*?)\[\/size\]/g, '## $1');
-  
-  // Substitui as tags de negrito [b] para ** em Markdown
+  content = content.replace(/<h([1-6])>(.*?)<\/h\1>/g, (match, p1, p2) => {
+    const hashes = '#'.repeat(p1); 
+    return `${hashes} ${p2}`;
+  });
+
+  content = content.replace(/\[h2\](.*?)\[\/h2\]/g, '## $1');
+  content = content.replace(/\[h3\](.*?)\[\/h3\]/g, '### $1');
   content = content.replace(/\[b\](.*?)\[\/b\]/g, '**$1**');
-  
-  // Substitui as tags de itálico [i] para * em Markdown
   content = content.replace(/\[i\](.*?)\[\/i\]/g, '*$1*');
-  
-  // Adicione mais substituições conforme necessário, como [url], [img], etc.
-  
+  content = content.replace(/\[u\](.*?)\[\/u\]/g, '~$1~');
+  content = content.replace(/\[url=(.*?)\](.*?)\[\/url\]/g, '[$2]($1)');
+  content = content.replace(/\[url\](.*?)\[\/url\]/g, '[$1]($1)');
+  content = content.replace(/\[img\](.*?)\[\/img\]/g, '![]($1)');
+  content = content.replace(/\[img=(.*?)\](.*?)\[\/img\]/g, '![$2]($1)');
+  content = content.replace(/\[list\](.*?)\[\/list\]/gs, (match, p1) => {
+    return p1.replace(/\[\*\](.*?)\[/g, '\n- $1\n');
+  });
+
+  content = content.replace(/\[ul\]/g, '').replace(/\[\/ul\]/g, '');
+  content = content.replace(/\[ol\]/g, '').replace(/\[\/ol\]/g, '');
+  content = content.replace(/<br\s*\/?>/g, '\n');
+  content = content.replace(/<\/?p>/g, '\n');
+  content = content.replace(/<blockquote>(.*?)<\/blockquote>/gs, '> $1');
+
   return content;
 };
 
 // Função para gerar o conteúdo do Markdown
 const generateMarkdown = (data) => {
-  const contentWithMarkdown = bbcodeToMarkdown(data.content); // Converte BBCode para Markdown
-  const tags = data.tags ? data.tags.split(',').map(tag => tag.trim()).join(', ') : ''; // Trata as tags
+  const contentWithMarkdown = bbcodeToMarkdown(data.content); 
+  const tags = data.tags ? data.tags.split(',').map(tag => tag.trim()).join(', ') : ''; 
 
   return `
 ---
@@ -51,18 +64,61 @@ ${contentWithMarkdown}
   `.trim();
 };
 
-// Função para criar o arquivo Markdown
-const createMarkdownFile = (entry) => {
-  const fileName = entry.file_name; // Nome do arquivo baseado no campo 'file_name'
+// Função para criar o arquivo Markdown com artigos relacionados
+const createMarkdownFile = (entry, allArticles) => {
+  const fileName = entry.file_name;
   const markdownContent = generateMarkdown(entry);
+  const relatedArticles = findRelatedArticles(entry, allArticles);
+  
+  let relatedArticlesHtml = '';
+
+  if (relatedArticles.length > 0) {
+    relatedArticlesHtml = `
+    <div class="related-articles">
+      <h2>Artigos Relacionados</h2>
+      <ul>
+        ${relatedArticles.map(article => {
+          return `
+            <li class="related-article">
+              <div class="related-article-image">
+                <img src="${article.image}" alt="${article.title}">
+              </div>
+              <div class="related-article-info">
+                <h3><a href="/blog/posts/${article.file_name}/">${article.title}</a></h3>
+                <p>${article.description}</p>
+                <p class="tags">Tags: ${article.tags}</p>
+              </div>
+            </li>
+          `;
+        }).join('')}
+      </ul>
+    </div>
+    `;
+  }
+
+  const finalContent = markdownContent + '\n\n' + relatedArticlesHtml;
+
   const filePath = path.join(outputDir, `${fileName}.md`);
 
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
-  fs.writeFileSync(filePath, markdownContent, 'utf8');
+  fs.writeFileSync(filePath, finalContent, 'utf8');
   console.log(`Arquivo Markdown gerado: ${filePath}`);
+};
+
+// Função para encontrar artigos relacionados com base nas tags
+const findRelatedArticles = (currentArticle, allArticles) => {
+  const currentTags = currentArticle.tags.split(',').map(tag => tag.trim());
+  
+  return allArticles.filter(article => {
+    if (article.file_name === currentArticle.file_name) return false; // Exclui o próprio artigo
+    
+    const articleTags = article.tags.split(',').map(tag => tag.trim());
+    
+    return articleTags.some(tag => currentTags.includes(tag));
+  });
 };
 
 // Função para buscar dados da API e salvar arquivos .json na pasta data
@@ -72,9 +128,6 @@ const fetchDataFromAPI = async () => {
 
     const response = await axios.get(API_URL);
 
-    // Inspeciona a estrutura da resposta da API
-    console.log('Resposta da API:', response.data);
-
     const data = response.data?.response?.results || response.data?.results || response.data;
 
     if (Array.isArray(data)) {
@@ -82,7 +135,6 @@ const fetchDataFromAPI = async () => {
         fs.mkdirSync(dataDir, { recursive: true });
       }
 
-      // Salva cada item como um arquivo .json individual na pasta data
       data.forEach((item, index) => {
         const filePath = path.join(dataDir, `post_${index + 1}.json`);
         fs.writeFileSync(filePath, JSON.stringify(item, null, 2), 'utf-8');
@@ -108,15 +160,16 @@ const convertJsonToMarkdown = () => {
   }
 
   const files = fs.readdirSync(dataDir);
-
-  files.forEach((file) => {
-    if (path.extname(file) === '.json') {
+  
+  const allArticles = files
+    .filter(file => path.extname(file) === '.json')
+    .map(file => {
       const filePath = path.join(dataDir, file);
-      const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+      return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    });
 
-      // Usa o campo 'file_name' como o nome do arquivo .md
-      createMarkdownFile(data);
-    }
+  allArticles.forEach((article) => {
+    createMarkdownFile(article, allArticles);
   });
 };
 

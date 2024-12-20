@@ -18,6 +18,9 @@
 * textarea {
   resize: none;
 }
+* a {
+  text-decoration: none;
+}
 
 /* Desabilitar a seleção de texto em dispositivos móveis e tablets */
 @media (max-width: 768px) {
@@ -730,6 +733,122 @@ textarea {
   min-height: 120px;
 }
 
+.footer__content {
+  padding-top: 56px;
+  padding-bottom: 48px;
+}
+.footer__content a {
+  text-decoration: none;
+  line-height: 1.5;
+}
+.footer__content a:hover {
+  color: #777f8a;
+}
+
+#separator {
+  border-top: 0.1px solid rgb(206, 206, 206);
+  display: flex;
+  margin: 2rem 0;
+}
+
+.footer__content__logo {
+  margin-bottom: 1.2rem;
+}
+
+.footer__content {
+  display: flex;
+  flex-wrap: wrap;
+  /* Para garantir que os elementos se ajustem */
+  gap: 1rem;
+  justify-content: space-between;
+  /* Para espaçar os itens quando necessário */
+}
+.footer__content .footer__content__socials {
+  display: flex;
+  margin-top: 1.5rem;
+  flex-direction: row;
+}
+.footer__content__column {
+  flex: 1 1;
+  /* Tamanho base para as colunas. Isso garante que as colunas não fiquem menores que 300px */
+  padding: 0 1rem;
+  /* Espaçamento interno nas colunas */
+}
+.footer__content__column h3 {
+  margin-bottom: 2.3rem;
+  line-height: 1.2;
+}
+.footer__content__column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.footer__content__column ul li {
+  font-size: 0.9rem;
+}
+.footer__content__column span {
+  font-size: 0.8rem;
+}
+.footer__content__column button,
+.footer__content__column input {
+  width: 100%;
+  margin-bottom: 0.4rem;
+}
+
+#copy {
+  text-align: center;
+  margin: 0.4rem auto;
+  max-width: 80%;
+}
+#copy span {
+  font-size: 0.8rem;
+  margin: 0 auto;
+}
+
+div.footer__content__column:nth-child(6) {
+  min-width: 205px;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .footer {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  .footer__content {
+    gap: 0.5rem;
+  }
+  .footer__content__column {
+    flex: 1 1 45%;
+    /* Colunas em 2 para telas médias */
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .footer__content__column {
+    flex: 1 1 100%;
+    /* As colunas ficam empilhadas em telas pequenas */
+  }
+}
+@media (max-width: 480px) {
+  .footer {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .footer__content__column {
+    flex: 1 1 100%;
+    /* Colunas continuam empilhadas */
+    padding: 0.5rem;
+    /* Reduz o padding em telas muito pequenas */
+  }
+}
+div.footer__content__column:nth-child(6) > h3:nth-child(1) {
+  margin-bottom: 0.5rem;
+}
+
 .section {
   padding: 56px 0;
 }
@@ -768,6 +887,10 @@ textarea {
   flex: 1 1 100%;
   margin-bottom: 1rem;
 }
+.articles__list__item:hover .articles__title {
+  color: #ff4667;
+  text-decoration: underline;
+}
 .articles__image {
   height: 202px;
   width: 100%;
@@ -781,13 +904,14 @@ textarea {
 }
 .articles__title {
   margin-top: 0.2rem;
+  line-height: 1.4;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
   -webkit-line-clamp: 2;
 }
 .articles__categories {
-  color: #a2a7af;
+  color: #939da7;
 }
 .articles__description {
   display: -webkit-box;
@@ -1762,114 +1886,6 @@ textarea {
   background-color: #252d3a;
 }
 
-.footer__content {
-  padding-top: 56px;
-  padding-bottom: 48px;
-}
-
-#separator {
-  border-top: 0.1px solid rgb(206, 206, 206);
-  display: flex;
-  margin: 2rem 0;
-}
-
-a {
-  text-decoration: none;
-  line-height: 1.5;
-}
-a:hover {
-  color: #777f8a;
-}
-
-.footer__content__logo {
-  margin-bottom: 1.2rem;
-}
-
-.footer__content {
-  display: flex;
-  flex-wrap: wrap; /* Para garantir que os elementos se ajustem */
-  gap: 1rem;
-  justify-content: space-between; /* Para espaçar os itens quando necessário */
-}
-.footer__content .footer__content__socials {
-  display: flex;
-  margin-top: 1.5rem;
-  flex-direction: row;
-}
-.footer__content__column {
-  flex: 1 1; /* Tamanho base para as colunas. Isso garante que as colunas não fiquem menores que 300px */
-  padding: 0 1rem; /* Espaçamento interno nas colunas */
-}
-.footer__content__column h3 {
-  margin-bottom: 2.3rem;
-  line-height: 1.2;
-}
-.footer__content__column ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-.footer__content__column ul li {
-  font-size: 0.9rem;
-}
-.footer__content__column span {
-  font-size: 0.8rem;
-}
-.footer__content__column button, .footer__content__column input {
-  width: 100%;
-  margin-bottom: 0.4rem;
-}
-
-#copy {
-  text-align: center;
-  margin: 0.4rem auto;
-  max-width: 80%;
-}
-#copy span {
-  font-size: 0.8rem;
-  margin: 0 auto;
-}
-
-div.footer__content__column:nth-child(6) {
-  min-width: 205px;
-}
-
-/* Responsividade */
-@media (max-width: 1200px) {
-  .footer {
-    padding-top: 36px;
-    padding-bottom: 36px;
-  }
-  .footer__content {
-    gap: 0.5rem;
-  }
-  .footer__content__column {
-    flex: 1 1 45%; /* Colunas em 2 para telas médias */
-  }
-}
-@media (max-width: 768px) {
-  .footer {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-  .footer__content__column {
-    flex: 1 1 100%; /* As colunas ficam empilhadas em telas pequenas */
-  }
-}
-@media (max-width: 480px) {
-  .footer {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-  .footer__content__column {
-    flex: 1 1 100%; /* Colunas continuam empilhadas */
-    padding: 0.5rem; /* Reduz o padding em telas muito pequenas */
-  }
-}
-div.footer__content__column:nth-child(6) > h3:nth-child(1) {
-  margin-bottom: 0.5rem;
-}
-
 .section-scroll {
   display: none;
 }
@@ -1882,6 +1898,43 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   display: flex;
   list-style: none;
   gap: 0.4rem;
+}
+
+.related-articles {
+  margin-top: 40px;
+}
+
+.related-articles h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.related-article {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.related-article-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.related-article-info h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.related-article-info p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.related-article-info .tags {
+  font-size: 12px;
+  color: #888;
 }
 
 /*# sourceMappingURL=main.css.map */
