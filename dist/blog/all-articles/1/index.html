@@ -81,6 +81,35 @@
         <span class="account">Already have an account?<button id="login-btn">Log in</button></span>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Modais
+      const loginModal = document.getElementById('loginModal');
+      const signupModal = document.getElementById('signupModal');
+
+      // Botões que controlam os modais
+      const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
+      const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
+
+      // Verifica se todos os elementos necessários existem
+      if (!loginModal || !signupModal || !loginBtn || !signBtn) {
+        return; // Interrompe a execução caso algum elemento não esteja presente
+      }
+
+      // Evento para abrir o modal de Login e fechar o de Cadastro
+      loginBtn.addEventListener('click', function() {
+        signupModal.classList.remove('visible');
+        loginModal.classList.add('visible');
+      });
+
+      // Evento para abrir o modal de Cadastro e fechar o de Login
+      signBtn.addEventListener('click', function() {
+        loginModal.classList.remove('visible');
+        signupModal.classList.add('visible');
+      });
+    });
+    </script>
     </header>
     <!-- Main -->
     <main>
@@ -124,6 +153,45 @@
                         <h3>How to Keep Your Home Clean with Limited Time?</h3>
                         <span></span>
                         <p>Maintaining a clean home can feel overwhelming, particularly for individuals with busy schedules and minimal free time. However, employing simple and effective strategies can help you keep your home tidy and organized, even amidst a hectic lifestyle.</p>
+                    </article>
+                </a>
+            </li>
+            
+            <li role="article" class="articles__list__item">
+                <a href="/blog/posts/6-tips-for-efficient-kitchen-cleaning20-12-2024/">
+                    <article>
+                        <div>
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734717279673x194183628966472000/kitchen.png" alt="">
+                        </div>
+                        <h3>6 Tips for Efficient Kitchen Cleaning</h3>
+                        <span></span>
+                        <p>With these 6 simple tips, you can perform efficient cleaning and keep your kitchen immaculate.</p>
+                    </article>
+                </a>
+            </li>
+            
+            <li role="article" class="articles__list__item">
+                <a href="/blog/posts/how-to-keep-your-bathroom-immaculate20-12-2024/">
+                    <article>
+                        <div>
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734713889929x701173468358720300/bathroom.png" alt="">
+                        </div>
+                        <h3>How to Keep Your Bathroom Immaculate</h3>
+                        <span></span>
+                        <p>Maintaining a clean and hygienic bathroom is essential to ensure the comfort and health of everyone at home. With some simple tips and effective tricks, it&#39;s possible to keep the bathroom immaculate.</p>
+                    </article>
+                </a>
+            </li>
+            
+            <li role="article" class="articles__list__item">
+                <a href="/blog/posts/the-ultimate-guide-to-keeping-your-living-room-always-tidy20-12-2024/">
+                    <article>
+                        <div>
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734714535358x823323796801388300/tidy.png" alt="">
+                        </div>
+                        <h3>The Ultimate Guide to Keeping Your Living Room Always Tidy</h3>
+                        <span></span>
+                        <p>Black woman chilling out on couch with a cup of tea and a remote control.</p>
                     </article>
                 </a>
             </li>

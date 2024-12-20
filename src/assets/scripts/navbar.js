@@ -242,3 +242,4 @@ document.addEventListener("click", function(event) {
     menuIconSpan.textContent = "menu"; // Exibe novamente o ícone de menu
   }
 });
+
