@@ -28,6 +28,7 @@ async function fetchUserInfo(userId) {
   }
 }
 
+
 async function checkAuth() {
   const authContainer = document.getElementById("authContainer");
   const dashboardButton = document.getElementById("dashboardButton"); // Referência ao botão "Dashboard"
@@ -242,4 +243,8 @@ document.addEventListener("click", function(event) {
     menuIconSpan.textContent = "menu"; // Exibe novamente o ícone de menu
   }
 });
+
+
+
+
 

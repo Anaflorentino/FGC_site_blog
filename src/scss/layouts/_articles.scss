@@ -17,6 +17,12 @@
         &__item {
             flex: 1 1 100%; // Por padrão, 1 artigo por linha
             margin-bottom: 1rem; // Espaçamento entre os artigos
+            &:hover {
+                .articles__title {
+                    color: vars.$primary-500;
+                    text-decoration: underline;
+                }
+            }
         }
     }
 
@@ -34,6 +40,7 @@
 
     &__title {
         margin-top: .2rem;
+        line-height: 1.4;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         overflow: hidden;
@@ -41,7 +48,7 @@
     }
 
     &__categories {
-        color: vars.$text-200;
+        color: vars.$neutrals-400;
     }
 
     &__description {

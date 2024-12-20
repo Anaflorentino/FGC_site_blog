@@ -3,13 +3,6 @@
 .footer__content {
     padding-top: 56px;
     padding-bottom: 48px;
-    }
-
-    #separator {
-        border-top: 0.1px solid rgb(206, 206, 206);
-        display: flex;
-        margin: 2rem 0;
-    }
 
     a {
         text-decoration: none;
@@ -20,24 +13,37 @@
         }
     }
 
-    .footer__content__logo {
-        margin-bottom: 1.2rem;
-    }
+}
+
+#separator {
+    border-top: 0.1px solid rgb(206, 206, 206);
+    display: flex;
+    margin: 2rem 0;
+}
+
+.footer__content__logo {
+    margin-bottom: 1.2rem;
+}
 
 .footer__content {
     display: flex;
-    flex-wrap: wrap; /* Para garantir que os elementos se ajustem */
+    flex-wrap: wrap;
+    /* Para garantir que os elementos se ajustem */
     gap: 1rem;
-    justify-content: space-between; /* Para espaçar os itens quando necessário */
+    justify-content: space-between;
+    /* Para espaçar os itens quando necessário */
 
-    .footer__content__socials { 
+    .footer__content__socials {
         display: flex;
         margin-top: 1.5rem;
         flex-direction: row;
     }
+
     &__column {
-        flex: 1 1; /* Tamanho base para as colunas. Isso garante que as colunas não fiquem menores que 300px */
-        padding: 0 1rem; /* Espaçamento interno nas colunas */
+        flex: 1 1;
+        /* Tamanho base para as colunas. Isso garante que as colunas não fiquem menores que 300px */
+        padding: 0 1rem;
+        /* Espaçamento interno nas colunas */
 
         h3 {
             margin-bottom: 2.3rem;
@@ -57,7 +63,9 @@
         span {
             font-size: .8rem;
         }
-        button, input {
+
+        button,
+        input {
             width: 100%;
             margin-bottom: .4rem;
         }
@@ -79,7 +87,7 @@
 
 div.footer__content__column:nth-child(6) {
     min-width: 205px;
-    }
+}
 
 /* Responsividade */
 @media (max-width: 1200px) {
@@ -93,7 +101,8 @@ div.footer__content__column:nth-child(6) {
     }
 
     .footer__content__column {
-        flex: 1 1 45%; /* Colunas em 2 para telas médias */
+        flex: 1 1 45%;
+        /* Colunas em 2 para telas médias */
     }
 }
 
@@ -104,7 +113,8 @@ div.footer__content__column:nth-child(6) {
     }
 
     .footer__content__column {
-        flex: 1 1 100%; /* As colunas ficam empilhadas em telas pequenas */
+        flex: 1 1 100%;
+        /* As colunas ficam empilhadas em telas pequenas */
     }
 }
 
@@ -115,12 +125,14 @@ div.footer__content__column:nth-child(6) {
     }
 
     .footer__content__column {
-        flex: 1 1 100%; /* Colunas continuam empilhadas */
-        padding: 0.5rem; /* Reduz o padding em telas muito pequenas */
+        flex: 1 1 100%;
+        /* Colunas continuam empilhadas */
+        padding: 0.5rem;
+        /* Reduz o padding em telas muito pequenas */
     }
 }
 
 
-div.footer__content__column:nth-child(6) > h3:nth-child(1) {
-margin-bottom: .5rem;
+div.footer__content__column:nth-child(6)>h3:nth-child(1) {
+    margin-bottom: .5rem;
 }

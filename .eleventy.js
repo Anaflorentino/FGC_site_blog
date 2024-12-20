@@ -1,5 +1,7 @@
 module.exports = function (eleventyConfig) {
 
+    eleventyConfig.addPassthroughCopy("src/assets"); // Copia toda a pasta src/assets para dist/assets
+    
     // Configurando coleção "posts" - Todos os posts no blog
     eleventyConfig.addCollection("posts", function (collectionApi) {
         return collectionApi.getFilteredByGlob("src/blog/posts/**/*.md");
