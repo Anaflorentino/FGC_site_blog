@@ -1,3 +1,19 @@
+<!-- Modal de Support -->
+<div id="supportModalOverlay" class="support-modal-overlay">
+    <div class="support-modal-content">
+        <div class="support-modal-close">
+            <button id="closeSupportModal" class="support-close-btn">X</button>
+        </div>
+        <h3>Need help? <br>
+            Get in touch by email or phone</h3>
+        <div class="cta cta--block">
+            <button class="button button--full button--primary">+1 310 986 9840</button>
+            <button class="button button--full button--primary">contact@flashguyscleaning.com</button>
+        </div>
+    </div>
+</div>
+
+
 <!-- Navbar -->
 <nav class="navbar">
     <ul class="nav-list">
@@ -8,26 +24,24 @@
         </button>
         <a class="logo" href="/"><img
                 src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
-                alt=""></a>
+                alt="Brand logo"></a>
         <div class="nav-list-links">
-            <li><a class="menu-link" href="#">Services</a></li>
-            <li><a class="menu-link" href="#">Subscription</a></li>
-            <li><a class="menu-link" href="#">Support</a></li>
-            <li><a class="menu-link" href="#">Coupons</a></li>
-            <li><a class="menu-link" href="#">About us</a></li>
-            <li><a class="menu-link" href="#">FAQ</a></li>
+            <li><a class="menu-link" href="#services">Services</a></li>
+            <li><a class="menu-link" href="#about-us">About us</a></li>
+            <li><a class="menu-link" href="#support">Support</a></li>
+            <li><a class="menu-link" href="#faq">FAQ</a></li>
             <li><a class="menu-link" href="/blog">Blog</a></li>
         </div>
     </ul>
 
     <!-- Login e Signup -->
     <div class="navbar-buttons">
-        <button class="dashboard-button button button--secondary button--small" id="dashboardButton">Dashboard</button>
-        <button class="book-now button button--primary button--small">Book now</button>
+        <!-- ! Adicionar link dinâmico para dashboard ! -->
+        <a href=""><button class="dashboard-button button button--secondary button--small" id="dashboardButton">Dashboard</button></a>
+        <a href="https://flashguyscleaning.com/schedule?date=&coupon=first05"><button class="book-now button button--primary button--small">Book now</button></a>
         <div class="auth-container" id="authContainer">
             <!-- Content dynamically injected by JS -->
         </div>
-    </div>
     </div>
 </nav>
 
@@ -39,8 +53,10 @@
         <input type="password" id="modalPassword" placeholder="Password" required>
         <button id="forgotPassword">I forgot my password</button>
         <button id="modalLoginButton">Log In</button>
+        <button id="sign-btn">Switch</button>
         <button class="google-login-button" id="googleLoginButton">
-            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">
+            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                alt="Google logo">
             Log In with Google
         </button>
         <span id="privacyPolicy">
@@ -58,38 +74,40 @@
         <input type="tel" id="signupPhone" placeholder="Phone Number" required>
         <input type="password" id="signupPassword" placeholder="Password" required>
         <button id="signupModalButton">Sign Up</button>
+        <button id="login-btn">Switch</button>
         <button class="google-login-button" id="googleSignupButton">
-            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">
+            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                alt="Google logo">
             Sign Up with Google
         </button>
     </div>
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Modais
-      const loginModal = document.getElementById('loginModal');
-      const signupModal = document.getElementById('signupModal');
+    document.addEventListener('DOMContentLoaded', function () {
+        // Modais
+        const loginModal = document.getElementById('loginModal');
+        const signupModal = document.getElementById('signupModal');
 
-      // Botões que controlam os modais
-      const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
-      const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
+        // Botões que controlam os modais
+        const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
+        const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
 
-      // Verifica se todos os elementos necessários existem
-      if (!loginModal || !signupModal || !loginBtn || !signBtn) {
-        return; // Interrompe a execução caso algum elemento não esteja presente
-      }
+        // Verifica se todos os elementos necessários existem
+        if (!loginModal || !signupModal || !loginBtn || !signBtn) {
+            return; // Interrompe a execução caso algum elemento não esteja presente
+        }
 
-      // Evento para abrir o modal de Login e fechar o de Cadastro
-      loginBtn.addEventListener('click', function() {
-        signupModal.classList.remove('visible');
-        loginModal.classList.add('visible');
-      });
+        // Evento para abrir o modal de Login e fechar o de Cadastro
+        loginBtn.addEventListener('click', function () {
+            signupModal.classList.remove('visible');
+            loginModal.classList.add('visible');
+        });
 
-      // Evento para abrir o modal de Cadastro e fechar o de Login
-      signBtn.addEventListener('click', function() {
-        loginModal.classList.remove('visible');
-        signupModal.classList.add('visible');
-      });
+        // Evento para abrir o modal de Cadastro e fechar o de Login
+        signBtn.addEventListener('click', function () {
+            loginModal.classList.remove('visible');
+            signupModal.classList.add('visible');
+        });
     });
-    </script>
+</script>

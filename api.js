@@ -15,34 +15,67 @@ const formatDate = (date) => {
   return `${year}-${month}-${day}`;
 };
 
-// Função para converter BBCode ou HTML para Markdown
+/// Função para converter BBCode ou HTML para Markdown, incluindo tags de RTF
 const bbcodeToMarkdown = (content) => {
+  // Convertendo cabeçalhos (H1-H6)
   content = content.replace(/<h([1-6])>(.*?)<\/h\1>/g, (match, p1, p2) => {
     const hashes = '#'.repeat(p1); 
     return `${hashes} ${p2}`;
   });
 
+  // Convertendo tags de título em BBCode
   content = content.replace(/\[h2\](.*?)\[\/h2\]/g, '## $1');
   content = content.replace(/\[h3\](.*?)\[\/h3\]/g, '### $1');
+
+  // Convertendo negrito e itálico em BBCode
   content = content.replace(/\[b\](.*?)\[\/b\]/g, '**$1**');
   content = content.replace(/\[i\](.*?)\[\/i\]/g, '*$1*');
   content = content.replace(/\[u\](.*?)\[\/u\]/g, '~$1~');
+
+  // Convertendo links
   content = content.replace(/\[url=(.*?)\](.*?)\[\/url\]/g, '[$2]($1)');
   content = content.replace(/\[url\](.*?)\[\/url\]/g, '[$1]($1)');
+
+  // Convertendo imagens
   content = content.replace(/\[img\](.*?)\[\/img\]/g, '![]($1)');
   content = content.replace(/\[img=(.*?)\](.*?)\[\/img\]/g, '![$2]($1)');
+
+  // Convertendo listas não ordenadas
   content = content.replace(/\[list\](.*?)\[\/list\]/gs, (match, p1) => {
     return p1.replace(/\[\*\](.*?)\[/g, '\n- $1\n');
   });
+  
+  // Convertendo listas ordenadas
+  content = content.replace(/\[ol\](.*?)\[\/ol\]/gs, (match, p1) => {
+    return p1.replace(/\[\*\](.*?)\[/g, '\n1. $1\n');
+  });
 
+  // Limpando tags de listas não estruturadas
   content = content.replace(/\[ul\]/g, '').replace(/\[\/ul\]/g, '');
   content = content.replace(/\[ol\]/g, '').replace(/\[\/ol\]/g, '');
+
+  // Convertendo quebras de linha e parágrafos
   content = content.replace(/<br\s*\/?>/g, '\n');
   content = content.replace(/<\/?p>/g, '\n');
+
+  // Convertendo citações
   content = content.replace(/<blockquote>(.*?)<\/blockquote>/gs, '> $1');
+
+  // Convertendo tags de tamanho de fonte
+  content = content.replace(/\[size=(\d+)\](.*?)\[\/size\]/g, (match, size, text) => {
+    // Ajuste para markdown, mas depende de como o tamanho é importante no seu caso
+    return `${text}`;
+  });
+
+  // Convertendo tags de cor (de forma simples, se necessário)
+  content = content.replace(/\[color=(.*?)\](.*?)\[\/color\]/g, (match, color, text) => {
+    // Se quiser suportar markdown simples, pode considerar que a cor não é diretamente suportada
+    return `${text}`;
+  });
 
   return content;
 };
+
 
 // Função para gerar o conteúdo do Markdown
 const generateMarkdown = (data) => {
@@ -75,19 +108,20 @@ const createMarkdownFile = (entry, allArticles) => {
   if (relatedArticles.length > 0) {
     relatedArticlesHtml = `
     <div class="related-articles">
-      <h2>Artigos Relacionados</h2>
+      <h2>Related articles</h2>
       <ul>
         ${relatedArticles.map(article => {
           return `
             <li class="related-article">
+            <a href="/blog/posts/${article.file_name}/">
               <div class="related-article-image">
                 <img src="${article.image}" alt="${article.title}">
-              </div>
               <div class="related-article-info">
                 <h3><a href="/blog/posts/${article.file_name}/">${article.title}</a></h3>
                 <p>${article.description}</p>
                 <p class="tags">Tags: ${article.tags}</p>
               </div>
+              </a>
             </li>
           `;
         }).join('')}

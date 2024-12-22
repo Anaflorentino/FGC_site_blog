@@ -53,7 +53,24 @@
     background-color: vars.$primary-500;
 }
 
-/* Responsividade para Tablets */
+/* Estilos para as setas */
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; 
+}
+
+
+.esquerda {
+    left: 24px; /* Posição da seta à esquerda */
+}
+
+.direita {
+    right: 16px; /* Posição da seta à direita */
+}
+
+/* Responsividade para tablets */
 @media (max-width: 768px) {
     .item {
         flex: 0 0 54%; /* Exibe 2 imagens por vez */
@@ -61,9 +78,17 @@
     }
 }
 
-/* Responsividade para Mobile */
+/* Responsividade para mobile */
 @media (max-width: 480px) {
     .item {
         flex: 0 0 89%; /* Exibe 1 imagem por vez */
+    }
+
+    .seta img {
+        width: 25px; /* Ajusta o tamanho da seta em dispositivos móveis */
+    }
+
+    .navegacao {
+        display: none; /* Oculta as bolinhas no mobile */
     }
 }

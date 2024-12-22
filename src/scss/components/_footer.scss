@@ -1,8 +1,12 @@
 @use '../abstracts/variables' as vars;
 
+.footer {
+    padding: 32px 0;
+    background-color: vars.$neutrals-50;
+}
+
 .footer__content {
-    padding-top: 56px;
-    padding-bottom: 48px;
+    
 
     a {
         text-decoration: none;

@@ -193,3 +193,17 @@
         top: 10%;
     }
 }
+
+.hero__text-kicker {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: .4rem;
+    margin-bottom: 12px;
+    
+    strong {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+}

@@ -89,7 +89,7 @@
         padding-right: 5%;
 
         button {
-            white-space: pre;
+            white-space: nowrap;
         }
     }
 
@@ -112,6 +112,7 @@
     line-height: 1;
     cursor: pointer;
     padding: 14px 20px;
+    height: 100%;
 
     &:hover {
         background-color: vars.$neutrals-50;

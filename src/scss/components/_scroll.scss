@@ -8,19 +8,13 @@
     h2, p {
         text-align: start;
     }
+
+    .left {
+        margin-right: .4rem;
+    }
 }
 
 .scroll-button {
-    background-color: transparent;
-    border: none;
-    border: 1.6px solid vars.$text-500;
-    border-radius: 6px;
-    cursor: pointer;
-    padding: .35rem;
-
-    &:hover {
-        opacity: .7;
-    }
 
     span {
         vertical-align: middle;

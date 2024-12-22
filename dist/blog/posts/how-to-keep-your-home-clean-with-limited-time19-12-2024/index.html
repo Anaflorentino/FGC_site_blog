@@ -19,7 +19,23 @@
 
 <body>
     <header>
-        <!-- Navbar -->
+        <!-- Modal de Support -->
+<div id="supportModalOverlay" class="support-modal-overlay">
+    <div class="support-modal-content">
+        <div class="support-modal-close">
+            <button id="closeSupportModal" class="support-close-btn">X</button>
+        </div>
+        <h3>Need help? <br>
+            Get in touch by email or phone</h3>
+        <div class="cta cta--block">
+            <button class="button button--full button--primary">+1 310 986 9840</button>
+            <button class="button button--full button--primary">contact@flashguyscleaning.com</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Navbar -->
 <nav class="navbar">
     <ul class="nav-list">
         <button id="menu">
@@ -29,26 +45,24 @@
         </button>
         <a class="logo" href="/"><img
                 src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
-                alt=""></a>
+                alt="Brand logo"></a>
         <div class="nav-list-links">
-            <li><a class="menu-link" href="#">Services</a></li>
-            <li><a class="menu-link" href="#">Subscription</a></li>
-            <li><a class="menu-link" href="#">Support</a></li>
-            <li><a class="menu-link" href="#">Coupons</a></li>
-            <li><a class="menu-link" href="#">About us</a></li>
-            <li><a class="menu-link" href="#">FAQ</a></li>
+            <li><a class="menu-link" href="#services">Services</a></li>
+            <li><a class="menu-link" href="#about-us">About us</a></li>
+            <li><a class="menu-link" href="#support">Support</a></li>
+            <li><a class="menu-link" href="#faq">FAQ</a></li>
             <li><a class="menu-link" href="/blog">Blog</a></li>
         </div>
     </ul>
 
     <!-- Login e Signup -->
     <div class="navbar-buttons">
-        <button class="dashboard-button button button--secondary button--small" id="dashboardButton">Dashboard</button>
-        <button class="book-now button button--primary button--small">Book now</button>
+        <!-- ! Adicionar link dinâmico para dashboard ! -->
+        <a href=""><button class="dashboard-button button button--secondary button--small" id="dashboardButton">Dashboard</button></a>
+        <a href="https://flashguyscleaning.com/schedule?date=&coupon=first05"><button class="book-now button button--primary button--small">Book now</button></a>
         <div class="auth-container" id="authContainer">
             <!-- Content dynamically injected by JS -->
         </div>
-    </div>
     </div>
 </nav>
 
@@ -60,8 +74,10 @@
         <input type="password" id="modalPassword" placeholder="Password" required>
         <button id="forgotPassword">I forgot my password</button>
         <button id="modalLoginButton">Log In</button>
+        <button id="sign-btn">Switch</button>
         <button class="google-login-button" id="googleLoginButton">
-            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">
+            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                alt="Google logo">
             Log In with Google
         </button>
         <span id="privacyPolicy">
@@ -79,46 +95,45 @@
         <input type="tel" id="signupPhone" placeholder="Phone Number" required>
         <input type="password" id="signupPassword" placeholder="Password" required>
         <button id="signupModalButton">Sign Up</button>
+        <button id="login-btn">Switch</button>
         <button class="google-login-button" id="googleSignupButton">
-            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">
+            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                alt="Google logo">
             Sign Up with Google
         </button>
     </div>
 </div>
 
-<<<<<<< HEAD
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Modais
-      const loginModal = document.getElementById('loginModal');
-      const signupModal = document.getElementById('signupModal');
+    document.addEventListener('DOMContentLoaded', function () {
+        // Modais
+        const loginModal = document.getElementById('loginModal');
+        const signupModal = document.getElementById('signupModal');
 
-      // Botões que controlam os modais
-      const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
-      const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
+        // Botões que controlam os modais
+        const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
+        const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
 
-      // Verifica se todos os elementos necessários existem
-      if (!loginModal || !signupModal || !loginBtn || !signBtn) {
-        return; // Interrompe a execução caso algum elemento não esteja presente
-      }
+        // Verifica se todos os elementos necessários existem
+        if (!loginModal || !signupModal || !loginBtn || !signBtn) {
+            return; // Interrompe a execução caso algum elemento não esteja presente
+        }
 
-      // Evento para abrir o modal de Login e fechar o de Cadastro
-      loginBtn.addEventListener('click', function() {
-        signupModal.classList.remove('visible');
-        loginModal.classList.add('visible');
-      });
+        // Evento para abrir o modal de Login e fechar o de Cadastro
+        loginBtn.addEventListener('click', function () {
+            signupModal.classList.remove('visible');
+            loginModal.classList.add('visible');
+        });
 
-      // Evento para abrir o modal de Cadastro e fechar o de Login
-      signBtn.addEventListener('click', function() {
-        loginModal.classList.remove('visible');
-        signupModal.classList.add('visible');
-      });
+        // Evento para abrir o modal de Cadastro e fechar o de Login
+        signBtn.addEventListener('click', function () {
+            loginModal.classList.remove('visible');
+            signupModal.classList.add('visible');
+        });
     });
-    </script>
-=======
->>>>>>> 5029af414df378d3bd88fda9c9ded91bd02846d4
+</script>
     </header>
-    <main class="container">
+    <main>
 
         <!-- Artigo dinâmico -->
         <article class="article">
@@ -134,24 +149,25 @@
 
             <!-- Conteúdo dinâmico -->
             <div class="section__title">
-                <p>[size=4]Divide Tasks[/size]</p>
+                <p>Divide Tasks</p>
 <p>Rather than attempting to clean the entire house in one go, distribute tasks throughout the week. This not only makes cleaning more manageable but also prevents clutter from accumulating.</p>
-<p>[size=4]Prioritize High-Traffic Areas[/size]</p>
+<p>Prioritize High-Traffic Areas</p>
 <p>Focus on the areas of your home that experience the most foot traffic, such as the kitchen where meals are prepared and the bathroom, which sees daily use. By prioritizing these spaces, you'll notice a significant improvement in overall cleanliness.</p>
-<p>[size=4]Keep Cleaning Products Accessible[/size]</p>
+<p>Keep Cleaning Products Accessible</p>
 <p>Ensure essential cleaning supplies are readily available by storing them in a basket or bucket within easy reach. This allows you to swiftly access them whenever needed.</p>
-<p>[size=4]Establish a Daily Routine[/size]</p>
+<p>Establish a Daily Routine</p>
 <p>Dedicate a few minutes each morning or evening to tackle quick tasks, such as wiping down kitchen counters, vacuuming main floors, or cleaning the bathroom. This consistent effort prevents dirt buildup and saves time in the long run.</p>
-<p>[size=4]Don't Neglect Regular Maintenance[/size]</p>
+<p>Don't Neglect Regular Maintenance</p>
 <p>Remember to routinely change bed sheets, clean air conditioning filters, and conduct deep cleaning sessions a few times a year.
 Maintaining a clean home with limited time available can be challenging, but it's certainly achievable. By implementing straightforward and efficient strategies such as task division, prioritizing high-traffic areas, and establishing a daily cleaning routine you can ensure your home remains spotless, even on the busiest of days.</p>
 <p><div class="related-articles">
-<h2>Artigos Relacionados</h2>
+<h2>Related articles</h2>
 <ul></p>
 <p><li class="related-article">
 <div class="related-article-image">
+<a href="/blog/posts/how-to-keep-your-bathroom-immaculate20-12-2024/">
 <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734713889929x701173468358720300/bathroom.png" alt="How to Keep Your Bathroom Immaculate">
-</div>
+</a>
 <div class="related-article-info">
 <h3><a href="/blog/posts/how-to-keep-your-bathroom-immaculate20-12-2024/">How to Keep Your Bathroom Immaculate</a></h3>
 <p>Maintaining a clean and hygienic bathroom is essential to ensure the comfort and health of everyone at home. With some simple tips and effective tricks, it's possible to keep the bathroom immaculate.</p>

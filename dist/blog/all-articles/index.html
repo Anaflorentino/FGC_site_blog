@@ -21,7 +21,23 @@
 <body>
     <!-- Header -->
     <header>
-        <!-- Navbar -->
+        <!-- Modal de Support -->
+<div id="supportModalOverlay" class="support-modal-overlay">
+    <div class="support-modal-content">
+        <div class="support-modal-close">
+            <button id="closeSupportModal" class="support-close-btn">X</button>
+        </div>
+        <h3>Need help? <br>
+            Get in touch by email or phone</h3>
+        <div class="cta cta--block">
+            <button class="button button--full button--primary">+1 310 986 9840</button>
+            <button class="button button--full button--primary">contact@flashguyscleaning.com</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Navbar -->
 <nav class="navbar">
     <ul class="nav-list">
         <button id="menu">
@@ -31,26 +47,24 @@
         </button>
         <a class="logo" href="/"><img
                 src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
-                alt=""></a>
+                alt="Brand logo"></a>
         <div class="nav-list-links">
-            <li><a class="menu-link" href="#">Services</a></li>
-            <li><a class="menu-link" href="#">Subscription</a></li>
-            <li><a class="menu-link" href="#">Support</a></li>
-            <li><a class="menu-link" href="#">Coupons</a></li>
-            <li><a class="menu-link" href="#">About us</a></li>
-            <li><a class="menu-link" href="#">FAQ</a></li>
+            <li><a class="menu-link" href="#services">Services</a></li>
+            <li><a class="menu-link" href="#about-us">About us</a></li>
+            <li><a class="menu-link" href="#support">Support</a></li>
+            <li><a class="menu-link" href="#faq">FAQ</a></li>
             <li><a class="menu-link" href="/blog">Blog</a></li>
         </div>
     </ul>
 
     <!-- Login e Signup -->
     <div class="navbar-buttons">
-        <button class="dashboard-button button button--secondary button--small" id="dashboardButton">Dashboard</button>
-        <button class="book-now button button--primary button--small">Book now</button>
+        <!-- ! Adicionar link dinâmico para dashboard ! -->
+        <a href=""><button class="dashboard-button button button--secondary button--small" id="dashboardButton">Dashboard</button></a>
+        <a href="https://flashguyscleaning.com/schedule?date=&coupon=first05"><button class="book-now button button--primary button--small">Book now</button></a>
         <div class="auth-container" id="authContainer">
             <!-- Content dynamically injected by JS -->
         </div>
-    </div>
     </div>
 </nav>
 
@@ -62,8 +76,10 @@
         <input type="password" id="modalPassword" placeholder="Password" required>
         <button id="forgotPassword">I forgot my password</button>
         <button id="modalLoginButton">Log In</button>
+        <button id="sign-btn">Switch</button>
         <button class="google-login-button" id="googleLoginButton">
-            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">
+            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                alt="Google logo">
             Log In with Google
         </button>
         <span id="privacyPolicy">
@@ -81,44 +97,43 @@
         <input type="tel" id="signupPhone" placeholder="Phone Number" required>
         <input type="password" id="signupPassword" placeholder="Password" required>
         <button id="signupModalButton">Sign Up</button>
+        <button id="login-btn">Switch</button>
         <button class="google-login-button" id="googleSignupButton">
-            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">
+            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                alt="Google logo">
             Sign Up with Google
         </button>
     </div>
 </div>
 
-<<<<<<< HEAD
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Modais
-      const loginModal = document.getElementById('loginModal');
-      const signupModal = document.getElementById('signupModal');
+    document.addEventListener('DOMContentLoaded', function () {
+        // Modais
+        const loginModal = document.getElementById('loginModal');
+        const signupModal = document.getElementById('signupModal');
 
-      // Botões que controlam os modais
-      const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
-      const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
+        // Botões que controlam os modais
+        const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
+        const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
 
-      // Verifica se todos os elementos necessários existem
-      if (!loginModal || !signupModal || !loginBtn || !signBtn) {
-        return; // Interrompe a execução caso algum elemento não esteja presente
-      }
+        // Verifica se todos os elementos necessários existem
+        if (!loginModal || !signupModal || !loginBtn || !signBtn) {
+            return; // Interrompe a execução caso algum elemento não esteja presente
+        }
 
-      // Evento para abrir o modal de Login e fechar o de Cadastro
-      loginBtn.addEventListener('click', function() {
-        signupModal.classList.remove('visible');
-        loginModal.classList.add('visible');
-      });
+        // Evento para abrir o modal de Login e fechar o de Cadastro
+        loginBtn.addEventListener('click', function () {
+            signupModal.classList.remove('visible');
+            loginModal.classList.add('visible');
+        });
 
-      // Evento para abrir o modal de Cadastro e fechar o de Login
-      signBtn.addEventListener('click', function() {
-        loginModal.classList.remove('visible');
-        signupModal.classList.add('visible');
-      });
+        // Evento para abrir o modal de Cadastro e fechar o de Login
+        signBtn.addEventListener('click', function () {
+            loginModal.classList.remove('visible');
+            signupModal.classList.add('visible');
+        });
     });
-    </script>
-=======
->>>>>>> 5029af414df378d3bd88fda9c9ded91bd02846d4
+</script>
     </header>
     <!-- Main -->
     <main>
@@ -232,79 +247,82 @@
     <!-- Footer -->
     <footer>
         <!-- Footer -->
-<div class="container footer__content">
-    <div class="footer__content__column">
-        <div class="footer__content__logo">
-            <a href="#" onclick="scrollToTop(event)">
-                <img src="/assets/images/logos/brand-logo-icon.svg" alt="Brand logo icon">
-            </a>
+<div class="footer">
+    <div class="container footer__content">
+        <div class="footer__content__column">
+            <div class="footer__content__logo">
+                <a href="#" onclick="scrollToTop(event)">
+                    <img src="/assets/images/logos/brand-logo-icon.svg" alt="Brand logo icon">
+                </a>
+            </div>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <ul class="footer__content__socials">
+                <li><a href="#"><img src="/assets/images/icons/social/facebook.svg" alt="Facebook brand logo"></a></li>
+                <li><a href="#"><img src="/assets/images/icons/social/youtube.svg" alt="YouTube brand logo"></a></li>
+                <li><a href="#"><img src="/assets/images/icons/social/instagram.svg" alt="Instagram brand logo"></a>
+                </li>
+            </ul>
         </div>
-        <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Terms of use</a></li>
-            <li><a href="#">Policy Privacy</a></li>
-        </ul>
-        <ul class="footer__content__socials">
-            <li><a href=""><img src="/assets/images/icons/social/facebook.svg" alt="Facebook brand logo"></a></li>
-            <li><a href="#"><img src="/assets/images/icons/social/youtube.svg" alt="YouTube brand logo"></a></li>
-            <li><a href="#"><img src="/assets/images/icons/social/instagram.svg" alt="Instagram brand logo"></a></li>
-        </ul>
+        <div class="footer__content__column">
+            <h3>Flash Guys</h3>
+            <ul>
+                <li><a href="#">Professionals</a></li>
+                <li><a href="#">Subscription</a></li>
+                <li><a href="#">Promotions</a></li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Services</h3>
+            <ul>
+                <li><a href="#">Deep Cleaning</a></li>
+                <li><a href="#">Standard Cleaning</a></li>
+                <li><a href="#">Commercial Cleaning</a></li>
+                <li><a href="#">Post Construction Cleaning</a></li>
+                <li><a href="#">Move-in/out Cleaning</a></li>
+                <li><a href="#">Airbnb Cleaning</a></li>
+                <li><a href="#">Extreme Cleaning</a></li>
+                <li><a href="#">Carpets & Upholstery</a></li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Areas served</h3>
+            <ul>
+                <li>Los Angeles and area</li>
+                <li>South Bay, CA</li>
+                <li>South L.A, CA</li>
+                <li>Southheast, CA</li>
+                <li>Westside, CA</li>
+                <li>San Francisco (soon)</li>
+                <li>San Diego (soon)</li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Get updates and promotions</h3>
+            <div>Subscribe now to stay tuned</div>
+            <form>
+                <input type="text" placeholder="Email">
+                <button type="submit" class="button button--primary">Subscribe</button>
+                <div><span>By subscribing you agree to our <a href="#">Privacy Policy</a>.</span></div>
+            </form>
+        </div>
     </div>
-    <div class="footer__content__column">
-        <h3>Flash Guys</h3>
-        <ul>
-            <li><a href="#">Professionals</a></li>
-            <li><a href="#">Subscription</a></li>
-            <li><a href="#">Promotions</a></li>
-        </ul>
+    <div id="copy">
+        <div id="separator"></div>
+        <span>© 2024 All Rights Reserved, Flash Guys Cleaning</span>
     </div>
-    <div class="footer__content__column">
-        <h3>Services</h3>
-        <ul>
-            <li><a href="#">Deep Cleaning</a></li>
-            <li><a href="#">Standard Cleaning</a></li>
-            <li><a href="#">Commercial Cleaning</a></li>
-            <li><a href="#">Post Construction Cleaning</a></li>
-            <li><a href="#">Move-in/out Cleaning</a></li>
-            <li><a href="#">Airbnb Cleaning</a></li>
-            <li><a href="#">Extreme Cleaning</a></li>
-            <li><a href="#">Carpets & Upholstery</a></li>
-        </ul>
-    </div>
-    <div class="footer__content__column">
-        <h3>Areas served</h3>
-        <ul>
-            <li>Los Angeles and area</li>
-            <li>South Bay, CA</li>
-            <li>South L.A, CA</li>
-            <li>Southheast, CA</li>
-            <li>Westside, CA</li>
-            <li>San Francisco (soon)</li>
-            <li>San Diego (soon)</li>
-        </ul>
-    </div>
-    <div class="footer__content__column">
-        <h3>Support</h3>
-        <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Contact us</a></li>
-        </ul>
-    </div>
-    <div class="footer__content__column">
-        <h3>Get updates and promotions</h3>
-        <div>Subscribe now to stay tuned</div>
-        <form>
-            <input type="text" placeholder="Email">
-            <button type="submit" class="button button--primary">Subscribe</button>
-            <div><span>By subscribing you agree to our <a href="#">Privacy Policy</a>.</span></div>
-        </form>
-    </div>
-</div>
-<div id="copy">
-    <div id="separator"></div>
-    <span>© 2024 All Rights Reserved, Flash Guys Cleaning</span>
 </div>
     </footer>
 
@@ -326,6 +344,7 @@
 
 <!-- Testimonials -->
 <script type="module" src="/assets/scripts/main.js"></script>
+<script type="module" src="/assets/scripts/contact-modal.js"></script>
 <script type="module" src="/assets/scripts/pre-form.js"></script>
 <script type="module" src="/assets/scripts/toggle.js"></script>
 <script type="module" src="/assets/scripts/scroll.js"></script>
