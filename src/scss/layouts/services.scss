@@ -100,3 +100,26 @@
     
 }
 
+.services__nav button {
+    background-color: transparent;
+    border: none;
+    border: 1px solid vars.$neutrals-100;
+    border-radius: 12px;
+    display: flex;
+    font-size: .8rem;
+    gap: .4rem;
+    align-items: center;
+    line-height: 1;
+    cursor: pointer;
+    padding: 14px 20px;
+
+    &:hover {
+        background-color: vars.$neutrals-50;
+        border: vars.$accent-400 1px solid;
+    }
+
+    &.active {
+        background-color: vars.$neutrals-50;  // Mantém a cor de fundo do hover
+        border: vars.$accent-400 1px solid;   // Mantém a borda do hover
+    }
+}
