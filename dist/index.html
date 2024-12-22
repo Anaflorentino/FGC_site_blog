@@ -100,32 +100,33 @@
 <section class="hero">
     <div class="hero__content">
         <div class="hero__text">
-            <h1 class="hero__text-title">Reliable cleaning services for <span class="highlight-text">spotless spaces in
-                    California</span></h1>
-            <p class="hero__text-description">Experience a professional and personalized cleaning service that suits
-                your lifestyle. From homes to offices, we've got it covered!</p>
+            <h1 class="hero__text-title">Reliable Cleaning Services for Spotless Homes and Offices in California</h1>
+            <p class="hero__text-description">Experience a professional and personalized cleaning service that suits your lifestyle. From homes to offices, we've got it covered!</p>
             <ul class="list">
-                <li><span><img src="assets/images/icons/outline/check-color.svg"
-                            alt="Check icon representing brand authority"></span>$1M in Insurance Protection</li>
-                <li><span><img src="assets/images/icons/outline/check-color.svg"
-                            alt="Check icon representing brand authority"></span>+5000 cleanings in 4 years</li>
-                <li><span><img src="assets/images/icons/outline/check-color.svg"
-                            alt="Check icon representing brand authority"></span>24h professional team</li>
+                <li><span><img src="assets/images/icons/outline/check-color.svg" alt="Check icon representing brand authority"></span><span itemscope itemprop="serviceFeature"> $1M in Insurance Protection</span></li>
+                <li><span><img src="assets/images/icons/outline/check-color.svg" alt="Check icon representing brand authority"></span><span itemscope itemprop="serviceFeature"> +5000 cleanings in 4 years</span></li>
+                <li><span><img src="assets/images/icons/outline/check-color.svg" alt="Check icon representing brand authority"></span><span itemscope itemprop="serviceFeature"> 24h professional team</span></li>
             </ul>
             <div class="cta">
-                <a href="#" class="button button--secondary">Free estimate</a>
-                <a href="#" class="button button--primary">Book now</a>
+                <a href="#" class="button button--secondary" title="Get a free estimate for cleaning services">Free estimate</a>
+                <a href="#" class="button button--primary" title="Book a cleaning service now">Book now</a>
             </div>
         </div>
         <div class="hero__image">
-            <img src="assets/images/hero-img.jpg" alt="Image of a spotless kitchen">
+            <!-- Responsividade com o uso de <picture> -->
+            <picture>
+                <!-- Usar a imagem responsiva para telas menores que 768px -->
+                <source srcset="assets/images/hero-img.jpg" media="(max-width: 768px)">
+                <!-- Imagem padrão, será usada para telas maiores que 768px -->
+                <img src="assets/images/hero-img.jpg" alt="Spotless kitchen after cleaning service in California" loading="lazy">
+            </picture>
 
             <!-- Pre-form -->
             <div class="hero__form-container">
                 <form action="#">
                     <div class="hero__form-select-container">
-                        <div class="hero__form-select-left-icon bedroom"></div> <!-- Ícone à esquerda -->
-                        <select class="hero__form-select">
+                        <div class="hero__form-select-left-icon bedroom" aria-hidden="true"></div> <!-- Icon for bedroom selection -->
+                        <select class="hero__form-select" aria-label="Select number of bedrooms">
                             <option value="" disabled selected>Number of bedrooms</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -133,11 +134,11 @@
                             <option value="4">4</option>
                             <option value="5">5+</option>
                         </select>
-                        <div class="hero__form-select-arrow-icon"></div> <!-- Ícone à direita -->
+                        <div class="hero__form-select-arrow-icon" aria-hidden="true"></div> <!-- Right arrow icon -->
                     </div>
                     <div class="hero__form-select-container">
-                        <div class="hero__form-select-left-icon bathroom"></div> <!-- Ícone à esquerda -->
-                        <select class="hero__form-select">
+                        <div class="hero__form-select-left-icon bathroom" aria-hidden="true"></div> <!-- Icon for bathroom selection -->
+                        <select class="hero__form-select" aria-label="Select number of bathrooms">
                             <option value="" disabled selected>Number of bathrooms</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -145,19 +146,26 @@
                             <option value="4">4</option>
                             <option value="5">5+</option>
                         </select>
-                        <div class="hero__form-select-arrow-icon"></div> <!-- Ícone à direita -->
+                        <div class="hero__form-select-arrow-icon" aria-hidden="true"></div> <!-- Right arrow icon -->
                     </div>
                     <!-- Toggle "Pet friendly" -->
                     <div class="hero__toggle-container">
-                        <div class="hero__toggle" id="pet-friendly-toggle"></div>
+                        <div class="hero__toggle" id="pet-friendly-toggle" aria-label="Pet friendly toggle"></div>
                         <span class="hero__toggle-text" id="pet-friendly-text">Pet friendly</span>
                     </div>
-                    <button class="button button--primary" type="submit">Free estimate</button>
+                    <button class="button button--primary" type="submit" aria-label="Submit the form for a free estimate">Free estimate</button>
                 </form>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Open Graph Meta Tags for Social Sharing -->
+<meta property="og:title" content="Reliable Cleaning Services for Spotless Homes and Offices in California">
+<meta property="og:description" content="Book a professional and personalized cleaning service that suits your lifestyle. From homes to offices, we’ve got it covered!">
+<meta property="og:image" content="assets/images/hero-img.jpg">
+<meta property="og:url" content="https://www.yourwebsite.com">
+
 
 <!-- * Testimonials Section *> -->
 <section class="section-wrapper">
@@ -731,11 +739,9 @@
         <div class="extreme__image">
             <sl-image-comparer>
                 <img slot="before"
-                    src="https://s3-alpha-sig.figma.com/img/c065/27a5/703dba063d3e01d02d6b682e2e54a591?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=MrXUYWcYjS5qyRXRBAoroBbpviVXcRTSUwQIcsUPLc4xas5Xue-4Oo~g5Z-X2SNFwMomWdCTLNfAXF4QeB0r5epstegGeOt0-iRHLrA5aeaGmH7~Xbak62QU3TLmxTB~mqicn3B3ofkvzxSUtOdSIM-mAm2psBorH4TcPvU3qmSbHUQMZND146Waf57XWH4dtgtXpIyH4-pw8IS6e~vIBelh4p5~wRdXX0bPQyjgSk6NHH4fgwdrVDKVnN0JtrKgnhu6KrrlnACkdTjdRIpARUNdMxA8gOWBm5fgbCO8o5Bbgaexk6f4t5UHrNEWDH0jdxu6lTUHUyPWfJjFI0Czew__"
-                    alt="Placeholder" />
+                    src="assets/images/extreme-before.png" />
                 <img slot="after"
-                    src="https://images.unsplash.com/photo-1609041958269-fc44467d925d?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Placeholder" />
+                    src="assets/images/modern-wooden-kitchen-interior-steel-kitchen-faucet.jpg" />
             </sl-image-comparer>
         </div>
         <div class="extreme__content">
@@ -743,16 +749,16 @@
             <p><strong>Is your place overwhelmed by clutter, damage, or neglect?</strong> Our new Extreme Cleaning
                 service is designed to handle the toughest and most critical cleaning challenges.</p>
             <ul class="extreme__list">
-                <li class="extreme__list__item"><span class="material-symbols-rounded">check</span><strong>Disaster
+                <li class="extreme__list__item"><span><img src="assets/images/icons/outline/check-color.svg" alt="Check icon representing Extreme Cleaning feature"></span><strong>Disaster
                         cleanup:</strong> Fire, flood, and mold remediation.
                 </li>
-                <li class="extreme__list__item"><span class="material-symbols-rounded">check</span><strong>Hoarding
+                <li class="extreme__list__item"><span><img src="assets/images/icons/outline/check-color.svg" alt="Check icon representing Extreme Cleaning feature"></span><strong>Hoarding
                         cleanup:</strong> Safe and compassionate removal of excessive belongings.
                 </li>
-                <li class="extreme__list__item"><span class="material-symbols-rounded">check</span><strong>Vacant
+                <li class="extreme__list__item"><span><img src="assets/images/icons/outline/check-color.svg" alt="Check icon representing Extreme Cleaning feature"></span><strong>Vacant
                         property cleanup:</strong> Deep cleaning and restoration of unoccupied spaces.
                 </li>
-                <li class="extreme__list__item"><span class="material-symbols-rounded">check</span><strong>Absolute
+                <li class="extreme__list__item"><span><img src="assets/images/icons/outline/check-color.svg" alt="Check icon representing Extreme Cleaning feature"></span><strong>Absolute
                         Privacy:</strong> We are committed to protecting your personal information with care and
                     discretion.
                 </li>

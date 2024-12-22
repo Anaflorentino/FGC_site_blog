@@ -3,7 +3,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 4rem;
+    gap: 4.5rem;
     padding-top: 48px;
     padding-bottom: 48px;
     flex-wrap: wrap;
@@ -14,8 +14,15 @@
 
     img {
         border-radius: 12px;
-    }
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        }
 
+    &__image {
+        max-width: 80vh;
+        height: 100%;
+    }    
 
 
     &__image, &__content {

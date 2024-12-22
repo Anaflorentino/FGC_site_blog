@@ -564,11 +564,10 @@ ul li {
   font-size: 0.8rem;
   font-weight: 500;
   border-radius: 0.25rem;
-  color: #777f8a;
+  color: #5d6674;
 }
 .menu-link:hover {
-  color: #344051;
-  background-color: #f8f8f8;
+  color: #2f3a4a;
 }
 
 .link-text {
@@ -1550,7 +1549,7 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 4rem;
+  gap: 4.5rem;
   padding-top: 48px;
   padding-bottom: 48px;
   flex-wrap: wrap;
@@ -1560,6 +1559,13 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
 }
 .extreme img {
   border-radius: 12px;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.extreme__image {
+  max-width: 80vh;
+  height: 100%;
 }
 .extreme__image, .extreme__content {
   flex: 1 1;

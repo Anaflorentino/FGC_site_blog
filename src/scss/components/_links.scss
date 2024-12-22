@@ -7,11 +7,10 @@
     font-size: .8rem;
     font-weight: 500;
     border-radius: 0.25rem;
-    color: vars.$text-300;
+    color: vars.$text-400;
 
     &:hover {
-        color: vars.$text-500;
-        background-color: vars.$neutrals-50;
+        color: vars.$text-600;
 
     }
 }

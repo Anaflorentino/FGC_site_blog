@@ -207,98 +207,92 @@ document.addEventListener('DOMContentLoaded', () => {
             "Clutter"
         ]
     };
-// Função para preencher o conteúdo dinâmico
-function fillServiceContent(service) {
-    const activeService = document.querySelector(`.services__cleaning li[data-service="${service}"]`);
-    const serviceIncludedList = activeService.querySelector('.services__included ul');
-    const viewMoreButton = activeService.querySelector('button');
 
-    if (serviceIncludedList) {
-        const items = servicesContent[service];
+    // Função para preencher o conteúdo dinâmico
+    function fillServiceContent(service) {
+        const activeService = document.querySelector(`.services__cleaning li[data-service="${service}"]`);
+        const serviceIncludedList = activeService.querySelector('.services__included ul');
+        const viewMoreButton = activeService.querySelector('button');
 
-        // Concatenar os itens usando ' • ' como separador
+        if (serviceIncludedList) {
+            const items = servicesContent[service];
+
+            // Concatenar os itens usando ' • ' como separador
+            const itemsText = items.join(' • ');
+
+            // Exibir apenas os 10 primeiros itens (usando ' • ' para concatenar)
+            const visibleItemsText = items.slice(0, 10).join(' • ');
+
+            // Inserir os itens concatenados formatados
+            serviceIncludedList.innerHTML = `<li>${visibleItemsText}</li>`;
+
+            // Verificar se há mais de 10 itens para mostrar
+            if (items.length > 10) {
+                viewMoreButton.style.display = 'block'; // Exibe o botão "View more"
+
+                // Remover o evento de clique anterior (caso já exista) para evitar múltiplos ouvintes
+                viewMoreButton.removeEventListener('click', toggleView);
+
+                // Adicionar evento de clique para mostrar todos os itens ou esconder
+                viewMoreButton.addEventListener('click', toggleView);
+            } else {
+                viewMoreButton.style.display = 'none'; // Esconde o botão caso não haja mais de 10 itens
+            }
+        }
+    }
+
+    // Função que alterna entre "View more" e "View less"
+    function toggleView(event) {
+        const button = event.target;
+        const activeService = button.closest('li');
+        const serviceIncludedList = activeService.querySelector('.services__included ul');
+        const items = servicesContent[activeService.dataset.service];
+
         const itemsText = items.join(' • ');
-
-        // Exibir apenas os 10 primeiros itens (usando ' • ' para concatenar)
         const visibleItemsText = items.slice(0, 10).join(' • ');
 
-        // Inserir os itens concatenados formatados
-        serviceIncludedList.innerHTML = `<li>${visibleItemsText}</li>`;
-
-        // Se houver mais de 2 itens, mostrar o botão "View more"
-        if (items.length > 2) {
-            viewMoreButton.style.display = 'block'; // Exibe o botão "View more"
-
-            // Remover o evento de clique anterior (caso já exista) para evitar múltiplos ouvintes
-            viewMoreButton.removeEventListener('click', toggleView);
-
-            // Adicionar evento de clique para mostrar todos os itens ou esconder
-            viewMoreButton.addEventListener('click', toggleView);
+        if (button.textContent === 'View more') {
+            // Exibe todos os itens concatenados com ' • '
+            serviceIncludedList.innerHTML = `<li>${itemsText}</li>`;
+            button.textContent = 'View less'; // Muda o texto para 'View less'
         } else {
-            viewMoreButton.style.display = 'none'; // Caso não haja mais de 2 itens, o botão fica escondido
+            // Volta para os dois primeiros itens concatenados com ' • '
+            serviceIncludedList.innerHTML = `<li>${visibleItemsText}</li>`;
+            button.textContent = 'View more'; // Muda o texto para 'View more'
         }
     }
-}
 
-// Função que alterna entre "View more" e "View less"
-function toggleView(event) {
-    const button = event.target;
-    const activeService = button.closest('li');
-    const serviceIncludedList = activeService.querySelector('.services__included ul');
-    const items = servicesContent[activeService.dataset.service];
+    // Função para mostrar o serviço correspondente e esconder os outros
+    function showService(service) {
+        serviceArticles.forEach(article => {
+            if (article.dataset.service === service) {
+                article.removeAttribute('hidden');
+            } else {
+                article.setAttribute('hidden', true);
+            }
+        });
 
-    const itemsText = items.join(' • ');
-    const visibleItemsText = items.slice(0, 10).join(' • ');
+        // Preencher o conteúdo dinâmico do serviço atual
+        fillServiceContent(service);
 
-    if (button.textContent === 'View more') {
-        // Exibe todos os itens concatenados com ' • '
-        serviceIncludedList.innerHTML = `<li>${itemsText}</li>`;
-        button.textContent = 'View less'; // Muda o texto para 'View less'
-    } else {
-        // Volta para os dois primeiros itens concatenados com ' • '
-        serviceIncludedList.innerHTML = `<li>${visibleItemsText}</li>`;
-        button.textContent = 'View more'; // Muda o texto para 'View more'
+        // Atualizar a tab ativa
+        serviceButtons.forEach(button => {
+            if (button.dataset.service === service) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
     }
-}
 
-
-// Função para mostrar o serviço correspondente e esconder os outros
-function showService(service) {
-    serviceArticles.forEach(article => {
-        if (article.dataset.service === service) {
-            article.removeAttribute('hidden');
-        } else {
-            article.setAttribute('hidden', true);
-        }
-    });
-
-    // Preencher o conteúdo dinâmico do serviço atual
-    fillServiceContent(service);
-
-    // Alterar a classe de hover para a tab ativa
-    updateActiveTab(service);
-}
-
-// Função para alterar a classe da tab ativa
-function updateActiveTab(service) {
-    // Remover a classe 'active' de todas as tabs
+    // Adicionar evento de clique nos botões de navegação
     serviceButtons.forEach(button => {
-        button.classList.remove('active');
+        button.addEventListener('click', () => {
+            const service = button.dataset.service;
+            showService(service);
+        });
     });
 
-    // Adicionar a classe 'active' à tab correspondente
-    const activeButton = document.querySelector(`.services__nav button[data-service="${service}"]`);
-    activeButton.classList.add('active');
-}
-
-// Adicionar evento de clique nos botões de navegação
-serviceButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const service = button.dataset.service;
-        showService(service);
-    });
-});
-
-// Inicializar mostrando o primeiro serviço visível (Deep Cleaning)
-showService("deep-cleaning");
+    // Inicializar mostrando o primeiro serviço visível (Deep Cleaning)
+    showService("deep-cleaning");
 });
