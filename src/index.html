@@ -75,51 +75,56 @@ title: Flash Guys Cleaning | Los Angeles, CA
 <meta property="og:title" content="Reliable Cleaning Services for Spotless Homes and Offices in California">
 <meta property="og:description" content="Book a professional and personalized cleaning service that suits your lifestyle. From homes to offices, we’ve got it covered!">
 <meta property="og:image" content="assets/images/hero-img.jpg">
-<meta property="og:url" content="https://www.yourwebsite.com">
+<meta property="og:url" content="https://www.flashguyscleaning.com">
 
 
-<!-- * Testimonials Section *> -->
-<section class="section-wrapper">
+<!-- * Testimonials Section * -->
+<section class="section-wrapper" aria-labelledby="testimonials-section">
     <div class="container">
+        <!-- Título da seção com o ID para referenciar o cabeçalho na navegação -->
         <div class="testimonials__title">
-            <h2>What our clients say</h2>
-            <button class="button button--secondary button--small">Make a review</button>
+            <h2 id="testimonials-section">What Our Clients Say</h2>
+            <button class="button button--secondary button--small" aria-label="Leave a review">Make a Review</button>
         </div>
-        <!-- Horizontal Scroll -->
+
+        <!-- Scroll Horizontal -->
         <div class="scroll">
             <div id="testimonials-container-wrapper" class="testimonials-container-wrapper">
-                <button class="scroll-button left" id="scroll-left">
+                <button class="scroll-button left" id="scroll-left" aria-label="Scroll left">
                     <span class="material-symbols-rounded">arrow_back</span>
                 </button>
-                <button class="scroll-button right" id="scroll-right">
+                <button class="scroll-button right" id="scroll-right" aria-label="Scroll right">
                     <span class="material-symbols-rounded">arrow_forward</span>
                 </button>
-                <div id="testimonials-container" class="testimonials-container">
-                    <!-- *Conteúdo dinâmico: 'assets/scripts/testimonialsData.js * -->
+                <div id="testimonials-container" class="testimonials-container" role="region" aria-labelledby="testimonials-section">
+                    <!-- Conteúdo dinâmico de depoimentos vai aqui: 'assets/scripts/testimonialsData.js' -->
                 </div>
             </div>
 
-            <!-- Modal Overlay -->
-            <div id="testimonial-modal" class="modal hidden">
+            <!-- Modal de Testemunho (exibição de depoimento detalhado) -->
+            <div id="testimonial-modal" class="modal hidden" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
                 <div class="modal-content">
-                    <span id="close-modal" class="close-button">&times;</span>
-                    <div id="modal-body"></div>
+                    <span id="close-modal" class="close-button" aria-label="Close modal">&times;</span>
+                    <div id="modal-body" class="modal-body"></div>
                 </div>
             </div>
         </div>
+
+        <!-- Seção de Logos de Avaliações -->
         <div class="testimonials__logos">
             <div class="testimonials__logos__description">
-                <p><strong>4,9 overall rating</strong></p>
-                <p>in over 2000 reviews</p>
+                <p><strong>4.9 Overall Rating</strong></p>
+                <p>From over 2000 reviews</p>
             </div>
-            <ul class="testimonials__logos__images">
-                <li><img src="assets/images/icons/social/bark.svg" alt="Bark company logo"></li>
-                <li><img src="assets/images/icons/social/google.svg" alt="Google company logo"></li>
-                <li><img src="assets/images/icons/social/thumbtack.svg" alt="Thumbtack company logo"></li>
+            <ul class="testimonials__logos__images" aria-label="Review platforms">
+                <li><img src="assets/images/icons/social/bark.svg" alt="Bark company logo" loading="lazy"></li>
+                <li><img src="assets/images/icons/social/google.svg" alt="Google company logo" loading="lazy"></li>
+                <li><img src="assets/images/icons/social/thumbtack.svg" alt="Thumbtack company logo" loading="lazy"></li>
             </ul>
         </div>
     </div>
 </section>
+
 
 <!-- * Why Choose Us Section * -->
 <section class="container">
