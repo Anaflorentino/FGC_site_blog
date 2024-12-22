@@ -52,12 +52,27 @@
     </div>
 </nav>
 
+<<<<<<< HEAD
+
+<!-- Login Modal -->
+=======
 <!-- Modal de Login -->
+>>>>>>> 5029af414df378d3bd88fda9c9ded91bd02846d4
 <div class="nav-modal" id="loginModal">
     <div class="modal-content">
         <h3>Login</h3>
         <input type="email" id="modalEmail" placeholder="Email" required>
         <input type="password" id="modalPassword" placeholder="Password" required>
+<<<<<<< HEAD
+        <button id="modalLoginButton">Log In</button>
+        <button class="google-login-button" id="googleLoginButton"><img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">Log In with Google</button>
+        <span id="privacyPolicy"><p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="#">Privacy Policy</a>.</p></span>
+        <span class="account">Don't have an account?<button id="sign-btn">Create an account</button></span>
+    </div>
+</div>
+
+<!-- Signup Modal -->
+=======
         <button id="forgotPassword">I forgot my password</button>
         <button id="modalLoginButton">Log In</button>
         <button class="google-login-button" id="googleLoginButton">
@@ -71,6 +86,7 @@
 </div>
 
 <!-- Modal de Signup -->
+>>>>>>> 5029af414df378d3bd88fda9c9ded91bd02846d4
 <div class="nav-modal" id="signupModal">
     <div class="modal-content">
         <h3>Sign Up</h3>
@@ -79,6 +95,41 @@
         <input type="tel" id="signupPhone" placeholder="Phone Number" required>
         <input type="password" id="signupPassword" placeholder="Password" required>
         <button id="signupModalButton">Sign Up</button>
+<<<<<<< HEAD
+        <button class="google-login-button" id="googleSignupButton"><img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">Sign Up with Google</button>
+        <span class="account">Already have an account?<button id="login-btn">Log in</button></span>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Modais
+      const loginModal = document.getElementById('loginModal');
+      const signupModal = document.getElementById('signupModal');
+
+      // Botões que controlam os modais
+      const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
+      const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
+
+      // Verifica se todos os elementos necessários existem
+      if (!loginModal || !signupModal || !loginBtn || !signBtn) {
+        return; // Interrompe a execução caso algum elemento não esteja presente
+      }
+
+      // Evento para abrir o modal de Login e fechar o de Cadastro
+      loginBtn.addEventListener('click', function() {
+        signupModal.classList.remove('visible');
+        loginModal.classList.add('visible');
+      });
+
+      // Evento para abrir o modal de Cadastro e fechar o de Login
+      signBtn.addEventListener('click', function() {
+        loginModal.classList.remove('visible');
+        signupModal.classList.add('visible');
+      });
+    });
+    </script>
+=======
         <button class="google-login-button" id="googleSignupButton">
             <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">
             Sign Up with Google
@@ -86,6 +137,7 @@
     </div>
 </div>
 
+>>>>>>> 5029af414df378d3bd88fda9c9ded91bd02846d4
     </header>
     <main class="container">
 
@@ -103,6 +155,19 @@
 
             <!-- Conteúdo dinâmico -->
             <div class="section__title">
+<<<<<<< HEAD
+                <p>[h2]Organize the Pantry[/h2]</p>
+<p>Keep food and ingredients organized in transparent containers. Label each item for easy identification and keep frequently used products within reach.</p>
+<p>Disinfect Surfaces</p>
+<p>Use an appropriate disinfectant to clean kitchen surfaces such as countertops, sinks, and tables. Wipe countertops with a damp cloth and mild detergent.</p>
+<p>[h2]Deep Clean Appliances[/h2]</p>
+<p><strong>Regularly, deep clean appliances such as refrigerator, stove, oven, and microwave.</strong></p>
+<p>Remove all trays and shelves and wash with soap and water. Clean the interior of the appliances with a damp cloth and mild detergent.</p>
+<p><strong>Don't Forget the Oven</strong>: Remove the racks and apply a specific oven cleaner. Let the product sit according to the manufacturer's instructions and then wipe with a damp cloth.</p>
+<p>[h2]Wash Dishes Regularly[/h2]</p>
+<p>Avoid accumulating dirty dishes in the sink. Wash dishes, cutlery, and pots after use or put them in the dishwasher immediately. This prevents dirt buildup and facilitates daily kitchen cleaning.</p>
+<p>[h2]Keep the Floor Clean[/h2]</p>
+=======
                 <h2>Organize the Pantry</h2>
 <p>Keep food and ingredients organized in transparent containers. Label each item for easy identification and keep frequently used products within reach.</p>
 <p>Disinfect Surfaces</p>
@@ -114,10 +179,13 @@
 <h2>Wash Dishes Regularly</h2>
 <p>Avoid accumulating dirty dishes in the sink. Wash dishes, cutlery, and pots after use or put them in the dishwasher immediately. This prevents dirt buildup and facilitates daily kitchen cleaning.</p>
 <h2>Keep the Floor Clean</h2>
+>>>>>>> 5029af414df378d3bd88fda9c9ded91bd02846d4
 <p>Sweep or vacuum the kitchen floor daily to remove dirt and crumbs. After cleaning, wipe with a damp cloth and disinfectant to ensure the floor stays clean.
 Do a Weekly Deep Clean</p>
 <p>Once a week, dedicate time for a deep clean of the kitche. This includes cleaning the extractor fan, washing curtains, cleaning the interior of cabinets and drawers, among other tasks.</p>
 <p>With these 6 simple tips, you can keep your kitchen clean and organized all the time, providing a safe and pleasant environment for cooking.</p>
+<<<<<<< HEAD
+=======
 <p><div class="related-articles">
 <h2>Artigos Relacionados</h2>
 <ul></p>
@@ -133,12 +201,16 @@ Do a Weekly Deep Clean</p>
 </li></p>
 <p></ul>
 </div></p>
+>>>>>>> 5029af414df378d3bd88fda9c9ded91bd02846d4
 
             </div>
         </article>
 
+<<<<<<< HEAD
+=======
         <!-- Conteúdo dinamico vem aqui -->
          
+>>>>>>> 5029af414df378d3bd88fda9c9ded91bd02846d4
     </main>
 
 

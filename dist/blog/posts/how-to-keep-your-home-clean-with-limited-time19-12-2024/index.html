@@ -86,6 +86,37 @@
     </div>
 </div>
 
+<<<<<<< HEAD
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Modais
+      const loginModal = document.getElementById('loginModal');
+      const signupModal = document.getElementById('signupModal');
+
+      // Botões que controlam os modais
+      const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
+      const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
+
+      // Verifica se todos os elementos necessários existem
+      if (!loginModal || !signupModal || !loginBtn || !signBtn) {
+        return; // Interrompe a execução caso algum elemento não esteja presente
+      }
+
+      // Evento para abrir o modal de Login e fechar o de Cadastro
+      loginBtn.addEventListener('click', function() {
+        signupModal.classList.remove('visible');
+        loginModal.classList.add('visible');
+      });
+
+      // Evento para abrir o modal de Cadastro e fechar o de Login
+      signBtn.addEventListener('click', function() {
+        loginModal.classList.remove('visible');
+        signupModal.classList.add('visible');
+      });
+    });
+    </script>
+=======
+>>>>>>> 5029af414df378d3bd88fda9c9ded91bd02846d4
     </header>
     <main class="container">
 

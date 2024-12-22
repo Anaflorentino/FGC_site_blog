@@ -7,7 +7,7 @@
     <!-- Basehead -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy</title>
+<title>All Articles</title>
 <link rel="stylesheet" href="/css/main.css">
 
 <!-- Material Symbols Rounded -->
@@ -16,8 +16,6 @@
 <!-- Shoelace Library -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css" />
     
-<meta name="description" content="Flash Guys Cleaning Privacy Policy" />
-
 </head>
 
 <body>
@@ -56,25 +54,21 @@
     </div>
 </nav>
 
-<!-- Modal de Login -->
+
+<!-- Login Modal -->
 <div class="nav-modal" id="loginModal">
     <div class="modal-content">
         <h3>Login</h3>
         <input type="email" id="modalEmail" placeholder="Email" required>
         <input type="password" id="modalPassword" placeholder="Password" required>
-        <button id="forgotPassword">I forgot my password</button>
         <button id="modalLoginButton">Log In</button>
-        <button class="google-login-button" id="googleLoginButton">
-            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">
-            Log In with Google
-        </button>
-        <span id="privacyPolicy">
-            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="#">Privacy Policy</a>.</p>
-        </span>
+        <button class="google-login-button" id="googleLoginButton"><img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">Log In with Google</button>
+        <span id="privacyPolicy"><p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="#">Privacy Policy</a>.</p></span>
+        <span class="account">Don't have an account?<button id="sign-btn">Create an account</button></span>
     </div>
 </div>
 
-<!-- Modal de Signup -->
+<!-- Signup Modal -->
 <div class="nav-modal" id="signupModal">
     <div class="modal-content">
         <h3>Sign Up</h3>
@@ -83,14 +77,11 @@
         <input type="tel" id="signupPhone" placeholder="Phone Number" required>
         <input type="password" id="signupPassword" placeholder="Password" required>
         <button id="signupModalButton">Sign Up</button>
-        <button class="google-login-button" id="googleSignupButton">
-            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">
-            Sign Up with Google
-        </button>
+        <button class="google-login-button" id="googleSignupButton"><img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg" alt="Google logo">Sign Up with Google</button>
+        <span class="account">Already have an account?<button id="login-btn">Log in</button></span>
     </div>
 </div>
 
-<<<<<<< HEAD
 <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Modais
@@ -119,15 +110,119 @@
       });
     });
     </script>
-=======
->>>>>>> 5029af414df378d3bd88fda9c9ded91bd02846d4
     </header>
     <!-- Main -->
     <main>
         
-<h1>Privacy Policy</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum molestiae ex dignissimos vitae eum mollitia ad impedit
-    suscipit veniam eos quae aut sunt voluptates, a dolorum dolor dolore. Tempore, doloremque?</p>
+
+<div class="container">
+
+    <!-- Pages Index -->
+    <nav class="pagination-links section__title">
+        <ol class="pagination-links__list">
+            <li class="pagination-links__list__item"><a href="/">Home ></a></li>
+            <li class="pagination-links__list__item"><a href="/blog">Blog ></a></li>
+            <li class="pagination-links__list__item"><a href="/blog/all-articles">All articles ></a></li>
+
+            <!-- Exibe o número da página atual -->
+            
+            <li class="pagination-links__list__item current-page">
+                Page 2
+            </li>
+            
+
+        </ol>
+    </nav>
+
+    <div class="section__title">
+        <h1>All Articles</h1>
+        <p>Stay updated with the latest tips and news in residential cleaning. Here you'll find practical advice,
+            detailed guides, and the newest trends to help you keep your home spotless and healthy.</p>
+    </div>
+
+    <!-- Exibindo os posts -->
+    <div class="articles">
+        <ol role="list">
+            
+            <li role="article" class="articles__list__item">
+                <a href="/blog/posts/how-to-keep-your-home-clean-with-limited-time19-12-2024/">
+                    <article>
+                        <div>
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734640432828x375397332491456200/Frame%20552.png" alt="">
+                        </div>
+                        <h3>How to Keep Your Home Clean with Limited Time?</h3>
+                        <span></span>
+                        <p>Maintaining a clean home can feel overwhelming, particularly for individuals with busy schedules and minimal free time. However, employing simple and effective strategies can help you keep your home tidy and organized, even amidst a hectic lifestyle.</p>
+                    </article>
+                </a>
+            </li>
+            
+            <li role="article" class="articles__list__item">
+                <a href="/blog/posts/6-tips-for-efficient-kitchen-cleaning20-12-2024/">
+                    <article>
+                        <div>
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734717279673x194183628966472000/kitchen.png" alt="">
+                        </div>
+                        <h3>6 Tips for Efficient Kitchen Cleaning</h3>
+                        <span></span>
+                        <p>With these 6 simple tips, you can perform efficient cleaning and keep your kitchen immaculate.</p>
+                    </article>
+                </a>
+            </li>
+            
+            <li role="article" class="articles__list__item">
+                <a href="/blog/posts/how-to-keep-your-bathroom-immaculate20-12-2024/">
+                    <article>
+                        <div>
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734713889929x701173468358720300/bathroom.png" alt="">
+                        </div>
+                        <h3>How to Keep Your Bathroom Immaculate</h3>
+                        <span></span>
+                        <p>Maintaining a clean and hygienic bathroom is essential to ensure the comfort and health of everyone at home. With some simple tips and effective tricks, it&#39;s possible to keep the bathroom immaculate.</p>
+                    </article>
+                </a>
+            </li>
+            
+            <li role="article" class="articles__list__item">
+                <a href="/blog/posts/the-ultimate-guide-to-keeping-your-living-room-always-tidy20-12-2024/">
+                    <article>
+                        <div>
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734714535358x823323796801388300/tidy.png" alt="">
+                        </div>
+                        <h3>The Ultimate Guide to Keeping Your Living Room Always Tidy</h3>
+                        <span></span>
+                        <p>Black woman chilling out on couch with a cup of tea and a remote control.</p>
+                    </article>
+                </a>
+            </li>
+            
+        </ol>
+    </div>
+
+
+    <!-- Pagination -->
+    <div class="pagination">
+        
+        <a href="/blog/all-articles/" class="enabled">← Página Anterior</a>
+        
+
+        <!-- Correção: Acessando corretamente os números das páginas -->
+        
+        
+        <a href="" class="page-link">1</a> <!-- Links para outras páginas -->
+        
+        
+        
+        <a href="" class="page-link">2</a> <!-- Links para outras páginas -->
+        
+        
+
+        
+        <span class="disabled">Próxima Página →</span>
+        
+    </div>
+
+</div>
     </main>
     <!-- Footer -->
     <footer>
@@ -135,9 +230,7 @@
 <div class="container footer__content">
     <div class="footer__content__column">
         <div class="footer__content__logo">
-            <a href="#" onclick="scrollToTop(event)">
-                <img src="/assets/images/logos/brand-logo-icon.svg" alt="Brand logo icon">
-            </a>
+            <img src="/assets/images/logos/brand-logo-icon.svg" alt="Brand logo icon">
         </div>
         <ul>
             <li><a href="#">About us</a></li>
@@ -230,7 +323,7 @@
 <script type="module" src="/assets/scripts/toggle.js"></script>
 <script type="module" src="/assets/scripts/scroll.js"></script>
 <script type="module" src="/assets/scripts/carousel.js"></script>
-<script type="module" src="/assets/scripts/footer.js"></script>
+<script type="module" src="/assets/scripts/promotions.js"></script>
 
 
 </html>
