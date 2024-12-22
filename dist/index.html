@@ -214,88 +214,75 @@
     </div>
 </section>
 
-
 <!-- * Why Choose Us Section * -->
-<section class="container">
-
+<section class="container" aria-labelledby="why-choose-us">
     <div class="section">
         <div class="testimonials__title section__title">
-            <h2>Why choose Flash Guys?</h2>
-            <button class="button button--small button--secondary">Check our work</button>
+            <h2 id="why-choose-us">Why Choose Flash Guys?</h2>
+            <button class="button button--small button--secondary" aria-label="See our work">Check our work</button>
         </div>
+
         <div class="why__content">
             <!-- Accordion -->
             <div class="why__content__left">
-                <ul class="accordion">
+                <ul class="accordion" aria-label="Reasons to choose Flash Guys">
                     <li>
-                        <button class="accordion__button">
-                            <h3>Super qualified 24/7 professional team</h3><span class="material-symbols-rounded add">
-                                add
-                            </span>
+                        <button class="accordion__button" aria-expanded="false" aria-controls="accordion-content-1">
+                            <h3>Super qualified 24/7 professional team</h3>
+                            <span class="material-symbols-rounded add" aria-hidden="true">add</span>
                         </button>
-                        <div class="accordion__content">
-                            <p>Our professional, verified and dedicated team guarantees
-                                exemplary
-                                treatment and safety for your home 24h.</p>
-                            <a href="#" class="link-text" class="link-text">Learn more</a>
-                    </li>
-                    <li>
-                        <button class="accordion__button">
-                            <h3>Eco & Pet friendly</h3><span class="material-symbols-rounded add">
-                                add
-                            </span>
-                        </button>
-                        <div class="accordion__content">
-                            <p>We understand that pets are part of the family. That's
-                                why our services are pet-friendly, ensuring a safe and comfortable environment for your
-                                furry companions while delivering top-notch cleaning results.</p>
+                        <div id="accordion-content-1" class="accordion__content" aria-hidden="true">
+                            <p>Our professional, verified, and dedicated team guarantees exemplary treatment and safety for your home 24h.</p>
                             <a href="#" class="link-text">Learn more</a>
+                        </div>
                     </li>
                     <li>
-                        <button class="accordion__button">
-                            <h3>Personalized plans</h3><span class="material-symbols-rounded add">
-                                add
-                            </span>
+                        <button class="accordion__button" aria-expanded="false" aria-controls="accordion-content-2">
+                            <h3>Eco & Pet friendly</h3>
+                            <span class="material-symbols-rounded add" aria-hidden="true">add</span>
                         </button>
-                        <div class="accordion__content">
-                            <p>For every need & lifestyle, we offer a fully personalized
-                                plan.</p>
+                        <div id="accordion-content-2" class="accordion__content" aria-hidden="true">
+                            <p>We understand that pets are part of the family. That's why our services are pet-friendly, ensuring a safe and comfortable environment for your furry companions while delivering top-notch cleaning results.</p>
                             <a href="#" class="link-text">Learn more</a>
+                        </div>
                     </li>
                     <li>
-                        <button class="accordion__button">
-                            <h3>100% guaranteed satisfaction</h3><span class="material-symbols-rounded add">
-                                add
-                            </span>
+                        <button class="accordion__button" aria-expanded="false" aria-controls="accordion-content-3">
+                            <h3>Personalized plans</h3>
+                            <span class="material-symbols-rounded add" aria-hidden="true">add</span>
                         </button>
-                        <div class="accordion__content">
-                            <p>To ensure your complete satisfaction and happiness, if
-                                you are not entirely pleased with the service provided, simply contact us within 24
-                                hours.
-                                We will send our cleaning technicians back to your home within 1 business day, often the
-                                same day, for a complimentary re-cleaning. We strive for excellence and want your
-                                experience
-                                with us to be nothing short of wonderful. Please note that we do not offer cash refunds
-                                or
-                                discounts on cleaning services, but we are dedicated to resolving any issues promptly to
-                                ensure your satisfaction.</p>
+                        <div id="accordion-content-3" class="accordion__content" aria-hidden="true">
+                            <p>For every need & lifestyle, we offer a fully personalized plan.</p>
                             <a href="#" class="link-text">Learn more</a>
+                        </div>
                     </li>
-                    <!-- CTA -->
-                    <div class="cta">
-                        <a href="#" class="button button--secondary">Free estimate</a>
-                        <a href="#" class="button button--primary">Book now</a>
-                    </div>
+                    <li>
+                        <button class="accordion__button" aria-expanded="false" aria-controls="accordion-content-4">
+                            <h3>100% guaranteed satisfaction</h3>
+                            <span class="material-symbols-rounded add" aria-hidden="true">add</span>
+                        </button>
+                        <div id="accordion-content-4" class="accordion__content" aria-hidden="true">
+                            <p>If you are not entirely pleased with the service provided, simply contact us within 24 hours. We will send our cleaning technicians back to your home for a complimentary re-cleaning, ensuring your complete satisfaction.</p>
+                            <a href="#" class="link-text">Learn more</a>
+                        </div>
+                    </li>
                 </ul>
+
+                <!-- CTA -->
+                <div class="cta">
+                    <a href="#" class="button button--secondary" aria-label="Request a free cleaning estimate">Free estimate</a>
+                    <a href="#" class="button button--primary" aria-label="Book a cleaning service">Book now</a>
+                </div>
             </div>
 
             <!-- Image -->
             <div class="why__content__right">
-                <img src="assets/images/test/test.png" alt="">
+                <img src="assets/images/test/test.png" alt="A father and his child in a perfeclty clean kitchen, enjoying their time together" loading="lazy" width="500" height="300">
             </div>
         </div>
     </div>
 </section>
+
 
 <!-- * Our Services Section * -->
 <section class="container">
