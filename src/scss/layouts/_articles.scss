@@ -98,6 +98,20 @@
     padding: 0 5%;
     margin: 0 auto;
 
+   /* Selecionando o último parágrafo após o H2 */
+h1 {
+    margin-bottom: .4rem;
+}
+
+h2 {
+    margin-bottom: .2rem;
+    margin-top: 2rem;
+}
+
+   h2 ~ p {
+    margin-bottom: .4rem;
+}
+
     &__image {
         width: 100%;
         height: 440px;

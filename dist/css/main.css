@@ -1048,6 +1048,17 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   max-width: 920px;
   padding: 0 5%;
   margin: 0 auto;
+  /* Selecionando o último parágrafo após o H2 */
+}
+.article h1 {
+  margin-bottom: 0.4rem;
+}
+.article h2 {
+  margin-bottom: 0.2rem;
+  margin-top: 2rem;
+}
+.article h2 ~ p {
+  margin-bottom: 0.4rem;
 }
 .article__image {
   width: 100%;
