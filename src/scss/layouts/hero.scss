@@ -5,9 +5,17 @@
     height: 100vh;
     justify-content: space-between;
     align-items: center;
-    padding-left: 7%;
+    padding-left: 8%;
     width: 100%;
     position: relative;
+
+    @media (max-width: 780px) {
+        padding-left: 0 4%;
+    }
+
+    @media (min-width: 1350px) {
+        padding-left: 0 12%;
+    }
 }
 
 .hero__content {
