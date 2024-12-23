@@ -277,7 +277,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
+document.addEventListener('DOMContentLoaded', function() {
+  var selector = document.getElementById('signupPhone');
+  var im = new Inputmask("(999) 999-9999");  // Máscara de telefone americano
+  im.mask(selector);
+});
 
 
 
