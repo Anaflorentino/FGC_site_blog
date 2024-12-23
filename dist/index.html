@@ -72,7 +72,9 @@
     <div class="modal-content">
         <h3>Login</h3>
         <input type="email" id="modalEmail" placeholder="Email" required>
+        <span class="input-warning">Please enter your email*</span>
         <input type="password" id="modalPassword" placeholder="Password" required>
+        <span class="input-warning">Please enter a valid password*</span>
         <button id="forgotPassword">I forgot my password</button>
         <button id="modalLoginButton">Log In</button>
         <button class="google-login-button" id="googleLoginButton">
@@ -92,9 +94,13 @@
     <div class="modal-content">
         <h3>Sign Up</h3>
         <input type="text" id="signupName" placeholder="Full Name" required>
+        <span class="input-warning">Please enter your full name*</span>
         <input type="email" id="signupEmail" placeholder="Email" required>
+        <span class="input-warning">Please enter your email*</span>
         <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+        <span class="input-warning">Please enter you phone number*</span>
         <input type="password" id="signupPassword" placeholder="Password" required>
+        <span class="input-warning">Please enter a password*</span>
         <button id="signupModalButton">Sign Up</button>
         <button class="google-login-button" id="googleSignupButton">
             <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
@@ -1079,7 +1085,22 @@
     </main>
     <!-- Footer -->
     <footer>
-        <!-- Footer -->
+        <!-- Modal de Support -->
+<div id="supportModalOverlay" class="support-modal-overlay">
+    <div class="support-modal-content">
+        <div class="support-modal-close">
+            <button id="closeSupportModal" class="support-close-btn">X</button>
+        </div>
+        <h3>Need help? <br>
+            Get in touch by email or phone</h3>
+        <div class="cta cta--block">
+            <button class="button button--full button--primary">+1 310 986 9840</button>
+            <button class="button button--full button--primary">contact@flashguyscleaning.com</button>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
 <div class="footer">
     <div class="container footer__content">
         <div class="footer__content__column">
@@ -1112,14 +1133,14 @@
         <div class="footer__content__column">
             <h3>Services</h3>
             <ul>
-                <li><a href="#">Deep Cleaning</a></li>
-                <li><a href="#">Standard Cleaning</a></li>
-                <li><a href="#">Commercial Cleaning</a></li>
-                <li><a href="#">Post Construction Cleaning</a></li>
-                <li><a href="#">Move-in/out Cleaning</a></li>
-                <li><a href="#">Airbnb Cleaning</a></li>
-                <li><a href="#">Extreme Cleaning</a></li>
-                <li><a href="#">Carpets & Upholstery</a></li>
+                <li><a href="http://localhost:8080/#services">Deep Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Standard Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Commercial Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Post Construction Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Move-in/out Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Airbnb Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Extreme Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Carpets & Upholstery</a></li>
             </ul>
         </div>
         <div class="footer__content__column">
@@ -1137,9 +1158,8 @@
         <div class="footer__content__column">
             <h3>Support</h3>
             <ul>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="http://localhost:8080/#faq">FAQ</a></li>
+                <li>+1 310 986 9840</li>
             </ul>
         </div>
         <div class="footer__content__column">
@@ -1155,6 +1175,7 @@
     <div id="copy">
         <div id="separator"></div>
         <span>© 2024 All Rights Reserved, Flash Guys Cleaning</span>
+        <span>flashguyscleaning.com</span>
     </div>
 </div>
     </footer>
