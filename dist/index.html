@@ -59,8 +59,7 @@
 
     <!-- Login e Signup -->
     <div class="navbar-buttons">
-        <!-- ! Adicionar link dinâmico para dashboard ! -->
-        <a href=""><button class="dashboard-button button button--secondary button--small" id="dashboardButton">Dashboard</button></a>
+        <a href="https://flashguyscleaning.com/dashboard"><button class="dashboard-button button button--secondary button--small" id="dashboardButton">Dashboard</button></a>
         <a href="https://flashguyscleaning.com/schedule?date=&coupon=first05"><button class="book-now button button--primary button--small">Book now</button></a>
         <div class="auth-container" id="authContainer">
             <!-- Content dynamically injected by JS -->
@@ -76,15 +75,15 @@
         <input type="password" id="modalPassword" placeholder="Password" required>
         <button id="forgotPassword">I forgot my password</button>
         <button id="modalLoginButton">Log In</button>
-        <button id="sign-btn">Switch</button>
         <button class="google-login-button" id="googleLoginButton">
             <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
-                alt="Google logo">
+            alt="Google logo">
             Log In with Google
         </button>
         <span id="privacyPolicy">
             <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="#">Privacy Policy</a>.</p>
         </span>
+        <p class="account-switcher">Don't have an account?<button class="button" id="sign-btn">Create account</button></p>
     </div>
 </div>
 
@@ -97,12 +96,12 @@
         <input type="tel" id="signupPhone" placeholder="Phone Number" required>
         <input type="password" id="signupPassword" placeholder="Password" required>
         <button id="signupModalButton">Sign Up</button>
-        <button id="login-btn">Switch</button>
         <button class="google-login-button" id="googleSignupButton">
             <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
-                alt="Google logo">
+            alt="Google logo">
             Sign Up with Google
         </button>
+        <p class="account-switcher">Already have an account?<button class="button" id="login-btn">Login</button></p>
     </div>
 </div>
 
@@ -184,11 +183,11 @@
                         <!-- Icon for bedroom selection -->
                         <select class="hero__form-select" aria-label="Select number of bedrooms" id="dropdownBedroom">
                             <option value="" disabled selected>Number of bedrooms</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5+</option>
+                            <option value="1">1 bedroom</option>
+                            <option value="2">2 bedrooms</option>
+                            <option value="3">3 bedrooms</option>
+                            <option value="4">4 bedrooms</option>
+                            <option value="5">5+ bedrooms</option>
                         </select>
                         <div class="hero__form-select-arrow-icon" aria-hidden="true"></div> <!-- Right arrow icon -->
                     </div>
@@ -197,11 +196,11 @@
                         <!-- Icon for bathroom selection -->
                         <select class="hero__form-select" aria-label="Select number of bathrooms" id="dropdownBathroom">
                             <option value="" disabled selected>Number of bathrooms</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5+</option>
+                            <option value="1">1 bathroom</option>
+                            <option value="2">2 bathrooms</option>
+                            <option value="3">3 bathrooms</option>
+                            <option value="4">4 bathrooms</option>
+                            <option value="5">5+ bathrooms</option>
                         </select>
                         <div class="hero__form-select-arrow-icon" aria-hidden="true"></div> <!-- Right arrow icon -->
                     </div>
@@ -223,7 +222,7 @@
 <meta property="og:description"
     content="Book a professional and personalized cleaning service that suits your lifestyle. From homes to offices, we've got it covered!">
 <meta property="og:image" content="assets/images/hero-img.jpg">
-<meta property="og:url" content="https://www.flashguyscleaning.com">
+<meta property="og:url" content="https://flashguyscleaning.com">
 
 
 <!-- * Testimonials Section * -->
@@ -232,7 +231,10 @@
         <!-- Título da seção com o ID para referenciar o cabeçalho na navegação -->
         <div class="testimonials__title">
             <h2 id="testimonials-section">What Our Clients Say</h2>
-            <button class="button button--secondary button--small" aria-label="Leave a review">Make a Review</button>
+            <a href="https://www.thumbtack.com/ca/redondo-beach/electrical-repairs/flash-guys-cleaning/service/402105454248648706" target="_blank">
+                <button class="button button--secondary button--small" aria-label="Leave a review">Make a Review</button>
+            </a>
+            
         </div>
 
         <!-- Scroll Horizontal -->

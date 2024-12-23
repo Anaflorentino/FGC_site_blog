@@ -191,6 +191,7 @@
 
     .hero__image {
         width: 100%;
+        height: 50vh;
     }
 
     .hero__text {
@@ -224,8 +225,18 @@
     .hero__text {
         padding-left: 4%;
     }
+}
 
-    .hero__image {
-        height: 50vh;
+.account-switcher {
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    align-items: center;
+    gap: .5rem;
+
+    button {
+        padding-left: 0;
+        font-size: 14px;
+        color: vars.$primary-500;
     }
 }
