@@ -244,6 +244,39 @@ document.addEventListener("click", function(event) {
   }
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const emailInput = document.getElementById('modalEmail');
+  const forgotPasswordButton = document.getElementById('forgotPassword');
+
+  forgotPasswordButton.addEventListener('click', function () {
+    const email = emailInput.value.trim();
+
+    if (!email) {
+      alert('Please fill in the email field');
+      emailInput.focus(); 
+      return;
+    }
+
+    fetch('https://flashguyscleaning.com/version-test/api/1.1/wf/resetpassword', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'User-Agent': 'insomnia/10.2.0'
+      },
+      body: JSON.stringify({ email: email })
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert('Reset email sent successfully!');
+      console.log(data);
+    })
+    .catch(error => {
+      console.error('Error sending reset email:', error);
+      alert('Failed to send reset email. Please try again.');
+    });
+  });
+});
+
 
 
 
