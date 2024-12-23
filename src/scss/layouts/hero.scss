@@ -8,14 +8,6 @@
     padding-left: 8%;
     width: 100%;
     position: relative;
-
-    @media (max-width: 780px) {
-        padding-left: 0 4%;
-    }
-
-    @media (min-width: 1350px) {
-        padding-left: 0 12%;
-    }
 }
 
 .hero__content {
@@ -179,7 +171,12 @@
     color: vars.$text-400; /* Cor do texto quando o toggle está ativo */
 }
 
+@media (max-width: 13250px) {
+   .hero {
 
+       padding-left: 12%;
+   }
+}
 
 @media (max-width: 740px) {
     .hero {
@@ -199,7 +196,8 @@
     .hero__text {
         width: 100%;
         text-align: start;
-        padding: 0 5%;
+        padding: 0;
+        padding-right: 4%;
         margin-bottom: 1rem;
     }
 
@@ -219,5 +217,15 @@
         font-size: 14px;
         font-weight: 500;
         line-height: 1.5;
+    }
+}
+
+@media (max-width: 780px) {
+    .hero__text {
+        padding-left: 4%;
+    }
+
+    .hero__image {
+        height: 50vh;
     }
 }

@@ -963,7 +963,7 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
     padding: 0 4%;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1350px) {
   .container {
     padding: 0 12%;
   }
@@ -1065,7 +1065,7 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   height: 100vh;
   justify-content: space-between;
   align-items: center;
-  padding-left: 7%;
+  padding-left: 8%;
   width: 100%;
   position: relative;
 }
@@ -1230,6 +1230,11 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   color: #5d5059; /* Cor do texto quando o toggle está ativo */
 }
 
+@media (max-width: 13250px) {
+  .hero {
+    padding-left: 12%;
+  }
+}
 @media (max-width: 740px) {
   .hero {
     padding-left: 0;
@@ -1245,7 +1250,8 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   .hero__text {
     width: 100%;
     text-align: start;
-    padding: 0 5%;
+    padding: 0;
+    padding-right: 4%;
     margin-bottom: 1rem;
   }
   .hero__form-container {
@@ -1265,6 +1271,14 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   line-height: 1.5;
 }
 
+@media (max-width: 780px) {
+  .hero__text {
+    padding-left: 4%;
+  }
+  .hero__image {
+    height: 50vh;
+  }
+}
 .section-wrapper {
   background: -webkit-linear-gradient(rgba(255, 70, 192, 0.05) 0%, rgba(21, 165, 246, 0.05) 100%);
   padding: 48px 0;
