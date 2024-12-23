@@ -27,16 +27,32 @@ With these simple and effective tips, you can keep your bathroom immaculate and 
       <ul>
         
             <li class="related-article">
-              <div class="related-article-image">
-                <a href="/blog/posts/how-to-keep-your-home-clean-with-limited-time19-12-2024/">
-                <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734640432828x375397332491456200/Frame%20552.png" alt="How to Keep Your Home Clean with Limited Time?">
-                </a>
-              <div class="related-article-info">
-                <h3><a href="/blog/posts/how-to-keep-your-home-clean-with-limited-time19-12-2024/">How to Keep Your Home Clean with Limited Time?</a></h3>
-                <p>Maintaining a clean home can feel overwhelming, particularly for individuals with busy schedules and minimal free time. However, employing simple and effective strategies can help you keep your home tidy and organized, even amidst a hectic lifestyle.</p>
-                <p class="tags">Tags: Tips and Tricks,Related</p>
-              </div>
+              <a href="/blog/posts/how-to-keep-your-home-clean-with-limited-time19-12-2024/">
+                <div class="related-article-image">
+                  <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734640432828x375397332491456200/Frame%20552.png" alt="How to Keep Your Home Clean with Limited Time?">
+                </div>
+                <div class="related-article-info">
+                  <h3>How to Keep Your Home Clean with Limited Time?</h3>
+                  <p>Maintaining a clean home can feel overwhelming, particularly for individuals with busy schedules and minimal free time. However, employing simple and effective strategies can help you keep your home tidy and organized, even amidst a hectic lifestyle.</p>
+                  <p class="tags">Categories: Tips and Tricks,Related</p>
+                </div>
+              </a>
             </li>
+
+          
+            <li class="related-article">
+              <a href="/blog/posts/teste22-12-2024/">
+                <div class="related-article-image">
+                  <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734921470470x667912279032677000/why-img.png" alt="Teste">
+                </div>
+                <div class="related-article-info">
+                  <h3>Teste</h3>
+                  <p>Test</p>
+                  <p class="tags">Categories: Tips and Tricks</p>
+                </div>
+              </a>
+            </li>
+
           
       </ul>
     </div>

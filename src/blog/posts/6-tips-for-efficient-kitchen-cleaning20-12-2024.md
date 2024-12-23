@@ -43,16 +43,18 @@ With these 6 simple tips, you can keep your kitchen clean and organized all the 
       <ul>
         
             <li class="related-article">
-              <div class="related-article-image">
-                <a href="/blog/posts/the-ultimate-guide-to-keeping-your-living-room-always-tidy20-12-2024/">
-                <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734714535358x823323796801388300/tidy.png" alt="The Ultimate Guide to Keeping Your Living Room Always Tidy">
-                </a>
-              <div class="related-article-info">
-                <h3><a href="/blog/posts/the-ultimate-guide-to-keeping-your-living-room-always-tidy20-12-2024/">The Ultimate Guide to Keeping Your Living Room Always Tidy</a></h3>
-                <p>Black woman chilling out on couch with a cup of tea and a remote control.</p>
-                <p class="tags">Tags: Cleaning routine</p>
-              </div>
+              <a href="/blog/posts/the-ultimate-guide-to-keeping-your-living-room-always-tidy20-12-2024/">
+                <div class="related-article-image">
+                  <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734714535358x823323796801388300/tidy.png" alt="The Ultimate Guide to Keeping Your Living Room Always Tidy">
+                </div>
+                <div class="related-article-info">
+                  <h3>The Ultimate Guide to Keeping Your Living Room Always Tidy</h3>
+                  <p>Black woman chilling out on couch with a cup of tea and a remote control.</p>
+                  <p class="tags">Categories: Cleaning routine</p>
+                </div>
+              </a>
             </li>
+
           
       </ul>
     </div>

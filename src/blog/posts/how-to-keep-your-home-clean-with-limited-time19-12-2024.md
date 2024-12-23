@@ -35,16 +35,32 @@ Maintaining a clean home with limited time available can be challenging, but it'
       <ul>
         
             <li class="related-article">
-              <div class="related-article-image">
-                <a href="/blog/posts/how-to-keep-your-bathroom-immaculate20-12-2024/">
-                <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734713889929x701173468358720300/bathroom.png" alt="How to Keep Your Bathroom Immaculate">
-                </a>
-              <div class="related-article-info">
-                <h3><a href="/blog/posts/how-to-keep-your-bathroom-immaculate20-12-2024/">How to Keep Your Bathroom Immaculate</a></h3>
-                <p>Maintaining a clean and hygienic bathroom is essential to ensure the comfort and health of everyone at home. With some simple tips and effective tricks, it's possible to keep the bathroom immaculate.</p>
-                <p class="tags">Tags: Tutorials,Tips and Tricks</p>
-              </div>
+              <a href="/blog/posts/how-to-keep-your-bathroom-immaculate20-12-2024/">
+                <div class="related-article-image">
+                  <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734713889929x701173468358720300/bathroom.png" alt="How to Keep Your Bathroom Immaculate">
+                </div>
+                <div class="related-article-info">
+                  <h3>How to Keep Your Bathroom Immaculate</h3>
+                  <p>Maintaining a clean and hygienic bathroom is essential to ensure the comfort and health of everyone at home. With some simple tips and effective tricks, it's possible to keep the bathroom immaculate.</p>
+                  <p class="tags">Categories: Tutorials,Tips and Tricks</p>
+                </div>
+              </a>
             </li>
+
+          
+            <li class="related-article">
+              <a href="/blog/posts/teste22-12-2024/">
+                <div class="related-article-image">
+                  <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734921470470x667912279032677000/why-img.png" alt="Teste">
+                </div>
+                <div class="related-article-info">
+                  <h3>Teste</h3>
+                  <p>Test</p>
+                  <p class="tags">Categories: Tips and Tricks</p>
+                </div>
+              </a>
+            </li>
+
           
       </ul>
     </div>

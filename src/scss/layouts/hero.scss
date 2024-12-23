@@ -48,9 +48,8 @@
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
-    max-width: 320px;
-    padding: 20px;
+    min-width: 280px;
+    padding: 36px 24px 32px 24px;
     background-color: vars.$bg-color;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.103);
     border-radius: 10px;
@@ -121,7 +120,7 @@
     background-size: 20px;
 }
 
-/* Toggle minimalista (M3) */
+/* Toggle */
 .hero__toggle-container {
     display: flex;
     align-items: center;
@@ -132,7 +131,7 @@
     position: relative;
     width: 34px;
     height: 20px;
-    background-color: vars.$neutrals-100;
+    background-color: vars.$neutrals-100; /* Cor do toggle quando inativo */
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -146,25 +145,32 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: vars.$bg-color;
+    background-color: vars.$bg-color; /* Cor da bolinha dentro do toggle */
     transition: transform 0.3s;
 }
 
 .hero__toggle-text {
     font-size: 1rem;
-    color: vars.$neutrals-200;
+    color: vars.$neutrals-400; /* Cor do texto quando inativo */
     margin-left: 10px;
     cursor: pointer;
-    /* Adiciona o cursor de pointer para indicar que é clicável */
 }
 
+/* Muda a cor do toggle quando está ativo */
 .hero__toggle.active {
-    background-color: vars.$primary-500;
+    background-color: vars.$primary-500; /* Cor do toggle quando ativo */
 }
 
+/* Muda a cor da bolinha dentro do toggle quando está ativo */
 .hero__toggle.active:before {
-    transform: translateX(14px);
+    transform: translateX(14px); /* Move a bolinha para o lado */
 }
+
+/* Muda a cor do texto quando o toggle está ativo, mas sem mudar a cor do toggle */
+.hero__toggle.active + .hero__toggle-text {
+    color: vars.$text-400; /* Cor do texto quando o toggle está ativo */
+}
+
 
 
 @media (max-width: 740px) {

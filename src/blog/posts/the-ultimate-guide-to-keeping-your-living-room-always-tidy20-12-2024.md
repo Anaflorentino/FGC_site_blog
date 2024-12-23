@@ -30,16 +30,18 @@ With these simple tips and strategies, you can keep your living room always tidy
       <ul>
         
             <li class="related-article">
-              <div class="related-article-image">
-                <a href="/blog/posts/6-tips-for-efficient-kitchen-cleaning20-12-2024/">
-                <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734717279673x194183628966472000/kitchen.png" alt="6 Tips for Efficient Kitchen Cleaning">
-                </a>
-              <div class="related-article-info">
-                <h3><a href="/blog/posts/6-tips-for-efficient-kitchen-cleaning20-12-2024/">6 Tips for Efficient Kitchen Cleaning</a></h3>
-                <p>With these 6 simple tips, you can perform efficient cleaning and keep your kitchen immaculate.</p>
-                <p class="tags">Tags: Cleaning routine</p>
-              </div>
+              <a href="/blog/posts/6-tips-for-efficient-kitchen-cleaning20-12-2024/">
+                <div class="related-article-image">
+                  <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734717279673x194183628966472000/kitchen.png" alt="6 Tips for Efficient Kitchen Cleaning">
+                </div>
+                <div class="related-article-info">
+                  <h3>6 Tips for Efficient Kitchen Cleaning</h3>
+                  <p>With these 6 simple tips, you can perform efficient cleaning and keep your kitchen immaculate.</p>
+                  <p class="tags">Categories: Cleaning routine</p>
+                </div>
+              </a>
             </li>
+
           
       </ul>
     </div>

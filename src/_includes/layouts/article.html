@@ -2,14 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     {% include "basehead.html" %}
     {%block head %}{% endblock %}
 </head>
 
 <body>
+
     <header>
         {% include "navbar.html" %}
+       
     </header>
     <main>
 
@@ -29,14 +33,11 @@
             <div class="section__title">
                 {{ content | safe }}
             </div>
+
         </article>
 
-        <!-- Conteúdo dinamico vem aqui -->
-         
+        {% include "footer.html" %}
+        {%block footer %}{% endblock %}
+
     </main>
-
-
-
-
-
 </body>

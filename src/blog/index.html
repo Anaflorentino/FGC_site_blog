@@ -1,7 +1,13 @@
 ---
 layout: layouts/base.html
 title: Latest posts
+services_link: /#services
+aboutus_link: /#about-us
+support_link: #support
+faq_link: /#faq
+blog_link: /blog
 ---
+
 
 <div class="container">
 
@@ -13,49 +19,16 @@ title: Latest posts
     </ol>
   </nav>
 
-  <div class="section__title">
-    <h1>{{ title }}</h1>
-    <p>Stay updated with the latest tips and news in residential cleaning. Here you'll find practical advice, detailed guides, and the newest trends to help you keep your home spotless and healthy.</p>
-  </div>
-
-<!-- * Loop para recentes | Posts -->
-<div class="featured-container section__title">
-  <div>
-    {% for post in collections.posts | sort(attribute='date', reverse=true) %}
-      {% if loop.index <= 3 %}
-        {% if loop.index is divisibleby(2) %}
-          <div class="column left">
-            <span>{{ post.data.tags }}</span>
-            <div class="image-container">
-              <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" />
-            </div>
-          </div>
-        {% else %}
-          <div class="column right">
-            <span>{{ post.data.tags }}</span>
-            <div class="image-container">
-              <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" />
-
-            </div>
-          </div>
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-</div
-
-
   <!-- * Seção de preview para todos os Artigos -->
   <section class="articles">
     <div class="section__title">
       <h2>Cleaning tips</h2>
       <p>Transform your cleaning routine! Discover our curated cleaning tips that make maintaining a spotless home a breeze. Click now to discover the secrets that will save you time and energy.</p>
-      <a href="all-articles/"><button class="button button--secondary button--small">View all</button></a>
     </div>
     
     <ol role="list" class="articles__list">
       {% for post in collections.posts | sort(attribute='date', reverse=true) %}
-        {% if loop.index <= 4 %}
+        {% if loop.index %}
           <li role="article" class="articles__list__item">
             <a href="{{ post.url }}">
               <article>
@@ -71,3 +44,4 @@ title: Latest posts
         {% endif %}
       {% endfor %}
     </ol>
+</section>

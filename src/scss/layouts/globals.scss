@@ -7,11 +7,15 @@
 }
 
 .container {
-    padding: 0 5%;
+    padding: 0 8%;
     margin: 0 auto;
 
+    @media (max-width: 780px) {
+        padding: 0 4%;
+    }
+
     @media (min-width: 1400px) {
-        padding: 0 10%;
+        padding: 0 12%;
     }
 }
 

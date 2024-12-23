@@ -19,7 +19,7 @@ const formatDate = (date) => {
 const bbcodeToMarkdown = (content) => {
   // Convertendo cabeçalhos (H1-H6)
   content = content.replace(/<h([1-6])>(.*?)<\/h\1>/g, (match, p1, p2) => {
-    const hashes = '#'.repeat(p1); 
+    const hashes = '#'.repeat(p1);
     return `${hashes} ${p2}`;
   });
 
@@ -44,7 +44,7 @@ const bbcodeToMarkdown = (content) => {
   content = content.replace(/\[list\](.*?)\[\/list\]/gs, (match, p1) => {
     return p1.replace(/\[\*\](.*?)\[/g, '\n- $1\n');
   });
-  
+
   // Convertendo listas ordenadas
   content = content.replace(/\[ol\](.*?)\[\/ol\]/gs, (match, p1) => {
     return p1.replace(/\[\*\](.*?)\[/g, '\n1. $1\n');
@@ -79,8 +79,8 @@ const bbcodeToMarkdown = (content) => {
 
 // Função para gerar o conteúdo do Markdown
 const generateMarkdown = (data) => {
-  const contentWithMarkdown = bbcodeToMarkdown(data.content); 
-  const tags = data.tags ? data.tags.split(',').map(tag => tag.trim()).join(', ') : ''; 
+  const contentWithMarkdown = bbcodeToMarkdown(data.content);
+  const tags = data.tags ? data.tags.split(',').map(tag => tag.trim()).join(', ') : '';
 
   return `
 ---
@@ -102,7 +102,7 @@ const createMarkdownFile = (entry, allArticles) => {
   const fileName = entry.file_name;
   const markdownContent = generateMarkdown(entry);
   const relatedArticles = findRelatedArticles(entry, allArticles);
-  
+
   let relatedArticlesHtml = '';
 
   if (relatedArticles.length > 0) {
@@ -111,20 +111,22 @@ const createMarkdownFile = (entry, allArticles) => {
       <h2>Related articles</h2>
       <ul>
         ${relatedArticles.map(article => {
-          return `
+      return `
             <li class="related-article">
-            <a href="/blog/posts/${article.file_name}/">
-              <div class="related-article-image">
-                <img src="${article.image}" alt="${article.title}">
-              <div class="related-article-info">
-                <h3><a href="/blog/posts/${article.file_name}/">${article.title}</a></h3>
-                <p>${article.description}</p>
-                <p class="tags">Tags: ${article.tags}</p>
-              </div>
+              <a href="/blog/posts/${article.file_name}/">
+                <div class="related-article-image">
+                  <img src="${article.image}" alt="${article.title}">
+                </div>
+                <div class="related-article-info">
+                  <h3>${article.title}</h3>
+                  <p>${article.description}</p>
+                  <p class="tags">Categories: ${article.tags}</p>
+                </div>
               </a>
             </li>
+
           `;
-        }).join('')}
+    }).join('')}
       </ul>
     </div>
     `;
@@ -145,12 +147,12 @@ const createMarkdownFile = (entry, allArticles) => {
 // Função para encontrar artigos relacionados com base nas tags
 const findRelatedArticles = (currentArticle, allArticles) => {
   const currentTags = currentArticle.tags.split(',').map(tag => tag.trim());
-  
+
   return allArticles.filter(article => {
     if (article.file_name === currentArticle.file_name) return false; // Exclui o próprio artigo
-    
+
     const articleTags = article.tags.split(',').map(tag => tag.trim());
-    
+
     return articleTags.some(tag => currentTags.includes(tag));
   });
 };
@@ -194,7 +196,7 @@ const convertJsonToMarkdown = () => {
   }
 
   const files = fs.readdirSync(dataDir);
-  
+
   const allArticles = files
     .filter(file => path.extname(file) === '.json')
     .map(file => {
