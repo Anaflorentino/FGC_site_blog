@@ -6,9 +6,10 @@
 // *FAQ
 .faq {
     display: flex;
-    padding: 48px 5%;
     gap: 2rem;
     justify-content: space-between;
+    padding-top: 48px;
+    padding-bottom: 48px;
 
     &__left {
         display: flex;
