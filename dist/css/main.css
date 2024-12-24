@@ -196,7 +196,7 @@ ul li {
   width: 100%;
   padding: 10px;
   margin: 0;
-  margin-top: 6px;
+  margin-top: 12px;
   box-sizing: border-box;
 }
 
@@ -209,7 +209,7 @@ ul li {
   color: white;
   border: none;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 12px;
   border-radius: 5px;
 }
 .google-login-button:hover,
@@ -326,6 +326,8 @@ ul li {
   font-size: 12px;
   color: #788591;
   cursor: pointer;
+  display: block;
+  margin-top: 4px;
   text-decoration: underline;
 }
 #forgotPassword:hover {
@@ -399,6 +401,25 @@ ul li {
   color: red;
   font-size: 0.7rem;
   display: block;
+  display: none; /* Inicialmente oculto */
+}
+
+.account-switcher {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  align-items: center;
+  gap: 0.5rem;
+}
+.account-switcher button {
+  padding-left: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff4667;
+  text-decoration: underline;
+}
+.account-switcher button:hover {
+  color: #e8405e;
 }
 
 .support-modal-overlay {
@@ -1300,19 +1321,6 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
     padding-left: 4%;
   }
 }
-.account-switcher {
-  display: flex;
-  font-size: 14px;
-  font-weight: 600;
-  align-items: center;
-  gap: 0.5rem;
-}
-.account-switcher button {
-  padding-left: 0;
-  font-size: 14px;
-  color: #ff4667;
-}
-
 .section-wrapper {
   background: -webkit-linear-gradient(rgba(255, 70, 192, 0.05) 0%, rgba(21, 165, 246, 0.05) 100%);
   padding: 48px 0;
@@ -1901,8 +1909,7 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   background: #f1f1f1;
 }
 .team__cards__item {
-  max-width: 348px;
-  min-width: 340px;
+  min-width: 240px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1911,7 +1918,7 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   padding: 36px 32px 40px 32px;
   border-radius: 12px;
   flex-shrink: 0;
-  max-width: 348px;
+  max-width: 320px;
 }
 .team__cards__name {
   display: flex;

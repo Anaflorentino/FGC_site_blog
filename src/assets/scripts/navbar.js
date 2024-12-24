@@ -1,34 +1,232 @@
-async function fetchUserInfo(userId) {
-  const userInfoUrl = "https://flashguyscleaning.com/version-test/api/1.1/wf/userinfo";
-  const userInfoPayload = { id: userId };
+// Função para exibir os warnings (mensagens de erro)
+function showWarning(inputElement, warningSpan) {
+  warningSpan.style.display = 'inline'; // Exibe o span com a mensagem de erro
+  inputElement.classList.add('input-error'); // Adiciona uma classe para estilizar o campo com erro
+}
+
+// Função para ocultar os warnings
+function hideWarning(inputElement, warningSpan) {
+  warningSpan.style.display = 'none'; // Oculta o span com a mensagem de erro
+  inputElement.classList.remove('input-error'); // Remove a classe de erro
+}
+
+// Função para validar o modal de login
+document.getElementById("modalLoginButton").addEventListener("click", (event) => {
+  const email = document.getElementById("modalEmail");
+  const password = document.getElementById("modalPassword");
+  const emailWarning = email.nextElementSibling; // O span de erro após o input de email
+  const passwordWarning = password.nextElementSibling; // O span de erro após o input de senha
+
+  let isValid = true;
+
+  // Validação do email
+  if (!email.value) {
+    showWarning(email, emailWarning);
+    isValid = false;
+  } else {
+    hideWarning(email, emailWarning);
+  }
+
+  // Validação da senha
+  if (!password.value) {
+    showWarning(password, passwordWarning);
+    isValid = false;
+  } else {
+    hideWarning(password, passwordWarning);
+  }
+
+  // Se algum campo estiver inválido, evita o envio
+  if (!isValid) {
+    event.preventDefault(); // Impede o envio do formulário
+  } else {
+    // Se os campos estiverem válidos, prosseguir com o login
+    loginUser(email.value, password.value);
+  }
+});
+
+// Função para validar o modal de signup
+document.getElementById("signupModalButton").addEventListener("click", (event) => {
+  const name = document.getElementById("signupName");
+  const email = document.getElementById("signupEmail");
+  const phone = document.getElementById("signupPhone");
+  const password = document.getElementById("signupPassword");
+
+  const nameWarning = name.nextElementSibling;
+  const emailWarning = email.nextElementSibling;
+  const phoneWarning = phone.nextElementSibling;
+  const passwordWarning = password.nextElementSibling;
+
+  let isValid = true;
+
+  // Validação do nome (verificando se há pelo menos dois nomes)
+  const nameParts = name.value.trim().split(/\s+/); // Divida o nome por espaços em branco
+  if (nameParts.length < 2) {
+    showWarning(name, nameWarning); // Exibe o alerta se o nome tiver menos de 2 palavras
+    isValid = false;
+  } else {
+    hideWarning(name, nameWarning); // Caso contrário, esconde o alerta
+  }
+
+  // Validação do email
+  if (!email.value) {
+    showWarning(email, emailWarning);
+    isValid = false;
+  } else {
+    hideWarning(email, emailWarning);
+  }
+
+  // Validação do telefone
+  if (!phone.value || phone.value.length < 10) {
+    showWarning(phone, phoneWarning);
+    isValid = false;
+  } else {
+    hideWarning(phone, phoneWarning);
+  }
+
+  // Validação da senha
+  if (!password.value) {
+    showWarning(password, passwordWarning);
+    isValid = false;
+  } else {
+    hideWarning(password, passwordWarning);
+  }
+
+  // Se algum campo estiver inválido, evita o envio
+  if (!isValid) {
+    event.preventDefault(); // Impede o envio do formulário
+  } else {
+    // Se os campos estiverem válidos, prosseguir com o signup
+    signupUser(name.value, email.value, phone.value, password.value);
+  }
+});
+
+// Funções fictícias de login e signup (substitua pelo seu código real)
+function loginUser(email, password) {
+  console.log('Logando com', email, password);
+  // Aqui você pode colocar o código de login (fetch, etc.)
+}
+
+function signupUser(name, email, phone, password) {
+  console.log('Cadastrando com', name, email, phone, password);
+  // Aqui você pode colocar o código de cadastro (fetch, etc.)
+}
+
+// Login normal
+document.getElementById("modalLoginButton").addEventListener("click", async () => {
+  const email = document.getElementById("modalEmail").value;
+  const password = document.getElementById("modalPassword").value;
+
+  const loginUrl = "https://flashguyscleaning.com/version-test/api/1.1/wf/auth";
+  const loginPayload = {
+    email: email,
+    senha: password
+  };
 
   try {
-    const response = await fetch(userInfoUrl, {
+    const response = await fetch(loginUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(userInfoPayload)
+      body: JSON.stringify(loginPayload)
     });
 
-    if (!response.ok) {
-      throw new Error(`Failed to fetch user info: ${response.status}`);
-    }
-
     const data = await response.json();
-
     if (data.status === "success" && data.response) {
-      return data.response;
+      localStorage.setItem("user_id", data.response.user_id);
+      document.getElementById("loginModal").classList.remove("visible");
+      resetModalInputs("loginModal");
+      checkAuth();
     } else {
-      throw new Error("Invalid user info response");
+      console.log("Login failed.");
     }
   } catch (error) {
-    console.error("Error fetching user info:", error);
-    return null;
+    console.error("Login error:", error);
   }
+});
+
+// Signup normal
+document.getElementById("signupModalButton").addEventListener("click", async () => {
+  const name = document.getElementById("signupName").value;
+  const email = document.getElementById("signupEmail").value;
+  const phone = document.getElementById("signupPhone").value;
+  const password = document.getElementById("signupPassword").value;
+
+  const signupUrl = "https://flashguyscleaning.com/version-test/api/1.1/wf/auth";
+  const signupPayload = {
+    email: email,
+    senha: password,
+    name: name,
+    phone: phone
+  };
+
+  try {
+    const response = await fetch(signupUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(signupPayload)
+    });
+
+    const data = await response.json();
+    if (data.status === "success" && data.response) {
+      localStorage.setItem("user_id", data.response.user_id);
+      document.getElementById("signupModal").classList.remove("visible");
+      resetModalInputs("signupModal");
+      checkAuth();
+    } else {
+      console.log("Sign up failed.");
+    }
+  } catch (error) {
+    console.error("Sign up error:", error);
+  }
+});
+
+// Login com Google (redireciona para a página do Bubble)
+document.getElementById("googleLoginButton").addEventListener("click", () => {
+  window.location.href = "https://flashguyscleaning.com/version-test/google_login";
+});
+
+// Signup com Google (usa a mesma página - no Bubble você define se faz signup/login)
+document.getElementById("googleSignupButton").addEventListener("click", () => {
+  window.location.href = "https://flashguyscleaning.com/version-test/google_login";
+});
+
+// Resetar os inputs do modal
+function resetModalInputs(modalId) {
+  const modal = document.getElementById(modalId);
+  const inputs = modal.querySelectorAll("input");
+  inputs.forEach(input => input.value = "");
 }
 
+// Fecha o modal ao clicar fora dele
+document.getElementById("loginModal").addEventListener("click", (e) => {
+  if (e.target.id === "loginModal") {
+    document.getElementById("loginModal").classList.remove("visible");
+    resetModalInputs("loginModal");
+  }
+});
 
+document.getElementById("signupModal").addEventListener("click", (e) => {
+  if (e.target.id === "signupModal") {
+    document.getElementById("signupModal").classList.remove("visible");
+    resetModalInputs("signupModal");
+  }
+});
+
+// Se ao retornar do Bubble o user_id vier na URL, salvá-lo e atualizar
+const urlParams = new URLSearchParams(window.location.search);
+const returnedUserId = urlParams.get('user_id');
+if (returnedUserId) {
+  localStorage.setItem("user_id", returnedUserId);
+  // Remove o parâmetro da URL para não poluir
+  history.replaceState(null, '', window.location.pathname);
+}
+
+checkAuth();
+
+// Função para verificar o status do usuário logado
 async function checkAuth() {
   const authContainer = document.getElementById("authContainer");
   const dashboardButton = document.getElementById("dashboardButton"); // Referência ao botão "Dashboard"
@@ -98,190 +296,24 @@ async function checkAuth() {
   }
 }
 
-// Login normal
-document.getElementById("modalLoginButton").addEventListener("click", async () => {
-  const email = document.getElementById("modalEmail").value;
-  const password = document.getElementById("modalPassword").value;
-
-  const loginUrl = "https://flashguyscleaning.com/version-test/api/1.1/wf/auth";
-  const loginPayload = {
-    email: email,
-    senha: password
-  };
+// Função para buscar as informações do usuário
+async function fetchUserInfo(userId) {
+  const userInfoUrl = "https://flashguyscleaning.com/version-test/api/1.1/wf/userinfo";
+  const userInfoPayload = { id: userId };
 
   try {
-    const response = await fetch(loginUrl, {
+    const response = await fetch(userInfoUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(loginPayload)
+      body: JSON.stringify(userInfoPayload)
     });
 
     const data = await response.json();
-    if (data.status === "success" && data.response) {
-      localStorage.setItem("user_id", data.response.user_id);
-      document.getElementById("loginModal").classList.remove("visible");
-      resetModalInputs("loginModal");
-      checkAuth();
-    } else {
-      alert("Login failed.");
-    }
+    return data.response || null;
   } catch (error) {
-    console.error("Login error:", error);
+    console.error("Erro ao buscar informações do usuário:", error);
+    return null;
   }
-});
-
-// Signup normal
-document.getElementById("signupModalButton").addEventListener("click", async () => {
-  const name = document.getElementById("signupName").value;
-  const email = document.getElementById("signupEmail").value;
-  const phone = document.getElementById("signupPhone").value;
-  const password = document.getElementById("signupPassword").value;
-
-  const signupUrl = "https://flashguyscleaning.com/version-test/api/1.1/wf/auth";
-  const signupPayload = {
-    email: email,
-    senha: password,
-    name: name,
-    phone: phone
-  };
-
-  try {
-    const response = await fetch(signupUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(signupPayload)
-    });
-
-    const data = await response.json();
-    if (data.status === "success" && data.response) {
-      localStorage.setItem("user_id", data.response.user_id);
-      document.getElementById("signupModal").classList.remove("visible");
-      resetModalInputs("signupModal");
-      checkAuth();
-    } else {
-      alert("Sign up failed.");
-    }
-  } catch (error) {
-    console.error("Sign up error:", error);
-  }
-});
-
-// Login com Google (redireciona para a página do Bubble)
-document.getElementById("googleLoginButton").addEventListener("click", () => {
-  window.location.href = "https://flashguyscleaning.com/version-test/google_login";
-});
-
-// Signup com Google (usa a mesma página - no Bubble você define se faz signup/login)
-document.getElementById("googleSignupButton").addEventListener("click", () => {
-  window.location.href = "https://flashguyscleaning.com/version-test/google_login";
-});
-
-function resetModalInputs(modalId) {
-  const modal = document.getElementById(modalId);
-  const inputs = modal.querySelectorAll("input");
-  inputs.forEach(input => input.value = "");
 }
-
-document.getElementById("loginModal").addEventListener("click", (e) => {
-  if (e.target.id === "loginModal") {
-    document.getElementById("loginModal").classList.remove("visible");
-    resetModalInputs("loginModal");
-  }
-});
-
-document.getElementById("signupModal").addEventListener("click", (e) => {
-  if (e.target.id === "signupModal") {
-    document.getElementById("signupModal").classList.remove("visible");
-    resetModalInputs("signupModal");
-  }
-});
-
-// Se ao retornar do Bubble o user_id vier na URL, salvá-lo e atualizar
-const urlParams = new URLSearchParams(window.location.search);
-const returnedUserId = urlParams.get('user_id');
-if (returnedUserId) {
-  localStorage.setItem("user_id", returnedUserId);
-  // Remove o parâmetro da URL para não poluir
-  history.replaceState(null, '', window.location.pathname);
-}
-
-checkAuth();
-
-// Seleciona o ícone do menu, a lista de links e o span do ícone
-const menuIcon = document.getElementById("menu");
-const navLinks = document.querySelector(".nav-list-links");
-const menuIconSpan = menuIcon.querySelector("span");
-
-// Adiciona um evento de clique no ícone do menu
-menuIcon.addEventListener("click", function(event) {
-  // Previne que o clique no menu icon feche o menu logo após a abertura
-  event.stopPropagation();
-  
-  // Alterna a classe "active" para mostrar/ocultar os links
-  navLinks.classList.toggle("active");
-
-  // Altera o ícone para 'close' ou 'menu' baseado no estado do menu
-  if (navLinks.classList.contains("active")) {
-    menuIconSpan.textContent = "close"; // Exibe o ícone de 'X' quando o menu está aberto
-  } else {
-    menuIconSpan.textContent = "menu"; // Volta para o ícone de menu quando o menu está fechado
-  }
-});
-
-// Adiciona um evento de clique em qualquer parte do documento
-document.addEventListener("click", function(event) {
-  // Verifica se o clique foi fora do menu e do ícone do menu
-  if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
-    // Se foi fora, esconde o menu
-    navLinks.classList.remove("active");
-
-    // Restaura o ícone para 'menu'
-    menuIconSpan.textContent = "menu"; // Exibe novamente o ícone de menu
-  }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const emailInput = document.getElementById('modalEmail');
-  const forgotPasswordButton = document.getElementById('forgotPassword');
-
-  forgotPasswordButton.addEventListener('click', function () {
-    const email = emailInput.value.trim();
-
-    if (!email) {
-      alert('Please fill in the email field');
-      emailInput.focus(); 
-      return;
-    }
-
-    fetch('https://flashguyscleaning.com/version-test/api/1.1/wf/resetpassword', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'User-Agent': 'insomnia/10.2.0'
-      },
-      body: JSON.stringify({ email: email })
-    })
-    .then(response => response.json())
-    .then(data => {
-      alert('Reset email sent successfully!');
-      console.log(data);
-    })
-    .catch(error => {
-      console.error('Error sending reset email:', error);
-      alert('Failed to send reset email. Please try again.');
-    });
-  });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  var selector = document.getElementById('signupPhone');
-  var im = new Inputmask("(999) 999-9999");  // Máscara de telefone americano
-  im.mask(selector);
-});
-
-
-

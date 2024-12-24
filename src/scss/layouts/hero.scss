@@ -227,16 +227,3 @@
     }
 }
 
-.account-switcher {
-    display: flex;
-    font-size: 14px;
-    font-weight: 600;
-    align-items: center;
-    gap: .5rem;
-
-    button {
-        padding-left: 0;
-        font-size: 14px;
-        color: vars.$primary-500;
-    }
-}
