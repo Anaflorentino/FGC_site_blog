@@ -37,7 +37,6 @@
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
-
     
 </head>
 
@@ -1188,11 +1187,12 @@
         <div class="footer__content__column">
             <h3>Get updates and promotions</h3>
             <div>Subscribe now to stay tuned</div>
-            <form>
-                <input type="text" placeholder="Email">
+            <form id="subscribe-form">
+                <input type="email" id="subscribe-email" placeholder="Email" required>
                 <button type="submit" class="button button--primary">Subscribe</button>
                 <div><span>By subscribing you agree to our <a href="http://localhost:8080/privacy-policy">Privacy Policy</a>.</span></div>
             </form>
+            <div id="subscribe-message" class="subscribe-message"></div> <!-- Mensagem de feedback -->
         </div>
     </div>
     <div id="copy">
