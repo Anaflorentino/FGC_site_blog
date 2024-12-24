@@ -189,7 +189,7 @@
                         itemprop="serviceFeature"> 24h professional team</span></li>
             </ul>
             <div class="cta">
-                <a href="#" class="button button--secondary" title="Get a free estimate for cleaning services">Free
+                <a class="button button--secondary" title="Get a free estimate for cleaning services">Free
                     estimate</a>
                 <a href="#" class="button button--primary" title="Book a cleaning service now">Book now</a>
             </div>
@@ -210,7 +210,7 @@
                     <div class="hero__form-select-container">
                         <div class="hero__form-select-left-icon bedroom" aria-hidden="true"></div>
                         <!-- Icon for bedroom selection -->
-                        <select class="hero__form-select" aria-label="Select number of bedrooms">
+                        <select class="hero__form-select" aria-label="Select number of bedrooms" id="dropdownBedroom">
                             <option value="" disabled selected>Number of bedrooms</option>
                             <option value="1">1 bedroom</option>
                             <option value="2">2 bedrooms</option>
@@ -223,7 +223,7 @@
                     <div class="hero__form-select-container">
                         <div class="hero__form-select-left-icon bathroom" aria-hidden="true"></div>
                         <!-- Icon for bathroom selection -->
-                        <select class="hero__form-select" aria-label="Select number of bathrooms">
+                        <select class="hero__form-select" aria-label="Select number of bathrooms" id="dropdownBathroom">
                             <option value="" disabled selected>Number of bathrooms</option>
                             <option value="1">1 bathroom</option>
                             <option value="2">2 bathrooms</option>
@@ -238,7 +238,7 @@
                         <div class="hero__toggle" id="pet-friendly-toggle" aria-label="Pet friendly toggle"></div>
                         <span class="hero__toggle-text" id="pet-friendly-text">Pet friendly</span>
                     </div>
-                    <button class="button button--primary" type="submit"
+                    <button class="button button--primary" type="submit" id="btnFreeEstimate"
                         aria-label="Submit the form for a free estimate">Free estimate</button>
                 </form>
             </div>
@@ -1021,10 +1021,10 @@
         <div>
             <h3>Did not see your question?</h3>
             <p>Send us a message</p>
-            <form>
-                <input type="text" placeholder="Email">
+            <form id="faq-form">
+                <input type="email" placeholder="Email" id="email">
                 <textarea name="message" placeholder="Your message" id="message"></textarea>
-                <button class="button button button--primary" type="submit">Send message</button>
+                <button class="button button--small button--primary" type="submit">Send message</button>
             </form>
         </div>
     </div>
@@ -1214,6 +1214,8 @@
 <script src="/assets/scripts/services.js"></script>
 <script src="/assets/scripts/scroll-x.js"></script>
 <script src="/assets/scripts/included.json"></script>
+<script src="/assets/scripts/faq.js"></script>
+<script src="/assets/scripts/server.js"></script>
 
 <!-- Mascaras -->
 <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.7/dist/inputmask.min.js"></script>
@@ -1226,8 +1228,8 @@
 <!-- Testimonials -->
 <script type="module" src="/assets/scripts/main.js"></script>
 <script type="module" src="/assets/scripts/contact-modal.js"></script>
-<script type="module" src="/assets/scripts/pre-form.js"></script>
 <script type="module" src="/assets/scripts/toggle.js"></script>
+<script type="module" src="/assets/scripts/pre-form.js"></script>
 <script type="module" src="/assets/scripts/scroll.js"></script>
 <script type="module" src="/assets/scripts/carousel.js"></script>
 <script type="module" src="/assets/scripts/footer.js"></script>
