@@ -2051,6 +2051,47 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   background-color: #252d3a;
 }
 
+.document-background {
+  background-color: #f8f8f8;
+  padding: 56px 0;
+}
+
+.document {
+  color: #342430;
+  padding: 48px 40px;
+  border-radius: 16px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 44px 73px -3px;
+}
+.document__section {
+  margin-bottom: 48px;
+}
+.document__section h1 {
+  font-size: 2rem;
+  margin-bottom: 48px;
+  color: #342430;
+}
+.document__section p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.document__section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.document__section ul li {
+  list-style: disc;
+  margin-left: 2rem;
+}
+.document__section a {
+  color: #ff4667;
+}
+.document__section a:hover {
+  color: #e8405e;
+  text-decoration: underline;
+}
+
 .section-scroll {
   display: none;
 }

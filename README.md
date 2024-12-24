@@ -21,4 +21,5 @@ Esse código contém todas as funcionalidades relacionadas ao 11ty e é respons�
 Código com scripts e automações
 
 
-
+# Painél Bubble CMS
+https://flashguyscleaning.com/version-test/blogcreatetest

@@ -1,0 +1,49 @@
+@use '../abstracts/variables' as vars;
+
+
+.document-background {
+    background-color: #f8f8f8;
+    padding: 56px 0;
+}
+
+.document {
+    color: vars.$text-500;
+    padding: 48px 40px;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: #0003 0px 44px 73px -3px;
+    &__section {
+        margin-bottom: 48px;
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 48px;
+            color: vars.$text-500;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            li {
+                list-style: disc;
+                margin-left: 2rem;
+            }
+        }
+
+        a {
+            color: vars.$primary-500;
+            &:hover {
+                color: vars.$primary-600;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
