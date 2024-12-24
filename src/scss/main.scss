@@ -124,3 +124,25 @@
     grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
   }
 }
+
+/* Faq Email Success*/
+
+.success-message {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Subscribe Email*/
+
+.subscribe-message {
+  margin-top: 10px;
+  color: #28a745;  /* Verde para sucesso */
+  font-size: 14px;
+  text-align: center;
+}
