@@ -992,10 +992,10 @@
         <div>
             <h3>Did not see your question?</h3>
             <p>Send us a message</p>
-            <form>
-                <input type="text" placeholder="Email">
+            <form id="faq-form">
+                <input type="email" placeholder="Email" id="email">
                 <textarea name="message" placeholder="Your message" id="message"></textarea>
-                <button class="button button button--primary" type="submit">Send message</button>
+                <button class="button button--small button--primary" type="submit">Send message</button>
             </form>
         </div>
     </div>
@@ -1170,6 +1170,8 @@
 <script src="/assets/scripts/services.js"></script>
 <script src="/assets/scripts/scroll-x.js"></script>
 <script src="/assets/scripts/included.json"></script>
+<script src="/assets/scripts/faq.js"></script>
+<script src="/assets/scripts/server.js"></script>
 
 <!-- Mascaras -->
 <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.7/dist/inputmask.min.js"></script>
