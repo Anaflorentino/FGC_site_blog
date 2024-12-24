@@ -2057,8 +2057,10 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
 }
 
 .document {
+  margin: 0 auto;
   color: #342430;
   padding: 48px 40px;
+  max-width: 940px;
   border-radius: 16px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 44px 73px -3px;

@@ -40,20 +40,6 @@ With these simple and effective tips, you can keep your bathroom immaculate and 
             </li>
 
           
-            <li class="related-article">
-              <a href="/blog/posts/teste22-12-2024/">
-                <div class="related-article-image">
-                  <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734921470470x667912279032677000/why-img.png" alt="Teste">
-                </div>
-                <div class="related-article-info">
-                  <h3>Teste</h3>
-                  <p>Test</p>
-                  <p class="tags">Categories: Tips and Tricks</p>
-                </div>
-              </a>
-            </li>
-
-          
       </ul>
     </div>
     

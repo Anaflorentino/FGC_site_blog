@@ -7,8 +7,10 @@
 }
 
 .document {
+    margin: 0 auto;
     color: vars.$text-500;
     padding: 48px 40px;
+    max-width: 940px;
     border-radius: 16px;
     background-color: white;
     box-shadow: #0003 0px 44px 73px -3px;
