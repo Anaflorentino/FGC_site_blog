@@ -159,6 +159,21 @@ ul li {
   background-color: #ff6b85;
 }
 
+#profileDropdown {
+  display: flex;
+  align-items: baseline;
+  gap: 0.2rem;
+}
+#profileDropdown button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+#profileDropdown button:hover {
+  opacity: 0.7;
+}
+
 #dropdownMenu > button {
   display: flex;
   gap: 0.4rem;
@@ -195,8 +210,7 @@ ul li {
 .nav-modal .modal-content input {
   width: 100%;
   padding: 10px;
-  margin: 0;
-  margin-top: 12px;
+  margin: 12px 0 0;
   box-sizing: border-box;
 }
 
@@ -234,6 +248,27 @@ ul li {
   width: 24px;
 }
 
+#forgotPassword {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #342430;
+  margin-top: 0.2rem;
+  text-decoration: underline;
+}
+#forgotPassword:hover {
+  color: #776c74;
+}
+
+#privacyPolicy p, #privacyPolicy a {
+  color: #788591;
+  font-size: 0.7rem;
+}
+#privacyPolicy a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 #menu,
 #login,
 #signup,
@@ -261,147 +296,15 @@ ul li {
     border: none;
   }
 }
-.nav-list-links.active {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 50px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  left: 0;
-  height: 100vh;
-  width: 70%;
-  align-items: flex-start;
-  z-index: 999;
-}
-.nav-list-links.active li {
-  padding: 10px 0;
-  display: block;
-}
-.nav-list-links.active li a {
-  text-decoration: none;
-}
-.nav-list-links.active li a:hover {
-  background-color: transparent;
-}
-
 @media (max-width: 590px) {
   .navbar {
     display: block;
   }
 }
-#user-email {
-  color: #a5adb5;
-  font-size: 0.8rem;
-  padding-bottom: 0.5rem;
-}
-
-#user-name {
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.dropdownDivider {
-  border-top: 1px solid #d5d9dd;
-  padding: 0.4rem 0;
-  margin-top: 0.5rem;
-}
-
-#profileDropdown {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  gap: 0.35rem;
-}
-#profileDropdown button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-#forgotPassword {
-  border: none;
-  background-color: transparent;
-  font-size: 12px;
-  color: #788591;
-  cursor: pointer;
-  display: block;
-  margin-top: 4px;
-  text-decoration: underline;
-}
-#forgotPassword:hover {
-  color: #6d7984;
-}
-
-#modalPassword {
-  margin-bottom: 0;
-}
-
-#privacyPolicy {
-  font-size: 12px;
-  line-height: 1.1;
-}
-#privacyPolicy p,
-#privacyPolicy a {
-  color: #939da7;
-}
-#privacyPolicy a {
-  text-decoration: underline;
-}
-
-#privacyPolicy p,
-#privacyPolicy a {
-  margin-bottom: 32px;
-}
-
-.account {
-  font-size: 14px;
-}
-.account #sign-btn,
-.account #login-btn {
-  margin-left: 4px;
-  border: none;
-  font-size: 14px;
-  background-color: transparent;
-  cursor: pointer;
-  font-weight: 700;
-  color: #ff4667;
-}
-.account #sign-btn:hover,
-.account #login-btn:hover {
-  color: #e8405e;
-}
-
-.button {
-  padding: 10px;
-  cursor: pointer;
-}
-
-/* Inicialmente, escondemos as modais */
-.nav-modal {
-  display: none;
-}
-
-.nav-modal.visible {
-  display: block;
-}
-
-/* Algumas melhorias na aparência */
-.modal-content {
-  padding: 20px;
-  background-color: #fff;
-  width: 400px;
-  margin: 100px auto;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .input-warning {
   color: red;
   font-size: 0.7rem;
-  display: block;
-  display: none; /* Inicialmente oculto */
+  display: none;
 }
 
 .account-switcher {
@@ -599,6 +502,7 @@ ul li {
 .button--primary {
   background-color: #ff4667;
   color: white;
+  border: 1px solid;
 }
 .button--primary:hover {
   background-color: #ff6b85;
@@ -1003,6 +907,9 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   margin-bottom: 2rem;
 }
 
+.articles {
+  margin-bottom: 48px;
+}
 .articles a {
   text-decoration: none;
 }
@@ -1077,7 +984,7 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
 .article {
   max-width: 920px;
   padding: 0 5%;
-  margin: 0 auto;
+  margin: 32px auto;
   /* Selecionando o último parágrafo após o H2 */
 }
 .article h1 {
@@ -1103,7 +1010,88 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   object-fit: cover;
   border-radius: 16px;
 }
+@media (max-width: 740px) {
+  .article .article__image {
+    max-height: 300px;
+  }
+}
 
+.related-articles {
+  margin-top: 40px;
+}
+
+.related-articles h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.related-article a {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: start;
+  gap: 1.5rem;
+}
+@media (max-width: 746px) {
+  .related-article a {
+    display: block;
+  }
+}
+
+.related-article-image {
+  min-width: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 120px;
+}
+
+.related-article-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.related-article-info h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 746px) {
+  .related-article-info h3 {
+    margin: 0.7rem 0;
+  }
+}
+.related-article-info p {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+}
+
+.related-article-info .tags {
+  font-size: 12px;
+  color: #888;
+}
+
+.articles__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Exibe 4 colunas */
+  gap: 20px; /* Ajuste o espaçamento entre os itens */
+}
+
+@media (max-width: 920px) {
+  .articles__list {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+  }
+}
+@media (max-width: 480px) {
+  .articles__list {
+    grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+  }
+}
 .hero {
   display: flex;
   height: 100vh;
@@ -1257,6 +1245,7 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   color: #939da7; /* Cor do texto quando inativo */
   margin-left: 10px;
   cursor: pointer;
+  user-select: none;
 }
 
 /* Muda a cor do toggle quando está ativo */
@@ -1290,7 +1279,7 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   }
   .hero__image {
     width: 100%;
-    height: 50vh;
+    height: 64vh;
   }
   .hero__text {
     width: 100%;
@@ -1317,6 +1306,9 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
 }
 
 @media (max-width: 780px) {
+  .hero {
+    height: auto;
+  }
   .hero__text {
     padding-left: 4%;
   }
@@ -1784,6 +1776,26 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
     width: 100%;
   }
 }
+/* Faq Email Success*/
+.success-message {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Subscribe Email*/
+.subscribe-message {
+  margin-top: 10px;
+  color: #28a745; /* Verde para sucesso */
+  font-size: 14px;
+  text-align: center;
+}
+
 .subscription {
   padding-top: 48px;
   padding-bottom: 48px;
@@ -1914,6 +1926,7 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   flex-direction: column;
   align-items: center;
   background-color: #fff;
+  border: 1px solid #EBEBEB;
   box-shadow: 0px 17px 45.6px -30px rgba(0, 0, 0, 0.2509803922);
   padding: 36px 32px 40px 32px;
   border-radius: 12px;
@@ -2094,6 +2107,83 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   text-decoration: underline;
 }
 
+.cleaner__image {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.cleaner__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.cleaner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+.cleaner-wrapper .cleaner-article {
+  margin-bottom: 4rem;
+}
+.cleaner-wrapper .cleaner-article h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.cleaner-wrapper .cleaner-article p {
+  line-height: 1.8;
+  margin-bottom: 0.4rem;
+}
+.cleaner-wrapper .cleaner-article ul {
+  margin: 1.8rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.cleaner-wrapper .cleaner-article ul li h3 {
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+.cleaner-wrapper .cleaner-article ul li p {
+  font-size: 1rem;
+  color: #776c74;
+}
+.cleaner-wrapper .cleaner-article ul li span img {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.cleaner__details {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+}
+.cleaner__details h3 {
+  line-height: 1;
+}
+.cleaner__details span {
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+@media (max-width: 740px) {
+  .cleaner-wrapper {
+    flex-direction: column;
+  }
+  .cleaner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cleaner__image {
+    width: 120px;
+    height: 120px;
+  }
+}
 .section-scroll {
   display: none;
 }
@@ -2106,88 +2196,6 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   display: flex;
   list-style: none;
   gap: 0.4rem;
-}
-
-.related-articles {
-  margin-top: 40px;
-}
-
-.related-articles h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.related-article a {
-  display: flex;
-  margin-bottom: 20px;
-  align-items: start;
-  gap: 1.5rem;
-}
-
-.related-article-image {
-  min-width: 180px;
-  border-radius: 8px;
-  overflow: hidden;
-  height: 120px;
-}
-
-.related-article-image img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.related-article-info h3 {
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.related-article-info p {
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.related-article-info .tags {
-  font-size: 12px;
-  color: #888;
-}
-
-.articles__list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Exibe 4 colunas */
-  gap: 20px; /* Ajuste o espaçamento entre os itens */
-}
-
-@media (max-width: 920px) {
-  .articles__list {
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
-  }
-}
-@media (max-width: 480px) {
-  .articles__list {
-    grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
-  }
-}
-/* Faq Email Success*/
-.success-message {
-  padding: 10px;
-  margin-top: 10px;
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 16px;
-}
-
-/* Subscribe Email*/
-.subscribe-message {
-  margin-top: 10px;
-  color: #28a745; /* Verde para sucesso */
-  font-size: 14px;
-  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

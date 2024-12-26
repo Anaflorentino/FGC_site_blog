@@ -1,8 +1,81 @@
 ---
 layout: layouts/base.html
-title: Our team
+title: Our Team
 ---
 
-<h1>{{ title }}</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum molestiae ex dignissimos vitae eum mollitia ad impedit
-    suscipit veniam eos quae aut sunt voluptates, a dolorum dolor dolore. Tempore, doloremque?</p>
+
+<!-- Pages Index -->
+<nav class="pagination-links section__title container">
+    <ol class="pagination-links__list">
+        <li class="pagination-links__list__item"><a href="/">Home ></a></li>
+        <li class="pagination-links__list__item"><a href="#">Our team</a></li>
+    </ol>
+</nav>
+
+<main class="container">
+    <div class="section__title">
+        <h1>Meet the people who make your home sparkle</h1>
+        <p>Stories of inspiration from our team of cleaners</p>
+    </div>
+
+    <div class="cleaner-wrapper">
+        <!-- Foto e nome do cleaner -->
+        <div class="cleaner">
+            <div class="cleaner__image">
+                <img src="/assets/images/cleaners/maria-cleaner.jpg" alt="Picture of a smiling woman">
+            </div>
+            <div class="cleaner__details">
+                <h3>Maria</h3>
+                <img src="/assets/images/icons/filled/5-stars.svg" alt="5-starts representing clear's rating">
+                <span>Cleaner at Flash Guys</span>
+                <span>Since July, 2023</span>
+            </div>
+        </div>
+
+        <!-- Artigo sobre o cleaner -->
+        <article role="article" class="cleaner-article">
+            <header>
+                <h2>Maria: From Challenges to Top-cleaner of the Year ✨</h2>
+            </header>
+            <p>Maria, originally from Cuiabá, Brazil, moved to California with the promise of working as a nanny. But
+                soon, she realized that things wouldn't be as she had imagined…
+            </p>
+            <P>Far from home, feeling discouraged and unsure of her path, she discovered Flash Guys in 2023 and applied
+                to join as a helper.
+            </P>
+            <P><em>“At first, it was very difficult,”</em> she admits. Maria had no prior experience, and her English
+                was still
+                limited. But Flash believed in her and provided the support she needed to overcome each challenge!</P>
+            <p>Through hard work and the encouragement of her team, Maria conquered every obstacle. In less than a year,
+                we're proud to celebrate her as one of our top cleaners. <em>“Flash was the opportunity I so desperately
+                    needed. It was my light at the end of the tunnel,”</em> she shares emotionally.</p>
+
+            <ul role="list">
+                <li role="listitem">
+                    <h3><span><img src="/assets/images/icons/filled/skills.svg" width="24px"
+                                alt="Icon representing cleaner's skills"></span>Skills</h3>
+                    <p>Carpet & Upolstery Cleaning • House Cleaning • Attention to details</p>
+                </li>
+                <li role="listitem">
+                    <h3><span><img src="/assets/images/icons/filled/languages.svg" width="24px"
+                                alt="Icon representing cleaner's languages"></span>Languages</h3>
+                    <p>Brazilian Portuguese, English</p>
+                </li>
+                <li role="listitem">
+                    <h3><span><img src="/assets/images/icons/filled/feedback.svg" width="24px"
+                                alt="Icon representing what clients say about this cleaner"></span>What clients
+                        say</h3>
+                    <p>Clients trust Maria for her careful work and composed attitude.
+                    </p>
+                </li>
+            </ul>
+
+            <h2>Inspired by Elisa's journey?</h2>
+            <p>At Flash Guys, <span class="highlight-text">all cleaners are background-checked and expertly
+                    trained</span>
+                to provide a safe and reliable
+                services for you and your loved ones.</p>
+            <a href="https://flashguyscleaning.com/schedule"><button class="button button--primary">Book a cleaning today</button></a>
+        </article>
+    </div>
+</main>

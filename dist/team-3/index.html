@@ -7,36 +7,58 @@
     <!-- Basehead -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our team</title>
+<title>Our Team</title>
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://static.hotjar.com">
+
+<!-- Preload critical CSS -->
+<link rel="preload" href="/css/main.css" as="style">
 <link rel="stylesheet" href="/css/main.css">
 
 <!-- Material Symbols Rounded -->
+<link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 <!-- Shoelace Library -->
+<link rel="preload" as="style"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css" />
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HW3RF3HWWF"></script>
-<script>
+<script defer>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() {
+    dataLayer.push(arguments);
+  }
   gtag('js', new Date());
-
   gtag('config', 'G-HW3RF3HWWF');
 </script>
 
-<!-- Hotjar Tracking Code for Site 5249893 (Flash Guys Cleaning) -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:5249893,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+<!-- Hotjar Tracking Code -->
+<script defer>
+  (function(h, o, t, j, a, r) {
+    h.hj = h.hj || function() {
+      (h.hj.q = h.hj.q || []).push(arguments);
+    };
+    h._hjSettings = { hjid: 5249893, hjsv: 6 };
+    a = o.getElementsByTagName('head')[0];
+    r = o.createElement('script'); r.async = 1;
+    r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
 </script>
+
     
 </head>
 
@@ -81,8 +103,9 @@
 
     <!-- Login e Signup -->
     <div class="navbar-buttons">
-        <a href="https://flashguyscleaning.com/dashboard"><button class="dashboard-button button button--secondary button--small" id="dashboardButton">Dashboard</button></a>
-        <a href="https://flashguyscleaning.com/schedule?date=&coupon=first05"><button class="book-now button button--primary button--small">Book now</button></a>
+        <a href="https://flashguyscleaning.com/dashboard"><button
+                class="dashboard-button button button--secondary button--small"
+                id="dashboardButton">Dashboard</button></a>
         <div class="auth-container" id="authContainer">
             <!-- Content dynamically injected by JS -->
         </div>
@@ -101,13 +124,15 @@
         <button id="modalLoginButton">Log In</button>
         <button class="google-login-button" id="googleLoginButton">
             <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
-            alt="Google logo">
+                alt="Google logo">
             Log In with Google
         </button>
         <span id="privacyPolicy">
-            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="#">Privacy Policy</a>.</p>
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
         </span>
-        <p class="account-switcher">Don't have an account?<button class="button" id="sign-btn">Create account</button></p>
+        <p class="account-switcher">Don't have an account?<button class="button" id="sign-btn">Create account</button>
+        </p>
     </div>
 </div>
 
@@ -126,14 +151,19 @@
         <button id="signupModalButton">Sign Up</button>
         <button class="google-login-button" id="googleSignupButton">
             <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
-            alt="Google logo">
+                alt="Google logo">
             Sign Up with Google
         </button>
+        <span id="privacyPolicy">
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
+        </span>
         <p class="account-switcher">Already have an account?<button class="button" id="login-btn">Login</button></p>
     </div>
 </div>
 
 <script>
+
     document.addEventListener('DOMContentLoaded', function () {
         // Modais
         const loginModal = document.getElementById('loginModal');
@@ -159,15 +189,90 @@
             loginModal.classList.remove('visible');
             signupModal.classList.add('visible');
         });
-    });
+    })
 </script>
     </header>
     <!-- Main -->
     <main>
         
-<h1>Our team</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum molestiae ex dignissimos vitae eum mollitia ad impedit
-    suscipit veniam eos quae aut sunt voluptates, a dolorum dolor dolore. Tempore, doloremque?</p>
+
+<!-- Pages Index -->
+<nav class="pagination-links section__title container">
+    <ol class="pagination-links__list">
+        <li class="pagination-links__list__item"><a href="/">Home ></a></li>
+        <li class="pagination-links__list__item"><a href="#">Our team</a></li>
+    </ol>
+</nav>
+
+<main class="container">
+    <div class="section__title">
+        <h1>Meet the people who make your home sparkle</h1>
+        <p>Stories of inspiration from our team of cleaners</p>
+    </div>
+
+    <div class="cleaner-wrapper">
+        <!-- Foto e nome do cleaner -->
+        <div class="cleaner">
+            <div class="cleaner__image">
+                <img src="/assets/images/cleaners/fabiana.png" alt="Picture of a smiling woman">
+            </div>
+            <div class="cleaner__details">
+                <h3>Maria</h3>
+                <img src="/assets/images/icons/filled/5-stars.svg" alt="5-starts representing clear's rating">
+                <span>Cleaner at Flash Guys</span>
+                <span>Since July, 2023</span>
+            </div>
+        </div>
+
+        <!-- Artigo sobre o cleaner -->
+        <article role="article" class="cleaner-article">
+            <header>
+                <h2>Fabiana: A Family Journey Chasing Their Olympic Dream ✨</h2>
+            </header>
+            <p>In 2022, Fabiana, her husband, and their two sons took a bold and exciting step: they moved from Brazil
+                to California. The reason? To support their sons, who are professional skateboarders competing in
+                championships around the globe.
+            </p>
+            <P>Before this big move, Fabiana and her husband were successful entrepreneurs and owned a skate shop in
+                Brazil. However, when their sons dream of becoming Olympic skateboarders started to take shape, they
+                decided it was time for a major life change.
+            </P>
+            <P><em>“It was a big decision, but we've never regretted it,”</em> Fabiana shares. For her and her husband,
+                the
+                greatest joy is watching their sons do what they love and shine in competitions.</P>
+            <p>This story isn't just about sacrifice; it's about making intentional choices in the name of love and
+                purpose. Fabiana and her family show that with unity, dreams can become reality — and in the end, every
+                effort is worth it.</p>
+            <ul role="list">
+                <li role="listitem">
+                    <h3><span><img src="/assets/images/icons/filled/skills.svg" width="24px"
+                                alt="Icon representing cleaner's skills"></span>Skills</h3>
+                    <p>Carpet & Upolstery Cleaning • House Cleaning • Attention to details</p>
+                </li>
+                <li role="listitem">
+                    <h3><span><img src="/assets/images/icons/filled/languages.svg" width="24px"
+                                alt="Icon representing cleaner's languages"></span>Languages</h3>
+                    <p>Brazilian Portuguese, English</p>
+                </li>
+                <li role="listitem">
+                    <h3><span><img src="/assets/images/icons/filled/feedback.svg" width="24px"
+                                alt="Icon representing what clients say about this cleaner"></span>What clients
+                        say</h3>
+                    <p>Clients trust Maria for her careful work and composed attitude.
+                    </p>
+                </li>
+            </ul>
+
+            <h2>Inspired by Elisa's journey?</h2>
+            <p>At Flash Guys, <span class="highlight-text">all cleaners are background-checked and expertly
+                    trained</span>
+                to provide a safe and reliable
+                services for you and your loved ones.</p>
+            <a href="https://flashguyscleaning.com/schedule"><button class="button button--primary">Book a cleaning
+                    today</button></a>
+        </article>
+    </div>
+</main>
     </main>
     <!-- Footer -->
     <footer>
@@ -262,7 +367,6 @@
     <div id="copy">
         <div id="separator"></div>
         <span>© 2024 All Rights Reserved, Flash Guys Cleaning</span>
-        <span>flashguyscleaning.com</span>
     </div>
 </div>
     </footer>
@@ -273,7 +377,6 @@
 
 <!-- Menu Nav -->
 <script src="/assets/scripts/navbar.js"></script>
-<script src="/assets/scripts/menu-nav.js"></script>
 <script src="/assets/scripts/accordion.js"></script>
 <script src="/assets/scripts/services.js"></script>
 <script src="/assets/scripts/scroll-x.js"></script>
@@ -291,6 +394,7 @@
 
 <!-- Testimonials -->
 <script type="module" src="/assets/scripts/main.js"></script>
+<script type="module" src="/assets/scripts/nav-menu.js"></script>
 <script type="module" src="/assets/scripts/contact-modal.js"></script>
 <script type="module" src="/assets/scripts/toggle.js"></script>
 <script type="module" src="/assets/scripts/pre-form.js"></script>

@@ -8,35 +8,57 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy • Flash Guys Cleaning</title>
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://static.hotjar.com">
+
+<!-- Preload critical CSS -->
+<link rel="preload" href="/css/main.css" as="style">
 <link rel="stylesheet" href="/css/main.css">
 
 <!-- Material Symbols Rounded -->
+<link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 <!-- Shoelace Library -->
+<link rel="preload" as="style"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css" />
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HW3RF3HWWF"></script>
-<script>
+<script defer>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() {
+    dataLayer.push(arguments);
+  }
   gtag('js', new Date());
-
   gtag('config', 'G-HW3RF3HWWF');
 </script>
 
-<!-- Hotjar Tracking Code for Site 5249893 (Flash Guys Cleaning) -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:5249893,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+<!-- Hotjar Tracking Code -->
+<script defer>
+  (function(h, o, t, j, a, r) {
+    h.hj = h.hj || function() {
+      (h.hj.q = h.hj.q || []).push(arguments);
+    };
+    h._hjSettings = { hjid: 5249893, hjsv: 6 };
+    a = o.getElementsByTagName('head')[0];
+    r = o.createElement('script'); r.async = 1;
+    r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
 </script>
+
     
 <meta name="description" content="" />
 
@@ -83,8 +105,9 @@
 
     <!-- Login e Signup -->
     <div class="navbar-buttons">
-        <a href="https://flashguyscleaning.com/dashboard"><button class="dashboard-button button button--secondary button--small" id="dashboardButton">Dashboard</button></a>
-        <a href="https://flashguyscleaning.com/schedule?date=&coupon=first05"><button class="book-now button button--primary button--small">Book now</button></a>
+        <a href="https://flashguyscleaning.com/dashboard"><button
+                class="dashboard-button button button--secondary button--small"
+                id="dashboardButton">Dashboard</button></a>
         <div class="auth-container" id="authContainer">
             <!-- Content dynamically injected by JS -->
         </div>
@@ -103,13 +126,15 @@
         <button id="modalLoginButton">Log In</button>
         <button class="google-login-button" id="googleLoginButton">
             <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
-            alt="Google logo">
+                alt="Google logo">
             Log In with Google
         </button>
         <span id="privacyPolicy">
-            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="#">Privacy Policy</a>.</p>
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
         </span>
-        <p class="account-switcher">Don't have an account?<button class="button" id="sign-btn">Create account</button></p>
+        <p class="account-switcher">Don't have an account?<button class="button" id="sign-btn">Create account</button>
+        </p>
     </div>
 </div>
 
@@ -128,14 +153,19 @@
         <button id="signupModalButton">Sign Up</button>
         <button class="google-login-button" id="googleSignupButton">
             <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
-            alt="Google logo">
+                alt="Google logo">
             Sign Up with Google
         </button>
+        <span id="privacyPolicy">
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
+        </span>
         <p class="account-switcher">Already have an account?<button class="button" id="login-btn">Login</button></p>
     </div>
 </div>
 
 <script>
+
     document.addEventListener('DOMContentLoaded', function () {
         // Modais
         const loginModal = document.getElementById('loginModal');
@@ -161,7 +191,7 @@
             loginModal.classList.remove('visible');
             signupModal.classList.add('visible');
         });
-    });
+    })
 </script>
     </header>
     <!-- Main -->
@@ -349,7 +379,6 @@
     <div id="copy">
         <div id="separator"></div>
         <span>© 2024 All Rights Reserved, Flash Guys Cleaning</span>
-        <span>flashguyscleaning.com</span>
     </div>
 </div>
     </footer>
@@ -360,7 +389,6 @@
 
 <!-- Menu Nav -->
 <script src="/assets/scripts/navbar.js"></script>
-<script src="/assets/scripts/menu-nav.js"></script>
 <script src="/assets/scripts/accordion.js"></script>
 <script src="/assets/scripts/services.js"></script>
 <script src="/assets/scripts/scroll-x.js"></script>
@@ -378,6 +406,7 @@
 
 <!-- Testimonials -->
 <script type="module" src="/assets/scripts/main.js"></script>
+<script type="module" src="/assets/scripts/nav-menu.js"></script>
 <script type="module" src="/assets/scripts/contact-modal.js"></script>
 <script type="module" src="/assets/scripts/toggle.js"></script>
 <script type="module" src="/assets/scripts/pre-form.js"></script>

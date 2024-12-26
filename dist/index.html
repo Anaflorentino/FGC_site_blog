@@ -8,35 +8,57 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Flash Guys Cleaning | Los Angeles, CA</title>
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://static.hotjar.com">
+
+<!-- Preload critical CSS -->
+<link rel="preload" href="/css/main.css" as="style">
 <link rel="stylesheet" href="/css/main.css">
 
 <!-- Material Symbols Rounded -->
+<link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 <!-- Shoelace Library -->
+<link rel="preload" as="style"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css" />
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HW3RF3HWWF"></script>
-<script>
+<script defer>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() {
+    dataLayer.push(arguments);
+  }
   gtag('js', new Date());
-
   gtag('config', 'G-HW3RF3HWWF');
 </script>
 
-<!-- Hotjar Tracking Code for Site 5249893 (Flash Guys Cleaning) -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:5249893,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+<!-- Hotjar Tracking Code -->
+<script defer>
+  (function(h, o, t, j, a, r) {
+    h.hj = h.hj || function() {
+      (h.hj.q = h.hj.q || []).push(arguments);
+    };
+    h._hjSettings = { hjid: 5249893, hjsv: 6 };
+    a = o.getElementsByTagName('head')[0];
+    r = o.createElement('script'); r.async = 1;
+    r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
 </script>
+
     
 </head>
 
@@ -81,8 +103,9 @@
 
     <!-- Login e Signup -->
     <div class="navbar-buttons">
-        <a href="https://flashguyscleaning.com/dashboard"><button class="dashboard-button button button--secondary button--small" id="dashboardButton">Dashboard</button></a>
-        <a href="https://flashguyscleaning.com/schedule?date=&coupon=first05"><button class="book-now button button--primary button--small">Book now</button></a>
+        <a href="https://flashguyscleaning.com/dashboard"><button
+                class="dashboard-button button button--secondary button--small"
+                id="dashboardButton">Dashboard</button></a>
         <div class="auth-container" id="authContainer">
             <!-- Content dynamically injected by JS -->
         </div>
@@ -101,13 +124,15 @@
         <button id="modalLoginButton">Log In</button>
         <button class="google-login-button" id="googleLoginButton">
             <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
-            alt="Google logo">
+                alt="Google logo">
             Log In with Google
         </button>
         <span id="privacyPolicy">
-            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="#">Privacy Policy</a>.</p>
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
         </span>
-        <p class="account-switcher">Don't have an account?<button class="button" id="sign-btn">Create account</button></p>
+        <p class="account-switcher">Don't have an account?<button class="button" id="sign-btn">Create account</button>
+        </p>
     </div>
 </div>
 
@@ -126,14 +151,19 @@
         <button id="signupModalButton">Sign Up</button>
         <button class="google-login-button" id="googleSignupButton">
             <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
-            alt="Google logo">
+                alt="Google logo">
             Sign Up with Google
         </button>
+        <span id="privacyPolicy">
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
+        </span>
         <p class="account-switcher">Already have an account?<button class="button" id="login-btn">Login</button></p>
     </div>
 </div>
 
 <script>
+
     document.addEventListener('DOMContentLoaded', function () {
         // Modais
         const loginModal = document.getElementById('loginModal');
@@ -159,7 +189,7 @@
             loginModal.classList.remove('visible');
             signupModal.classList.add('visible');
         });
-    });
+    })
 </script>
     </header>
     <!-- Main -->
@@ -172,8 +202,11 @@
 <section class="hero">
     <div class="hero__content">
         <div class="hero__text">
-            <span class="hero__text-kicker"><img src="assets/images/icons/filled/5-stars-kicker.svg" alt="5-stars filled representing 4,9 overall rating of Flash Guys clients"><strong>4,9 overall rating</strong></span>
-            <h1 class="hero__text-title">Cleaning services for <span class="highlight-text">spotless spaces in California</span></h1>
+            <span class="hero__text-kicker"><img src="assets/images/icons/filled/5-stars-kicker.svg"
+                    alt="5-stars filled representing 4,9 overall rating of Flash Guys clients"><strong>4,9 overall
+                    rating</strong></span>
+            <h1 class="hero__text-title">Cleaning services for <span class="highlight-text">spotless spaces in
+                    California</span></h1>
             <p class="hero__text-description">Experience a professional and personalized cleaning service that suits
                 your lifestyle. From homes to offices, we've got it covered!</p>
             <ul class="list">
@@ -188,9 +221,11 @@
                         itemprop="serviceFeature"> 24h professional team</span></li>
             </ul>
             <div class="cta">
-                <a class="button button--secondary" title="Get a free estimate for cleaning services">Free
+                <a href="https://flashguyscleaning.com/schedule" class="button button--secondary"
+                    title="Get a free estimate for cleaning services">Free
                     estimate</a>
-                <a href="#" class="button button--primary" title="Book a cleaning service now">Book now</a>
+                <a href="https://flashguyscleaning.com/schedule" class="button button--primary"
+                    title="Book a cleaning service now">Book now</a>
             </div>
         </div>
         <div class="hero__image">
@@ -210,7 +245,7 @@
                         <div class="hero__form-select-left-icon bedroom" aria-hidden="true"></div>
                         <!-- Icon for bedroom selection -->
                         <select class="hero__form-select" aria-label="Select number of bedrooms" id="dropdownBedroom">
-                            <option value="" disabled selected>Number of bedrooms</option>
+                            <option value="" disabled selected>Bedrooms</option>
                             <option value="1">1 bedroom</option>
                             <option value="2">2 bedrooms</option>
                             <option value="3">3 bedrooms</option>
@@ -223,7 +258,7 @@
                         <div class="hero__form-select-left-icon bathroom" aria-hidden="true"></div>
                         <!-- Icon for bathroom selection -->
                         <select class="hero__form-select" aria-label="Select number of bathrooms" id="dropdownBathroom">
-                            <option value="" disabled selected>Number of bathrooms</option>
+                            <option value="" disabled selected>Bathrooms</option>
                             <option value="1">1 bathroom</option>
                             <option value="2">2 bathrooms</option>
                             <option value="3">3 bathrooms</option>
@@ -237,8 +272,9 @@
                         <div class="hero__toggle" id="pet-friendly-toggle" aria-label="Pet friendly toggle"></div>
                         <span class="hero__toggle-text" id="pet-friendly-text">Pet friendly</span>
                     </div>
-                    <button class="button button--primary" type="submit" id="btnFreeEstimate"
-                        aria-label="Submit the form for a free estimate">Free estimate</button>
+                    <a href="https://flashguyscleaning.com/schedule?date=1735664459416&coupon=first05"><button
+                            class="button button--primary" type="submit" id="btnFreeEstimate"
+                            aria-label="Submit the form for a free estimate">Free estimate</button></a>
                 </form>
             </div>
         </div>
@@ -259,10 +295,12 @@
         <!-- Título da seção com o ID para referenciar o cabeçalho na navegação -->
         <div class="testimonials__title">
             <h2 id="testimonials-section">What Our Clients Say</h2>
-            <a href="https://www.thumbtack.com/ca/redondo-beach/electrical-repairs/flash-guys-cleaning/service/402105454248648706" target="_blank">
-                <button class="button button--secondary button--small" aria-label="Leave a review">Make a Review</button>
+            <a href="https://www.thumbtack.com/ca/redondo-beach/electrical-repairs/flash-guys-cleaning/service/402105454248648706"
+                target="_blank">
+                <button class="button button--secondary button--small" aria-label="Leave a review">Make a
+                    Review</button>
             </a>
-            
+
         </div>
 
         <!-- Scroll Horizontal -->
@@ -311,7 +349,8 @@
     <div class="section">
         <div class="testimonials__title section__title">
             <h2 id="why-choose-us">Why Choose Flash Guys?</h2>
-            <a href="#our-work"><button class="button button--small button--secondary" aria-label="See our work">Check our work</button></a>
+            <a href="#our-work"><button class="button button--small button--secondary" aria-label="See our work">Check
+                    our work</button></a>
         </div>
 
         <div class="why__content">
@@ -380,6 +419,154 @@
                     loading="lazy" width="500" height="300">
             </div>
         </div>
+    </div>
+</section>
+
+<!-- * Our Work Section * -->
+<section class="our-work container" aria-labelledby="our-work-title" id="our-work">
+    <div class="section__title--center">
+        <h2 id="our-work-title">Our Work</h2>
+        <p>Committed to making spaces sparkle, <strong class="highlight-text">every time.</strong></p>
+    </div>
+    <div class="caroussel-wrapper">
+        <div class="carrossel">
+            <!-- Botões de navegação com imagens -->
+            <button class="seta esquerda scroll-arrow scroll-arrow--filled" aria-label="Previous slide">
+                <img src="assets/images/icons/outline/arrow-left.svg" alt="Previous slide" />
+            </button>
+            <button class="seta direita scroll-arrow scroll-arrow--filled" aria-label="Next slide">
+                <img src="assets/images/icons/outline/arrow-right.svg" alt="Next slide" />
+            </button>
+
+            <div class="carrossel-conteudo">
+                <div class="item">
+                    <img src="assets/images/jobs/Screenshot 2024-02-28 at 21.35.23.png"
+                        alt="Kitchen with spotless countertops after cleaning" loading="lazy" width="600" height="400">
+                </div>
+                <div class="item">
+                    <img src="assets/images/jobs/Screenshot 2024-02-28 at 21.36.59.png"
+                        alt="Bathroom with shiny, well-arranged furniture and clean surfaces" loading="lazy" width="600"
+                        height="400">
+                </div>
+                <div class="item">
+                    <img src="assets/images/jobs/sink.png"
+                        alt="Clean and organized Bathroom sink with no visible stains" loading="lazy" width="600"
+                        height="400">
+                </div>
+                <div class="item">
+                    <img src="assets/images/jobs/photo-3558_singular_display_fullPicture.jpg"
+                        alt="Spotless bathroom with clean mirrors and shiny bath" loading="lazy" width="600"
+                        height="400">
+                </div>
+                <div class="item">
+                    <img src="assets/images/jobs/Screenshot 2024-03-04 at 12.48.17.png"
+                        alt="Clean living room with spotless and shiny floor" loading="lazy" width="600" height="400">
+                </div>
+                <div class="item">
+                    <img src="assets/images/jobs/Screenshot 2024-03-04 at 12.50.06.png"
+                        alt="Spotlessly cleaned living room" loading="lazy" width="600" height="400">
+                </div>
+                <div class="item">
+                    <img src="assets/images/jobs/IMG_3037.jpg"
+                        alt="Living room with freshly cleaned floor and neat furniture" loading="lazy" width="600"
+                        height="400">
+                </div>
+            </div>
+            <div class="navegacao" aria-label="Carousel navigation">
+                <span class="bolinha" data-slide="0" aria-label="Slide 1"></span>
+                <span class="bolinha" data-slide="1" aria-label="Slide 2"></span>
+                <span class="bolinha" data-slide="2" aria-label="Slide 3"></span>
+                <!-- As bolinhas de navegação serão ajustadas automaticamente no JS -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- * Our Team Section* -->
+<section class="team" aria-labelledby="our-team-title" id="our-team">
+    <div class="container">
+        <div class="section__title section__title--center">
+            <h2 id="our-team-title">Meet some of the people who make your home shine ✨</h2>
+            <p>Our expert cleaning team is trained to truly treat your home with the care and respect it deserves.</p>
+        </div>
+        <!-- Cleaner Cards List -->
+        <ul role="list" class="team__cards section-scroll-x">
+            <!-- Cleaner 1 -->
+            <li role="article">
+                <article class="team__cards__item">
+                    <div class="team__cards__image">
+                        <img src="/assets/images/cleaners/nani.png"
+                            alt="Cleaner Laura smiling in her uniform, ready to clean" loading="lazy" width="200"
+                            height="300">
+                    </div>
+                    <div class="team__cards__name">
+                        <h3>Nani</h3>
+                        <span><img src="assets/images/icons/filled/badge.svg"
+                                alt="Badge icon representing verified cleaner" loading="lazy"></span>
+                    </div>
+                    <div>
+                        <span><img src="assets/images/icons/filled/5-stars.svg"
+                                alt="5 stars icons representing cleaner's rating" loading="lazy"></span>
+                    </div>
+                    <p class="team__cards__content">As a theology student, Nani has a passion for helping the community
+                        and believes in the power of faith on
+                        building meaningful connections. She describes California as a great and welcoming place.</p>
+                    <a href="team-1/" class="button button--primary button--full" title="Learn more about Laura">Keep
+                        reading</a>
+                </article>
+            </li>
+            <!-- Cleaner 2 -->
+            <li role="article">
+                <article class="team__cards__item">
+                    <div class="team__cards__image">
+                        <img src="assets/images/cleaners/maria-cleaner.jpg"
+                            alt="Cleaner John wearing a professional cleaning uniform, smiling" loading="lazy"
+                            width="200" height="300">
+                    </div>
+                    <div class="team__cards__name">
+                        <h3>Maria</h3>
+                        <span><img src="assets/images/icons/filled/badge.svg"
+                                alt="Badge icon representing verified cleaner" loading="lazy"></span>
+                    </div>
+                    <div>
+                        <span><img src="assets/images/icons/filled/5-stars.svg"
+                                alt="5 stars icons representing cleaner's rating" loading="lazy"></span>
+                    </div>
+                    <p class="team__cards__content">Maria, originally from Cuiabá, Brazil, moved to California with the
+                        promise of working as a nanny. But
+                        soon, she realized that things wouldn't be as she had imagined…</p>
+                    <a href="team-2/" class="button button--primary button--full" title="Learn more about John">Keep
+                        reading</a>
+                </article>
+            </li>
+            <!-- Cleaner 3 -->
+            <li role="article">
+                <article class="team__cards__item">
+                    <div class="team__cards__image">
+                        <img src="assets/images/cleaners/fabiana.png"
+                            alt="Cleaner Fabiana, smiling and ready to provide a thorough cleaning" loading="lazy"
+                            width="200" height="300">
+                    </div>
+                    <div class="team__cards__name">
+                        <h3>Fabiana</h3>
+                        <span><img src="assets/images/icons/filled/badge.svg"
+                                alt="Badge icon representing verified cleaner" loading="lazy"></span>
+                    </div>
+                    <div>
+                        <span><img src="assets/images/icons/filled/5-stars.svg"
+                                alt="5 stars icons representing cleaner's rating" loading="lazy"></span>
+                    </div>
+                    <p class="team__cards__content">Fabiana and her family moved
+                        to California to support their sons, who are professional skateboarders competing
+                        in
+                        championships around the globe.</p>
+                    <a href="team-3/" class="button button--primary button--full" title="Learn more about Sarah">Keep
+                        reading</a>
+                </article>
+            </li>
+        </ul>
+
     </div>
 </section>
 
@@ -571,164 +758,6 @@
     </div>
 </section>
 
-<!-- * Our Team Section* -->
-<section class="team" aria-labelledby="our-team-title" id="our-team">
-    <div class="container">
-        <div class="section__title section__title--center">
-            <h2 id="our-team-title">Meet some of the people who make your home shine ✨</h2>
-            <p>Our expert cleaning team is trained to truly treat your home with the care and respect it deserves.</p>
-        </div>
-        <!-- Cleaner Cards List -->
-        <ul role="list" class="team__cards section-scroll-x">
-            <li role="article">
-                <article class="team__cards__item">
-                    <div class="team__cards__image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj5t6OoXph6JhDQv-IuwQXS7GQc7v0pNiGzQ&s"
-                            alt="Cleaner Laura smiling in her uniform, ready to clean" loading="lazy" width="200"
-                            height="300">
-                    </div>
-                    <div class="team__cards__name">
-                        <h3>Kizy</h3>
-                        <span><img src="assets/images/icons/filled/badge.svg"
-                                alt="Badge icon representing verified cleaner" loading="lazy"></span>
-                    </div>
-                    <div>
-                        <span><img src="assets/images/icons/filled/5-stars.svg"
-                                alt="5 stars icons representing cleaner's rating" loading="lazy"></span>
-                    </div>
-                    <p class="team__cards__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod,
-                        natus! Esse eaque cumque
-                        blanditiis deleniti rerum quibusdam impedit eius, ipsum sequi voluptate delectus repellendus
-                        commodi aspernatur! Eum, cum officiis. Repudiandae.</p>
-                    <a href="#" class="button button--primary button--full" title="Learn more about Laura">Keep
-                        reading</a>
-                </article>
-            </li>
-            <li role="article">
-                <article class="team__cards__item">
-                    <div class="team__cards__image">
-                        <img src="assets/images/cleaners/maria-cleaner.jpg"
-                            alt="Cleaner John wearing a professional cleaning uniform, smiling" loading="lazy"
-                            width="200" height="300">
-                    </div>
-                    <div class="team__cards__name">
-                        <h3>Maria</h3>
-                        <span><img src="assets/images/icons/filled/badge.svg"
-                                alt="Badge icon representing verified cleaner" loading="lazy"></span>
-                    </div>
-                    <div>
-                        <span><img src="assets/images/icons/filled/5-stars.svg"
-                                alt="5 stars icons representing cleaner's rating" loading="lazy"></span>
-                    </div>
-                    <p class="team__cards__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod,
-                        natus! Esse eaque cumque
-                        blanditiis deleniti rerum quibusdam impedit eius, ipsum sequi voluptate delectus repellendus
-                        commodi aspernatur! Eum, cum officiis. Repudiandae.</p>
-                    <a href="#" class="button button--primary button--full" title="Learn more about John">Keep
-                        reading</a>
-                </article>
-            </li>
-            <li role="article">
-                <article class="team__cards__item">
-                    <div class="team__cards__image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj5t6OoXph6JhDQv-IuwQXS7GQc7v0pNiGzQ&s"
-                            alt="Cleaner Sarah, smiling and ready to provide a thorough cleaning" loading="lazy"
-                            width="200" height="300">
-                    </div>
-                    <div class="team__cards__name">
-                        <h3>Claudia</h3>
-                        <span><img src="assets/images/icons/filled/badge.svg"
-                                alt="Badge icon representing verified cleaner" loading="lazy"></span>
-                    </div>
-                    <div>
-                        <span><img src="assets/images/icons/filled/5-stars.svg"
-                                alt="5 stars icons representing cleaner's rating" loading="lazy"></span>
-                    </div>
-                    <p class="team__cards__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod,
-                        natus! Esse eaque cumque
-                        blanditiis deleniti rerum quibusdam impedit eius, ipsum sequi voluptate delectus repellendus
-                        commodi aspernatur! Eum, cum officiis. Repudiandae.</p>
-                    <a href="#" class="button button--primary button--full" title="Learn more about Sarah">Keep
-                        reading</a>
-                </article>
-            </li>
-        </ul>
-
-    </div>
-</section>
-
-
-<!-- * Our Work Section * -->
-<section class="our-work container" aria-labelledby="our-work-title" id="our-work">
-    <div class="section__title--center">
-        <h2 id="our-work-title">Our Work</h2>
-        <p>Committed to making spaces sparkle, <strong>every time.</strong></p>
-    </div>
-    <div class="caroussel-wrapper">
-        <div class="carrossel">
-            <!-- Botões de navegação com imagens -->
-            <button class="seta esquerda scroll-arrow scroll-arrow--filled" aria-label="Previous slide">
-                <img src="assets/images/icons/outline/arrow-left.svg" alt="Previous slide" />
-            </button>
-            <button class="seta direita scroll-arrow scroll-arrow--filled" aria-label="Next slide">
-                <img src="assets/images/icons/outline/arrow-right.svg" alt="Next slide" />
-            </button>
-
-            <div class="carrossel-conteudo">
-                <div class="item">
-                    <img src="assets/images/jobs/Screenshot 2024-02-28 at 21.35.23.png" 
-                         alt="Kitchen with spotless countertops after cleaning"
-                         loading="lazy" 
-                         width="600" height="400">
-                </div>
-                <div class="item">
-                    <img src="assets/images/jobs/Screenshot 2024-02-28 at 21.36.59.png" 
-                         alt="Bathroom with shiny, well-arranged furniture and clean surfaces"
-                         loading="lazy" 
-                         width="600" height="400">
-                </div>
-                <div class="item">
-                    <img src="assets/images/jobs/sink.png" 
-                         alt="Clean and organized Bathroom sink with no visible stains"
-                         loading="lazy" 
-                         width="600" height="400">
-                </div>
-                <div class="item">
-                    <img src="assets/images/jobs/photo-3558_singular_display_fullPicture.jpg"
-                         alt="Spotless bathroom with clean mirrors and shiny bath"
-                         loading="lazy" 
-                         width="600" height="400">
-                </div>
-                <div class="item">
-                    <img src="assets/images/jobs/Screenshot 2024-03-04 at 12.48.17.png" 
-                         alt="Clean living room with spotless and shiny floor"
-                         loading="lazy" 
-                         width="600" height="400">
-                </div>
-                <div class="item">
-                    <img src="assets/images/jobs/Screenshot 2024-03-04 at 12.50.06.png" 
-                         alt="Spotlessly cleaned living room"
-                         loading="lazy" 
-                         width="600" height="400">
-                </div>
-                <div class="item">
-                    <img src="assets/images/jobs/IMG_3037.jpg" 
-                         alt="Living room with freshly cleaned floor and neat furniture"
-                         loading="lazy" 
-                         width="600" height="400">
-                </div>
-            </div>
-            <div class="navegacao" aria-label="Carousel navigation">
-                <span class="bolinha" data-slide="0" aria-label="Slide 1"></span>
-                <span class="bolinha" data-slide="1" aria-label="Slide 2"></span>
-                <span class="bolinha" data-slide="2" aria-label="Slide 3"></span>
-                <!-- As bolinhas de navegação serão ajustadas automaticamente no JS -->
-            </div>
-        </div>
-    </div>
-</section>
-
-
 <!-- * Subscriptions Section * -->
 <section class="subscription" aria-labelledby="subscriptions-title" id="plans">
     <div class="section__title section__title--center">
@@ -763,7 +792,8 @@
                         alt="Check icon representing plan's benefit: Guaranteed recall" loading="lazy">Guaranteed recall
                 </li>
             </ul>
-            <button class="button button--primary button--full" aria-label="Subscribe to Weekly Plan">Subscribe</button>
+            <a href="https://flashguyscleaning.com/schedule"><button class="button button--primary button--full"
+                    aria-label="Subscribe to Weekly Plan">Subscribe</button></a>
             <span class="plan__disclaimer">Charged for each cleaning*</span>
         </li>
         <li class="subscription__cards__item">
@@ -792,8 +822,8 @@
                         alt="Check icon representing plan's benefit: Guaranteed recall" loading="lazy">Guaranteed recall
                 </li>
             </ul>
-            <button class="button button--primary button--full"
-                aria-label="Subscribe to Biweekly Plan">Subscribe</button>
+            <a href="https://flashguyscleaning.com/schedule"><button class="button button--primary button--full"
+                    aria-label="Subscribe to Biweekly Plan">Subscribe</button></a>
             <span class="plan__disclaimer">Charged for each cleaning*</span>
         </li>
         <li class="subscription__cards__item">
@@ -822,8 +852,10 @@
                         alt="Check icon representing plan's benefit: Guaranteed recall" loading="lazy">Guaranteed recall
                 </li>
             </ul>
-            <button class="button button--primary button--full"
-                aria-label="Subscribe to Monthly Plan">Subscribe</button>
+            <a href="https://flashguyscleaning.com/schedule">
+                <button class="button button--primary button--full"
+                    aria-label="Subscribe to Monthly Plan">Subscribe</button>
+            </a>
             <span class="plan__disclaimer">Charged for each cleaning*</span>
         </li>
     </ul>
@@ -955,20 +987,6 @@
         <!-- 4 divs para comportar os posts -->
         <div class="articles__list">
             <div class="articles__list__item">
-                <a href="/blog/posts/how-to-keep-your-home-clean-with-limited-time19-12-2024/">
-                    <article>
-                        <div class="articles__image">
-                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734640432828x375397332491456200/Frame%20552.png"
-                                alt="">
-                        </div>
-                        <h3 class="articles__title">How to Keep Your Home Clean with Limited Time?</h3>
-                        <span class="articles__categories">Tips and Tricks, Related</span>
-                        <p class="articles__description">Maintaining a clean home can feel overwhelming, particularly for individuals with busy schedules and minimal free time. However, employing simple and effective strategies can help you keep your home tidy and organized, even amidst a hectic lifestyle.</p>
-                    </article>
-                </a>
-            </div>
-
-            <div class="articles__list__item">
                 <a href="/blog/posts/6-tips-for-efficient-kitchen-cleaning20-12-2024/">
                     <article>
                         <div class="articles__image">
@@ -983,29 +1001,43 @@
             </div>
 
             <div class="articles__list__item">
-                <a href="/blog/posts/how-to-keep-your-bathroom-immaculate20-12-2024/">
+                <a href="/blog/posts/the-ultimate-guide-to-keeping-your-living-room-always-tidy20-12-2024/">
                     <article>
                         <div class="articles__image">
-                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734713889929x701173468358720300/bathroom.png"
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1735228661336x825098914528422400/thought-catalog-Nv-vx3kUR2A-unsplash.jpg"
                                 alt="">
                         </div>
-                        <h3 class="articles__title">How to Keep Your Bathroom Immaculate</h3>
-                        <span class="articles__categories">Tutorials, Tips and Tricks</span>
-                        <p class="articles__description">Maintaining a clean and hygienic bathroom is essential to ensure the comfort and health of everyone at home. With some simple tips and effective tricks, it&#39;s possible to keep the bathroom immaculate.</p>
+                        <h3 class="articles__title">The Ultimate Guide to Keeping Your Living Room Always Tidy</h3>
+                        <span class="articles__categories">Cleaning routine</span>
+                        <p class="articles__description">With these simple tips and strategies, you can keep your living room always tidy and inviting, creating a space where you and your guests can relax and enjoy special moments together.</p>
                     </article>
                 </a>
             </div>
 
             <div class="articles__list__item">
-                <a href="/blog/posts/the-ultimate-guide-to-keeping-your-living-room-always-tidy20-12-2024/">
+                <a href="/blog/posts/10-reasons-to-use-eco-friendly-cleaning-products-in-your-home26-12-2024/">
                     <article>
                         <div class="articles__image">
-                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734714535358x823323796801388300/tidy.png"
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1735232364993x364585932274945150/eco.jpg"
                                 alt="">
                         </div>
-                        <h3 class="articles__title">The Ultimate Guide to Keeping Your Living Room Always Tidy</h3>
-                        <span class="articles__categories">Cleaning routine</span>
-                        <p class="articles__description">Black woman chilling out on couch with a cup of tea and a remote control.</p>
+                        <h3 class="articles__title">10 Reasons to Use Eco-Friendly Cleaning Products in Your Home</h3>
+                        <span class="articles__categories">Health</span>
+                        <p class="articles__description">When it comes to keeping our homes clean, we often focus on results—sparkling floors, fresh-smelling rooms, and spotless surfaces. But have you ever thought about the impact your cleaning products have on the environment and your health? Choosing eco-friendly options isn’t just a trend; it’s a meaningful way to protect your family and the planet. Let’s dive into why it matters and how you can make the switch.</p>
+                    </article>
+                </a>
+            </div>
+
+            <div class="articles__list__item">
+                <a href="/blog/posts/how-to-encourage-kids-to-participate-in-regular-cleaning26-12-2024/">
+                    <article>
+                        <div class="articles__image">
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1735229830271x681591647694456000/d7a35a818adf866417a59dd8009d8e86.png"
+                                alt="">
+                        </div>
+                        <h3 class="articles__title">How to Encourage Kids to Participate in Regular Cleaning</h3>
+                        <span class="articles__categories">Tips and Tricks, Cleaning routine</span>
+                        <p class="articles__description">Getting kids involved in cleaning and organizing might sound like a challenge, but it’s a valuable life skill that teaches responsibility, teamwork, and pride in their surroundings. With the right approach, you can turn cleaning into a fun and rewarding activity that the whole family can enjoy. Here are some friendly tips to encourage your little ones to join in on keeping the house tidy.</p>
                     </article>
                 </a>
             </div>
@@ -1198,7 +1230,6 @@
     <div id="copy">
         <div id="separator"></div>
         <span>© 2024 All Rights Reserved, Flash Guys Cleaning</span>
-        <span>flashguyscleaning.com</span>
     </div>
 </div>
     </footer>
@@ -1209,7 +1240,6 @@
 
 <!-- Menu Nav -->
 <script src="/assets/scripts/navbar.js"></script>
-<script src="/assets/scripts/menu-nav.js"></script>
 <script src="/assets/scripts/accordion.js"></script>
 <script src="/assets/scripts/services.js"></script>
 <script src="/assets/scripts/scroll-x.js"></script>
@@ -1227,6 +1257,7 @@
 
 <!-- Testimonials -->
 <script type="module" src="/assets/scripts/main.js"></script>
+<script type="module" src="/assets/scripts/nav-menu.js"></script>
 <script type="module" src="/assets/scripts/contact-modal.js"></script>
 <script type="module" src="/assets/scripts/toggle.js"></script>
 <script type="module" src="/assets/scripts/pre-form.js"></script>

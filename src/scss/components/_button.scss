@@ -20,6 +20,7 @@
     &--primary {
         background-color: vars.$primary-500;
         color: vars.$bg-color;
+        border: 1px solid;
 
 
         &:hover {
