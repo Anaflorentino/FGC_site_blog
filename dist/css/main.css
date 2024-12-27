@@ -269,7 +269,7 @@ ul li {
   text-decoration: underline;
 }
 
-#menu,
+#menu-link,
 #login,
 #signup,
 #book-now,
@@ -284,13 +284,13 @@ ul li {
   .book-now {
     display: none;
   }
-  #menu,
+  #menu-link,
   #login,
   #signup,
   #book-now {
     display: block;
   }
-  #menu {
+  #menu-link {
     margin-right: 0.5rem;
     background-color: transparent;
     border: none;
