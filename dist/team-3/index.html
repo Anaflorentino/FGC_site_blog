@@ -191,6 +191,15 @@
         });
     })
 </script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        var selector = document.getElementById("signupPhone");
+        var im = new Inputmask("(999) 999-9999");
+        im.mask(selector);
+    });
+</script>
+    
     </header>
     <!-- Main -->
     <main>
@@ -385,7 +394,7 @@
 <script src="/assets/scripts/server.js"></script>
 
 <!-- Mascaras -->
-<script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.7/dist/inputmask.min.js"></script>
+<script src="https://unpkg.com/inputmask/dist/inputmask.min.js"></script>
 
 
 <!-- Shoelace -->

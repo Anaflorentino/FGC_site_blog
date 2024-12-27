@@ -1,0 +1,542 @@
+[33mcommit 6959524f77b10d4ce2463680a0abf88b0c6ffe4d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: oBregadiolli <bregadiolli.contato@gmail.com>
+Date:   Fri Dec 27 13:02:34 2024 -0300
+
+    Ajusts
+
+[33mcommit 5073f8091155fad8ae9db583a28350f1ef218e83[m
+Merge: 1f9f5d1 6acbca6
+Author: oBregadiolli <bregadiolli.contato@gmail.com>
+Date:   Thu Dec 26 21:29:37 2024 -0300
+
+    Resolve conflicts by accepting remote changes
+
+[33mcommit 1f9f5d138487dc89b48775bf05fc0fdd741fcf99[m
+Merge: 19c468c 703ba77
+Author: oBregadiolli <bregadiolli.contato@gmail.com>
+Date:   Thu Dec 26 21:27:47 2024 -0300
+
+    V2Test
+
+[33mcommit 6acbca647938558751552fc184d8b382d14f0031[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Thu Dec 26 21:27:42 2024 -0300
+
+    test
+
+[33mcommit 19c468c60d87e1c47323d85cd8e093692c685f2f[m
+Author: oBregadiolli <bregadiolli.contato@gmail.com>
+Date:   Thu Dec 26 21:16:13 2024 -0300
+
+    21:16
+
+[33mcommit 703ba77f47c21faf157cf3ca4bf058ce481404de[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Thu Dec 26 20:28:06 2024 -0300
+
+    Commit final changes
+
+[33mcommit 971846711f37ba40ec4f91a3d8663add0b8b12a9[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Wed Dec 25 13:35:45 2024 -0300
+
+    Fix subdirectories path issues
+
+[33mcommit 9a1c5e5c05b1e405127a5a2d1ff4453dd6807384[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 24 18:09:26 2024 -0300
+
+    Test directory
+
+[33mcommit b0fad38a2918aee7f707acfd4611d3a6cca0632e[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 24 17:54:13 2024 -0300
+
+    Create 'public_html'
+
+[33mcommit 63d0e819b8683ae71a40a772e2e9419d4a14ea48[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 24 17:46:18 2024 -0300
+
+    .gitignore
+
+[33mcommit ce813dd48933d6f73e3d58c4a39c4588d84aeb96[m
+Merge: 7f3d261 fb49cad
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 24 17:19:19 2024 -0300
+
+    Merge resolve
+
+[33mcommit 7f3d2616677f063ec212d78e47648bf9b4692319[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 24 17:10:25 2024 -0300
+
+    Preparing for Hostinger
+
+[33mcommit fb49cade459bf0434ade9efa963d86c2bfccb4b7[m
+Author: oBregadiolli <bregadiolli.contato@gmail.com>
+Date:   Tue Dec 24 16:39:26 2024 -0300
+
+    SubscribeMail
+
+[33mcommit fa14169a2e2fa53f7c41b156e8e9f8448c6005d0[m
+Author: oBregadiolli <bregadiolli.contato@gmail.com>
+Date:   Tue Dec 24 12:42:50 2024 -0300
+
+    Antes de alteração Form
+
+[33mcommit 8c3f59f6cce387c9959bb781a0e5396443b53a9a[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 24 10:35:35 2024 -0300
+
+    Create Privacy Policy and Terms of Use pages
+
+[33mcommit 7fa5227aa59eff6c0679600ac4645d0db50b50f1[m
+Merge: d39846b 04d4837
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 24 09:31:59 2024 -0300
+
+    Merge branch 'main' of https://github.com/Anaflorentino/FGC_site_blog
+
+[33mcommit 04d48379fbde6e1e1373dfc6b5f3e9c4e7703598[m
+Merge: 5fd3349 bba7e5e
+Author: oBregadiolli <bregadiolli.contato@gmail.com>
+Date:   Tue Dec 24 09:30:07 2024 -0300
+
+    Faq Postmark
+
+[33mcommit 5fd3349c0c9ba9ce1d2f35e197039f0fc0e4bef5[m
+Author: oBregadiolli <bregadiolli.contato@gmail.com>
+Date:   Tue Dec 24 09:26:52 2024 -0300
+
+    FAQ Api Postmark
+
+[33mcommit d39846b0cec709b365f6171f23bf7ecb982f688a[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 24 09:20:48 2024 -0300
+
+    Preparing for pull request
+
+[33mcommit bba7e5eac867a79f5523a10c47fcfb2c643a4f40[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 23 17:54:18 2024 -0300
+
+    Preparing for pull request
+
+[33mcommit d09322cd3c8f31a498e989510bf1d654c2c055ee[m
+Merge: 3ffe854 4ee0fc5
+Author: oBregadiolli <bregadiolli.contato@gmail.com>
+Date:   Mon Dec 23 16:36:26 2024 -0300
+
+    Merge branch 'main' of https://github.com/Anaflorentino/FGC_site_blog
+
+[33mcommit 4ee0fc5e4e474cc6e97e4ae856aa4e25f8076338[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 23 16:36:04 2024 -0300
+
+    Change files
+
+[33mcommit 3ffe854ef52cf60b0f70a69730b04f055f91fdb7[m
+Author: oBregadiolli <bregadiolli.contato@gmail.com>
+Date:   Mon Dec 23 16:34:28 2024 -0300
+
+    Pre-Form
+
+[33mcommit 178ac41431e7f8fc4feaf9ebd2e0a808f3c3feb4[m
+Merge: c44ab85 d52c638
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 23 15:30:55 2024 -0300
+
+    Merge branch 'main' of https://github.com/Anaflorentino/FGC_site_blog
+
+[33mcommit c44ab8534d66921ae57b1fb28f652487de481c23[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 23 15:30:38 2024 -0300
+
+    Preparing for merge
+
+[33mcommit d52c638784d910b99416eef2b43e6d924afa9b09[m
+Author: oBregadiolli <bregadiolli.contato@gmail.com>
+Date:   Mon Dec 23 15:02:27 2024 -0300
+
+    Masks Phone Number
+
+[33mcommit cab34fe0aaa844d4e642ce1a5b83adb5a780aac9[m
+Author: oBregadiolli <bregadiolli.contato@gmail.com>
+Date:   Mon Dec 23 14:56:55 2024 -0300
+
+    ForgotPassword Action
+
+[33mcommit 67c69fcf0335158dd6c49fbedbca8837f0ece5bb[m
+Author: oBregadiolli <bregadiolli.contato@gmail.com>
+Date:   Mon Dec 23 14:11:34 2024 -0300
+
+    Teste
+
+[33mcommit fa2d25e7d567da52766cfe5bf39d2e648e38a3df[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 23 14:05:56 2024 -0300
+
+    Test merge
+
+[33mcommit 265988fa817579a513d296c12c36e4a74956d70c[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 23 14:04:02 2024 -0300
+
+    Test merge
+
+[33mcommit 7ee872f56ac18238edf2ad5bdcf125131e8de8fa[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 23 14:00:51 2024 -0300
+
+    Adjusts on hero container
+
+[33mcommit ebe0fd9744739fbdf711a2f77e4da17aceb6cfcb[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 23 13:45:47 2024 -0300
+
+    Adjusts on Hero Section
+
+[33mcommit d56ef28e0c2903d01351b4d8771571dc4484a535[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 23 13:39:10 2024 -0300
+
+    Adjusts on FAQ section container
+
+[33mcommit b34769042709101f76ebb724662c3cc2c11c1cff[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 23 13:21:57 2024 -0300
+
+    Keeping up to date for pull request
+
+[33mcommit 2ddc52b895dc5eb85c03c94539f0e0d3cbd645fa[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Sun Dec 22 18:15:03 2024 -0300
+
+    Keeping up to date
+
+[33mcommit 0fcbb5285922624e7147ab7d1c8a6b620b9a7e3a[m
+Merge: 63a2005 4f67fa4
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Sun Dec 22 13:37:42 2024 -0300
+
+    Merge branch 'main' of https://github.com/Anaflorentino/FGC_site_blog
+
+[33mcommit 63a2005ff1d5d3374e6600e753d0d5ad9973614e[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Sun Dec 22 13:37:23 2024 -0300
+
+    SEO optimized --FAQ
+
+[33mcommit 91868a5f9e2171f9f8e8e25744a30af35a4cc375[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Sun Dec 22 13:30:57 2024 -0300
+
+    SEO optimized --Extreme
+
+[33mcommit b88a413398c3d2c5eea605d614ab6d7ee5fa9864[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Sun Dec 22 13:19:34 2024 -0300
+
+    SEO optimized --Our Work
+
+[33mcommit f39e8fb03db99b0e9066474f6f55d0aa7dd980e9[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Sun Dec 22 13:16:40 2024 -0300
+
+    SEO optimized --Our Team
+
+[33mcommit 0bf6cd9f56641daa238fa0c96635a1ff69881c9a[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Sun Dec 22 13:14:28 2024 -0300
+
+    SEO optimized --Why Choose Us
+
+[33mcommit dcd7a2fa8da986c2549f2fb9c61a9dd8b269e29f[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Sun Dec 22 13:11:49 2024 -0300
+
+    SEO optimized --Testiomials Section
+
+[33mcommit c22075539b7e9aee699955c2c637b01afeeab531[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Sun Dec 22 13:07:12 2024 -0300
+
+    SEO optmize -- Hero Section
+
+[33mcommit d269b527ec65e112371c74a151bd72d320a99f5b[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Sun Dec 22 12:22:22 2024 -0300
+
+    Add interaction to active tabs on Our Services section
+
+[33mcommit 4f67fa403490454e8e748fc931d1d2714ee82370[m
+Merge: 31a120d 5029af4
+Author: oBregadiolli <bregadiolli.contato@gmail.com>
+Date:   Fri Dec 20 16:18:28 2024 -0300
+
+    Login/SignupModalChange
+
+[33mcommit 31a120dd21cf3d22f32fe5c3bc09c19c06ad444b[m
+Author: oBregadiolli <bregadiolli.contato@gmail.com>
+Date:   Fri Dec 20 16:15:49 2024 -0300
+
+    Login/SignupModalChange
+
+[33mcommit 5029af414df378d3bd88fda9c9ded91bd02846d4[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Fri Dec 20 16:14:56 2024 -0300
+
+    RELATED POSTS LOGIC
+
+[33mcommit b746ff94c9812c07febe9aa0e08f0eaf1212e0f5[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Fri Dec 20 09:49:05 2024 -0300
+
+    test
+
+[33mcommit 57a807209baa5ec49f9fc182e9bdf92426c8783a[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Fri Dec 20 09:43:52 2024 -0300
+
+    Add new images
+
+[33mcommit cf749f8d756be8baea4892d3adc1508d96c57b25[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Thu Dec 19 20:15:38 2024 -0300
+
+    Fixed .rtf to .md conversion :D
+
+[33mcommit 40bedd0d70122b0268a354ce626990b76c0db247[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Thu Dec 19 00:36:39 2024 -0300
+
+    Keeping up to date
+
+[33mcommit c6dbeba7c88c2ff5fa10c606246dc4b8e7139fec[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 17 21:35:21 2024 -0300
+
+    Finish Coupons Section
+
+[33mcommit abc314aee5a218574f01b98357e55ef916a66ede[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 17 18:05:56 2024 -0300
+
+    Finish FAQ Section
+
+[33mcommit f0d627b25a253ccdc7d6ade745fc709d82911115[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 17 17:50:13 2024 -0300
+
+    Finish Extreme Cleaning Section
+
+[33mcommit cc50909391d638697f89507340c15cb792c424a5[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 17 14:36:40 2024 -0300
+
+    Finish caroussel layout
+
+[33mcommit 233776524ec3e72bbfeffb0ee0f53399bd3e2b90[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 17 12:49:37 2024 -0300
+
+    Adjusts on Our Services section
+
+[33mcommit 328dde2b0dad0d9b1acf57e5e3d00c36e0a0ef24[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 17 12:38:33 2024 -0300
+
+    Finish Our Services section content
+
+[33mcommit a307d07847aab65d301868f7c4e7767604eb62bf[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 17 09:46:26 2024 -0300
+
+    Finish Why-Choose-Us Section
+
+[33mcommit 63d68e980158acbfd026b44ffef8ad684f2f9a64[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 16 18:13:37 2024 -0300
+
+    Finish Testimonials Section
+
+[33mcommit f19f6250770aa3fd4bcd7ed587621a2abdbc1806[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 16 15:10:29 2024 -0300
+
+    Adjusts on Hero Section
+
+[33mcommit 42a41ae6958005673af6a274a42ea180dbead1f7[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 16 11:53:11 2024 -0300
+
+    Keeping up to date
+
+[33mcommit dbc12b10a25ce74154dd85b4c84ac2ce09d85909[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 16 09:55:43 2024 -0300
+
+    Adjusts on navbar
+
+[33mcommit e89b65c34d30420ff1bd86be16a868f4ddb84b48[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 16 09:37:29 2024 -0300
+
+    Adjusts on Hero's pre-form
+
+[33mcommit 3e337fe97f8d4dd1824d630ec9e400710fe6a48a[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Sun Dec 15 22:42:25 2024 -0300
+
+    Create button styles for all sections
+
+[33mcommit 9931a5a04b2d8f5f0a6bb59f0e001d5da488c650[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Sun Dec 15 20:51:28 2024 -0300
+
+    Create pre-form layout and interactions --Hero-section
+
+[33mcommit 7879b111f3a8b2b418219a609c0186729e7d4a11[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Sun Dec 15 17:39:51 2024 -0300
+
+    Create navbar with login authentication
+
+[33mcommit c55893dc6ffb7862232331ccb764499d52ae5d29[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Fri Dec 13 16:01:43 2024 -0300
+
+    Create indivual article's layout --Article-Blog-page
+
+[33mcommit e580dc7b45c9142b3651336e31f1fabb8153a0fe[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Thu Dec 12 16:43:23 2024 -0300
+
+    Add footer layout -- Footer Section
+
+[33mcommit 2cf08068be5d56303c0906619669daa005665a22[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Thu Dec 12 16:40:23 2024 -0300
+
+    Add layout --FAQ Section
+
+[33mcommit 31b1579b9844bd4168b18e18d060e7fed49f4277[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Thu Dec 12 16:30:44 2024 -0300
+
+    Create featured articles layout --Featured Articles Section
+
+[33mcommit c0cf8bf40e4100495e568306fb399254e53a9de5[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Thu Dec 12 14:02:25 2024 -0300
+
+    Create overlay on coupons --Promotions and Coupons Section
+
+[33mcommit 5111eb1061ea9ccb7a0147df2a255d5eff23c514[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Thu Dec 12 13:40:53 2024 -0300
+
+    Create coupons layout --Promotions and Coupons Section
+
+[33mcommit b2bf4d65cca87398b08994213d848f49605dff6f[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Thu Dec 12 13:35:26 2024 -0300
+
+    Add promotions layout -- Coupons and Promotions Section
+
+[33mcommit a914560513311c78716ffd95e807b3d0f1452743[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Wed Dec 11 08:31:58 2024 -0300
+
+    Create --Extreme Cleaning Section
+
+[33mcommit 42d8ef741dff72f7df2b11a7b59f557a7b72936a[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Wed Dec 11 07:28:07 2024 -0300
+
+    Add fill to icons --base/_icons.scss
+
+[33mcommit 4eb82de4c2a031dbff5bec55b2adcca6c5743015[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 10 15:39:21 2024 -0300
+
+    Create subscription cards layout --Subscription Plans Section
+
+[33mcommit be1f9afa211cf538370472f5a1c17e62caec82dd[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 10 12:19:15 2024 -0300
+
+    Create blog page + Content Loop 11ty --Blog Page
+
+[33mcommit a62fd6edc4f7fb8c63cd5b5f06f07f328c96d709[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Tue Dec 10 10:26:44 2024 -0300
+
+    Create featured articles responsive  layout --Blog Page
+
+[33mcommit eaa0a3920c910a6564ed995cb1b493b1b161d3f7[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 9 14:04:17 2024 -0300
+
+    API Bubble --Data Fetch + Converter: .json => .md
+
+[33mcommit 17c809230d11ba9449559a4582ad5631a8448c58[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 9 12:31:43 2024 -0300
+
+    Add Shoelace carousel component
+
+[33mcommit 772227f2dd1215d00ed989a335175dc5704ce102[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 9 12:04:41 2024 -0300
+
+    Adjusts on horizontal scroll layout --Our Team Section
+
+[33mcommit 4289d3e47ce920cd8ee4bc38184804806c117ccf[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 9 11:59:13 2024 -0300
+
+    Add horizontal scroll --Our Team Section
+
+[33mcommit 7e428c5838b2a0dcad456020e3432271e0a13b52[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 9 10:52:11 2024 -0300
+
+    Add CTA --Our Services Section
+
+[33mcommit d36843d12d21df1e670ebf910d9f27a9f22f28fb[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 9 10:49:45 2024 -0300
+
+    Add section content and interactions --Our Services
+
+[33mcommit 9c220e0c023bbda9ea5c24265d723ef2c1277dd6[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 9 10:02:22 2024 -0300
+
+    Create accordions --Why Choose Us Section
+
+[33mcommit 3bdd79e458af593e21e2d87ec251d7d840e686fb[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 9 01:00:58 2024 -0300
+
+    Create modal overlay -- Testimonials Section
+
+[33mcommit a5ac46e555c6b21b4e3411389fc78ebab4433587[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Mon Dec 9 00:24:29 2024 -0300
+
+    Create dinamic testimonials cards -- Testimonials Section
+
+[33mcommit 950f6111ece5793c0d89611011c954ff89c4da58[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Sun Dec 8 19:30:17 2024 -0300
+
+    Fix CTA position -- Main Header Nav
+
+[33mcommit 60b3a48a5c17aa859966a9df5b171254345df438[m
+Author: Ana Florentino <abmflorentino@gmail.com>
+Date:   Sun Dec 8 18:57:21 2024 -0300
+
+    Add responsive navbar -- Main Header
