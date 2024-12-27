@@ -54,7 +54,6 @@ With these 6 simple tips, you can keep your kitchen clean and organized all the 
                 </div>
               </a>
             </li>
-
           
             <li class="related-article">
               <a href="/blog/posts/how-to-keep-your-bathroom-immaculate26-12-2024/">
@@ -68,7 +67,6 @@ With these 6 simple tips, you can keep your kitchen clean and organized all the 
                 </div>
               </a>
             </li>
-
           
             <li class="related-article">
               <a href="/blog/posts/how-to-encourage-kids-to-participate-in-regular-cleaning26-12-2024/">
@@ -82,7 +80,6 @@ With these 6 simple tips, you can keep your kitchen clean and organized all the 
                 </div>
               </a>
             </li>
-
           
       </ul>
     </div>

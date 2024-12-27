@@ -1,0 +1,91 @@
+@use '../abstracts/variables' as vars;
+
+.cleaner__image {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+}
+
+.cleaner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+
+    .cleaner-article {
+        margin-bottom: 4rem;
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: .5rem;
+        }
+
+    p {
+        line-height: 1.8;
+        margin-bottom: .4rem;
+    }
+
+    ul {
+        margin: 1.8rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        li {
+            h3 {
+                font-size: 18px;
+                margin-bottom: .5rem;
+            }
+            p {
+                font-size: 1rem;
+                color: vars.$text-300;
+            }
+            span {
+                img {
+                    vertical-align: middle;
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+}
+}
+
+.cleaner__details {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    align-items: center;
+
+    h3 {
+        line-height: 1;
+    }
+
+    span {
+        font-size: .8rem;
+        line-height: 1;
+    }
+    
+}
+
+@media (max-width: 740px) {
+    .cleaner-wrapper {
+        flex-direction: column;
+    }
+
+    .cleaner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cleaner__image {
+        width: 120px;
+        height: 120px;
+    }
+}

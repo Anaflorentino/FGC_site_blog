@@ -36,8 +36,9 @@
 
     <!-- Login e Signup -->
     <div class="navbar-buttons">
-        <a href="https://flashguyscleaning.com/dashboard"><button class="dashboard-button button button--secondary button--small" id="dashboardButton">Dashboard</button></a>
-        <a href="https://flashguyscleaning.com/schedule?date=&coupon=first05"><button class="book-now button button--primary button--small">Book now</button></a>
+        <a href="https://flashguyscleaning.com/dashboard"><button
+                class="dashboard-button button button--secondary button--small"
+                id="dashboardButton">Dashboard</button></a>
         <div class="auth-container" id="authContainer">
             <!-- Content dynamically injected by JS -->
         </div>
@@ -56,13 +57,15 @@
         <button id="modalLoginButton">Log In</button>
         <button class="google-login-button" id="googleLoginButton">
             <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
-            alt="Google logo">
+                alt="Google logo">
             Log In with Google
         </button>
         <span id="privacyPolicy">
-            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="#">Privacy Policy</a>.</p>
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
         </span>
-        <p class="account-switcher">Don't have an account?<button class="button" id="sign-btn">Create account</button></p>
+        <p class="account-switcher">Don't have an account?<button class="button" id="sign-btn">Create account</button>
+        </p>
     </div>
 </div>
 
@@ -81,14 +84,19 @@
         <button id="signupModalButton">Sign Up</button>
         <button class="google-login-button" id="googleSignupButton">
             <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
-            alt="Google logo">
+                alt="Google logo">
             Sign Up with Google
         </button>
+        <span id="privacyPolicy">
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
+        </span>
         <p class="account-switcher">Already have an account?<button class="button" id="login-btn">Login</button></p>
     </div>
 </div>
 
 <script>
+
     document.addEventListener('DOMContentLoaded', function () {
         // Modais
         const loginModal = document.getElementById('loginModal');
@@ -114,5 +122,5 @@
             loginModal.classList.remove('visible');
             signupModal.classList.add('visible');
         });
-    });
+    })
 </script>

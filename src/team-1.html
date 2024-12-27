@@ -3,63 +3,83 @@ layout: layouts/base.html
 title: Our Team
 ---
 
-<h1>Meet the people who make your home sparkle</h1>
-<p>Stories of inspiration from our team of cleaners</p>
 
 <!-- Pages Index -->
-<nav class="pagination-links section__title">
+<nav class="pagination-links section__title container">
     <ol class="pagination-links__list">
         <li class="pagination-links__list__item"><a href="/">Home ></a></li>
         <li class="pagination-links__list__item"><a href="#">Our team</a></li>
     </ol>
 </nav>
 
-<div class="container">
-
-    <!-- Foto e nome do cleaner -->
-    <div>
-        <img src="assets/images/cleaners/maria-cleaner.jpg" alt="Picture of a smiling woman">
-        <h3>Maria</h3>
-        <img src="assets/images/icons/filled/5-stars.svg" alt="5-starts representing clear's rating">
-        <span>Cleaner at Flash Guys</span>
-        <span>Since July, 2023</span>
+<main class="container">
+    <div class="section__title">
+        <h1>Meet the people who make your home sparkle</h1>
+        <p>Stories of inspiration from our team of cleaners</p>
     </div>
 
-    <!-- Artigo sobre o cleaner -->
-    <article role="article">
-        <header>
-            <h2>Maria: From Challenges to Top-Cleaner of the Year!</h2>
-        </header>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, suscipit magnam. Sit illum natus a
-            optio modi aperiam nam mollitia iusto, praesentium veritatis quo et itaque, saepe minima delectus adipisci?
-        </p>
-        <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae dicta ratione dolorum quaerat perspiciatis
-            minima dolor non culpa eius, ducimus fugit rem libero unde. Officiis voluptatem enim autem quae expedita?
-        </P>
-        <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, voluptatibus? Aliquam a blanditiis illo
-            quas sint, enim ab nulla quae voluptate eum fuga ullam. Molestias error in aut fugiat fuga!</P>
+    <div class="cleaner-wrapper">
+        <!-- Foto e nome do cleaner -->
+        <div class="cleaner">
+            <div class="cleaner__image">
+                <img src="/assets/images/cleaners/nani.png" alt="Picture of a smiling woman">
+            </div>
+            <div class="cleaner__details">
+                <h3>Nani</h3>
+                <img src="/assets/images/icons/filled/5-stars.svg" alt="5-starts representing clear's rating">
+                <span>Cleaner at Flash Guys</span>
+                <span>Since July, 2023</span>
+            </div>
+        </div>
 
-        <ul role="list">
-            <li role="listitem">
-                <h3><span><img src="" alt="Icon representing cleaner's skills"></span>Skills</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </li>
-            <li role="listitem">
-                <h3><span><img src="" alt="Icon representing cleaner's languages"></span>Languages</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </li>
-            <li role="listitem">
-                <h3><span><img src="" alt="Icon representing what clients say about this cleaner"></span>What clients
-                    say</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </li>
-        </ul>
+        <!-- Artigo sobre o cleaner -->
+        <article role="article" class="cleaner-article">
+            <header>
+                <h2>Nani: A Journey of Faith, Love and Community ✨</h2>
+            </header>
+            <p>Just over a year ago, Nani and her husband left Rio de Janeiro, Brazil to embark on a new chapter in
+                California. Their decision was driven by the search for better living conditions and the desire to
+                immerse themselves in a new culture.
+            </p>
+            <P>At first, the language barrier was a challenge. But with effort and determination, Nani proudly shares a
+                recent milestone: she and her husband attended a service at an American church and understood everything
+                from beginning to end. <em>"It felt like a huge accomplishment,"</em> she says smiling. <em>"For the
+                    first time, we truly
+                    felt connected to the experience and the community around us."</em></P>
+            <p>As a theology student, Nani has a passion for helping the community and believes in the power of faith on
+                building meaningful connections. She describes California as a great and welcoming place.
+            </p>
+            <p>While happy with the life they've built, Nani and her husband are already thinking about the future. One
+                day, when they're older, they plan to return to Brazil to enjoy their retirement together and embrace
+                the well-earned rest in their homeland with family and firends.</p>
 
-        <h2>Inspired by Elisa's journey?</h2>
-        <p>At Flash Guys, <span class="highlight-text">all cleaners are background-checked and expertly trained</span> to provide a safe and reliable
-            services for you and your loved ones.</p>
-            <button class="button button--primary">Book a cleaning today</button>
-    </article>
+            <ul role="list">
+                <li role="listitem">
+                    <h3><span><img src="/assets/images/icons/filled/skills.svg" width="24px"
+                                alt="Icon representing cleaner's skills"></span>Skills</h3>
+                    <p>House Cleaning • Deep Cleaning • Kitchens & Bathrooms</p>
+                </li>
+                <li role="listitem">
+                    <h3><span><img src="/assets/images/icons/filled/languages.svg" width="24px"
+                                alt="Icon representing cleaner's languages"></span>Languages</h3>
+                    <p>Brazilian Portuguese, English</p>
+                </li>
+                <li role="listitem">
+                    <h3><span><img src="/assets/images/icons/filled/feedback.svg" width="24px"
+                                alt="Icon representing what clients say about this cleaner"></span>What clients
+                        say</h3>
+                    <p>Clients love Nani for her spirituous attitude and how quickly she delivers results.
+                    </p>
+                </li>
+            </ul>
 
-
-</div>
+            <h2>Inspired by Nani's journey?</h2>
+            <p>At Flash Guys, <strong><span class="highlight-text">all cleaners are background-checked and expertly
+                trained</span></strong>
+                to provide a safe and reliable
+                services for you and your loved ones.</p>
+            <a href="https://flashguyscleaning.com/schedule"><button class="button button--primary">Book a cleaning
+                    today</button></a>
+        </article>
+    </div>
+</main>

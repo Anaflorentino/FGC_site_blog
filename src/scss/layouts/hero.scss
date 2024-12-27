@@ -154,6 +154,7 @@
     color: vars.$neutrals-400; /* Cor do texto quando inativo */
     margin-left: 10px;
     cursor: pointer;
+    user-select: none;
 }
 
 /* Muda a cor do toggle quando está ativo */
@@ -191,7 +192,7 @@
 
     .hero__image {
         width: 100%;
-        height: 50vh;
+        height: 64vh;
     }
 
     .hero__text {
@@ -222,6 +223,9 @@
 }
 
 @media (max-width: 780px) {
+    .hero {
+        height: auto;
+    }
     .hero__text {
         padding-left: 4%;
     }

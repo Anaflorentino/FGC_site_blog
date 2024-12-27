@@ -32,7 +32,6 @@ Products like vinegar, baking soda, and lemon juice are effective in removing st
                 </div>
               </a>
             </li>
-
           
             <li class="related-article">
               <a href="/blog/posts/6-tips-for-efficient-kitchen-cleaning20-12-2024/">
@@ -46,7 +45,6 @@ Products like vinegar, baking soda, and lemon juice are effective in removing st
                 </div>
               </a>
             </li>
-
           
             <li class="related-article">
               <a href="/blog/posts/how-to-encourage-kids-to-participate-in-regular-cleaning26-12-2024/">
@@ -60,7 +58,6 @@ Products like vinegar, baking soda, and lemon juice are effective in removing st
                 </div>
               </a>
             </li>
-
           
       </ul>
     </div>

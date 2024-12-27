@@ -133,6 +133,14 @@
 
     </header>
     <main>
+        <!-- Pages Index -->
+        <nav class="pagination-links section__title article">
+            <ol class="pagination-links__list">
+                <li class="pagination-links__list__item"><a href="/">Home ></a></li>
+                <li class="pagination-links__list__item"><a href="/blog">Blog ></a></li>
+                <li class="pagination-links__list__item"><a href="#">{{ title }}</a></li>
+            </ol>
+        </nav>
 
         <!-- Artigo dinâmico -->
         <article class="article">
@@ -144,6 +152,14 @@
             <!-- Imagem dinâmica -->
             <div class="article__image section__title">
                 <img src="{{ image }}" alt="Imagem do post">
+            </div>
+
+            <!-- CTA -->
+            <div>
+                <h2>Need a hand with cleaning?</h2>
+                <p>Relax and leave the hard work to us. Book now and enjoy a cleaner space</p>
+                <a href="https://flashguyscleaning.com/schedule?date=&coupon=first05"><button
+                        class="button button--primary">Get 5% OFF - Book Now</button></a>
             </div>
 
             <!-- Conteúdo dinâmico -->

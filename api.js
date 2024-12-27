@@ -15,67 +15,47 @@ const formatDate = (date) => {
   return `${year}-${month}-${day}`;
 };
 
-/// Função para converter BBCode ou HTML para Markdown, incluindo tags de RTF
+// Função para converter rich text e BBCode para Markdown
 const bbcodeToMarkdown = (content) => {
-  // Convertendo cabeçalhos (H1-H6)
-  content = content.replace(/<h([1-6])>(.*?)<\/h\1>/g, (match, p1, p2) => {
-    const hashes = '#'.repeat(p1);
-    return `${hashes} ${p2}`;
-  });
+  // Convertendo cabeçalhos (H1-H6 e BBCode)
+  content = content.replace(/<h([1-6])>(.*?)<\/h\1>/g, (_, level, text) => `#`.repeat(level) + ` ${text}`);
+  content = content.replace(/\[h([1-6])\](.*?)\[\/h\1\]/g, (_, level, text) => `#`.repeat(level) + ` ${text}`);
 
-  // Convertendo tags de título em BBCode
-  content = content.replace(/\[h2\](.*?)\[\/h2\]/g, '## $1');
-  content = content.replace(/\[h3\](.*?)\[\/h3\]/g, '### $1');
-
-  // Convertendo negrito e itálico em BBCode
-  content = content.replace(/\[b\](.*?)\[\/b\]/g, '**$1**');
-  content = content.replace(/\[i\](.*?)\[\/i\]/g, '*$1*');
-  content = content.replace(/\[u\](.*?)\[\/u\]/g, '~$1~');
+  // Convertendo negrito, itálico e sublinhado
+  content = content.replace(/<b>(.*?)<\/b>/g, '**$1**').replace(/\[b\](.*?)\[\/b\]/g, '**$1**');
+  content = content.replace(/<i>(.*?)<\/i>/g, '*$1*').replace(/\[i\](.*?)\[\/i\]/g, '*$1*');
+  content = content.replace(/<u>(.*?)<\/u>/g, '_$1_').replace(/\[u\](.*?)\[\/u\]/g, '_$1_');
 
   // Convertendo links
+  content = content.replace(/<a href="(.*?)">(.*?)<\/a>/g, '[$2]($1)');
   content = content.replace(/\[url=(.*?)\](.*?)\[\/url\]/g, '[$2]($1)');
-  content = content.replace(/\[url\](.*?)\[\/url\]/g, '[$1]($1)');
 
   // Convertendo imagens
-  content = content.replace(/\[img\](.*?)\[\/img\]/g, '![]($1)');
+  content = content.replace(/<img src="(.*?)" alt="(.*?)"\/*>/g, '![$2]($1)');
   content = content.replace(/\[img=(.*?)\](.*?)\[\/img\]/g, '![$2]($1)');
 
   // Convertendo listas não ordenadas
-  content = content.replace(/\[list\](.*?)\[\/list\]/gs, (match, p1) => {
-    return p1.replace(/\[\*\](.*?)\[/g, '\n- $1\n');
-  });
+  content = content.replace(/<ul>(.*?)<\/ul>/gs, (_, items) => items.replace(/<li>(.*?)<\/li>/g, '- $1'));
+  content = content.replace(/\[ml\](.*?)\[\/ml\]/gs, (_, items) => items.replace(/\[li.*?\](.*?)\[\/li\]/g, '- $1'));
 
   // Convertendo listas ordenadas
-  content = content.replace(/\[ol\](.*?)\[\/ol\]/gs, (match, p1) => {
-    return p1.replace(/\[\*\](.*?)\[/g, '\n1. $1\n');
+  content = content.replace(/<ol>(.*?)<\/ol>/gs, (_, items) => {
+    let i = 1;
+    return items.replace(/<li>(.*?)<\/li>/g, () => `${i++}. $1`);
   });
 
-  // Limpando tags de listas não estruturadas
-  content = content.replace(/\[ul\]/g, '').replace(/\[\/ul\]/g, '');
-  content = content.replace(/\[ol\]/g, '').replace(/\[\/ol\]/g, '');
-
-  // Convertendo quebras de linha e parágrafos
-  content = content.replace(/<br\s*\/?>/g, '\n');
-  content = content.replace(/<\/?p>/g, '\n');
-
-  // Convertendo citações
+  // Convertendo blocos de citação
   content = content.replace(/<blockquote>(.*?)<\/blockquote>/gs, '> $1');
 
-  // Convertendo tags de tamanho de fonte
-  content = content.replace(/\[size=(\d+)\](.*?)\[\/size\]/g, (match, size, text) => {
-    // Ajuste para markdown, mas depende de como o tamanho é importante no seu caso
-    return `${text}`;
-  });
+  // Convertendo quebras de linha e parágrafos
+  content = content.replace(/<br\s*\/>/g, '\n');
+  content = content.replace(/<\/p>/g, '\n\n').replace(/<p>/g, '');
 
-  // Convertendo tags de cor (de forma simples, se necessário)
-  content = content.replace(/\[color=(.*?)\](.*?)\[\/color\]/g, (match, color, text) => {
-    // Se quiser suportar markdown simples, pode considerar que a cor não é diretamente suportada
-    return `${text}`;
-  });
+  // Removendo quaisquer tags HTML restantes
+  content = content.replace(/<[^>]+>/g, '');
 
-  return content;
+  return content.trim();
 };
-
 
 // Função para gerar o conteúdo do Markdown
 const generateMarkdown = (data) => {
@@ -97,7 +77,7 @@ ${contentWithMarkdown}
   `.trim();
 };
 
-// Função para criar o arquivo Markdown com artigos relacionados
+// Função para criar o arquivo Markdown
 const createMarkdownFile = (entry, allArticles) => {
   const fileName = entry.file_name;
   const markdownContent = generateMarkdown(entry);
@@ -111,7 +91,7 @@ const createMarkdownFile = (entry, allArticles) => {
       <h2>Related articles</h2>
       <ul>
         ${relatedArticles.map(article => {
-      return `
+          return `
             <li class="related-article">
               <a href="/blog/posts/${article.file_name}/">
                 <div class="related-article-image">
@@ -124,9 +104,8 @@ const createMarkdownFile = (entry, allArticles) => {
                 </div>
               </a>
             </li>
-
           `;
-    }).join('')}
+        }).join('')}
       </ul>
     </div>
     `;
@@ -144,12 +123,12 @@ const createMarkdownFile = (entry, allArticles) => {
   console.log(`Arquivo Markdown gerado: ${filePath}`);
 };
 
-// Função para encontrar artigos relacionados com base nas tags
+// Função para encontrar artigos relacionados
 const findRelatedArticles = (currentArticle, allArticles) => {
   const currentTags = currentArticle.tags.split(',').map(tag => tag.trim());
 
   return allArticles.filter(article => {
-    if (article.file_name === currentArticle.file_name) return false; // Exclui o próprio artigo
+    if (article.file_name === currentArticle.file_name) return false;
 
     const articleTags = article.tags.split(',').map(tag => tag.trim());
 
@@ -157,7 +136,7 @@ const findRelatedArticles = (currentArticle, allArticles) => {
   });
 };
 
-// Função para buscar dados da API e salvar arquivos .json na pasta data
+// Função para buscar dados da API
 const fetchDataFromAPI = async () => {
   try {
     console.log('Buscando dados da API...');
@@ -188,7 +167,7 @@ const fetchDataFromAPI = async () => {
   }
 };
 
-// Função para converter arquivos JSON na pasta data para Markdown
+// Função para converter arquivos JSON para Markdown
 const convertJsonToMarkdown = () => {
   if (!fs.existsSync(dataDir)) {
     console.error('Diretório data não encontrado. Certifique-se de que os arquivos JSON foram salvos.');

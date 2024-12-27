@@ -41,7 +41,6 @@ With these simple tips and strategies, you can keep your living room always tidy
                 </div>
               </a>
             </li>
-
           
             <li class="related-article">
               <a href="/blog/posts/how-to-keep-your-bathroom-immaculate26-12-2024/">
@@ -55,7 +54,6 @@ With these simple tips and strategies, you can keep your living room always tidy
                 </div>
               </a>
             </li>
-
           
             <li class="related-article">
               <a href="/blog/posts/how-to-encourage-kids-to-participate-in-regular-cleaning26-12-2024/">
@@ -69,7 +67,6 @@ With these simple tips and strategies, you can keep your living room always tidy
                 </div>
               </a>
             </li>
-
           
       </ul>
     </div>
