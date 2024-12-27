@@ -68,6 +68,12 @@ ul li {
   }
 }
 
+.headline {
+  font-size: 3.2rem;
+  line-height: 1.2;
+  letter-spacing: -2%;
+}
+
 /* Adicionando preenchimento aos ícones com a classe 'fill' */
 .material-symbols-rounded.fill {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
@@ -952,7 +958,7 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
 
 .container {
   padding: 0 8%;
-  margin: 0 auto;
+  margin: 2% auto;
 }
 @media (max-width: 780px) {
   .container {
@@ -1177,7 +1183,7 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
 
 .hero__text {
   width: 50%;
-  padding-right: 3.5rem;
+  padding-right: 15%;
   margin-top: 3.5rem;
 }
 
@@ -1342,15 +1348,22 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
     padding-left: 22%;
   }
 }
+@media (max-width: 1836px) {
+  .hero {
+    padding-right: 4%;
+  }
+}
 @media (max-width: 1349px) {
   .hero {
     padding-left: 8%;
+    padding-right: 2%;
   }
 }
 @media (max-width: 740px) {
   .hero {
     padding-left: 0;
     height: auto;
+    padding-right: 0;
   }
   .hero__content {
     flex-direction: column;
@@ -1621,12 +1634,12 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
 }
 
 .why__content__right {
-  height: 58vh;
+  height: 54vh;
   display: flex;
   justify-content: flex-end;
 }
 .why__content__right img {
-  width: 84%;
+  width: 80%;
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
@@ -1756,7 +1769,7 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 4.5rem;
+  gap: 3rem;
   padding-top: 48px;
   padding-bottom: 48px;
   flex-wrap: wrap;
@@ -1771,7 +1784,7 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   object-fit: cover;
 }
 .extreme__image {
-  max-width: 80vh;
+  max-width: 60vh;
   height: 100%;
 }
 .extreme__image, .extreme__content {

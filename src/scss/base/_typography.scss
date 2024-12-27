@@ -42,3 +42,9 @@ ul {
    
   }
 }
+
+.headline {
+  font-size: clamp(2.5rem, 3.2rem, 3.5rem);
+  line-height: 1.2;
+  letter-spacing: -2%;
+}

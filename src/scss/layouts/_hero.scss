@@ -19,7 +19,7 @@
 
 .hero__text {
     width: 50%;
-    padding-right: 3.5rem;
+    padding-right: 15%;
     margin-top: 3.5rem;
 }
 
@@ -186,10 +186,17 @@
     }
 }
 
+@media (max-width: 1836px) {
+    .hero {
+        padding-right: 4%;
+    }
+}
+
 @media (max-width: 1349px) {
     .hero {
 
         padding-left: 8%;
+        padding-right: 2%;
     }
 }
 
@@ -197,6 +204,7 @@
     .hero {
         padding-left: 0;
         height: auto;
+        padding-right: 0;
     }
 
     .hero__content {
