@@ -1,0 +1,1269 @@
+<!-- Template de Base -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basehead -->
+    <!-- Basehead -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flash Guys Cleaning | Los Angeles, CA</title>
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://static.hotjar.com">
+
+<!-- Preload critical CSS -->
+<link rel="preload" href="/css/main.css" as="style">
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- Material Symbols Rounded -->
+<link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- Shoelace Library -->
+<link rel="preload" as="style"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HW3RF3HWWF"></script>
+<script defer>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-HW3RF3HWWF');
+</script>
+
+<!-- Hotjar Tracking Code -->
+<script defer>
+  (function(h, o, t, j, a, r) {
+    h.hj = h.hj || function() {
+      (h.hj.q = h.hj.q || []).push(arguments);
+    };
+    h._hjSettings = { hjid: 5249893, hjsv: 6 };
+    a = o.getElementsByTagName('head')[0];
+    r = o.createElement('script'); r.async = 1;
+    r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+</script>
+
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Modal de Support -->
+<div id="supportModalOverlay" class="support-modal-overlay">
+    <div class="support-modal-content">
+        <div class="support-modal-close">
+            <button id="closeSupportModal" class="support-close-btn">X</button>
+        </div>
+        <h3>Need help? <br>
+            Get in touch by email or phone</h3>
+        <div class="cta cta--block">
+            <button class="button button--full button--primary">+1 310 986 9840</button>
+            <button class="button button--full button--primary">contact@flashguyscleaning.com</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Navbar -->
+<nav class="navbar">
+    <ul class="nav-list">
+        <button id="menu-link">
+            <span class="material-symbols-rounded">
+                menu
+            </span>
+        </button>
+        <a class="logo" href="/"><img
+                src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
+                alt="Brand logo"></a>
+        <div class="nav-list-links">
+            <li><a class="menu-link" href="/#services">Services</a></li>
+            <li><a class="menu-link" href="/#about-us">About us</a></li>
+            <li><a class="menu-link" href="#support">Support</a></li>
+            <li><a class="menu-link" href="/#faq">FAQ</a></li>
+            <li><a class="menu-link" href="/blog">Blog</a></li>
+        </div>
+    </ul>
+
+    <!-- Login e Signup -->
+    <div class="navbar-buttons">
+        <a href="https://flashguyscleaning.com/dashboard"><button
+                class="dashboard-button button button--secondary button--small"
+                id="dashboardButton">Dashboard</button></a>
+        <div class="auth-container" id="authContainer">
+            <!-- Content dynamically injected by JS -->
+        </div>
+    </div>
+</nav>
+
+<!-- Modal de Login -->
+<div class="nav-modal" id="loginModal">
+    <div class="modal-content">
+        <h3>Login</h3>
+        <input type="email" id="modalEmail" placeholder="Email" required>
+        <span class="input-warning">Please enter your email*</span>
+        <input type="password" id="modalPassword" placeholder="Password" required>
+        <span class="input-warning">Please enter a valid password*</span>
+        <button id="forgotPassword">I forgot my password</button>
+        <button id="modalLoginButton">Log In</button>
+        <button class="google-login-button" id="googleLoginButton">
+            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                alt="Google logo">
+            Log In with Google
+        </button>
+        <span id="privacyPolicy">
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
+        </span>
+        <p class="account-switcher">Don't have an account?<button class="button" id="sign-btn">Create account</button>
+        </p>
+    </div>
+</div>
+
+<!-- Modal de Signup -->
+<div class="nav-modal" id="signupModal">
+    <div class="modal-content">
+        <h3>Sign Up</h3>
+        <input type="text" id="signupName" placeholder="Full Name" required>
+        <span class="input-warning">Please enter your full name*</span>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <span class="input-warning">Please enter your email*</span>
+        <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+        <span class="input-warning">Please enter you phone number*</span>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <span class="input-warning">Please enter a password*</span>
+        <button id="signupModalButton">Sign Up</button>
+        <button class="google-login-button" id="googleSignupButton">
+            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                alt="Google logo">
+            Sign Up with Google
+        </button>
+        <span id="privacyPolicy">
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
+        </span>
+        <p class="account-switcher">Already have an account?<button class="button" id="login-btn">Login</button></p>
+    </div>
+</div>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Modais
+        const loginModal = document.getElementById('loginModal');
+        const signupModal = document.getElementById('signupModal');
+
+        // Botões que controlam os modais
+        const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
+        const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
+
+        // Verifica se todos os elementos necessários existem
+        if (!loginModal || !signupModal || !loginBtn || !signBtn) {
+            return; // Interrompe a execução caso algum elemento não esteja presente
+        }
+
+        // Evento para abrir o modal de Login e fechar o de Cadastro
+        loginBtn.addEventListener('click', function () {
+            signupModal.classList.remove('visible');
+            loginModal.classList.add('visible');
+        });
+
+        // Evento para abrir o modal de Cadastro e fechar o de Login
+        signBtn.addEventListener('click', function () {
+            loginModal.classList.remove('visible');
+            signupModal.classList.add('visible');
+        });
+    })
+</script>
+    </header>
+    <!-- Main -->
+    <main>
+        
+<!-- ? Head em '_includes/basehead.html' ? -->
+<!-- ? Header em '_includes/navbar' ? -->
+
+<!-- * Hero Section * -->
+<section class="hero">
+    <div class="hero__content">
+        <div class="hero__text">
+            <span class="hero__text-kicker"><img src="assets/images/icons/filled/5-stars-kicker.svg"
+                    alt="5-stars filled representing 4,9 overall rating of Flash Guys clients"><strong>4,9 overall
+                    rating</strong></span>
+            <h1 class="hero__text-title">Cleaning services for <span class="highlight-text">spotless spaces in
+                    California</span></h1>
+            <p class="hero__text-description">Experience a professional and personalized cleaning service that suits
+                your lifestyle. From homes to offices, we've got it covered!</p>
+            <ul class="list">
+                <li><span><img src="assets/images/icons/outline/check-color.svg"
+                            alt="Check icon representing brand authority"></span><span itemscope
+                        itemprop="serviceFeature"> $1M in Insurance Protection</span></li>
+                <li><span><img src="assets/images/icons/outline/check-color.svg"
+                            alt="Check icon representing brand authority"></span><span itemscope
+                        itemprop="serviceFeature"> +5000 cleanings in 4 years</span></li>
+                <li><span><img src="assets/images/icons/outline/check-color.svg"
+                            alt="Check icon representing brand authority"></span><span itemscope
+                        itemprop="serviceFeature"> 24h professional team</span></li>
+            </ul>
+            <div class="cta">
+                <a href="https://flashguyscleaning.com/schedule" class="button button--secondary"
+                    title="Get a free estimate for cleaning services">Free
+                    estimate</a>
+                <a href="https://flashguyscleaning.com/schedule" class="button button--primary"
+                    title="Book a cleaning service now">Book now</a>
+            </div>
+        </div>
+        <div class="hero__image">
+            <!-- Responsividade com o uso de <picture> -->
+            <picture>
+                <!-- Usar a imagem responsiva para telas menores que 768px -->
+                <source srcset="assets/images/hero-img.jpg" media="(max-width: 768px)">
+                <!-- Imagem padrão, será usada para telas maiores que 768px -->
+                <img src="assets/images/hero-img.jpg" alt="Spotless kitchen after cleaning service in California"
+                    loading="lazy">
+            </picture>
+
+            <!-- Pre-form -->
+            <div class="hero__form-container">
+                <form action="#">
+                    <div class="hero__form-select-container">
+                        <div class="hero__form-select-left-icon bedroom" aria-hidden="true"></div>
+                        <!-- Icon for bedroom selection -->
+                        <select class="hero__form-select" aria-label="Select number of bedrooms" id="dropdownBedroom">
+                            <option value="" disabled selected>Bedrooms</option>
+                            <option value="1">1 bedroom</option>
+                            <option value="2">2 bedrooms</option>
+                            <option value="3">3 bedrooms</option>
+                            <option value="4">4 bedrooms</option>
+                            <option value="5">5+ bedrooms</option>
+                        </select>
+                        <div class="hero__form-select-arrow-icon" aria-hidden="true"></div> <!-- Right arrow icon -->
+                    </div>
+                    <div class="hero__form-select-container">
+                        <div class="hero__form-select-left-icon bathroom" aria-hidden="true"></div>
+                        <!-- Icon for bathroom selection -->
+                        <select class="hero__form-select" aria-label="Select number of bathrooms" id="dropdownBathroom">
+                            <option value="" disabled selected>Bathrooms</option>
+                            <option value="1">1 bathroom</option>
+                            <option value="2">2 bathrooms</option>
+                            <option value="3">3 bathrooms</option>
+                            <option value="4">4 bathrooms</option>
+                            <option value="5">5+ bathrooms</option>
+                        </select>
+                        <div class="hero__form-select-arrow-icon" aria-hidden="true"></div> <!-- Right arrow icon -->
+                    </div>
+                    <!-- Toggle "Pet friendly" -->
+                    <div class="hero__toggle-container">
+                        <div class="hero__toggle" id="pet-friendly-toggle" aria-label="Pet friendly toggle"></div>
+                        <span class="hero__toggle-text" id="pet-friendly-text">Pet friendly</span>
+                    </div>
+                    <a href="https://flashguyscleaning.com/schedule?date=1735664459416&coupon=first05"><button
+                            class="button button--primary" type="submit" id="btnFreeEstimate"
+                            aria-label="Submit the form for a free estimate">Free estimate</button></a>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Open Graph Meta Tags for Social Sharing -->
+<meta property="og:title" content="Reliable Cleaning Services for Spotless Homes and Offices in California">
+<meta property="og:description"
+    content="Book a professional and personalized cleaning service that suits your lifestyle. From homes to offices, we've got it covered!">
+<meta property="og:image" content="assets/images/hero-img.jpg">
+<meta property="og:url" content="https://flashguyscleaning.com">
+
+
+<!-- * Testimonials Section * -->
+<section class="section-wrapper" aria-labelledby="testimonials-section" id="testimonials">
+    <div class="container">
+        <!-- Título da seção com o ID para referenciar o cabeçalho na navegação -->
+        <div class="testimonials__title">
+            <h2 id="testimonials-section">What Our Clients Say</h2>
+            <a href="https://www.thumbtack.com/ca/redondo-beach/electrical-repairs/flash-guys-cleaning/service/402105454248648706"
+                target="_blank">
+                <button class="button button--secondary button--small" aria-label="Leave a review">Make a
+                    Review</button>
+            </a>
+
+        </div>
+
+        <!-- Scroll Horizontal -->
+        <div class="scroll">
+            <div id="testimonials-container-wrapper" class="testimonials-container-wrapper">
+                <button class="scroll-button left scroll-arrow" id="scroll-left" aria-label="Scroll left">
+                    <span><img src="assets/images/icons/outline/arrow-left.svg" alt="Left arrow icon"></span>
+                </button>
+                <button class="scroll-button right scroll-arrow" id="scroll-right" aria-label="Scroll right">
+                    <span><img src="assets/images/icons/outline/arrow-right.svg" alt="Right arrow icon"></span>
+                </button>
+                <div id="testimonials-container" class="testimonials-container" role="region"
+                    aria-labelledby="testimonials-section">
+                    <!-- Conteúdo dinâmico de depoimentos vai aqui: 'assets/scripts/testimonialsData.js' -->
+                </div>
+            </div>
+
+            <!-- Modal de Testemunho (exibição de depoimento detalhado) -->
+            <div id="testimonial-modal" class="modal hidden" role="dialog" aria-labelledby="modal-title"
+                aria-hidden="true">
+                <div class="modal-content">
+                    <span id="close-modal" class="close-button" aria-label="Close modal">&times;</span>
+                    <div id="modal-body" class="modal-body"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Logos de Avaliações -->
+        <div class="testimonials__logos">
+            <div class="testimonials__logos__description">
+                <p><strong>4.9 Overall Rating</strong></p>
+                <p>From over 2000 reviews</p>
+            </div>
+            <ul class="testimonials__logos__images" aria-label="Review platforms">
+                <li><img src="assets/images/icons/social/bark.svg" alt="Bark company logo" loading="lazy"></li>
+                <li><img src="assets/images/icons/social/google.svg" alt="Google company logo" loading="lazy"></li>
+                <li><img src="assets/images/icons/social/thumbtack.svg" alt="Thumbtack company logo" loading="lazy">
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- * Why Choose Us Section * -->
+<section class="container" aria-labelledby="why-choose-us" id="about-us">
+    <div class="section">
+        <div class="testimonials__title section__title">
+            <h2 id="why-choose-us">Why Choose Flash Guys?</h2>
+            <a href="#our-work"><button class="button button--small button--secondary" aria-label="See our work">Check
+                    our work</button></a>
+        </div>
+
+        <div class="why__content">
+            <!-- Accordion -->
+            <div class="why__content__left">
+                <ul class="accordion" aria-label="Reasons to choose Flash Guys">
+                    <li>
+                        <button class="accordion__button" aria-expanded="false" aria-controls="accordion-content-1">
+                            <h3>Super qualified 24/7 professional team</h3>
+                            <span class="material-symbols-rounded add" aria-hidden="true">add</span>
+                        </button>
+                        <div id="accordion-content-1" class="accordion__content" aria-hidden="true">
+                            <p>Our professional, verified, and dedicated team guarantees exemplary treatment and safety
+                                for your home 24h.</p>
+                            <a href="#our-team" class="link-text">Learn more</a>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="accordion__button" aria-expanded="false" aria-controls="accordion-content-2">
+                            <h3>Eco & Pet friendly</h3>
+                            <span class="material-symbols-rounded add" aria-hidden="true">add</span>
+                        </button>
+                        <div id="accordion-content-2" class="accordion__content" aria-hidden="true">
+                            <p>We understand that pets are part of the family. That's why our services are pet-friendly,
+                                ensuring a safe and comfortable environment for your furry companions while delivering
+                                top-notch cleaning results.</p>
+                            <a href="#services" class="link-text">Learn more</a>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="accordion__button" aria-expanded="false" aria-controls="accordion-content-3">
+                            <h3>Personalized plans</h3>
+                            <span class="material-symbols-rounded add" aria-hidden="true">add</span>
+                        </button>
+                        <div id="accordion-content-3" class="accordion__content" aria-hidden="true">
+                            <p>For every need & lifestyle, we offer a fully personalized plan.</p>
+                            <a href="#plans" class="link-text">Learn more</a>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="accordion__button" aria-expanded="false" aria-controls="accordion-content-4">
+                            <h3>100% guaranteed satisfaction</h3>
+                            <span class="material-symbols-rounded add" aria-hidden="true">add</span>
+                        </button>
+                        <div id="accordion-content-4" class="accordion__content" aria-hidden="true">
+                            <p>If you are not entirely pleased with the service provided, simply contact us within 24
+                                hours. We will send our cleaning technicians back to your home for a complimentary
+                                re-cleaning, ensuring your complete satisfaction.</p>
+                            <a href="#testimonials" class="link-text">Learn more</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- CTA -->
+                <div class="cta">
+                    <a href="#" class="button button--secondary" aria-label="Request a free cleaning estimate">Free
+                        estimate</a>
+                    <a href="#" class="button button--primary" aria-label="Book a cleaning service">Book now</a>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="why__content__right">
+                <img src="assets/images/test/test.png"
+                    alt="A father and his child in a perfeclty clean kitchen, enjoying their time together"
+                    loading="lazy" width="500" height="300">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- * Our Work Section * -->
+<section class="our-work container" aria-labelledby="our-work-title" id="our-work">
+    <div class="section__title--center">
+        <h2 id="our-work-title">Our Work</h2>
+        <p>Committed to making spaces sparkle, <strong class="highlight-text">every time.</strong></p>
+    </div>
+    <div class="caroussel-wrapper">
+        <div class="carrossel">
+            <!-- Botões de navegação com imagens -->
+            <button class="seta esquerda scroll-arrow scroll-arrow--filled" aria-label="Previous slide">
+                <img src="assets/images/icons/outline/arrow-left.svg" alt="Previous slide" />
+            </button>
+            <button class="seta direita scroll-arrow scroll-arrow--filled" aria-label="Next slide">
+                <img src="assets/images/icons/outline/arrow-right.svg" alt="Next slide" />
+            </button>
+
+            <div class="carrossel-conteudo">
+                <div class="item">
+                    <img src="assets/images/jobs/Screenshot 2024-02-28 at 21.35.23.png"
+                        alt="Kitchen with spotless countertops after cleaning" loading="lazy" width="600" height="400">
+                </div>
+                <div class="item">
+                    <img src="assets/images/jobs/Screenshot 2024-02-28 at 21.36.59.png"
+                        alt="Bathroom with shiny, well-arranged furniture and clean surfaces" loading="lazy" width="600"
+                        height="400">
+                </div>
+                <div class="item">
+                    <img src="assets/images/jobs/sink.png"
+                        alt="Clean and organized Bathroom sink with no visible stains" loading="lazy" width="600"
+                        height="400">
+                </div>
+                <div class="item">
+                    <img src="assets/images/jobs/photo-3558_singular_display_fullPicture.jpg"
+                        alt="Spotless bathroom with clean mirrors and shiny bath" loading="lazy" width="600"
+                        height="400">
+                </div>
+                <div class="item">
+                    <img src="assets/images/jobs/Screenshot 2024-03-04 at 12.48.17.png"
+                        alt="Clean living room with spotless and shiny floor" loading="lazy" width="600" height="400">
+                </div>
+                <div class="item">
+                    <img src="assets/images/jobs/Screenshot 2024-03-04 at 12.50.06.png"
+                        alt="Spotlessly cleaned living room" loading="lazy" width="600" height="400">
+                </div>
+                <div class="item">
+                    <img src="assets/images/jobs/IMG_3037.jpg"
+                        alt="Living room with freshly cleaned floor and neat furniture" loading="lazy" width="600"
+                        height="400">
+                </div>
+            </div>
+            <div class="navegacao" aria-label="Carousel navigation">
+                <span class="bolinha" data-slide="0" aria-label="Slide 1"></span>
+                <span class="bolinha" data-slide="1" aria-label="Slide 2"></span>
+                <span class="bolinha" data-slide="2" aria-label="Slide 3"></span>
+                <!-- As bolinhas de navegação serão ajustadas automaticamente no JS -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- * Our Team Section* -->
+<section class="team" aria-labelledby="our-team-title" id="our-team">
+    <div class="container">
+        <div class="section__title section__title--center">
+            <h2 id="our-team-title">Meet some of the people who make your home shine ✨</h2>
+            <p>Our expert cleaning team is trained to truly treat your home with the care and respect it deserves.</p>
+        </div>
+        <!-- Cleaner Cards List -->
+        <ul role="list" class="team__cards section-scroll-x">
+            <!-- Cleaner 1 -->
+            <li role="article">
+                <article class="team__cards__item">
+                    <div class="team__cards__image">
+                        <img src="/assets/images/cleaners/nani.png"
+                            alt="Cleaner Laura smiling in her uniform, ready to clean" loading="lazy" width="200"
+                            height="300">
+                    </div>
+                    <div class="team__cards__name">
+                        <h3>Nani</h3>
+                        <span><img src="assets/images/icons/filled/badge.svg"
+                                alt="Badge icon representing verified cleaner" loading="lazy"></span>
+                    </div>
+                    <div>
+                        <span><img src="assets/images/icons/filled/5-stars.svg"
+                                alt="5 stars icons representing cleaner's rating" loading="lazy"></span>
+                    </div>
+                    <p class="team__cards__content">As a theology student, Nani has a passion for helping the community
+                        and believes in the power of faith on
+                        building meaningful connections. She describes California as a great and welcoming place.</p>
+                    <a href="team-1/" class="button button--primary button--full" title="Learn more about Laura">Keep
+                        reading</a>
+                </article>
+            </li>
+            <!-- Cleaner 2 -->
+            <li role="article">
+                <article class="team__cards__item">
+                    <div class="team__cards__image">
+                        <img src="assets/images/cleaners/maria-cleaner.jpg"
+                            alt="Cleaner John wearing a professional cleaning uniform, smiling" loading="lazy"
+                            width="200" height="300">
+                    </div>
+                    <div class="team__cards__name">
+                        <h3>Maria</h3>
+                        <span><img src="assets/images/icons/filled/badge.svg"
+                                alt="Badge icon representing verified cleaner" loading="lazy"></span>
+                    </div>
+                    <div>
+                        <span><img src="assets/images/icons/filled/5-stars.svg"
+                                alt="5 stars icons representing cleaner's rating" loading="lazy"></span>
+                    </div>
+                    <p class="team__cards__content">Maria, originally from Cuiabá, Brazil, moved to California with the
+                        promise of working as a nanny. But
+                        soon, she realized that things wouldn't be as she had imagined…</p>
+                    <a href="team-2/" class="button button--primary button--full" title="Learn more about John">Keep
+                        reading</a>
+                </article>
+            </li>
+            <!-- Cleaner 3 -->
+            <li role="article">
+                <article class="team__cards__item">
+                    <div class="team__cards__image">
+                        <img src="assets/images/cleaners/fabiana.png"
+                            alt="Cleaner Fabiana, smiling and ready to provide a thorough cleaning" loading="lazy"
+                            width="200" height="300">
+                    </div>
+                    <div class="team__cards__name">
+                        <h3>Fabiana</h3>
+                        <span><img src="assets/images/icons/filled/badge.svg"
+                                alt="Badge icon representing verified cleaner" loading="lazy"></span>
+                    </div>
+                    <div>
+                        <span><img src="assets/images/icons/filled/5-stars.svg"
+                                alt="5 stars icons representing cleaner's rating" loading="lazy"></span>
+                    </div>
+                    <p class="team__cards__content">Fabiana and her family moved
+                        to California to support their sons, who are professional skateboarders competing
+                        in
+                        championships around the globe.</p>
+                    <a href="team-3/" class="button button--primary button--full" title="Learn more about Sarah">Keep
+                        reading</a>
+                </article>
+            </li>
+        </ul>
+
+    </div>
+</section>
+
+
+<!-- * Our Services Section * -->
+<section class="container" id="services">
+    <div class="section">
+        <h2 class="section__title section__title--center">Discover our services</h2>
+        <!-- Navigation -->
+        <nav class="services">
+            <ul role="menuitem" class="services__nav">
+                <li><button data-service="deep-cleaning"><img src="assets/images/icons/form/deep.svg" width="16px"
+                            alt="">Deep Cleaning</button></li>
+                <li><button data-service="standard-cleaning"><img src="assets/images/icons/form/standard.svg"
+                            width="16px" alt="">Standard Cleaning</button></li>
+                <li><button data-service="move-cleaning"><img src="assets/images/icons/form/move.svg" width="18px"
+                            alt="">Move-in/out</button></li>
+                <li><button data-service="carpets-cleaning"><img src="assets/images/icons/form/couch.svg" width="17px"
+                            alt="">Carpets & Upholstery</button></li>
+                <li><button data-service="extreme-cleaning"><img src="assets/images/icons/form/extreme.svg" width="15px"
+                            alt="">Extreme Cleaning</button></li>
+                <li><button data-service="eco-friendly"><img src="assets/images/icons/form/eco.svg" width="16px"
+                            alt="">Eco-friendly</button></li>
+                <li><button data-service="post-construction"><img src="assets/images/icons/form/post.svg" width="16px"
+                            alt="">Post-construction</button></li>
+                <li><button data-service="hire-hour"><img src="assets/images/icons/form/hour.svg" width="16px"
+                            alt="">Hire-by-hour</button></li>
+                <li><button data-service="commercial"><img src="assets/images/icons/form/commercial.svg" width="16px"
+                            alt="">commercial</button></li>
+                <li><button data-service="air-bnb"><img src="assets/images/icons/form/air.svg" width="14px"
+                            alt="">AirBnB Cleaning</button></li>
+            </ul>
+        </nav>
+        <!-- Cleaning Type -->
+        <ul role="article" class="services__cleaning">
+            <li data-service="deep-cleaning">
+                <article>
+                    <h3>Deep Cleaning</h3>
+                    <p><strong>A heavy clean to refresh your home!</strong> Remove built-up dirt and grime to make your
+                        space feel brand
+                        new. Deep Cleaning is the top choice for thoroughly cleaning your home down to the smallest
+                        detail. Perfect for preparing for a special occasion or simply treating yourself.</p>
+                    <div class="services__included">
+                        <ul>
+                            <!-- Conteúdo dinâmico aqui -->
+                        </ul>
+                        <button class="link-text">View more</button>
+                    </div>
+                </article>
+            </li>
+            <li data-service="standard-cleaning" hidden>
+                <article>
+                    <h3>Standard Cleaning</h3>
+                    <p>An economical, fast, but very efficient cleaning. <strong>Perfect for everyday cleaning for a
+                            spotless
+                            home.</strong> Keep your space always guest-ready with our standard cleaning service.</p>
+                    <div class="services__included">
+                        <ul>
+                            <!-- Conteúdo dinâmico aqui -->
+                        </ul>
+                        <button class="link-text">View more</button>
+                    </div>
+                </article>
+            </li>
+            <li data-service="move-cleaning" hidden>
+                <article>
+                    <h3>Move-in/out</h3>
+                    <p><strong>Moving? Let us handle the cleaning!</strong> Complete cleaning to get your old place
+                        ready for the next
+                        tenant and your new home ready for you. Our expert team provides a comprehensive clean, so you
+                        can focus on settling in.</p>
+                    <div class="services__included">
+                        <ul>
+                            <!-- Conteúdo dinâmico aqui -->
+                        </ul>
+                        <button class="link-text">View more</button>
+                    </div>
+                </article>
+            </li>
+            <li data-service="carpets-cleaning" hidden>
+                <article>
+                    <h3>Carpets & Upholstery</h3>
+                    <p>Refresh your home with our expert carpet and upholstery cleaning service. We'll <strong>bring new
+                            life to
+                            your living spaces</strong>, ensuring a clean and comfortable environment for you and your
+                        family to
+                        enjoy.</p>
+                    <div class="services__included">
+                        <ul>
+                            <!-- Conteúdo dinâmico aqui -->
+                        </ul>
+                        <button class="link-text">View more</button>
+                    </div>
+                </article>
+            </li>
+            <li data-service="extreme-cleaning" hidden>
+                <article>
+                    <h3>Extreme Cleaning</h3>
+                    <p>Is your place overwhelmed by clutter, damage, or neglect? Our Extreme Cleaning service is
+                        designed to <strong>handle the toughest and most critical cleaning challenges.</strong></p>
+                    <div class="services__included">
+                        <ul>
+                            <!-- Conteúdo dinâmico aqui -->
+                        </ul>
+                        <button class="link-text">View more</button>
+                    </div>
+                </article>
+            </li>
+            <li data-service="eco-friendly" hidden>
+                <article>
+                    <h3>Eco-friendly</h3>
+                    <p>Experience a healthier home with our eco-friendly cleaning service. We use non-toxic cleaning
+                        products and sustainable methods to leave your space sparkling clean.</p>
+                    <div class="services__included">
+                        <ul>
+                            <!-- Conteúdo dinâmico aqui -->
+                        </ul>
+                        <button class="link-text">View more</button>
+                    </div>
+                </article>
+            </li>
+            <li data-service="hire-hour" hidden>
+                <article>
+                    <h3>Hire by the hour</h3>
+                    <p>The <strong>flexible cleaning service that puts you in control!</strong> Whether you need one
+                        cleaner for a quick
+                        tidy-up or a team for a deep cleaning, you choose the number of cleaners and the hours that suit
+                        your schedule.</p>
+                    <div class="services__included">
+                        <ul>
+                            <!-- Conteúdo dinâmico aqui -->
+                        </ul>
+                        <button class="link-text">View more</button>
+                    </div>
+                </article>
+            </li>
+            <li data-service="post-construction" hidden>
+                <article>
+                    <h3>Post-construction</h3>
+                    <p>Our post-construction cleaning service is designed to <strong>transform your newly renovated
+                            space into a
+                            clean and inviting home.</strong> We'll remove construction debris, dust, and odors, leaving
+                        your home
+                        looking its best.
+                    </p>
+                    <div class="services__included">
+                        <ul>
+                            <!-- Conteúdo dinâmico aqui -->
+                        </ul>
+                        <button class="link-text">View more</button>
+                    </div>
+                </article>
+            </li>
+            <li data-service="commercial" hidden>
+                <article>
+                    <h3>Commercial</h3>
+                    <p><strong>Create a clean and professional workspace that boosts productivity and impresses
+                            clients.</strong> Our commercial cleaning services are tailored to meet the unique needs of
+                        your business.
+                    </p>
+                    <div class="services__included">
+                        <ul>
+                            <!-- Conteúdo dinâmico aqui -->
+                        </ul>
+                        <button class="link-text">View more</button>
+                    </div>
+                </article>
+            </li>
+            <li data-service="air-bnb" hidden>
+                <article>
+                    <h3>AirBnB Cleaning</h3>
+                    <p><strong>Keep your guests coming back</strong> with our top-rated cleaning service. We'll ensure
+                        your guests will feel like home, helping you maintain a 5-star rating.
+                    </p>
+                    <div class="services__included">
+                        <ul>
+                            <!-- Conteúdo dinâmico aqui -->
+                        </ul>
+                        <button class="link-text">View more</button>
+                    </div>
+                </article>
+            </li>
+        </ul>
+        <!-- CTA -->
+        <div class="cta">
+            <a href="#" class="button button--secondary">Free estimate</a>
+            <a href="#" class="button button--primary">Book now</a>
+        </div>
+    </div>
+</section>
+
+<!-- * Subscriptions Section * -->
+<section class="subscription" aria-labelledby="subscriptions-title" id="plans">
+    <div class="section__title section__title--center">
+        <h2 id="subscriptions-title">Discover our subscription plans</h2>
+        <p>For every lifestyle, a customized and flexible plan that suits your routine.</p>
+    </div>
+    <!-- Lista de planos -->
+    <ul class="subscription__cards">
+        <li class="subscription__cards__item">
+            <div class="plan__header">
+                <h3>Weekly Plan</h3>
+                <span>20% OFF</span>
+            </div>
+            <div class="plan__pricing">
+                <span class="plan__price">$120.84</span>
+                <span class="starting">Starting price</span>
+            </div>
+            <h4>Every week visit</h4>
+            <ul class="plan__benefits">
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit: Cancel anytime" loading="lazy">Cancel anytime</li>
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit: Choose your cleaners" loading="lazy">Choose your
+                    cleaners</li>
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit: 4 Cleaning visits per month" loading="lazy">4
+                    Cleaning visits per month</li>
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit: 4 extras additional per month" loading="lazy">4
+                    extras additional per month</li>
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit: Guaranteed recall" loading="lazy">Guaranteed recall
+                </li>
+            </ul>
+            <a href="https://flashguyscleaning.com/schedule"><button class="button button--primary button--full"
+                    aria-label="Subscribe to Weekly Plan">Subscribe</button></a>
+            <span class="plan__disclaimer">Charged for each cleaning*</span>
+        </li>
+        <li class="subscription__cards__item">
+            <div class="plan__header">
+                <h3>Biweekly Plan</h3>
+                <span>10% OFF</span>
+            </div>
+            <div class="plan__pricing">
+                <span class="plan__price">$148.74</span>
+                <span class="starting">Starting price</span>
+            </div>
+            <h4>Biweekly visit</h4>
+            <ul class="plan__benefits">
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit: Cancel anytime" loading="lazy">Cancel anytime</li>
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit: Choose your cleaners" loading="lazy">Choose your
+                    cleaners</li>
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit: 2 Cleaning visits per month" loading="lazy">2
+                    Cleaning visits per month</li>
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit: 2 extras additional per month" loading="lazy">2
+                    extras additional per month</li>
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit: Guaranteed recall" loading="lazy">Guaranteed recall
+                </li>
+            </ul>
+            <a href="https://flashguyscleaning.com/schedule"><button class="button button--primary button--full"
+                    aria-label="Subscribe to Biweekly Plan">Subscribe</button></a>
+            <span class="plan__disclaimer">Charged for each cleaning*</span>
+        </li>
+        <li class="subscription__cards__item">
+            <div class="plan__header">
+                <h3>Monthly Plan</h3>
+                <span>5% OFF</span>
+            </div>
+            <div class="plan__pricing">
+                <span class="plan__price">$164.25</span>
+                <span class="starting">Starting price</span>
+            </div>
+            <h4>Monthly visit</h4>
+            <ul class="plan__benefits">
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit: Cancel anytime" loading="lazy">Cancel anytime</li>
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit: Choose your cleaners" loading="lazy">Choose your
+                    cleaners</li>
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit: 1 Cleaning visit per month" loading="lazy">1
+                    Cleaning visit per month</li>
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit: 1 extra additional per month" loading="lazy">1
+                    extra additional per month</li>
+                <li><img src="assets/images/icons/outline/check.svg"
+                        alt="Check icon representing plan's benefit: Guaranteed recall" loading="lazy">Guaranteed recall
+                </li>
+            </ul>
+            <a href="https://flashguyscleaning.com/schedule">
+                <button class="button button--primary button--full"
+                    aria-label="Subscribe to Monthly Plan">Subscribe</button>
+            </a>
+            <span class="plan__disclaimer">Charged for each cleaning*</span>
+        </li>
+    </ul>
+</section>
+
+
+<!-- * Coupons and Promotions Section * -->
+<section class="container" aria-labelledby="coupons-title">
+    <h2 id="coupons-title" class="section__title section__title--center">Exclusive cleaning promotions for a sparkling,
+        fresh makeover</h2>
+    <div class="coupons">
+        <ul class="coupons__list">
+            <li class="coupons__list__item">
+                <div class="coupon-content">
+                    <span><img src="assets/images/icons/coupons/calendar.svg"
+                            alt="Calendar icon representing 10% discount on first cleaning" loading="lazy"></span>
+                    <h3>10% discount</h3>
+                    <p>Using the welcome coupon for your first cleaning</p>
+                    <button class="coupon-btn" aria-label="Use 10% discount on first cleaning">Use this coupon</button>
+                </div>
+            </li>
+            <li class="coupons__list__item">
+                <div class="coupon-content">
+                    <span><img src="assets/images/icons/coupons/return.svg"
+                            alt="Return icon representing up to 15% discount on recurrent cleanings"
+                            loading="lazy"></span>
+                    <h3>Up to 15% discount</h3>
+                    <p>On recurrent cleanings</p>
+                    <button class="coupon-btn" aria-label="Use up to 15% discount on recurrent cleanings">Use this
+                        coupon</button>
+                </div>
+            </li>
+            <li class="coupons__list__item">
+                <div class="coupon-content">
+                    <span><img src="assets/images/icons/coupons/member.svg"
+                            alt="Loyalty icon representing Member Get Member discount" loading="lazy"></span>
+                    <h3>10% discount</h3>
+                    <p>Referring a friend — your friend gets 20%OFF</p>
+                    <button class="coupon-btn" aria-label="Use 10% discount for referring a friend">Use this
+                        coupon</button>
+                </div>
+            </li>
+            <li class="coupons__list__item">
+                <div class="coupon-content">
+                    <span><img src="assets/images/icons/coupons/couch.svg"
+                            alt="Couch icon representing 15% discount on Carpet & Upholstery services"
+                            loading="lazy"></span>
+                    <h3>15% discount</h3>
+                    <p>On our new Carpet & Upholstery additionals</p>
+                    <button class="coupon-btn" aria-label="Use 15% discount on Carpet & Upholstery services">Use this
+                        coupon</button>
+                </div>
+            </li>
+            <li class="coupons__list__item">
+                <div class="coupon-content">
+                    <span><img src="assets/images/icons/coupons/standard.svg"
+                            alt="Mop icon representing $140 discount on standard cleaning package"
+                            loading="lazy"></span>
+                    <h3>$140 cleaning</h3>
+                    <p>On the basic standard package</p>
+                    <button class="coupon-btn" aria-label="Use $140 discount on standard cleaning package">Use this
+                        coupon</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- * Extreme Cleaning Section * -->
+<section class="container" aria-labelledby="extreme-cleaning-title">
+    <div class="extreme">
+        <div class="extreme__image">
+            <sl-image-comparer>
+                <img slot="before" src="assets/images/extreme-before.png"
+                    alt="Before image showing an extremely cluttered and messy kitchen" loading="lazy" />
+                <img slot="after" src="assets/images/modern-wooden-kitchen-interior-steel-kitchen-faucet.jpg"
+                    alt="After image showing a clean and restored kitchen sink" loading="lazy" />
+            </sl-image-comparer>
+        </div>
+        <div class="extreme__content">
+            <h2 id="extreme-cleaning-title">Extreme Cleaning</h2>
+            <p><strong>Is your place overwhelmed by clutter, damage, or neglect?</strong> Our new Extreme Cleaning
+                service is designed to handle the toughest and most critical cleaning challenges.</p>
+            <ul class="extreme__list">
+                <li class="extreme__list__item">
+                    <span><img src="assets/images/icons/outline/check-color.svg"
+                            alt="Check icon representing Extreme Cleaning feature" loading="lazy"></span>
+                    <strong>Disaster cleanup:</strong> Fire, flood, and mold remediation.
+                </li>
+                <li class="extreme__list__item">
+                    <span><img src="assets/images/icons/outline/check-color.svg"
+                            alt="Check icon representing Extreme Cleaning feature" loading="lazy"></span>
+                    <strong>Hoarding cleanup:</strong> Safe and compassionate removal of excessive belongings.
+                </li>
+                <li class="extreme__list__item">
+                    <span><img src="assets/images/icons/outline/check-color.svg"
+                            alt="Check icon representing Extreme Cleaning feature" loading="lazy"></span>
+                    <strong>Vacant property cleanup:</strong> Deep cleaning and restoration of unoccupied spaces.
+                </li>
+                <li class="extreme__list__item">
+                    <span><img src="assets/images/icons/outline/check-color.svg"
+                            alt="Check icon representing Extreme Cleaning feature" loading="lazy"></span>
+                    <strong>Absolute Privacy:</strong> We are committed to protecting your personal information with
+                    care and discretion.
+                </li>
+            </ul>
+            <a href="#"><button class="button button--primary"
+                    aria-label="Contact us for extreme cleaning services">Contact us for sales</button></a>
+        </div>
+    </div>
+</section>
+
+
+<!-- * What's Included Section *  -->
+<!-- ! Criar What's Included ! -->
+
+<!-- * Featured Articles * -->
+<!-- ? Arquivos do blog em 'blog/' e templates em '_includes/' ? -->
+<div class="container">
+    <section class="articles">
+        <div class="section__title section__title--button">
+            <div>
+                <h2>Cleaning tips</h2>
+                <p>Find simple, helpful tips to make cleaning easy and keep your home always sparkling clean</p>
+            </div>
+            <div><button class="button button--secondary button--small"><a href="/blog">View all</a></button></div>
+        </div>
+
+        <!-- 4 divs para comportar os posts -->
+        <div class="articles__list">
+            <div class="articles__list__item">
+                <a href="/blog/posts/6-tips-for-efficient-kitchen-cleaning20-12-2024/">
+                    <article>
+                        <div class="articles__image">
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1734717279673x194183628966472000/kitchen.png"
+                                alt="">
+                        </div>
+                        <h3 class="articles__title">6 Tips for Efficient Kitchen Cleaning</h3>
+                        <span class="articles__categories">Cleaning routine</span>
+                        <p class="articles__description">With these 6 simple tips, you can perform efficient cleaning and keep your kitchen immaculate.</p>
+                    </article>
+                </a>
+            </div>
+
+            <div class="articles__list__item">
+                <a href="/blog/posts/the-ultimate-guide-to-keeping-your-living-room-always-tidy20-12-2024/">
+                    <article>
+                        <div class="articles__image">
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1735228661336x825098914528422400/thought-catalog-Nv-vx3kUR2A-unsplash.jpg"
+                                alt="">
+                        </div>
+                        <h3 class="articles__title">The Ultimate Guide to Keeping Your Living Room Always Tidy</h3>
+                        <span class="articles__categories">Cleaning routine</span>
+                        <p class="articles__description">With these simple tips and strategies, you can keep your living room always tidy and inviting, creating a space where you and your guests can relax and enjoy special moments together.</p>
+                    </article>
+                </a>
+            </div>
+
+            <div class="articles__list__item">
+                <a href="/blog/posts/10-reasons-to-use-eco-friendly-cleaning-products-in-your-home26-12-2024/">
+                    <article>
+                        <div class="articles__image">
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1735232364993x364585932274945150/eco.jpg"
+                                alt="">
+                        </div>
+                        <h3 class="articles__title">10 Reasons to Use Eco-Friendly Cleaning Products in Your Home</h3>
+                        <span class="articles__categories">Health</span>
+                        <p class="articles__description">When it comes to keeping our homes clean, we often focus on results—sparkling floors, fresh-smelling rooms, and spotless surfaces. But have you ever thought about the impact your cleaning products have on the environment and your health? Choosing eco-friendly options isn’t just a trend; it’s a meaningful way to protect your family and the planet. Let’s dive into why it matters and how you can make the switch.</p>
+                    </article>
+                </a>
+            </div>
+
+            <div class="articles__list__item">
+                <a href="/blog/posts/how-to-encourage-kids-to-participate-in-regular-cleaning26-12-2024/">
+                    <article>
+                        <div class="articles__image">
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1735229830271x681591647694456000/d7a35a818adf866417a59dd8009d8e86.png"
+                                alt="">
+                        </div>
+                        <h3 class="articles__title">How to Encourage Kids to Participate in Regular Cleaning</h3>
+                        <span class="articles__categories">Tips and Tricks, Cleaning routine</span>
+                        <p class="articles__description">Getting kids involved in cleaning and organizing might sound like a challenge, but it’s a valuable life skill that teaches responsibility, teamwork, and pride in their surroundings. With the right approach, you can turn cleaning into a fun and rewarding activity that the whole family can enjoy. Here are some friendly tips to encourage your little ones to join in on keeping the house tidy.</p>
+                    </article>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- * FAQ Section * -->
+<section class="faq container" id="faq">
+    <div class="faq__left">
+        <h2>FAQ</h2>
+        <div>
+            <h3>Did not see your question?</h3>
+            <p>Send us a message</p>
+            <form id="faq-form">
+                <input type="email" placeholder="Email" id="email">
+                <textarea name="message" placeholder="Your message" id="message"></textarea>
+                <button class="button button--small button--primary" type="submit">Send message</button>
+            </form>
+        </div>
+    </div>
+    <div class="faq__right">
+        <!-- Accordion List -->
+        <ul class="accordion">
+            <li>
+                <button class="accordion__button">
+                    <h3>Super qualified 24/7 professionals</h3><span class="material-symbols-rounded add">
+                        add
+                    </span>
+                </button>
+                <div class="accordion__content">
+                    <p>When it comes to complete house cleanings, we generally offer
+                        a fixed rate, and you can find the approximate prices listed on our pricing page.</p>
+                    <p>Additionally, if you require cleaning for specific rooms or
+                        areas and not the entire house, we
+                        provide hourly pricing as well.</p>
+                    <a href="#" class="link-text">Learn more</a>
+                </div>
+            </li>
+            <li>
+                <button class="accordion__button">
+                    <h3>Inclusions in Flat-Rate Services</h3><span class="material-symbols-rounded add">
+                        add
+                    </span>
+                </button>
+                <div class="accordion__content">
+                    <p>Flat-rate cleaning services are typically determined by the number of bedrooms and
+                        bathrooms in your home. This encompasses all living, dining, and kitchen areas.</p>
+                    <p>Additional spaces like studies or home offices are treated as bedrooms. Any unselected
+                        extras on the form are not part of the cleaning service.</p>
+                    <a href="#" class="link-text">Learn more</a>
+                </div>
+            </li>
+            <li>
+                <button class="accordion__button">
+                    <h3>Reschedule and Cancelation</h3><span class="material-symbols-rounded add">
+                        add
+                    </span>
+                </button>
+                <div class="accordion__content">
+                    <p>We understand that plans can change, which is why we have a flexible policy in place.
+                        Through our</p>
+                    <a href="#" class="link-text">Learn more</a>
+                </div>
+            </li>
+            <li>
+                <button class="accordion__button">
+                    <h3>Number of Cleaners</h3><span class="material-symbols-rounded add">
+                        add
+                    </span>
+                </button>
+                <div class="accordion__content">
+                    <p>The number of cleaners sent depends on the size of the cleaning task, ranging from 1 to
+                        6. For hourly services, the minimum of 3 hours always applies, with the price per hour
+                        per cleaner.</p>
+                    <a href="#" class="link-text">Learn more</a>
+                </div>
+            </li>
+            <li>
+                <button class="accordion__button">
+                    <h3>Presence During Cleaning</h3><span class="material-symbols-rounded add">
+                        add
+                    </span>
+                </button>
+                <div class="accordion__content">
+                    <p>Clients can choose to be present or away during cleaning. If absent, access arrangements
+                        are needed. Cleaners assure responsible handling of your home, including locking up or
+                        key placement as per your instructions.</p>
+                    <a href="#" class="link-text">Learn more</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+
+<!-- ? Footer em '_includes/footer.html' ? -->
+    </main>
+    <!-- Footer -->
+    <footer>
+        <!-- Modal de Support -->
+<div id="supportModalOverlay" class="support-modal-overlay">
+    <div class="support-modal-content">
+        <div class="support-modal-close">
+            <button id="closeSupportModal" class="support-close-btn">X</button>
+        </div>
+        <h3>Need help? <br>
+            Get in touch by email or phone</h3>
+        <div class="cta cta--block">
+            <button class="button button--full button--primary">+1 310 986 9840</button>
+            <button class="button button--full button--primary">contact@flashguyscleaning.com</button>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="container footer__content">
+        <div class="footer__content__column">
+            <div class="footer__content__logo">
+                <a href="#" onclick="scrollToTop(event)">
+                    <img src="/assets/images/logos/brand-logo-icon.svg" alt="Brand logo icon">
+                </a>
+            </div>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <ul class="footer__content__socials">
+                <li><a href="#"><img src="/assets/images/icons/social/facebook.svg" alt="Facebook brand logo"></a></li>
+                <li><a href="#"><img src="/assets/images/icons/social/youtube.svg" alt="YouTube brand logo"></a></li>
+                <li><a href="#"><img src="/assets/images/icons/social/instagram.svg" alt="Instagram brand logo"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Flash Guys</h3>
+            <ul>
+                <li><a href="#">Professionals</a></li>
+                <li><a href="#">Subscription</a></li>
+                <li><a href="#">Promotions</a></li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Services</h3>
+            <ul>
+                <li><a href="http://localhost:8080/#services">Deep Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Standard Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Commercial Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Post Construction Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Move-in/out Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Airbnb Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Extreme Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Carpets & Upholstery</a></li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Areas served</h3>
+            <ul>
+                <li>Los Angeles and area</li>
+                <li>South Bay, CA</li>
+                <li>South L.A, CA</li>
+                <li>Southheast, CA</li>
+                <li>Westside, CA</li>
+                <li>San Francisco (soon)</li>
+                <li>San Diego (soon)</li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="http://localhost:8080/#faq">FAQ</a></li>
+                <li>+1 310 986 9840</li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Get updates and promotions</h3>
+            <div>Subscribe now to stay tuned</div>
+            <form id="subscribe-form">
+                <input type="email" id="subscribe-email" placeholder="Email" required>
+                <button type="submit" class="button button--primary">Subscribe</button>
+                <div><span>By subscribing you agree to our <a href="http://localhost:8080/privacy-policy">Privacy Policy</a>.</span></div>
+            </form>
+            <div id="subscribe-message" class="subscribe-message"></div> <!-- Mensagem de feedback -->
+        </div>
+    </div>
+    <div id="copy">
+        <div id="separator"></div>
+        <span>© 2024 All Rights Reserved, Flash Guys Cleaning</span>
+    </div>
+</div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+
+<!-- Menu Nav -->
+<script src="/assets/scripts/navbar.js"></script>
+<script src="/assets/scripts/accordion.js"></script>
+<script src="/assets/scripts/services.js"></script>
+<script src="/assets/scripts/scroll-x.js"></script>
+<script src="/assets/scripts/included.json"></script>
+<script src="/assets/scripts/faq.js"></script>
+<script src="/assets/scripts/server.js"></script>
+
+<!-- Mascaras -->
+<script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.7/dist/inputmask.min.js"></script>
+
+
+<!-- Shoelace -->
+<script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/shoelace-autoloader.js"></script>
+
+<!-- Testimonials -->
+<script type="module" src="/assets/scripts/main.js"></script>
+<script type="module" src="/assets/scripts/nav-menu.js"></script>
+<script type="module" src="/assets/scripts/contact-modal.js"></script>
+<script type="module" src="/assets/scripts/toggle.js"></script>
+<script type="module" src="/assets/scripts/pre-form.js"></script>
+<script type="module" src="/assets/scripts/scroll.js"></script>
+<script type="module" src="/assets/scripts/carousel.js"></script>
+<script type="module" src="/assets/scripts/footer.js"></script>
+
+
+</html>

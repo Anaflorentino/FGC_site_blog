@@ -1,0 +1,437 @@
+<!-- Template de Base -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basehead -->
+    <!-- Basehead -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Articles</title>
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://static.hotjar.com">
+
+<!-- Preload critical CSS -->
+<link rel="preload" href="/css/main.css" as="style">
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- Material Symbols Rounded -->
+<link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- Shoelace Library -->
+<link rel="preload" as="style"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HW3RF3HWWF"></script>
+<script defer>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-HW3RF3HWWF');
+</script>
+
+<!-- Hotjar Tracking Code -->
+<script defer>
+  (function(h, o, t, j, a, r) {
+    h.hj = h.hj || function() {
+      (h.hj.q = h.hj.q || []).push(arguments);
+    };
+    h._hjSettings = { hjid: 5249893, hjsv: 6 };
+    a = o.getElementsByTagName('head')[0];
+    r = o.createElement('script'); r.async = 1;
+    r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+</script>
+
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Modal de Support -->
+<div id="supportModalOverlay" class="support-modal-overlay">
+    <div class="support-modal-content">
+        <div class="support-modal-close">
+            <button id="closeSupportModal" class="support-close-btn">X</button>
+        </div>
+        <h3>Need help? <br>
+            Get in touch by email or phone</h3>
+        <div class="cta cta--block">
+            <button class="button button--full button--primary">+1 310 986 9840</button>
+            <button class="button button--full button--primary">contact@flashguyscleaning.com</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Navbar -->
+<nav class="navbar">
+    <ul class="nav-list">
+        <button id="menu-link">
+            <span class="material-symbols-rounded">
+                menu
+            </span>
+        </button>
+        <a class="logo" href="/"><img
+                src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
+                alt="Brand logo"></a>
+        <div class="nav-list-links">
+            <li><a class="menu-link" href="/#services">Services</a></li>
+            <li><a class="menu-link" href="/#about-us">About us</a></li>
+            <li><a class="menu-link" href="#support">Support</a></li>
+            <li><a class="menu-link" href="/#faq">FAQ</a></li>
+            <li><a class="menu-link" href="/blog">Blog</a></li>
+        </div>
+    </ul>
+
+    <!-- Login e Signup -->
+    <div class="navbar-buttons">
+        <a href="https://flashguyscleaning.com/dashboard"><button
+                class="dashboard-button button button--secondary button--small"
+                id="dashboardButton">Dashboard</button></a>
+        <div class="auth-container" id="authContainer">
+            <!-- Content dynamically injected by JS -->
+        </div>
+    </div>
+</nav>
+
+<!-- Modal de Login -->
+<div class="nav-modal" id="loginModal">
+    <div class="modal-content">
+        <h3>Login</h3>
+        <input type="email" id="modalEmail" placeholder="Email" required>
+        <span class="input-warning">Please enter your email*</span>
+        <input type="password" id="modalPassword" placeholder="Password" required>
+        <span class="input-warning">Please enter a valid password*</span>
+        <button id="forgotPassword">I forgot my password</button>
+        <button id="modalLoginButton">Log In</button>
+        <button class="google-login-button" id="googleLoginButton">
+            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                alt="Google logo">
+            Log In with Google
+        </button>
+        <span id="privacyPolicy">
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
+        </span>
+        <p class="account-switcher">Don't have an account?<button class="button" id="sign-btn">Create account</button>
+        </p>
+    </div>
+</div>
+
+<!-- Modal de Signup -->
+<div class="nav-modal" id="signupModal">
+    <div class="modal-content">
+        <h3>Sign Up</h3>
+        <input type="text" id="signupName" placeholder="Full Name" required>
+        <span class="input-warning">Please enter your full name*</span>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <span class="input-warning">Please enter your email*</span>
+        <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+        <span class="input-warning">Please enter you phone number*</span>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <span class="input-warning">Please enter a password*</span>
+        <button id="signupModalButton">Sign Up</button>
+        <button class="google-login-button" id="googleSignupButton">
+            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                alt="Google logo">
+            Sign Up with Google
+        </button>
+        <span id="privacyPolicy">
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
+        </span>
+        <p class="account-switcher">Already have an account?<button class="button" id="login-btn">Login</button></p>
+    </div>
+</div>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Modais
+        const loginModal = document.getElementById('loginModal');
+        const signupModal = document.getElementById('signupModal');
+
+        // Botões que controlam os modais
+        const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
+        const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
+
+        // Verifica se todos os elementos necessários existem
+        if (!loginModal || !signupModal || !loginBtn || !signBtn) {
+            return; // Interrompe a execução caso algum elemento não esteja presente
+        }
+
+        // Evento para abrir o modal de Login e fechar o de Cadastro
+        loginBtn.addEventListener('click', function () {
+            signupModal.classList.remove('visible');
+            loginModal.classList.add('visible');
+        });
+
+        // Evento para abrir o modal de Cadastro e fechar o de Login
+        signBtn.addEventListener('click', function () {
+            loginModal.classList.remove('visible');
+            signupModal.classList.add('visible');
+        });
+    })
+</script>
+    </header>
+    <!-- Main -->
+    <main>
+        
+
+<div class="container">
+
+    <!-- Pages Index -->
+    <nav class="pagination-links section__title">
+        <ol class="pagination-links__list">
+            <li class="pagination-links__list__item"><a href="/">Home ></a></li>
+            <li class="pagination-links__list__item"><a href="/blog">Blog ></a></li>
+            <li class="pagination-links__list__item"><a href="/blog/all-articles">All articles ></a></li>
+
+            <!-- Exibe o número da página atual -->
+            
+            <li class="pagination-links__list__item current-page">
+                Page 2
+            </li>
+            
+
+        </ol>
+    </nav>
+
+    <div class="section__title">
+        <h1>All Articles</h1>
+        <p>Stay updated with the latest tips and news in residential cleaning. Here you'll find practical advice,
+            detailed guides, and the newest trends to help you keep your home spotless and healthy.</p>
+    </div>
+
+    <!-- Exibindo os posts -->
+    <div class="articles">
+        <ol role="list">
+            
+            <li role="article" class="articles__list__item">
+                <a href="/blog/posts/how-to-keep-your-bathroom-immaculate26-12-2024/">
+                    <article>
+                        <div>
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1735229606005x136130512563203970/bathroom.png" alt="">
+                        </div>
+                        <h3>How to Keep Your Bathroom Immaculate</h3>
+                        <span></span>
+                        <p>Maintaining a clean and hygienic bathroom is essential to ensure the comfort and health of everyone at home. With some simple tips and effective tricks, it&#39;s possible to keep the bathroom immaculate.</p>
+                    </article>
+                </a>
+            </li>
+            
+            <li role="article" class="articles__list__item">
+                <a href="/blog/posts/how-to-organize-your-home-to-start-the-year-off-right26-12-2024/">
+                    <article>
+                        <div>
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1735232081892x130695813371761500/part.jpg" alt="">
+                        </div>
+                        <h3>How to Organize Your Home to Start the Year Off Right</h3>
+                        <span></span>
+                        <p>A new year brings fresh opportunities, and what better way to embrace the season than with a deeply cleaned and organized home? A clean slate can do wonders for your mood, productivity, and overall well-being. Here’s a friendly guide to help you tackle a deep cleaning session that will leave your home sparkling and your mind refreshed.</p>
+                    </article>
+                </a>
+            </li>
+            
+            <li role="article" class="articles__list__item">
+                <a href="/blog/posts/how-to-remove-pet-hair-from-surfaces26-12-2024/">
+                    <article>
+                        <div>
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1735231664217x691536964464594800/pets-2.jpg" alt="">
+                        </div>
+                        <h3>How to Remove Pet Hair from Surfaces</h3>
+                        <span></span>
+                        <p>Pets bring love and joy into our homes, but they also come with a less charming side effect - fur everywhere! From couches to carpets, pet hair can be stubborn and challenging to clean. But with the right strategies and tools, you can keep your home looking spotless without compromising on your furry friend’s freedom. Here’s how to effectively remove pet hair from all kinds of surfaces.</p>
+                    </article>
+                </a>
+            </li>
+            
+            <li role="article" class="articles__list__item">
+                <a href="/blog/posts/how-to-remove-wine-stains-from-surfaces-a-holiday-guide26-12-2024/">
+                    <article>
+                        <div>
+                            <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1735234008897x233981587408311780/close-up-wine-stain-detail.jpg" alt="">
+                        </div>
+                        <h3>How to Remove Wine Stains from Surfaces</h3>
+                        <span></span>
+                        <p>The holiday season is a time for celebration, laughter, and yes—wine! But with festive cheer often comes accidental spills. Whether it’s red wine on your favorite tablecloth or white wine on the carpet, stains don’t have to ruin the fun. Here’s a friendly guide to tackling wine stains on various surfaces, ensuring your home stays spotless throughout the holidays.</p>
+                    </article>
+                </a>
+            </li>
+            
+        </ol>
+    </div>
+
+
+    <!-- Pagination -->
+    <div class="pagination">
+        
+        <a href="/blog/all-articles/" class="enabled">← Página Anterior</a>
+        
+
+        <!-- Correção: Acessando corretamente os números das páginas -->
+        
+        
+        <a href="" class="page-link">1</a> <!-- Links para outras páginas -->
+        
+        
+        
+        <a href="" class="page-link">2</a> <!-- Links para outras páginas -->
+        
+        
+
+        
+        <span class="disabled">Próxima Página →</span>
+        
+    </div>
+
+</div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <!-- Modal de Support -->
+<div id="supportModalOverlay" class="support-modal-overlay">
+    <div class="support-modal-content">
+        <div class="support-modal-close">
+            <button id="closeSupportModal" class="support-close-btn">X</button>
+        </div>
+        <h3>Need help? <br>
+            Get in touch by email or phone</h3>
+        <div class="cta cta--block">
+            <button class="button button--full button--primary">+1 310 986 9840</button>
+            <button class="button button--full button--primary">contact@flashguyscleaning.com</button>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="container footer__content">
+        <div class="footer__content__column">
+            <div class="footer__content__logo">
+                <a href="#" onclick="scrollToTop(event)">
+                    <img src="/assets/images/logos/brand-logo-icon.svg" alt="Brand logo icon">
+                </a>
+            </div>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <ul class="footer__content__socials">
+                <li><a href="#"><img src="/assets/images/icons/social/facebook.svg" alt="Facebook brand logo"></a></li>
+                <li><a href="#"><img src="/assets/images/icons/social/youtube.svg" alt="YouTube brand logo"></a></li>
+                <li><a href="#"><img src="/assets/images/icons/social/instagram.svg" alt="Instagram brand logo"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Flash Guys</h3>
+            <ul>
+                <li><a href="#">Professionals</a></li>
+                <li><a href="#">Subscription</a></li>
+                <li><a href="#">Promotions</a></li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Services</h3>
+            <ul>
+                <li><a href="http://localhost:8080/#services">Deep Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Standard Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Commercial Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Post Construction Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Move-in/out Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Airbnb Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Extreme Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Carpets & Upholstery</a></li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Areas served</h3>
+            <ul>
+                <li>Los Angeles and area</li>
+                <li>South Bay, CA</li>
+                <li>South L.A, CA</li>
+                <li>Southheast, CA</li>
+                <li>Westside, CA</li>
+                <li>San Francisco (soon)</li>
+                <li>San Diego (soon)</li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="http://localhost:8080/#faq">FAQ</a></li>
+                <li>+1 310 986 9840</li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Get updates and promotions</h3>
+            <div>Subscribe now to stay tuned</div>
+            <form id="subscribe-form">
+                <input type="email" id="subscribe-email" placeholder="Email" required>
+                <button type="submit" class="button button--primary">Subscribe</button>
+                <div><span>By subscribing you agree to our <a href="http://localhost:8080/privacy-policy">Privacy Policy</a>.</span></div>
+            </form>
+            <div id="subscribe-message" class="subscribe-message"></div> <!-- Mensagem de feedback -->
+        </div>
+    </div>
+    <div id="copy">
+        <div id="separator"></div>
+        <span>© 2024 All Rights Reserved, Flash Guys Cleaning</span>
+    </div>
+</div>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+
+<!-- Menu Nav -->
+<script src="/assets/scripts/navbar.js"></script>
+<script src="/assets/scripts/accordion.js"></script>
+<script src="/assets/scripts/services.js"></script>
+<script src="/assets/scripts/scroll-x.js"></script>
+<script src="/assets/scripts/included.json"></script>
+<script src="/assets/scripts/faq.js"></script>
+<script src="/assets/scripts/server.js"></script>
+
+<!-- Mascaras -->
+<script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.7/dist/inputmask.min.js"></script>
+
+
+<!-- Shoelace -->
+<script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/shoelace-autoloader.js"></script>
+
+<!-- Testimonials -->
+<script type="module" src="/assets/scripts/main.js"></script>
+<script type="module" src="/assets/scripts/nav-menu.js"></script>
+<script type="module" src="/assets/scripts/contact-modal.js"></script>
+<script type="module" src="/assets/scripts/toggle.js"></script>
+<script type="module" src="/assets/scripts/pre-form.js"></script>
+<script type="module" src="/assets/scripts/scroll.js"></script>
+<script type="module" src="/assets/scripts/carousel.js"></script>
+<script type="module" src="/assets/scripts/footer.js"></script>
+
+
+</html>
