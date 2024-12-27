@@ -1,0 +1,393 @@
+<!-- Template de Artigo -->
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <!-- Basehead -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Remove Wine Stains from Surfaces</title>
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://static.hotjar.com">
+
+<!-- Preload critical CSS -->
+<link rel="preload" href="/css/main.css" as="style">
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- Material Symbols Rounded -->
+<link rel="preload" as="style"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- Shoelace Library -->
+<link rel="preload" as="style"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.19.0/cdn/themes/light.css" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HW3RF3HWWF"></script>
+<script defer>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-HW3RF3HWWF');
+</script>
+
+<!-- Hotjar Tracking Code -->
+<script defer>
+  (function(h, o, t, j, a, r) {
+    h.hj = h.hj || function() {
+      (h.hj.q = h.hj.q || []).push(arguments);
+    };
+    h._hjSettings = { hjid: 5249893, hjsv: 6 };
+    a = o.getElementsByTagName('head')[0];
+    r = o.createElement('script'); r.async = 1;
+    r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+</script>
+
+    
+</head>
+
+<body>
+
+    <header>
+        <!-- Modal de Support -->
+        <div id="supportModalOverlay" class="support-modal-overlay">
+            <div class="support-modal-content">
+                <div class="support-modal-close">
+                    <button id="closeSupportModal" class="support-close-btn">X</button>
+                </div>
+                <h3>Need help? <br>
+                    Get in touch by email or phone</h3>
+                <div class="cta cta--block">
+                    <button class="button button--full button--primary">+1 310 986 9840</button>
+                    <button class="button button--full button--primary">contact@flashguyscleaning.com</button>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul class="nav-list">
+                <button id="menu">
+                    <span class="material-symbols-rounded">
+                        menu
+                    </span>
+                </button>
+                <a class="logo" href="/"><img
+                        src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
+                        alt="Brand logo"></a>
+                <div class="nav-list-links">
+                    <li><a class="menu-link"
+                            href="http://localhost:8080/#services">Services</a>
+                    </li>
+                    <li><a class="menu-link"
+                            href="http://localhost:8080/#about-us">About us</a>
+                    </li>
+                    <li><a class="menu-link" href="#support">Support</a></li>
+                    <li><a class="menu-link" href="http://localhost:8080/#faq">FAQ</a>
+                    </li>
+                    <li><a class="menu-link"
+                            href="http://localhost:8080/blog">Blog</a></li>
+                </div>
+            </ul>
+
+            <!-- Login e Signup -->
+            <div class="navbar-buttons">
+                <!-- ! Adicionar link dinâmico para dashboard ! -->
+                <a href=""><button class="dashboard-button button button--secondary button--small"
+                        id="dashboardButton">Dashboard</button></a>
+                <a href="https://flashguyscleaning.com/schedule?date=&coupon=first05"><button
+                        class="book-now button button--primary button--small">Book now</button></a>
+                <div class="auth-container" id="authContainer">
+                    <!-- Content dynamically injected by JS -->
+                </div>
+            </div>
+        </nav>
+        <!-- Modal de Login -->
+        <div class="nav-modal" id="loginModal">
+            <div class="modal-content">
+                <h3>Login</h3>
+                <input type="email" id="modalEmail" placeholder="Email" required>
+                <input type="password" id="modalPassword" placeholder="Password" required>
+                <button id="forgotPassword">I forgot my password</button>
+                <button id="modalLoginButton">Log In</button>
+                <button id="sign-btn">Switch</button>
+                <button class="google-login-button" id="googleLoginButton">
+                    <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                        alt="Google logo">
+                    Log In with Google
+                </button>
+                <span id="privacyPolicy">
+                    <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="#">Privacy
+                            Policy</a>.</p>
+                </span>
+            </div>
+        </div>
+        <!-- Modal de Signup -->
+        <div class="nav-modal" id="signupModal">
+            <div class="modal-content">
+                <h3>Sign Up</h3>
+                <input type="text" id="signupName" placeholder="Full Name" required>
+                <input type="email" id="signupEmail" placeholder="Email" required>
+                <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+                <input type="password" id="signupPassword" placeholder="Password" required>
+                <button id="signupModalButton">Sign Up</button>
+                <button id="login-btn">Switch</button>
+                <button class="google-login-button" id="googleSignupButton">
+                    <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                        alt="Google logo">
+                    Sign Up with Google
+                </button>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Modais
+                const loginModal = document.getElementById('loginModal');
+                const signupModal = document.getElementById('signupModal');
+
+                // Botões que controlam os modais
+                const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
+                const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
+
+                // Verifica se todos os elementos necessários existem
+                if (!loginModal || !signupModal || !loginBtn || !signBtn) {
+                    return; // Interrompe a execução caso algum elemento não esteja presente
+                }
+
+                // Evento para abrir o modal de Login e fechar o de Cadastro
+                loginBtn.addEventListener('click', function () {
+                    signupModal.classList.remove('visible');
+                    loginModal.classList.add('visible');
+                });
+
+                // Evento para abrir o modal de Cadastro e fechar o de Login
+                signBtn.addEventListener('click', function () {
+                    loginModal.classList.remove('visible');
+                    signupModal.classList.add('visible');
+                });
+            });
+        </script>
+
+    </header>
+    <main>
+        <!-- Pages Index -->
+        <nav class="pagination-links section__title article">
+            <ol class="pagination-links__list">
+                <li class="pagination-links__list__item"><a href="/">Home ></a></li>
+                <li class="pagination-links__list__item"><a href="/blog">Blog ></a></li>
+                <li class="pagination-links__list__item"><a href="#">How to Remove Wine Stains from Surfaces</a></li>
+            </ol>
+        </nav>
+
+        <!-- Artigo dinâmico -->
+        <article class="article">
+            <div class="section__title">
+                <h1>How to Remove Wine Stains from Surfaces</h1>
+                <p>The holiday season is a time for celebration, laughter, and yes—wine! But with festive cheer often comes accidental spills. Whether it’s red wine on your favorite tablecloth or white wine on the carpet, stains don’t have to ruin the fun. Here’s a friendly guide to tackling wine stains on various surfaces, ensuring your home stays spotless throughout the holidays.</p>
+            </div>
+
+            <!-- Imagem dinâmica -->
+            <div class="article__image section__title">
+                <img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1735234008897x233981587408311780/close-up-wine-stain-detail.jpg" alt="Imagem do post">
+            </div>
+
+            <!-- CTA -->
+            <div>
+                <h2>Need a hand with cleaning?</h2>
+                <p>Relax and leave the hard work to us. Book now and enjoy a cleaner space</p>
+                <a href="https://flashguyscleaning.com/schedule?date=&coupon=first05"><button
+                        class="button button--primary">Get 5% OFF - Book Now</button></a>
+            </div>
+
+            <!-- Conteúdo dinâmico -->
+            <div class="section__title">
+                <h2>1. Act Quickly for Best Results</h2>
+<p>[ul]- The faster you address a wine stain, the easier it will be to remove.- Blot (don’t rub!) the stain immediately with a clean cloth or paper towel to soak up as much liquid as possible.- Avoid scrubbing, as this can push the wine deeper into the fabric or surface.[/ul][h2]
+[/h2]</p>
+<h2>2. Removing Wine Stains from Fabric and Linens</h2>
+<h3>Red Wine:</h3>
+<p>[ul]- <strong>Salt Method</strong>:[ul data=1]- Generously sprinkle salt over the wet stain to absorb the wine.- Let it sit for 15-30 minutes, then rinse with cold water.[/ul]- <strong>Baking Soda Paste</strong>:[ul data=1]- Mix baking soda and water to form a paste. Apply it to the stain and let it dry before rinsing.[/ul]- <strong>Vinegar and Dish Soap</strong>:[ul data=1]- Mix one part white vinegar with two parts water and a small drop of dish soap. Blot the stain gently with this solution.[/ul][/ul]### White Wine:
+[ul]- Surprisingly, white wine can help dilute red wine stains. Pour a small amount over the red wine stain before blotting and cleaning with your preferred method.[/ul]</p>
+<h2>3. Removing Wine Stains from Carpets</h2>
+<h3>Red Wine:</h3>
+<p>[ul]- <strong>Club Soda</strong>:[ul data=1]- Pour club soda directly onto the stain. Its carbonation helps lift the wine while the salt content prevents it from setting. Blot gently with a clean towel.[/ul]- <strong>Hydrogen Peroxide and Dish Soap</strong>:[ul data=1]- Mix one part hydrogen peroxide with one part dish soap. Apply to the stain, blotting gently. Rinse with water and blot dry.[/ul][/ul]### White Wine:
+[ul]- Use a damp cloth soaked in soapy water to blot the stain. Repeat as needed and finish with a dry towel to absorb excess moisture.[/ul]</p>
+<h2>4. Removing Wine Stains from Upholstery</h2>
+<h3>Red Wine:</h3>
+<p>[ul]- <strong>Alcohol Method</strong>:[ul data=1]- Dab the stain with a small amount of rubbing alcohol to break down the pigments. Blot with a clean cloth soaked in water to rinse.[/ul]- <strong>Specialized Cleaners</strong>:[ul data=1]- Use a fabric-safe stain remover specifically designed for upholstery. Always test a small area first to ensure it won’t damage the material.[/ul][/ul]### White Wine:
+[ul]- Mix a solution of mild dish soap and warm water. Blot the stain gently, working from the outside in to avoid spreading.[/ul][h2]
+[/h2]</p>
+<h2>5. Removing Wine Stains from Hard Surfaces</h2>
+<h3>Wooden Tables and Floors:</h3>
+<p>[ul]- Wipe up the spill immediately with a damp cloth.- For lingering stains, use a mixture of baking soda and water as a gentle scrub. Avoid harsh chemicals that might damage the finish.[/ul]### Countertops:
+[ul]- <strong>Granite or Marble</strong>:[ul data=1]- Blot the spill and clean with a pH-neutral cleaner. Avoid acidic solutions like vinegar, which can damage natural stone.[/ul]- <strong>Laminate or Other Surfaces</strong>:[ul data=1]- Use a mild dish soap solution or a specialized cleaner for stubborn stains.[/ul][/ul][h2]
+[/h2]</p>
+<h2>6. Pro Tips for the Holidays</h2>
+<h3>Be Prepared:</h3>
+<p>[ul]- Keep stain removal essentials on hand: baking soda, club soda, white vinegar, hydrogen peroxide, and microfiber cloths.- Set up a designated spot for guests to place their drinks, reducing the risk of spills.[/ul]### Holiday-Specific Stains:
+[ul]- For wine-soaked <strong>napkins or tablecloths</strong>, wash them as soon as possible with a pre-treatment stain remover.- Consider using <strong>dark or patterned linens</strong> during parties to camouflage potential spills.[/ul][h2]
+[/h2]</p>
+<h2>7. When All Else Fails</h2>
+<p>[ul]- For stubborn stains, don’t hesitate to call a professional cleaner. They have the tools and expertise to restore your surfaces to their pre-spill glory.[/ul]</p>
+<h2>Final Thoughts</h2>
+<p>Wine spills don’t have to be a holiday nightmare. With these quick and effective tips, you can remove stains and get back to enjoying the festivities in no time. So pour yourself another glass, keep the cleaning kit nearby, and celebrate the season worry-free! 🍷✨</p>
+<p><div class="related-articles">
+<h2>Related articles</h2>
+<ul></p>
+<p><li class="related-article">
+<a href="/blog/posts/how-to-encourage-kids-to-participate-in-regular-cleaning26-12-2024/">
+<div class="related-article-image">
+<img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1735229830271x681591647694456000/d7a35a818adf866417a59dd8009d8e86.png" alt="How to Encourage Kids to Participate in Regular Cleaning">
+</div>
+<div class="related-article-info">
+<h3>How to Encourage Kids to Participate in Regular Cleaning</h3>
+<p>Getting kids involved in cleaning and organizing might sound like a challenge, but it’s a valuable life skill that teaches responsibility, teamwork, and pride in their surroundings. With the right approach, you can turn cleaning into a fun and rewarding activity that the whole family can enjoy. Here are some friendly tips to encourage your little ones to join in on keeping the house tidy.</p>
+<p class="tags">Categories: Tips and Tricks,Cleaning routine</p>
+</div>
+</a>
+</li></p>
+<p><li class="related-article">
+<a href="/blog/posts/how-to-remove-pet-hair-from-surfaces26-12-2024/">
+<div class="related-article-image">
+<img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1735231664217x691536964464594800/pets-2.jpg" alt="How to Remove Pet Hair from Surfaces">
+</div>
+<div class="related-article-info">
+<h3>How to Remove Pet Hair from Surfaces</h3>
+<p>Pets bring love and joy into our homes, but they also come with a less charming side effect - fur everywhere! From couches to carpets, pet hair can be stubborn and challenging to clean. But with the right strategies and tools, you can keep your home looking spotless without compromising on your furry friend’s freedom. Here’s how to effectively remove pet hair from all kinds of surfaces.</p>
+<p class="tags">Categories: Tips and Tricks,Pet-friendly</p>
+</div>
+</a>
+</li></p>
+<p><li class="related-article">
+<a href="/blog/posts/how-to-organize-your-home-to-start-the-year-off-right26-12-2024/">
+<div class="related-article-image">
+<img src="//3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1735232081892x130695813371761500/part.jpg" alt="How to Organize Your Home to Start the Year Off Right">
+</div>
+<div class="related-article-info">
+<h3>How to Organize Your Home to Start the Year Off Right</h3>
+<p>A new year brings fresh opportunities, and what better way to embrace the season than with a deeply cleaned and organized home? A clean slate can do wonders for your mood, productivity, and overall well-being. Here’s a friendly guide to help you tackle a deep cleaning session that will leave your home sparkling and your mind refreshed.</p>
+<p class="tags">Categories: Tips and Tricks</p>
+</div>
+</a>
+</li></p>
+<p></ul>
+</div></p>
+
+            </div>
+
+        </article>
+
+        <!-- Modal de Support -->
+<div id="supportModalOverlay" class="support-modal-overlay">
+    <div class="support-modal-content">
+        <div class="support-modal-close">
+            <button id="closeSupportModal" class="support-close-btn">X</button>
+        </div>
+        <h3>Need help? <br>
+            Get in touch by email or phone</h3>
+        <div class="cta cta--block">
+            <button class="button button--full button--primary">+1 310 986 9840</button>
+            <button class="button button--full button--primary">contact@flashguyscleaning.com</button>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="container footer__content">
+        <div class="footer__content__column">
+            <div class="footer__content__logo">
+                <a href="#" onclick="scrollToTop(event)">
+                    <img src="/assets/images/logos/brand-logo-icon.svg" alt="Brand logo icon">
+                </a>
+            </div>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <ul class="footer__content__socials">
+                <li><a href="#"><img src="/assets/images/icons/social/facebook.svg" alt="Facebook brand logo"></a></li>
+                <li><a href="#"><img src="/assets/images/icons/social/youtube.svg" alt="YouTube brand logo"></a></li>
+                <li><a href="#"><img src="/assets/images/icons/social/instagram.svg" alt="Instagram brand logo"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Flash Guys</h3>
+            <ul>
+                <li><a href="#">Professionals</a></li>
+                <li><a href="#">Subscription</a></li>
+                <li><a href="#">Promotions</a></li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Services</h3>
+            <ul>
+                <li><a href="http://localhost:8080/#services">Deep Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Standard Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Commercial Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Post Construction Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Move-in/out Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Airbnb Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Extreme Cleaning</a></li>
+                <li><a href="http://localhost:8080/#services">Carpets & Upholstery</a></li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Areas served</h3>
+            <ul>
+                <li>Los Angeles and area</li>
+                <li>South Bay, CA</li>
+                <li>South L.A, CA</li>
+                <li>Southheast, CA</li>
+                <li>Westside, CA</li>
+                <li>San Francisco (soon)</li>
+                <li>San Diego (soon)</li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="http://localhost:8080/#faq">FAQ</a></li>
+                <li>+1 310 986 9840</li>
+            </ul>
+        </div>
+        <div class="footer__content__column">
+            <h3>Get updates and promotions</h3>
+            <div>Subscribe now to stay tuned</div>
+            <form id="subscribe-form">
+                <input type="email" id="subscribe-email" placeholder="Email" required>
+                <button type="submit" class="button button--primary">Subscribe</button>
+                <div><span>By subscribing you agree to our <a href="http://localhost:8080/privacy-policy">Privacy Policy</a>.</span></div>
+            </form>
+            <div id="subscribe-message" class="subscribe-message"></div> <!-- Mensagem de feedback -->
+        </div>
+    </div>
+    <div id="copy">
+        <div id="separator"></div>
+        <span>© 2024 All Rights Reserved, Flash Guys Cleaning</span>
+    </div>
+</div>
+        
+
+    </main>
+</body>
