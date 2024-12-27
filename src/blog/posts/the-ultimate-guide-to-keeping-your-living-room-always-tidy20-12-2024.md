@@ -10,18 +10,32 @@ tags: Cleaning routine
 
 ## Arrange Pillows and Throws
 
+
+
 Fold throws and elegantly arrange them over the back of the sofa. Pillows can be neatly arranged on the sofa to create an aesthetically pleasing look that invites relaxation.
+
+
 
 ## Keeping Surfaces Clean and Uncluttered
 
+
+
 Avoid cluttering coffee and side tables with too many items. Keep only essential pieces such as decorative books or a vase with fresh flowers. Regularly wipe down surfaces with a damp cloth to remove dust and dirt.
+
+
 
 ## Decorative Objects
 
+
+
 Select decorative objects that complement the style of the room and arrange them in a balanced and harmonious manner.
 
+
+
 ## Strategies for Keeping Upholstery Clean
+
 Regularly wash pillow covers and throws. Clean spills immediately with a damp cloth and mild detergent.
+
 With these simple tips and strategies, you can keep your living room always tidy and inviting, creating a space where you and your guests can relax and enjoy special moments together.
 
 

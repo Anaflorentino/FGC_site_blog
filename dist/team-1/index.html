@@ -10,7 +10,7 @@
 <title>Our Team</title>
 
 <!-- Favicon -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/assets/images/logos/brand-logo-icon.svg" type="image/FlashGuysCleaning-icon">
 
 <!-- Preconnect for performance -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,6 +66,7 @@
     <!-- Header -->
     <header>
         <!-- Modal de Support -->
+
 <div id="supportModalOverlay" class="support-modal-overlay">
     <div class="support-modal-content">
         <div class="support-modal-close">
@@ -81,35 +82,39 @@
 </div>
 
 
-<!-- Navbar -->
 <nav class="navbar">
-    <ul class="nav-list">
-        <button id="menu-link">
-            <span class="material-symbols-rounded">
-                menu
-            </span>
-        </button>
-        <a class="logo" href="/"><img
-                src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
-                alt="Brand logo"></a>
-        <div class="nav-list-links">
-            <li><a class="menu-link" href="/#services">Services</a></li>
-            <li><a class="menu-link" href="/#about-us">About us</a></li>
-            <li><a class="menu-link" href="#support">Support</a></li>
-            <li><a class="menu-link" href="/#faq">FAQ</a></li>
-            <li><a class="menu-link" href="/blog">Blog</a></li>
-        </div>
-    </ul>
+    <div class="navbar-left">
+        <!-- Logo -->
+        <a href="/" class="navbar-logo">
+            <img src="/assets/images/logos/logo.png" alt="Logo" class="Brand Logo image">
+        </a>
 
-    <!-- Login e Signup -->
-    <div class="navbar-buttons">
-        <a href="https://flashguyscleaning.com/dashboard"><button
-                class="dashboard-button button button--secondary button--small"
-                id="dashboardButton">Dashboard</button></a>
+        <!-- Links (para desktop e mobile) -->
+        <ul class="navbar-links" id="navbarLinks">
+            <li><a class="menu-link" href="/#about-us">About Us</a></li>
+            <li><a class="menu-link" href="/#services">Services</a></li>
+            <li><a class="menu-link"href="/#faq">FAQ</a></li>
+            <li><a class="menu-link" href="#support">Support</a></li>
+            <li><a class="menu-link" href="/blog">Blog</a></li>
+        </ul>
+    </div>
+
+    <!-- Botões de ação (para desktop e mobile) -->
+    <div class="navbar-buttons" id="navbarButtons">
+        <a href="https://flashguyscleaning.com/dashboard">
+            <button class="dashboard-button button button--secondary button--small" id="dashboardButton">
+                Dashboard
+            </button>
+        </a>
         <div class="auth-container" id="authContainer">
             <!-- Content dynamically injected by JS -->
         </div>
     </div>
+
+    <!-- Hamburger Icon (aparece apenas no mobile) -->
+    <button class="navbar-toggle" id="navbarToggle">
+        <span class="hamburger-icon"></span>
+    </button>
 </nav>
 
 <!-- Modal de Login -->
@@ -303,37 +308,37 @@
                 </a>
             </div>
             <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="/#about-us">About us</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/terms-of-use">Terms of use</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
             </ul>
             <ul class="footer__content__socials">
-                <li><a href="#"><img src="/assets/images/icons/social/facebook.svg" alt="Facebook brand logo"></a></li>
-                <li><a href="#"><img src="/assets/images/icons/social/youtube.svg" alt="YouTube brand logo"></a></li>
-                <li><a href="#"><img src="/assets/images/icons/social/instagram.svg" alt="Instagram brand logo"></a>
+                <li><a href="https://www.facebook.com/flash.guyscleaning/"><img src="/assets/images/icons/social/facebook.svg" alt="Facebook brand logo"></a></li>
+                <li><a href="https://www.youtube.com/@flashguyscleaning"><img src="/assets/images/icons/social/youtube.svg" alt="YouTube brand logo"></a></li>
+                <li><a href="https://www.instagram.com/flashguyscleaning/"><img src="/assets/images/icons/social/instagram.svg" alt="Instagram brand logo"></a>
                 </li>
             </ul>
         </div>
         <div class="footer__content__column">
             <h3>Flash Guys</h3>
             <ul>
-                <li><a href="#">Professionals</a></li>
-                <li><a href="#">Subscription</a></li>
-                <li><a href="#">Promotions</a></li>
+                <li><a href="/#our-team">Professionals</a></li>
+                <li><a href="/#plans">Subscription</a></li>
+                <li><a href="/#coupons">Promotions</a></li>
             </ul>
         </div>
         <div class="footer__content__column">
             <h3>Services</h3>
             <ul>
-                <li><a href="http://localhost:8080/#services">Deep Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Standard Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Commercial Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Post Construction Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Move-in/out Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Airbnb Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Extreme Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Carpets & Upholstery</a></li>
+                <li><a href="/#services">Deep Cleaning</a></li>
+                <li><a href="/#services">Standard Cleaning</a></li>
+                <li><a href="/#services">Commercial Cleaning</a></li>
+                <li><a href="/#services">Post Construction Cleaning</a></li>
+                <li><a href="/#services">Move-in/out Cleaning</a></li>
+                <li><a href="/#services">Airbnb Cleaning</a></li>
+                <li><a href="/#extreme-cleaning">Extreme Cleaning</a></li>
+                <li><a href="/#services">Carpets & Upholstery</a></li>
             </ul>
         </div>
         <div class="footer__content__column">
@@ -351,7 +356,7 @@
         <div class="footer__content__column">
             <h3>Support</h3>
             <ul>
-                <li><a href="http://localhost:8080/#faq">FAQ</a></li>
+                <li><a href="/#faq">FAQ</a></li>
                 <li>+1 310 986 9840</li>
             </ul>
         </div>
@@ -379,6 +384,7 @@
 
 <!-- Menu Nav -->
 <script src="/assets/scripts/navbar.js"></script>
+<script src="/assets/scripts/menu-mobile.js"></script>
 <script src="/assets/scripts/accordion.js"></script>
 <script src="/assets/scripts/services.js"></script>
 <script src="/assets/scripts/scroll-x.js"></script>

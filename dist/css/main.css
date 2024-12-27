@@ -73,42 +73,131 @@ ul li {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
+/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
-  color: rgb(27, 27, 27);
-  padding: 2% 7%;
-  position: sticky;
+  padding: 1rem 10%;
+  background-color: #fff;
+  position: relative;
+  z-index: 100;
+  position: fixed; /* Fixa a navbar no topo */
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 1000; /* Certifique-se de que esteja acima de outros elementos */
+  background-color: #fff; /* Garante que tenha um fundo sólido */
+  transition: box-shadow 0.3s ease; /* Suaviza a transição do box-shadow */
 }
-.navbar .logo {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin-right: 1rem;
-  flex-shrink: 0;
+
+/* Navbar com sombra (quando a página rolar) */
+.navbar.scrolled {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona a sombra */
 }
-.navbar .navbar-buttons {
-  display: flex;
-  gap: 0.5rem;
-}
-.navbar .nav-list,
-.navbar .nav-list-links {
+
+/* Logo e Links no Desktop */
+.navbar-left {
   display: flex;
   align-items: center;
-  gap: 0.2rem;
 }
-.navbar .nav-links a {
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }
 
+.navbar-logo img {
+  width: 178px;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.navbar-links li {
+  display: inline;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Botões no Desktop */
+.navbar-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.dashboard-button {
+  font-size: 14px;
+}
+
+/* Botão Hamburger */
+.navbar-toggle {
+  display: none; /* Escondido no desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+}
+
+/* Responsivo: Apenas Logo visível inicialmente */
+@media (max-width: 768px) {
+  /* Esconde os links e botões no layout principal */
+  .navbar-links,
+  .navbar-buttons {
+    display: none;
+  }
+  /* Exibe o botão de toggle */
+  .navbar-toggle {
+    display: block;
+  }
+  /* Links e Botões no Menu Mobile */
+  .navbar.open .navbar-links,
+  .navbar.open .navbar-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: auto;
+    padding-left: 10%;
+  }
+  .navbar.open .navbar-links {
+    width: 100%;
+  }
+  .navbar.open .navbar-buttons {
+    width: 100%;
+    top: 250%;
+  }
+  .auth-container {
+    flex-direction: column-reverse;
+    align-items: auto;
+  }
+}
 .auth-container {
   position: relative;
   display: flex;
   gap: 0.4rem;
-  align-items: center;
   margin-inline-end: 0.4rem;
 }
 
@@ -135,7 +224,6 @@ ul li {
 .dropdown {
   position: absolute;
   top: 50px;
-  right: 0;
   background: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 24px 24px 12px;
@@ -278,29 +366,6 @@ ul li {
   cursor: pointer;
 }
 
-@media (max-width: 1202px) {
-  .nav-list-links li,
-  .dashboard,
-  .book-now {
-    display: none;
-  }
-  #menu-link,
-  #login,
-  #signup,
-  #book-now {
-    display: block;
-  }
-  #menu-link {
-    margin-right: 0.5rem;
-    background-color: transparent;
-    border: none;
-  }
-}
-@media (max-width: 590px) {
-  .navbar {
-    display: block;
-  }
-}
 .input-warning {
   color: red;
   font-size: 0.7rem;
@@ -387,7 +452,6 @@ ul li {
 .accordion {
   width: 100%;
   max-width: 600px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -412,11 +476,11 @@ ul li {
 /* Elemento do conteúdo do acordeão */
 .accordion__content {
   display: none;
-  padding: 0.8rem;
+  padding: 0 10px;
+  padding-bottom: 22px;
   background-color: #f8f8f8;
   border-radius: 0 0 12px 12px;
   position: relative;
-  /* Necessário para posicionar a borda */
 }
 .accordion__content a {
   padding: 0 0.8rem;
@@ -429,12 +493,10 @@ ul li {
 
 .material-symbols-rounded.add {
   color: #ff4667;
-  /* Cor rosa */
 }
 
 .accordion__button.open {
   border-radius: 12px 12px 0 0;
-  /* Novo valor do border-radius quando aberto */
 }
 
 .accordion__content::after {
@@ -486,11 +548,10 @@ ul li {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.8rem 1.2rem;
+  padding: 0.6rem 1.2rem;
   font-size: 0.8rem;
   font-weight: 600;
   text-align: center;
-  line-height: 1;
   text-decoration: none;
   border: none;
   background-color: transparent;
@@ -528,13 +589,14 @@ ul li {
   color: #5d5059;
 }
 .button--small {
-  padding: 0.6rem 1rem;
   font-size: 0.8rem;
   font-weight: 500;
+  line-height: normal;
 }
 .button--full {
   width: 100%;
   text-align: center;
+  line-height: normal;
 }
 
 .cta {
@@ -573,7 +635,7 @@ ul li {
 .menu-link {
   text-decoration: none;
   padding: 0.4rem 1rem;
-  font-size: 0.8rem;
+  font-size: 14px;
   font-weight: 500;
   border-radius: 0.25rem;
   color: #5d5059;
@@ -650,7 +712,7 @@ ul li {
 .carrossel {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 24px 0;
   overflow: hidden;
@@ -664,7 +726,7 @@ ul li {
 .item {
   flex: 0 0 44%; /* Exibe 3 imagens por vez por padrão */
   padding: 10px;
-  height: 348px;
+  height: 368px;
 }
 
 .item img {
@@ -899,12 +961,16 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
 }
 @media (min-width: 1350px) {
   .container {
-    padding: 0 12%;
+    padding: 0 22%;
   }
 }
 
 .section__title {
   margin-bottom: 2rem;
+}
+
+.section-blog {
+  padding: 2% 22%;
 }
 
 .articles {
@@ -1094,17 +1160,18 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
 }
 .hero {
   display: flex;
-  height: 100vh;
+  height: auto;
   justify-content: space-between;
   align-items: center;
   padding-left: 8%;
   width: 100%;
   position: relative;
+  margin-top: 4rem;
 }
 
 .hero__content {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
 }
 
@@ -1125,7 +1192,8 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
 
 .hero__image {
   width: 50%;
-  height: 100vh;
+  height: 75vh;
+  min-height: 45vh;
   position: relative;
 }
 
@@ -1157,7 +1225,7 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
 
 .hero__form-select {
   width: 100%;
-  padding: 12px 12px 12px 20px;
+  padding: 12px 12px 12px 26px;
   /* Espaço para o ícone à esquerda */
   margin-bottom: 8px;
   border: 1px solid #d5d9dd;
@@ -1222,7 +1290,8 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   position: relative;
   width: 34px;
   height: 20px;
-  background-color: #d5d9dd; /* Cor do toggle quando inativo */
+  background-color: #d5d9dd;
+  /* Cor do toggle quando inativo */
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -1236,13 +1305,15 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: white; /* Cor da bolinha dentro do toggle */
+  background-color: white;
+  /* Cor da bolinha dentro do toggle */
   transition: transform 0.3s;
 }
 
 .hero__toggle-text {
   font-size: 1rem;
-  color: #939da7; /* Cor do texto quando inativo */
+  color: #939da7;
+  /* Cor do texto quando inativo */
   margin-left: 10px;
   cursor: pointer;
   user-select: none;
@@ -1250,22 +1321,30 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
 
 /* Muda a cor do toggle quando está ativo */
 .hero__toggle.active {
-  background-color: #ff4667; /* Cor do toggle quando ativo */
+  background-color: #ff4667;
+  /* Cor do toggle quando ativo */
 }
 
 /* Muda a cor da bolinha dentro do toggle quando está ativo */
 .hero__toggle.active:before {
-  transform: translateX(14px); /* Move a bolinha para o lado */
+  transform: translateX(14px);
+  /* Move a bolinha para o lado */
 }
 
 /* Muda a cor do texto quando o toggle está ativo, mas sem mudar a cor do toggle */
 .hero__toggle.active + .hero__toggle-text {
-  color: #5d5059; /* Cor do texto quando o toggle está ativo */
+  color: #5d5059;
+  /* Cor do texto quando o toggle está ativo */
 }
 
-@media (max-width: 13250px) {
+@media (max-width: 4000px) {
   .hero {
-    padding-left: 12%;
+    padding-left: 22%;
+  }
+}
+@media (max-width: 1349px) {
+  .hero {
+    padding-left: 8%;
   }
 }
 @media (max-width: 740px) {
@@ -1409,10 +1488,10 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
 .testimonials__header-wrapper,
 .testimonials__reply__logo {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   justify-content: space-between;
-  margin-left: 1.2rem;
+  margin-left: 0.8rem;
 }
 
 .testimonials__reply__logo {
@@ -1466,7 +1545,8 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   border-radius: 12px;
   box-shadow: none;
   position: relative;
-  height: 80vh;
+  height: auto;
+  max-height: 75vh;
   overflow: auto;
 }
 
@@ -1596,9 +1676,7 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   font-size: 0.8rem;
   gap: 0.4rem;
   align-items: center;
-  line-height: 1;
-  cursor: pointer;
-  padding: 14px 20px;
+  line-height: 2.5;
 }
 .services__nav button:hover {
   background-color: #f8f8f8;
@@ -1660,9 +1738,9 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   font-size: 0.8rem;
   gap: 0.4rem;
   align-items: center;
-  line-height: 1;
+  line-height: 1.8;
   cursor: pointer;
-  padding: 14px 20px;
+  padding: 12px 20px;
   height: 100%;
 }
 .services__nav button:hover {
@@ -2196,6 +2274,10 @@ div.footer__content__column:nth-child(6) > h3:nth-child(1) {
   display: flex;
   list-style: none;
   gap: 0.4rem;
+}
+
+:target {
+  scroll-margin-top: 74.5px; /* Altura da navbar */
 }
 
 /*# sourceMappingURL=main.css.map */

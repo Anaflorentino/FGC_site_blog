@@ -15,47 +15,45 @@ const formatDate = (date) => {
   return `${year}-${month}-${day}`;
 };
 
-// Função para converter rich text e BBCode para Markdown
 const bbcodeToMarkdown = (content) => {
   // Convertendo cabeçalhos (H1-H6 e BBCode)
-  content = content.replace(/<h([1-6])>(.*?)<\/h\1>/g, (_, level, text) => `#`.repeat(level) + ` ${text}`);
   content = content.replace(/\[h([1-6])\](.*?)\[\/h\1\]/g, (_, level, text) => `#`.repeat(level) + ` ${text}`);
 
   // Convertendo negrito, itálico e sublinhado
-  content = content.replace(/<b>(.*?)<\/b>/g, '**$1**').replace(/\[b\](.*?)\[\/b\]/g, '**$1**');
-  content = content.replace(/<i>(.*?)<\/i>/g, '*$1*').replace(/\[i\](.*?)\[\/i\]/g, '*$1*');
-  content = content.replace(/<u>(.*?)<\/u>/g, '_$1_').replace(/\[u\](.*?)\[\/u\]/g, '_$1_');
+  content = content.replace(/\[b\](.*?)\[\/b\]/g, '**$1**');
+  content = content.replace(/\[i\](.*?)\[\/i\]/g, '*$1*');
+  content = content.replace(/\[u\](.*?)\[\/u\]/g, '_$1_');
 
-  // Convertendo links
-  content = content.replace(/<a href="(.*?)">(.*?)<\/a>/g, '[$2]($1)');
-  content = content.replace(/\[url=(.*?)\](.*?)\[\/url\]/g, '[$2]($1)');
+  // Convertendo listas não ordenadas ([ml] e [ul])
+  content = content.replace(/\[ml\]\[ul\](.*?)\[\/ul\]\[\/ml\]/gs, (_, items) => {
+    return items
+      .replace(/\[li.*?\](.*?)\[\/li\]/g, (_, item) => `- ${item.trim()}`)
+      .trim()
+      .replace(/- /g, '\n- '); // Adiciona quebra de linha antes de cada item
+  });
 
-  // Convertendo imagens
-  content = content.replace(/<img src="(.*?)" alt="(.*?)"\/*>/g, '![$2]($1)');
-  content = content.replace(/\[img=(.*?)\](.*?)\[\/img\]/g, '![$2]($1)');
-
-  // Convertendo listas não ordenadas
-  content = content.replace(/<ul>(.*?)<\/ul>/gs, (_, items) => items.replace(/<li>(.*?)<\/li>/g, '- $1'));
-  content = content.replace(/\[ml\](.*?)\[\/ml\]/gs, (_, items) => items.replace(/\[li.*?\](.*?)\[\/li\]/g, '- $1'));
-
-  // Convertendo listas ordenadas
-  content = content.replace(/<ol>(.*?)<\/ol>/gs, (_, items) => {
+  // Convertendo listas ordenadas ([ml] e [ol])
+  content = content.replace(/\[ml\]\[ol\](.*?)\[\/ol\]\[\/ml\]/gs, (_, items) => {
     let i = 1;
-    return items.replace(/<li>(.*?)<\/li>/g, () => `${i++}. $1`);
+    return items
+      .replace(/\[li.*?\](.*?)\[\/li\]/g, (_, item) => `${i++}. ${item.trim()}`)
+      .trim()
+      .replace(/^\d+\. /gm, '\n$&'); // Adiciona quebra de linha antes de cada item
   });
 
   // Convertendo blocos de citação
-  content = content.replace(/<blockquote>(.*?)<\/blockquote>/gs, '> $1');
+  content = content.replace(/\[quote\](.*?)\[\/quote\]/gs, '> $1');
 
   // Convertendo quebras de linha e parágrafos
-  content = content.replace(/<br\s*\/>/g, '\n');
-  content = content.replace(/<\/p>/g, '\n\n').replace(/<p>/g, '');
+  content = content.replace(/\n/g, '\n\n');
 
-  // Removendo quaisquer tags HTML restantes
-  content = content.replace(/<[^>]+>/g, '');
+  // Removendo quaisquer tags BBCode restantes
+  content = content.replace(/\[.*?\]/g, '');
 
   return content.trim();
 };
+
+
 
 // Função para gerar o conteúdo do Markdown
 const generateMarkdown = (data) => {

@@ -115,10 +115,10 @@
 .testimonials__header-wrapper,
 .testimonials__reply__logo {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     justify-content: space-between;
-    margin-left: 1.2rem;
+    margin-left: .8rem;
 
 }
 
@@ -177,7 +177,8 @@
     border-radius: 12px;
     box-shadow: none;
     position: relative;
-    height: 80vh;
+    height: auto;
+    max-height: 75vh;
     overflow: auto;
 }
 

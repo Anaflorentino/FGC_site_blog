@@ -2,17 +2,18 @@
 
 .hero {
     display: flex;
-    height: 100vh;
+    height: auto;
     justify-content: space-between;
     align-items: center;
     padding-left: 8%;
     width: 100%;
     position: relative;
+    margin-top: 4rem;
 }
 
 .hero__content {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
 }
 
@@ -33,7 +34,8 @@
 
 .hero__image {
     width: 50%;
-    height: 100vh;
+    height: 75vh;
+    min-height: 45vh;
     position: relative;
 }
 
@@ -66,7 +68,7 @@
 
 .hero__form-select {
     width: 100%;
-    padding: 12px 12px 12px 20px;
+    padding: 12px 12px 12px 26px;
     /* Espaço para o ícone à esquerda */
     margin-bottom: 8px;
     border: 1px solid vars.$neutrals-100;
@@ -131,7 +133,8 @@
     position: relative;
     width: 34px;
     height: 20px;
-    background-color: vars.$neutrals-100; /* Cor do toggle quando inativo */
+    background-color: vars.$neutrals-100;
+    /* Cor do toggle quando inativo */
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -145,13 +148,15 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: vars.$bg-color; /* Cor da bolinha dentro do toggle */
+    background-color: vars.$bg-color;
+    /* Cor da bolinha dentro do toggle */
     transition: transform 0.3s;
 }
 
 .hero__toggle-text {
     font-size: 1rem;
-    color: vars.$neutrals-400; /* Cor do texto quando inativo */
+    color: vars.$neutrals-400;
+    /* Cor do texto quando inativo */
     margin-left: 10px;
     cursor: pointer;
     user-select: none;
@@ -159,24 +164,33 @@
 
 /* Muda a cor do toggle quando está ativo */
 .hero__toggle.active {
-    background-color: vars.$primary-500; /* Cor do toggle quando ativo */
+    background-color: vars.$primary-500;
+    /* Cor do toggle quando ativo */
 }
 
 /* Muda a cor da bolinha dentro do toggle quando está ativo */
 .hero__toggle.active:before {
-    transform: translateX(14px); /* Move a bolinha para o lado */
+    transform: translateX(14px);
+    /* Move a bolinha para o lado */
 }
 
 /* Muda a cor do texto quando o toggle está ativo, mas sem mudar a cor do toggle */
-.hero__toggle.active + .hero__toggle-text {
-    color: vars.$text-400; /* Cor do texto quando o toggle está ativo */
+.hero__toggle.active+.hero__toggle-text {
+    color: vars.$text-400;
+    /* Cor do texto quando o toggle está ativo */
 }
 
-@media (max-width: 13250px) {
-   .hero {
+@media (max-width: 4000px) {
+    .hero {
+        padding-left: 22%;
+    }
+}
 
-       padding-left: 12%;
-   }
+@media (max-width: 1349px) {
+    .hero {
+
+        padding-left: 8%;
+    }
 }
 
 @media (max-width: 740px) {
@@ -214,7 +228,7 @@
     justify-content: start;
     gap: .4rem;
     margin-bottom: 12px;
-    
+
     strong {
         font-size: 14px;
         font-weight: 500;
@@ -226,8 +240,8 @@
     .hero {
         height: auto;
     }
+
     .hero__text {
         padding-left: 4%;
     }
 }
-

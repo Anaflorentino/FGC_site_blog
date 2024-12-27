@@ -10,30 +10,57 @@ tags: Cleaning routine
 
 ## Organize the Pantry
 
+
+
 Keep food and ingredients organized in transparent containers. Label each item for easy identification and keep frequently used products within reach.
+
+
 
 Disinfect Surfaces
 
+
+
 Use an appropriate disinfectant to clean kitchen surfaces such as countertops, sinks, and tables. Wipe countertops with a damp cloth and mild detergent.
+
+
 
 ## Deep Clean Appliances
 
+
+
 **Regularly, deep clean appliances such as refrigerator, stove, oven, and microwave.**
+
+
 
 Remove all trays and shelves and wash with soap and water. Clean the interior of the appliances with a damp cloth and mild detergent.
 
+
+
 **Don't Forget the Oven**: Remove the racks and apply a specific oven cleaner. Let the product sit according to the manufacturer's instructions and then wipe with a damp cloth.
+
+
 
 ## Wash Dishes Regularly
 
+
+
 Avoid accumulating dirty dishes in the sink. Wash dishes, cutlery, and pots after use or put them in the dishwasher immediately. This prevents dirt buildup and facilitates daily kitchen cleaning.
+
+
 
 ## Keep the Floor Clean
 
+
+
 Sweep or vacuum the kitchen floor daily to remove dirt and crumbs. After cleaning, wipe with a damp cloth and disinfectant to ensure the floor stays clean.
+
 Do a Weekly Deep Clean
 
+
+
 Once a week, dedicate time for a deep clean of the kitche. This includes cleaning the extractor fan, washing curtains, cleaning the interior of cabinets and drawers, among other tasks.
+
+
 
 With these 6 simple tips, you can keep your kitchen clean and organized all the time, providing a safe and pleasant environment for cooking.
 

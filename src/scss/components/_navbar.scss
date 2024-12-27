@@ -1,47 +1,141 @@
 @use '../abstracts/variables' as vars;
 
 // Navbar Styles
+/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: vars.$bg-color;
-  color: rgb(27, 27, 27);
-  padding: 2% 7%;
-  position: sticky;
+  padding: 1rem 10%;
+  background-color: #fff;
+  position: relative;
+  z-index: 100;
+  position: fixed; /* Fixa a navbar no topo */
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 1000; /* Certifique-se de que esteja acima de outros elementos */
+  background-color: #fff; /* Garante que tenha um fundo sólido */
+  transition: box-shadow 0.3s ease; /* Suaviza a transição do box-shadow */
+}
 
-  .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-right: 1rem;
-    flex-shrink: 0;
-  }
+/* Navbar com sombra (quando a página rolar) */
+.navbar.scrolled {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona a sombra */
+}
 
-  .navbar-buttons {
-    display: flex;
-    gap: 0.5rem;
-  }
+/* Logo e Links no Desktop */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
 
-  .nav-list,
-  .nav-list-links {
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
-  }
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
 
-  .nav-links a {
-    text-decoration: none;
+.navbar-logo {
+  img {
+    width: 178px;
   }
 }
 
-// Authentication Container
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.navbar-links li {
+  display: inline;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Botões no Desktop */
+.navbar-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.dashboard-button {
+  font-size: 14px;
+}
+
+/* Botão Hamburger */
+.navbar-toggle {
+  display: none; /* Escondido no desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+}
+
+/* Responsivo: Apenas Logo visível inicialmente */
+@media (max-width: 768px) {
+  /* Esconde os links e botões no layout principal */
+  .navbar-links,
+  .navbar-buttons {
+    display: none;
+  }
+
+  /* Exibe o botão de toggle */
+  .navbar-toggle {
+    display: block;
+  }
+
+  /* Links e Botões no Menu Mobile */
+  .navbar.open .navbar-links,
+  .navbar.open .navbar-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: auto;
+    padding-left: 10%;
+
+  }
+
+  .navbar.open .navbar-links {
+    width: 100%;
+  }
+
+  .navbar.open .navbar-buttons {
+    width: 100%;
+    top: 250%;
+  }
+
+  .auth-container {
+    flex-direction: column-reverse;
+    align-items: auto;
+  }
+}
+
+// * Authentication Container
 .auth-container {
   position: relative;
   display: flex;
   gap: 0.4rem;
-  align-items: center;
   margin-inline-end: 0.4rem;
 }
 
@@ -70,7 +164,6 @@
 .dropdown {
   position: absolute;
   top: 50px;
-  right: 0;
   background: vars.$bg-color;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 24px 24px 12px;
@@ -230,33 +323,6 @@
   cursor: pointer;
 }
 
-@media (max-width: 1202px) {
-  .nav-list-links li,
-  .dashboard,
-  .book-now {
-    display: none;
-  }
-
-  #menu-link,
-  #login,
-  #signup,
-  #book-now {
-    display: block;
-  }
-
-  #menu-link {
-    margin-right: 0.5rem;
-    background-color: transparent;
-    border: none;
-  }
-}
-
-@media (max-width: 590px) {
-  .navbar {
-    display: block;
-  }
-}
-
 // Utility Classes
 .input-warning {
   color: red;
@@ -283,5 +349,3 @@
     }
   }
 }
-
-

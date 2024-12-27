@@ -32,9 +32,7 @@
             font-size: .8rem;
             gap: .4rem;
             align-items: center;
-            line-height: 1;
-            cursor: pointer;
-            padding: 14px 20px;
+            line-height: 2.5;
 
             &:hover {
                 background-color: vars.$neutrals-50;
@@ -109,9 +107,9 @@
     font-size: .8rem;
     gap: .4rem;
     align-items: center;
-    line-height: 1;
+    line-height: 1.8;
     cursor: pointer;
-    padding: 14px 20px;
+    padding: 12px 20px;
     height: 100%;
 
     &:hover {

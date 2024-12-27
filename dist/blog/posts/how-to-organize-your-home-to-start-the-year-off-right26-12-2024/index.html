@@ -11,7 +11,7 @@
 <title>How to Organize Your Home to Start the Year Off Right</title>
 
 <!-- Favicon -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/assets/images/logos/brand-logo-icon.svg" type="image/FlashGuysCleaning-icon">
 
 <!-- Preconnect for performance -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,129 +64,141 @@
 </head>
 
 <body>
-
-    <header>
-        <!-- Modal de Support -->
-        <div id="supportModalOverlay" class="support-modal-overlay">
-            <div class="support-modal-content">
-                <div class="support-modal-close">
-                    <button id="closeSupportModal" class="support-close-btn">X</button>
-                </div>
-                <h3>Need help? <br>
-                    Get in touch by email or phone</h3>
-                <div class="cta cta--block">
-                    <button class="button button--full button--primary">+1 310 986 9840</button>
-                    <button class="button button--full button--primary">contact@flashguyscleaning.com</button>
-                </div>
-            </div>
-        </div>
-        <!-- Navbar -->
-        <nav class="navbar">
-            <ul class="nav-list">
-                <button id="menu">
-                    <span class="material-symbols-rounded">
-                        menu
-                    </span>
-                </button>
-                <a class="logo" href="/"><img
-                        src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
-                        alt="Brand logo"></a>
-                <div class="nav-list-links">
-                    <li><a class="menu-link"
-                            href="http://localhost:8080/#services">Services</a>
-                    </li>
-                    <li><a class="menu-link"
-                            href="http://localhost:8080/#about-us">About us</a>
-                    </li>
-                    <li><a class="menu-link" href="#support">Support</a></li>
-                    <li><a class="menu-link" href="http://localhost:8080/#faq">FAQ</a>
-                    </li>
-                    <li><a class="menu-link"
-                            href="http://localhost:8080/blog">Blog</a></li>
-                </div>
-            </ul>
-
-            <!-- Login e Signup -->
-            <div class="navbar-buttons">
-                <!-- ! Adicionar link dinâmico para dashboard ! -->
-                <a href=""><button class="dashboard-button button button--secondary button--small"
-                        id="dashboardButton">Dashboard</button></a>
-                <a href="https://flashguyscleaning.com/schedule?date=&coupon=first05"><button
-                        class="book-now button button--primary button--small">Book now</button></a>
-                <div class="auth-container" id="authContainer">
-                    <!-- Content dynamically injected by JS -->
-                </div>
-            </div>
-        </nav>
-        <!-- Modal de Login -->
-        <div class="nav-modal" id="loginModal">
-            <div class="modal-content">
-                <h3>Login</h3>
-                <input type="email" id="modalEmail" placeholder="Email" required>
-                <input type="password" id="modalPassword" placeholder="Password" required>
-                <button id="forgotPassword">I forgot my password</button>
-                <button id="modalLoginButton">Log In</button>
-                <button id="sign-btn">Switch</button>
-                <button class="google-login-button" id="googleLoginButton">
-                    <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
-                        alt="Google logo">
-                    Log In with Google
-                </button>
-                <span id="privacyPolicy">
-                    <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="#">Privacy
-                            Policy</a>.</p>
-                </span>
-            </div>
-        </div>
-        <!-- Modal de Signup -->
-        <div class="nav-modal" id="signupModal">
-            <div class="modal-content">
-                <h3>Sign Up</h3>
-                <input type="text" id="signupName" placeholder="Full Name" required>
-                <input type="email" id="signupEmail" placeholder="Email" required>
-                <input type="tel" id="signupPhone" placeholder="Phone Number" required>
-                <input type="password" id="signupPassword" placeholder="Password" required>
-                <button id="signupModalButton">Sign Up</button>
-                <button id="login-btn">Switch</button>
-                <button class="google-login-button" id="googleSignupButton">
-                    <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
-                        alt="Google logo">
-                    Sign Up with Google
-                </button>
-            </div>
-        </div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                // Modais
-                const loginModal = document.getElementById('loginModal');
-                const signupModal = document.getElementById('signupModal');
-
-                // Botões que controlam os modais
-                const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
-                const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
-
-                // Verifica se todos os elementos necessários existem
-                if (!loginModal || !signupModal || !loginBtn || !signBtn) {
-                    return; // Interrompe a execução caso algum elemento não esteja presente
-                }
-
-                // Evento para abrir o modal de Login e fechar o de Cadastro
-                loginBtn.addEventListener('click', function () {
-                    signupModal.classList.remove('visible');
-                    loginModal.classList.add('visible');
-                });
-
-                // Evento para abrir o modal de Cadastro e fechar o de Login
-                signBtn.addEventListener('click', function () {
-                    loginModal.classList.remove('visible');
-                    signupModal.classList.add('visible');
-                });
-            });
-        </script>
-
-    </header>
+    
     <main>
+
+            <!-- Modal de Support -->
+
+<div id="supportModalOverlay" class="support-modal-overlay">
+    <div class="support-modal-content">
+        <div class="support-modal-close">
+            <button id="closeSupportModal" class="support-close-btn">X</button>
+        </div>
+        <h3>Need help? <br>
+            Get in touch by email or phone</h3>
+        <div class="cta cta--block">
+            <button class="button button--full button--primary">+1 310 986 9840</button>
+            <button class="button button--full button--primary">contact@flashguyscleaning.com</button>
+        </div>
+    </div>
+</div>
+
+
+<nav class="navbar">
+    <div class="navbar-left">
+        <!-- Logo -->
+        <a href="/" class="navbar-logo">
+            <img src="/assets/images/logos/logo.png" alt="Logo" class="Brand Logo image">
+        </a>
+
+        <!-- Links (para desktop e mobile) -->
+        <ul class="navbar-links" id="navbarLinks">
+            <li><a class="menu-link" href="/#about-us">About Us</a></li>
+            <li><a class="menu-link" href="/#services">Services</a></li>
+            <li><a class="menu-link"href="/#faq">FAQ</a></li>
+            <li><a class="menu-link" href="#support">Support</a></li>
+            <li><a class="menu-link" href="/blog">Blog</a></li>
+        </ul>
+    </div>
+
+    <!-- Botões de ação (para desktop e mobile) -->
+    <div class="navbar-buttons" id="navbarButtons">
+        <a href="https://flashguyscleaning.com/dashboard">
+            <button class="dashboard-button button button--secondary button--small" id="dashboardButton">
+                Dashboard
+            </button>
+        </a>
+        <div class="auth-container" id="authContainer">
+            <!-- Content dynamically injected by JS -->
+        </div>
+    </div>
+
+    <!-- Hamburger Icon (aparece apenas no mobile) -->
+    <button class="navbar-toggle" id="navbarToggle">
+        <span class="hamburger-icon"></span>
+    </button>
+</nav>
+
+<!-- Modal de Login -->
+<div class="nav-modal" id="loginModal">
+    <div class="modal-content">
+        <h3>Login</h3>
+        <input type="email" id="modalEmail" placeholder="Email" required>
+        <span class="input-warning">Please enter your email*</span>
+        <input type="password" id="modalPassword" placeholder="Password" required>
+        <span class="input-warning">Please enter a valid password*</span>
+        <button id="forgotPassword">I forgot my password</button>
+        <button id="modalLoginButton">Log In</button>
+        <button class="google-login-button" id="googleLoginButton">
+            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                alt="Google logo">
+            Log In with Google
+        </button>
+        <span id="privacyPolicy">
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
+        </span>
+        <p class="account-switcher">Don't have an account?<button class="button" id="sign-btn">Create account</button>
+        </p>
+    </div>
+</div>
+
+<!-- Modal de Signup -->
+<div class="nav-modal" id="signupModal">
+    <div class="modal-content">
+        <h3>Sign Up</h3>
+        <input type="text" id="signupName" placeholder="Full Name" required>
+        <span class="input-warning">Please enter your full name*</span>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <span class="input-warning">Please enter your email*</span>
+        <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+        <span class="input-warning">Please enter you phone number*</span>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <span class="input-warning">Please enter a password*</span>
+        <button id="signupModalButton">Sign Up</button>
+        <button class="google-login-button" id="googleSignupButton">
+            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                alt="Google logo">
+            Sign Up with Google
+        </button>
+        <span id="privacyPolicy">
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
+        </span>
+        <p class="account-switcher">Already have an account?<button class="button" id="login-btn">Login</button></p>
+    </div>
+</div>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Modais
+        const loginModal = document.getElementById('loginModal');
+        const signupModal = document.getElementById('signupModal');
+
+        // Botões que controlam os modais
+        const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
+        const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
+
+        // Verifica se todos os elementos necessários existem
+        if (!loginModal || !signupModal || !loginBtn || !signBtn) {
+            return; // Interrompe a execução caso algum elemento não esteja presente
+        }
+
+        // Evento para abrir o modal de Login e fechar o de Cadastro
+        loginBtn.addEventListener('click', function () {
+            signupModal.classList.remove('visible');
+            loginModal.classList.add('visible');
+        });
+
+        // Evento para abrir o modal de Cadastro e fechar o de Login
+        signBtn.addEventListener('click', function () {
+            loginModal.classList.remove('visible');
+            signupModal.classList.add('visible');
+        });
+    })
+</script>
+            
         <!-- Pages Index -->
         <nav class="pagination-links section__title article">
             <ol class="pagination-links__list">
@@ -219,32 +231,86 @@
             <!-- Conteúdo dinâmico -->
             <div class="section__title">
                 <h2>Plan Before You Begin</h2>
-<p>Deep cleaning isn’t a race; it’s a marathon. Start by making a plan:
-[ul]- <strong>List the areas</strong> you want to clean, room by room.- <strong>Gather your supplies</strong>: Stock up on cleaning products, gloves, trash bags, and storage bins.- Dedicate a <strong>realistic timeframe</strong>: A weekend or a few hours each day works well.[/ul][h3]
-[/h3]</p>
+<p>Deep cleaning isn’t a race; it’s a marathon. Start by making a plan:</p>
+<ul>
+<li>
+<p><strong>List the areas</strong> you want to clean, room by room.</p>
+</li>
+<li>
+<p><strong>Gather your supplies</strong>: Stock up on cleaning products, gloves, trash bags, and storage bins.</p>
+</li>
+<li>
+<p>Dedicate a <strong>realistic timeframe</strong>: A weekend or a few hours each day works well.</p>
+</li>
+</ul>
 <h2>Declutter First</h2>
-<p>Cleaning is much easier without clutter in the way. Follow these steps:
-[ul]- <strong>Sort your belongings</strong>: Create “keep,” “donate,” and “discard” piles.- Focus on <strong>one area at a time</strong>, such as a closet or cabinet.- Ask yourself: “Have I used this in the past year?” If not, it’s time to let it go.[/ul][h3]
-[/h3]</p>
+<p>Cleaning is much easier without clutter in the way. Follow these steps:</p>
+<ul>
+<li>
+<p><strong>Sort your belongings</strong>: Create “keep,” “donate,” and “discard” piles.</p>
+</li>
+<li>
+<p>Focus on <strong>one area at a time</strong>, such as a closet or cabinet.</p>
+</li>
+<li>
+<p>Ask yourself: “Have I used this in the past year?” If not, it’s time to let it go.</p>
+</li>
+</ul>
 <h2>Start with High-Traffic Areas</h2>
-<p>The kitchen, living room, and bathrooms see the most use and deserve extra attention:
-[ul]- In the <strong>kitchen</strong>, clean appliances like the oven and refrigerator. Don’t forget to check for expired items in the pantry.- In the <strong>living room</strong>, vacuum upholstery, clean rugs, and dust electronics.- In the <strong>bathroom</strong>, scrub tiles, descale showerheads, and organize toiletries.[/ul][h3]
-[/h3]</p>
+<p>The kitchen, living room, and bathrooms see the most use and deserve extra attention:</p>
+<ul>
+<li>
+<p>In the <strong>kitchen</strong>, clean appliances like the oven and refrigerator. Don’t forget to check for expired items in the pantry.</p>
+</li>
+<li>
+<p>In the <strong>living room</strong>, vacuum upholstery, clean rugs, and dust electronics.</p>
+</li>
+<li>
+<p>In the <strong>bathroom</strong>, scrub tiles, descale showerheads, and organize toiletries.</p>
+</li>
+</ul>
 <h2>Go Beyond the Surface</h2>
-<p>Deep cleaning means tackling spots often overlooked during regular cleaning. Pay attention to:
-[ul]- <strong>Baseboards and corners</strong>: Use a damp cloth or a vacuum with a brush attachment.- <strong>Light fixtures</strong>: Dust and wipe down bulbs and fixtures for brighter spaces.- <strong>Windows</strong>: Clean glass panes, frames, and sills for a streak-free shine.[/ul][h3]
-[/h3]</p>
+<p>Deep cleaning means tackling spots often overlooked during regular cleaning. Pay attention to:</p>
+<ul>
+<li>
+<p><strong>Baseboards and corners</strong>: Use a damp cloth or a vacuum with a brush attachment.</p>
+</li>
+<li>
+<p><strong>Light fixtures</strong>: Dust and wipe down bulbs and fixtures for brighter spaces.</p>
+</li>
+<li>
+<p><strong>Windows</strong>: Clean glass panes, frames, and sills for a streak-free shine.</p>
+</li>
+</ul>
 <h2>Organize as You Go</h2>
-<p>Deep cleaning is the perfect time to introduce organization into your home:
-[ul]- Use <strong>storage bins</strong> to group similar items together.- Label shelves or containers for easy access.- Arrange items based on frequency of use—keep daily essentials within reach.[/ul][h3]
-[/h3]</p>
+<p>Deep cleaning is the perfect time to introduce organization into your home:</p>
+<ul>
+<li>
+<p>Use <strong>storage bins</strong> to group similar items together.</p>
+</li>
+<li>
+<p>Label shelves or containers for easy access.</p>
+</li>
+<li>
+<p>Arrange items based on frequency of use—keep daily essentials within reach.</p>
+</li>
+</ul>
 <h2>Add a Fresh Touch</h2>
-<p>Once everything is clean and organized, give your home an inviting feel:
-[ul]- Place <strong>air fresheners</strong> or diffuse essential oils for a subtle, pleasant scent.- Add a vase of fresh <strong>flowers</strong> or a potted plant for a lively touch.- Replace old <strong>doormats</strong> or cushions to refresh your decor.[/ul][h3]
-[/h3]</p>
+<p>Once everything is clean and organized, give your home an inviting feel:</p>
+<ul>
+<li>
+<p>Place <strong>air fresheners</strong> or diffuse essential oils for a subtle, pleasant scent.</p>
+</li>
+<li>
+<p>Add a vase of fresh <strong>flowers</strong> or a potted plant for a lively touch.</p>
+</li>
+<li>
+<p>Replace old <strong>doormats</strong> or cushions to refresh your decor.</p>
+</li>
+</ul>
 <h2>Final Thoughts</h2>
-<p>Starting the year with a clean and organized home isn’t just about tidying up—it’s about creating a space that inspires and uplifts you. By breaking the process into manageable steps, you can transform your home without feeling overwhelmed.
-So roll up your sleeves, put on your favorite playlist, and get cleaning! The rewards of a fresh, organized space are well worth the effort. 🌟</p>
+<p>Starting the year with a clean and organized home isn’t just about tidying up—it’s about creating a space that inspires and uplifts you. By breaking the process into manageable steps, you can transform your home without feeling overwhelmed.</p>
+<p>So roll up your sleeves, put on your favorite playlist, and get cleaning! The rewards of a fresh, organized space are well worth the effort. 🌟</p>
 <p><div class="related-articles">
 <h2>Related articles</h2>
 <ul></p>
@@ -316,37 +382,37 @@ So roll up your sleeves, put on your favorite playlist, and get cleaning! The re
                 </a>
             </div>
             <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="/#about-us">About us</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/terms-of-use">Terms of use</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
             </ul>
             <ul class="footer__content__socials">
-                <li><a href="#"><img src="/assets/images/icons/social/facebook.svg" alt="Facebook brand logo"></a></li>
-                <li><a href="#"><img src="/assets/images/icons/social/youtube.svg" alt="YouTube brand logo"></a></li>
-                <li><a href="#"><img src="/assets/images/icons/social/instagram.svg" alt="Instagram brand logo"></a>
+                <li><a href="https://www.facebook.com/flash.guyscleaning/"><img src="/assets/images/icons/social/facebook.svg" alt="Facebook brand logo"></a></li>
+                <li><a href="https://www.youtube.com/@flashguyscleaning"><img src="/assets/images/icons/social/youtube.svg" alt="YouTube brand logo"></a></li>
+                <li><a href="https://www.instagram.com/flashguyscleaning/"><img src="/assets/images/icons/social/instagram.svg" alt="Instagram brand logo"></a>
                 </li>
             </ul>
         </div>
         <div class="footer__content__column">
             <h3>Flash Guys</h3>
             <ul>
-                <li><a href="#">Professionals</a></li>
-                <li><a href="#">Subscription</a></li>
-                <li><a href="#">Promotions</a></li>
+                <li><a href="/#our-team">Professionals</a></li>
+                <li><a href="/#plans">Subscription</a></li>
+                <li><a href="/#coupons">Promotions</a></li>
             </ul>
         </div>
         <div class="footer__content__column">
             <h3>Services</h3>
             <ul>
-                <li><a href="http://localhost:8080/#services">Deep Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Standard Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Commercial Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Post Construction Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Move-in/out Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Airbnb Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Extreme Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Carpets & Upholstery</a></li>
+                <li><a href="/#services">Deep Cleaning</a></li>
+                <li><a href="/#services">Standard Cleaning</a></li>
+                <li><a href="/#services">Commercial Cleaning</a></li>
+                <li><a href="/#services">Post Construction Cleaning</a></li>
+                <li><a href="/#services">Move-in/out Cleaning</a></li>
+                <li><a href="/#services">Airbnb Cleaning</a></li>
+                <li><a href="/#extreme-cleaning">Extreme Cleaning</a></li>
+                <li><a href="/#services">Carpets & Upholstery</a></li>
             </ul>
         </div>
         <div class="footer__content__column">
@@ -364,7 +430,7 @@ So roll up your sleeves, put on your favorite playlist, and get cleaning! The re
         <div class="footer__content__column">
             <h3>Support</h3>
             <ul>
-                <li><a href="http://localhost:8080/#faq">FAQ</a></li>
+                <li><a href="/#faq">FAQ</a></li>
                 <li>+1 310 986 9840</li>
             </ul>
         </div>

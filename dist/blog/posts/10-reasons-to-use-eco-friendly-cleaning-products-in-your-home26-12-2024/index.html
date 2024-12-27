@@ -11,7 +11,7 @@
 <title>10 Reasons to Use Eco-Friendly Cleaning Products in Your Home</title>
 
 <!-- Favicon -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/assets/images/logos/brand-logo-icon.svg" type="image/FlashGuysCleaning-icon">
 
 <!-- Preconnect for performance -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,129 +64,141 @@
 </head>
 
 <body>
-
-    <header>
-        <!-- Modal de Support -->
-        <div id="supportModalOverlay" class="support-modal-overlay">
-            <div class="support-modal-content">
-                <div class="support-modal-close">
-                    <button id="closeSupportModal" class="support-close-btn">X</button>
-                </div>
-                <h3>Need help? <br>
-                    Get in touch by email or phone</h3>
-                <div class="cta cta--block">
-                    <button class="button button--full button--primary">+1 310 986 9840</button>
-                    <button class="button button--full button--primary">contact@flashguyscleaning.com</button>
-                </div>
-            </div>
-        </div>
-        <!-- Navbar -->
-        <nav class="navbar">
-            <ul class="nav-list">
-                <button id="menu">
-                    <span class="material-symbols-rounded">
-                        menu
-                    </span>
-                </button>
-                <a class="logo" href="/"><img
-                        src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
-                        alt="Brand logo"></a>
-                <div class="nav-list-links">
-                    <li><a class="menu-link"
-                            href="http://localhost:8080/#services">Services</a>
-                    </li>
-                    <li><a class="menu-link"
-                            href="http://localhost:8080/#about-us">About us</a>
-                    </li>
-                    <li><a class="menu-link" href="#support">Support</a></li>
-                    <li><a class="menu-link" href="http://localhost:8080/#faq">FAQ</a>
-                    </li>
-                    <li><a class="menu-link"
-                            href="http://localhost:8080/blog">Blog</a></li>
-                </div>
-            </ul>
-
-            <!-- Login e Signup -->
-            <div class="navbar-buttons">
-                <!-- ! Adicionar link dinâmico para dashboard ! -->
-                <a href=""><button class="dashboard-button button button--secondary button--small"
-                        id="dashboardButton">Dashboard</button></a>
-                <a href="https://flashguyscleaning.com/schedule?date=&coupon=first05"><button
-                        class="book-now button button--primary button--small">Book now</button></a>
-                <div class="auth-container" id="authContainer">
-                    <!-- Content dynamically injected by JS -->
-                </div>
-            </div>
-        </nav>
-        <!-- Modal de Login -->
-        <div class="nav-modal" id="loginModal">
-            <div class="modal-content">
-                <h3>Login</h3>
-                <input type="email" id="modalEmail" placeholder="Email" required>
-                <input type="password" id="modalPassword" placeholder="Password" required>
-                <button id="forgotPassword">I forgot my password</button>
-                <button id="modalLoginButton">Log In</button>
-                <button id="sign-btn">Switch</button>
-                <button class="google-login-button" id="googleLoginButton">
-                    <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
-                        alt="Google logo">
-                    Log In with Google
-                </button>
-                <span id="privacyPolicy">
-                    <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="#">Privacy
-                            Policy</a>.</p>
-                </span>
-            </div>
-        </div>
-        <!-- Modal de Signup -->
-        <div class="nav-modal" id="signupModal">
-            <div class="modal-content">
-                <h3>Sign Up</h3>
-                <input type="text" id="signupName" placeholder="Full Name" required>
-                <input type="email" id="signupEmail" placeholder="Email" required>
-                <input type="tel" id="signupPhone" placeholder="Phone Number" required>
-                <input type="password" id="signupPassword" placeholder="Password" required>
-                <button id="signupModalButton">Sign Up</button>
-                <button id="login-btn">Switch</button>
-                <button class="google-login-button" id="googleSignupButton">
-                    <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
-                        alt="Google logo">
-                    Sign Up with Google
-                </button>
-            </div>
-        </div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                // Modais
-                const loginModal = document.getElementById('loginModal');
-                const signupModal = document.getElementById('signupModal');
-
-                // Botões que controlam os modais
-                const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
-                const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
-
-                // Verifica se todos os elementos necessários existem
-                if (!loginModal || !signupModal || !loginBtn || !signBtn) {
-                    return; // Interrompe a execução caso algum elemento não esteja presente
-                }
-
-                // Evento para abrir o modal de Login e fechar o de Cadastro
-                loginBtn.addEventListener('click', function () {
-                    signupModal.classList.remove('visible');
-                    loginModal.classList.add('visible');
-                });
-
-                // Evento para abrir o modal de Cadastro e fechar o de Login
-                signBtn.addEventListener('click', function () {
-                    loginModal.classList.remove('visible');
-                    signupModal.classList.add('visible');
-                });
-            });
-        </script>
-
-    </header>
+    
     <main>
+
+            <!-- Modal de Support -->
+
+<div id="supportModalOverlay" class="support-modal-overlay">
+    <div class="support-modal-content">
+        <div class="support-modal-close">
+            <button id="closeSupportModal" class="support-close-btn">X</button>
+        </div>
+        <h3>Need help? <br>
+            Get in touch by email or phone</h3>
+        <div class="cta cta--block">
+            <button class="button button--full button--primary">+1 310 986 9840</button>
+            <button class="button button--full button--primary">contact@flashguyscleaning.com</button>
+        </div>
+    </div>
+</div>
+
+
+<nav class="navbar">
+    <div class="navbar-left">
+        <!-- Logo -->
+        <a href="/" class="navbar-logo">
+            <img src="/assets/images/logos/logo.png" alt="Logo" class="Brand Logo image">
+        </a>
+
+        <!-- Links (para desktop e mobile) -->
+        <ul class="navbar-links" id="navbarLinks">
+            <li><a class="menu-link" href="/#about-us">About Us</a></li>
+            <li><a class="menu-link" href="/#services">Services</a></li>
+            <li><a class="menu-link"href="/#faq">FAQ</a></li>
+            <li><a class="menu-link" href="#support">Support</a></li>
+            <li><a class="menu-link" href="/blog">Blog</a></li>
+        </ul>
+    </div>
+
+    <!-- Botões de ação (para desktop e mobile) -->
+    <div class="navbar-buttons" id="navbarButtons">
+        <a href="https://flashguyscleaning.com/dashboard">
+            <button class="dashboard-button button button--secondary button--small" id="dashboardButton">
+                Dashboard
+            </button>
+        </a>
+        <div class="auth-container" id="authContainer">
+            <!-- Content dynamically injected by JS -->
+        </div>
+    </div>
+
+    <!-- Hamburger Icon (aparece apenas no mobile) -->
+    <button class="navbar-toggle" id="navbarToggle">
+        <span class="hamburger-icon"></span>
+    </button>
+</nav>
+
+<!-- Modal de Login -->
+<div class="nav-modal" id="loginModal">
+    <div class="modal-content">
+        <h3>Login</h3>
+        <input type="email" id="modalEmail" placeholder="Email" required>
+        <span class="input-warning">Please enter your email*</span>
+        <input type="password" id="modalPassword" placeholder="Password" required>
+        <span class="input-warning">Please enter a valid password*</span>
+        <button id="forgotPassword">I forgot my password</button>
+        <button id="modalLoginButton">Log In</button>
+        <button class="google-login-button" id="googleLoginButton">
+            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                alt="Google logo">
+            Log In with Google
+        </button>
+        <span id="privacyPolicy">
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
+        </span>
+        <p class="account-switcher">Don't have an account?<button class="button" id="sign-btn">Create account</button>
+        </p>
+    </div>
+</div>
+
+<!-- Modal de Signup -->
+<div class="nav-modal" id="signupModal">
+    <div class="modal-content">
+        <h3>Sign Up</h3>
+        <input type="text" id="signupName" placeholder="Full Name" required>
+        <span class="input-warning">Please enter your full name*</span>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <span class="input-warning">Please enter your email*</span>
+        <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+        <span class="input-warning">Please enter you phone number*</span>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <span class="input-warning">Please enter a password*</span>
+        <button id="signupModalButton">Sign Up</button>
+        <button class="google-login-button" id="googleSignupButton">
+            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                alt="Google logo">
+            Sign Up with Google
+        </button>
+        <span id="privacyPolicy">
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
+        </span>
+        <p class="account-switcher">Already have an account?<button class="button" id="login-btn">Login</button></p>
+    </div>
+</div>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Modais
+        const loginModal = document.getElementById('loginModal');
+        const signupModal = document.getElementById('signupModal');
+
+        // Botões que controlam os modais
+        const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
+        const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
+
+        // Verifica se todos os elementos necessários existem
+        if (!loginModal || !signupModal || !loginBtn || !signBtn) {
+            return; // Interrompe a execução caso algum elemento não esteja presente
+        }
+
+        // Evento para abrir o modal de Login e fechar o de Cadastro
+        loginBtn.addEventListener('click', function () {
+            signupModal.classList.remove('visible');
+            loginModal.classList.add('visible');
+        });
+
+        // Evento para abrir o modal de Cadastro e fechar o de Login
+        signBtn.addEventListener('click', function () {
+            loginModal.classList.remove('visible');
+            signupModal.classList.add('visible');
+        });
+    })
+</script>
+            
         <!-- Pages Index -->
         <nav class="pagination-links section__title article">
             <ol class="pagination-links__list">
@@ -219,34 +231,92 @@
             <!-- Conteúdo dinâmico -->
             <div class="section__title">
                 <h2>Better for Your Health</h2>
-<p>Conventional cleaning products often contain harsh chemicals that can irritate the skin, eyes, and respiratory system. Eco-friendly alternatives offer a safer choice because they:
-[ul]- Use <strong>natural ingredients</strong> like plant-based surfactants and essential oils.- Are free from harmful chemicals like ammonia, bleach, and synthetic fragrances.- Reduce exposure to toxins that can trigger allergies or worsen asthma.[/ul][h3]
-[/h3]</p>
+<p>Conventional cleaning products often contain harsh chemicals that can irritate the skin, eyes, and respiratory system. Eco-friendly alternatives offer a safer choice because they:</p>
+<ul>
+<li>
+<p>Use <strong>natural ingredients</strong> like plant-based surfactants and essential oils.</p>
+</li>
+<li>
+<p>Are free from harmful chemicals like ammonia, bleach, and synthetic fragrances.</p>
+</li>
+<li>
+<p>Reduce exposure to toxins that can trigger allergies or worsen asthma.</p>
+</li>
+</ul>
 <h2>Safer for Children and Pets</h2>
-<p>Kids and pets are more vulnerable to the effects of harsh cleaning products. Since they often come into closer contact with floors and surfaces, eco-friendly cleaners can provide peace of mind by:
-[ul]- Minimizing chemical residues.- Offering non-toxic solutions for everyday cleaning.[/ul][h3]
-[/h3]</p>
+<p>Kids and pets are more vulnerable to the effects of harsh cleaning products. Since they often come into closer contact with floors and surfaces, eco-friendly cleaners can provide peace of mind by:</p>
+<ul>
+<li>
+<p>Minimizing chemical residues.</p>
+</li>
+<li>
+<p>Offering non-toxic solutions for everyday cleaning.</p>
+</li>
+</ul>
 <h2>Reduces Environmental Impact</h2>
-<p>Cleaning products don’t just disappear after use—they end up in our water systems and ecosystems. Eco-friendly options are designed to:
-[ul]- Be <strong>biodegradable</strong>, breaking down naturally without polluting the environment.- Avoid harsh chemicals that harm aquatic life.- Use sustainable packaging, such as recyclable or compostable materials.[/ul][h3]
-[/h3]</p>
+<p>Cleaning products don’t just disappear after use—they end up in our water systems and ecosystems. Eco-friendly options are designed to:</p>
+<ul>
+<li>
+<p>Be <strong>biodegradable</strong>, breaking down naturally without polluting the environment.</p>
+</li>
+<li>
+<p>Avoid harsh chemicals that harm aquatic life.</p>
+</li>
+<li>
+<p>Use sustainable packaging, such as recyclable or compostable materials.</p>
+</li>
+</ul>
 <h2>Improves Indoor Air Quality</h2>
-<p>Synthetic fragrances and chemical fumes from conventional cleaners can linger in the air, reducing indoor air quality. Eco-friendly products help by:
-[ul]- Using <strong>natural scents</strong> or being fragrance-free.- Eliminating harmful volatile organic compounds (VOCs).[/ul][h3]
-[/h3]</p>
+<p>Synthetic fragrances and chemical fumes from conventional cleaners can linger in the air, reducing indoor air quality. Eco-friendly products help by:</p>
+<ul>
+<li>
+<p>Using <strong>natural scents</strong> or being fragrance-free.</p>
+</li>
+<li>
+<p>Eliminating harmful volatile organic compounds (VOCs).</p>
+</li>
+</ul>
 <h2>Supports Sustainable Practices</h2>
-<p>When you buy eco-friendly products, you’re supporting brands committed to sustainability. Many companies go the extra mile by:
-[ul]- Using <strong>renewable energy</strong> in production.- Sourcing ingredients ethically.- Offering refillable packaging options.[/ul][h3]
-[/h3]</p>
+<p>When you buy eco-friendly products, you’re supporting brands committed to sustainability. Many companies go the extra mile by:</p>
+<ul>
+<li>
+<p>Using <strong>renewable energy</strong> in production.</p>
+</li>
+<li>
+<p>Sourcing ingredients ethically.</p>
+</li>
+<li>
+<p>Offering refillable packaging options.</p>
+</li>
+</ul>
 <h3>How to Choose Eco-Friendly Cleaning Products</h3>
-<p>Not all products labeled “green” are truly eco-friendly. Keep an eye out for:
-[ul]- <strong>Certifications</strong>: Look for trusted labels like “EPA Safer Choice,” “Green Seal,” or “Ecocert.”- <strong>Ingredient transparency</strong>: Reputable brands list all ingredients on their packaging.- <strong>Concentrated formulas</strong>: These reduce waste by using less packaging and shipping fewer materials.[/ul]### DIY Eco-Friendly Cleaning Tips
-You can also make your own eco-friendly cleaners using simple ingredients like:
-[ul]- <strong>Vinegar and baking soda</strong> for scrubbing and deodorizing.- <strong>Lemon juice</strong> for cutting grease and adding a fresh scent.- <strong>Castile soap</strong> as an all-purpose cleaner.[/ul][h3]
-[/h3]</p>
+<p>Not all products labeled “green” are truly eco-friendly. Keep an eye out for:</p>
+<ul>
+<li>
+<p><strong>Certifications</strong>: Look for trusted labels like “EPA Safer Choice,” “Green Seal,” or “Ecocert.”</p>
+</li>
+<li>
+<p><strong>Ingredient transparency</strong>: Reputable brands list all ingredients on their packaging.</p>
+</li>
+<li>
+<p><strong>Concentrated formulas</strong>: These reduce waste by using less packaging and shipping fewer materials.### DIY Eco-Friendly Cleaning Tips</p>
+</li>
+</ul>
+<p>You can also make your own eco-friendly cleaners using simple ingredients like:</p>
+<ul>
+<li>
+<p><strong>Vinegar and baking soda</strong> for scrubbing and deodorizing.</p>
+</li>
+<li>
+<p><strong>Lemon juice</strong> for cutting grease and adding a fresh scent.</p>
+</li>
+<li>
+<p><strong>Castile soap</strong> as an all-purpose cleaner.</p>
+</li>
+</ul>
 <h2>Final Thoughts</h2>
-<p>Switching to eco-friendly cleaning products might seem like a small step, but it makes a big difference. You’re not just creating a cleaner home—you’re contributing to a healthier planet and a brighter future for the next generation.
-So next time you’re shopping for cleaning supplies, consider going green. Your home, your family, and the environment will thank you! 🌱✨</p>
+<p>Switching to eco-friendly cleaning products might seem like a small step, but it makes a big difference. You’re not just creating a cleaner home—you’re contributing to a healthier planet and a brighter future for the next generation.</p>
+<p>So next time you’re shopping for cleaning supplies, consider going green. Your home, your family, and the environment will thank you! 🌱✨</p>
 
             </div>
 
@@ -277,37 +347,37 @@ So next time you’re shopping for cleaning supplies, consider going green. Your
                 </a>
             </div>
             <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="/#about-us">About us</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/terms-of-use">Terms of use</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
             </ul>
             <ul class="footer__content__socials">
-                <li><a href="#"><img src="/assets/images/icons/social/facebook.svg" alt="Facebook brand logo"></a></li>
-                <li><a href="#"><img src="/assets/images/icons/social/youtube.svg" alt="YouTube brand logo"></a></li>
-                <li><a href="#"><img src="/assets/images/icons/social/instagram.svg" alt="Instagram brand logo"></a>
+                <li><a href="https://www.facebook.com/flash.guyscleaning/"><img src="/assets/images/icons/social/facebook.svg" alt="Facebook brand logo"></a></li>
+                <li><a href="https://www.youtube.com/@flashguyscleaning"><img src="/assets/images/icons/social/youtube.svg" alt="YouTube brand logo"></a></li>
+                <li><a href="https://www.instagram.com/flashguyscleaning/"><img src="/assets/images/icons/social/instagram.svg" alt="Instagram brand logo"></a>
                 </li>
             </ul>
         </div>
         <div class="footer__content__column">
             <h3>Flash Guys</h3>
             <ul>
-                <li><a href="#">Professionals</a></li>
-                <li><a href="#">Subscription</a></li>
-                <li><a href="#">Promotions</a></li>
+                <li><a href="/#our-team">Professionals</a></li>
+                <li><a href="/#plans">Subscription</a></li>
+                <li><a href="/#coupons">Promotions</a></li>
             </ul>
         </div>
         <div class="footer__content__column">
             <h3>Services</h3>
             <ul>
-                <li><a href="http://localhost:8080/#services">Deep Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Standard Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Commercial Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Post Construction Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Move-in/out Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Airbnb Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Extreme Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Carpets & Upholstery</a></li>
+                <li><a href="/#services">Deep Cleaning</a></li>
+                <li><a href="/#services">Standard Cleaning</a></li>
+                <li><a href="/#services">Commercial Cleaning</a></li>
+                <li><a href="/#services">Post Construction Cleaning</a></li>
+                <li><a href="/#services">Move-in/out Cleaning</a></li>
+                <li><a href="/#services">Airbnb Cleaning</a></li>
+                <li><a href="/#extreme-cleaning">Extreme Cleaning</a></li>
+                <li><a href="/#services">Carpets & Upholstery</a></li>
             </ul>
         </div>
         <div class="footer__content__column">
@@ -325,7 +395,7 @@ So next time you’re shopping for cleaning supplies, consider going green. Your
         <div class="footer__content__column">
             <h3>Support</h3>
             <ul>
-                <li><a href="http://localhost:8080/#faq">FAQ</a></li>
+                <li><a href="/#faq">FAQ</a></li>
                 <li>+1 310 986 9840</li>
             </ul>
         </div>

@@ -11,7 +11,7 @@
 <title>How to Encourage Kids to Participate in Regular Cleaning</title>
 
 <!-- Favicon -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/assets/images/logos/brand-logo-icon.svg" type="image/FlashGuysCleaning-icon">
 
 <!-- Preconnect for performance -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,129 +64,141 @@
 </head>
 
 <body>
-
-    <header>
-        <!-- Modal de Support -->
-        <div id="supportModalOverlay" class="support-modal-overlay">
-            <div class="support-modal-content">
-                <div class="support-modal-close">
-                    <button id="closeSupportModal" class="support-close-btn">X</button>
-                </div>
-                <h3>Need help? <br>
-                    Get in touch by email or phone</h3>
-                <div class="cta cta--block">
-                    <button class="button button--full button--primary">+1 310 986 9840</button>
-                    <button class="button button--full button--primary">contact@flashguyscleaning.com</button>
-                </div>
-            </div>
-        </div>
-        <!-- Navbar -->
-        <nav class="navbar">
-            <ul class="nav-list">
-                <button id="menu">
-                    <span class="material-symbols-rounded">
-                        menu
-                    </span>
-                </button>
-                <a class="logo" href="/"><img
-                        src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
-                        alt="Brand logo"></a>
-                <div class="nav-list-links">
-                    <li><a class="menu-link"
-                            href="http://localhost:8080/#services">Services</a>
-                    </li>
-                    <li><a class="menu-link"
-                            href="http://localhost:8080/#about-us">About us</a>
-                    </li>
-                    <li><a class="menu-link" href="#support">Support</a></li>
-                    <li><a class="menu-link" href="http://localhost:8080/#faq">FAQ</a>
-                    </li>
-                    <li><a class="menu-link"
-                            href="http://localhost:8080/blog">Blog</a></li>
-                </div>
-            </ul>
-
-            <!-- Login e Signup -->
-            <div class="navbar-buttons">
-                <!-- ! Adicionar link dinâmico para dashboard ! -->
-                <a href=""><button class="dashboard-button button button--secondary button--small"
-                        id="dashboardButton">Dashboard</button></a>
-                <a href="https://flashguyscleaning.com/schedule?date=&coupon=first05"><button
-                        class="book-now button button--primary button--small">Book now</button></a>
-                <div class="auth-container" id="authContainer">
-                    <!-- Content dynamically injected by JS -->
-                </div>
-            </div>
-        </nav>
-        <!-- Modal de Login -->
-        <div class="nav-modal" id="loginModal">
-            <div class="modal-content">
-                <h3>Login</h3>
-                <input type="email" id="modalEmail" placeholder="Email" required>
-                <input type="password" id="modalPassword" placeholder="Password" required>
-                <button id="forgotPassword">I forgot my password</button>
-                <button id="modalLoginButton">Log In</button>
-                <button id="sign-btn">Switch</button>
-                <button class="google-login-button" id="googleLoginButton">
-                    <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
-                        alt="Google logo">
-                    Log In with Google
-                </button>
-                <span id="privacyPolicy">
-                    <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="#">Privacy
-                            Policy</a>.</p>
-                </span>
-            </div>
-        </div>
-        <!-- Modal de Signup -->
-        <div class="nav-modal" id="signupModal">
-            <div class="modal-content">
-                <h3>Sign Up</h3>
-                <input type="text" id="signupName" placeholder="Full Name" required>
-                <input type="email" id="signupEmail" placeholder="Email" required>
-                <input type="tel" id="signupPhone" placeholder="Phone Number" required>
-                <input type="password" id="signupPassword" placeholder="Password" required>
-                <button id="signupModalButton">Sign Up</button>
-                <button id="login-btn">Switch</button>
-                <button class="google-login-button" id="googleSignupButton">
-                    <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
-                        alt="Google logo">
-                    Sign Up with Google
-                </button>
-            </div>
-        </div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                // Modais
-                const loginModal = document.getElementById('loginModal');
-                const signupModal = document.getElementById('signupModal');
-
-                // Botões que controlam os modais
-                const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
-                const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
-
-                // Verifica se todos os elementos necessários existem
-                if (!loginModal || !signupModal || !loginBtn || !signBtn) {
-                    return; // Interrompe a execução caso algum elemento não esteja presente
-                }
-
-                // Evento para abrir o modal de Login e fechar o de Cadastro
-                loginBtn.addEventListener('click', function () {
-                    signupModal.classList.remove('visible');
-                    loginModal.classList.add('visible');
-                });
-
-                // Evento para abrir o modal de Cadastro e fechar o de Login
-                signBtn.addEventListener('click', function () {
-                    loginModal.classList.remove('visible');
-                    signupModal.classList.add('visible');
-                });
-            });
-        </script>
-
-    </header>
+    
     <main>
+
+            <!-- Modal de Support -->
+
+<div id="supportModalOverlay" class="support-modal-overlay">
+    <div class="support-modal-content">
+        <div class="support-modal-close">
+            <button id="closeSupportModal" class="support-close-btn">X</button>
+        </div>
+        <h3>Need help? <br>
+            Get in touch by email or phone</h3>
+        <div class="cta cta--block">
+            <button class="button button--full button--primary">+1 310 986 9840</button>
+            <button class="button button--full button--primary">contact@flashguyscleaning.com</button>
+        </div>
+    </div>
+</div>
+
+
+<nav class="navbar">
+    <div class="navbar-left">
+        <!-- Logo -->
+        <a href="/" class="navbar-logo">
+            <img src="/assets/images/logos/logo.png" alt="Logo" class="Brand Logo image">
+        </a>
+
+        <!-- Links (para desktop e mobile) -->
+        <ul class="navbar-links" id="navbarLinks">
+            <li><a class="menu-link" href="/#about-us">About Us</a></li>
+            <li><a class="menu-link" href="/#services">Services</a></li>
+            <li><a class="menu-link"href="/#faq">FAQ</a></li>
+            <li><a class="menu-link" href="#support">Support</a></li>
+            <li><a class="menu-link" href="/blog">Blog</a></li>
+        </ul>
+    </div>
+
+    <!-- Botões de ação (para desktop e mobile) -->
+    <div class="navbar-buttons" id="navbarButtons">
+        <a href="https://flashguyscleaning.com/dashboard">
+            <button class="dashboard-button button button--secondary button--small" id="dashboardButton">
+                Dashboard
+            </button>
+        </a>
+        <div class="auth-container" id="authContainer">
+            <!-- Content dynamically injected by JS -->
+        </div>
+    </div>
+
+    <!-- Hamburger Icon (aparece apenas no mobile) -->
+    <button class="navbar-toggle" id="navbarToggle">
+        <span class="hamburger-icon"></span>
+    </button>
+</nav>
+
+<!-- Modal de Login -->
+<div class="nav-modal" id="loginModal">
+    <div class="modal-content">
+        <h3>Login</h3>
+        <input type="email" id="modalEmail" placeholder="Email" required>
+        <span class="input-warning">Please enter your email*</span>
+        <input type="password" id="modalPassword" placeholder="Password" required>
+        <span class="input-warning">Please enter a valid password*</span>
+        <button id="forgotPassword">I forgot my password</button>
+        <button id="modalLoginButton">Log In</button>
+        <button class="google-login-button" id="googleLoginButton">
+            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                alt="Google logo">
+            Log In with Google
+        </button>
+        <span id="privacyPolicy">
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
+        </span>
+        <p class="account-switcher">Don't have an account?<button class="button" id="sign-btn">Create account</button>
+        </p>
+    </div>
+</div>
+
+<!-- Modal de Signup -->
+<div class="nav-modal" id="signupModal">
+    <div class="modal-content">
+        <h3>Sign Up</h3>
+        <input type="text" id="signupName" placeholder="Full Name" required>
+        <span class="input-warning">Please enter your full name*</span>
+        <input type="email" id="signupEmail" placeholder="Email" required>
+        <span class="input-warning">Please enter your email*</span>
+        <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+        <span class="input-warning">Please enter you phone number*</span>
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <span class="input-warning">Please enter a password*</span>
+        <button id="signupModalButton">Sign Up</button>
+        <button class="google-login-button" id="googleSignupButton">
+            <img src="https://3e05e1059faef26605a551bdc8638217.cdn.bubble.io/f1708285141170x452995189915581060/icons8-google.svg"
+                alt="Google logo">
+            Sign Up with Google
+        </button>
+        <span id="privacyPolicy">
+            <p>By continuing, you agree to Flash Guys Cleaning Terms of Service and <a href="/privacy-policy/">Privacy
+                    Policy</a>.</p>
+        </span>
+        <p class="account-switcher">Already have an account?<button class="button" id="login-btn">Login</button></p>
+    </div>
+</div>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Modais
+        const loginModal = document.getElementById('loginModal');
+        const signupModal = document.getElementById('signupModal');
+
+        // Botões que controlam os modais
+        const loginBtn = document.getElementById('login-btn'); // Botão dentro do modal de cadastro
+        const signBtn = document.getElementById('sign-btn'); // Botão dentro do modal de login
+
+        // Verifica se todos os elementos necessários existem
+        if (!loginModal || !signupModal || !loginBtn || !signBtn) {
+            return; // Interrompe a execução caso algum elemento não esteja presente
+        }
+
+        // Evento para abrir o modal de Login e fechar o de Cadastro
+        loginBtn.addEventListener('click', function () {
+            signupModal.classList.remove('visible');
+            loginModal.classList.add('visible');
+        });
+
+        // Evento para abrir o modal de Cadastro e fechar o de Login
+        signBtn.addEventListener('click', function () {
+            loginModal.classList.remove('visible');
+            signupModal.classList.add('visible');
+        });
+    })
+</script>
+            
         <!-- Pages Index -->
         <nav class="pagination-links section__title article">
             <ol class="pagination-links__list">
@@ -219,29 +231,102 @@
             <!-- Conteúdo dinâmico -->
             <div class="section__title">
                 <h2>Start with Age-Appropriate Tasks</h2>
-<p>Assign chores that match your child’s age and abilities to make them feel confident and capable:
-[ul]- <strong>Toddlers</strong>: Picking up toys, wiping low surfaces with a damp cloth.- <strong>Preschoolers</strong>: Sorting laundry, watering plants, setting the table.- <strong>School-aged kids</strong>: Vacuuming, dusting, organizing books or toys.- <strong>Teens</strong>: Taking out the trash, cleaning their own rooms, or helping with meal prep cleanup.[/ul]</p>
+<p>Assign chores that match your child’s age and abilities to make them feel confident and capable:</p>
+<ul>
+<li>
+<p><strong>Toddlers</strong>: Picking up toys, wiping low surfaces with a damp cloth.</p>
+</li>
+<li>
+<p><strong>Preschoolers</strong>: Sorting laundry, watering plants, setting the table.</p>
+</li>
+<li>
+<p><strong>School-aged kids</strong>: Vacuuming, dusting, organizing books or toys.</p>
+</li>
+<li>
+<p><strong>Teens</strong>: Taking out the trash, cleaning their own rooms, or helping with meal prep cleanup.</p>
+</li>
+</ul>
 <h2>Turn Cleaning into a Game</h2>
-<p>Make chores feel less like work and more like play by introducing fun elements:
-[ul]- <strong>Time challenges</strong>: “Let’s see who can clean up their toys the fastest!”- <strong>Treasure hunt</strong>: Hide small rewards in areas that need organizing for them to discover while cleaning.- <strong>Point system</strong>: Create a reward chart where they earn stars or stickers for completed tasks.[/ul]</p>
+<p>Make chores feel less like work and more like play by introducing fun elements:</p>
+<ul>
+<li>
+<p><strong>Time challenges</strong>: “Let’s see who can clean up their toys the fastest!”</p>
+</li>
+<li>
+<p><strong>Treasure hunt</strong>: Hide small rewards in areas that need organizing for them to discover while cleaning.</p>
+</li>
+<li>
+<p><strong>Point system</strong>: Create a reward chart where they earn stars or stickers for completed tasks.</p>
+</li>
+</ul>
 <h2>Lead by Example</h2>
-<p>Children learn by watching you. Demonstrate a positive attitude toward cleaning:
-[ul]- Show enthusiasm for keeping the home clean and organized.- Work alongside them to make it a family activity.- Highlight the benefits of a clean space, like being able to find their favorite toys or having more room to play.[/ul]</p>
+<p>Children learn by watching you. Demonstrate a positive attitude toward cleaning:</p>
+<ul>
+<li>
+<p>Show enthusiasm for keeping the home clean and organized.</p>
+</li>
+<li>
+<p>Work alongside them to make it a family activity.</p>
+</li>
+<li>
+<p>Highlight the benefits of a clean space, like being able to find their favorite toys or having more room to play.</p>
+</li>
+</ul>
 <h2>Use Visual Aids and Checklists</h2>
-<p>Kids respond well to clear instructions and visuals:
-[ul]- Create a <strong>chore chart</strong> with colorful illustrations or stickers.- Use <strong>before-and-after photos</strong> to show the impact of cleaning.- Break tasks into smaller, manageable steps to avoid overwhelming them.[/ul]</p>
+<p>Kids respond well to clear instructions and visuals:</p>
+<ul>
+<li>
+<p>Create a <strong>chore chart</strong> with colorful illustrations or stickers.</p>
+</li>
+<li>
+<p>Use <strong>before-and-after photos</strong> to show the impact of cleaning.</p>
+</li>
+<li>
+<p>Break tasks into smaller, manageable steps to avoid overwhelming them.</p>
+</li>
+</ul>
 <h2>Incorporate Music and Fun Tools</h2>
-<p>Cleaning doesn’t have to be boring—make it enjoyable:
-[ul]- Play upbeat music and have a mini dance party while tidying up.- Give them colorful cleaning supplies or child-sized tools they’ll love using.- Let them pick their favorite cleaning cloths or gloves to personalize the experience.[/ul]</p>
+<p>Cleaning doesn’t have to be boring—make it enjoyable:</p>
+<ul>
+<li>
+<p>Play upbeat music and have a mini dance party while tidying up.</p>
+</li>
+<li>
+<p>Give them colorful cleaning supplies or child-sized tools they’ll love using.</p>
+</li>
+<li>
+<p>Let them pick their favorite cleaning cloths or gloves to personalize the experience.</p>
+</li>
+</ul>
 <h2>Offer Praise and Rewards</h2>
-<p>Positive reinforcement goes a long way:
-[ul]- Acknowledge their effort with kind words: “Great job organizing your toys!”- Offer small rewards, like extra screen time, a family movie night, or a special treat.- Celebrate milestones, like completing a week of chores, with a fun activity.[/ul]</p>
+<p>Positive reinforcement goes a long way:</p>
+<ul>
+<li>
+<p>Acknowledge their effort with kind words: “Great job organizing your toys!”</p>
+</li>
+<li>
+<p>Offer small rewards, like extra screen time, a family movie night, or a special treat.</p>
+</li>
+<li>
+<p>Celebrate milestones, like completing a week of chores, with a fun activity.</p>
+</li>
+</ul>
 <h2>Be Patient and Flexible</h2>
-<p>Kids may not get it perfect every time, and that’s okay:
-[ul]- Focus on progress rather than perfection—praise the effort, not just the results.- Be willing to adjust tasks or expectations based on their energy levels and mood.- Make cleaning a positive experience by keeping it lighthearted and encouraging.[/ul]</p>
+<p>Kids may not get it perfect every time, and that’s okay:</p>
+<ul>
+<li>
+<p>Focus on progress rather than perfection—praise the effort, not just the results.</p>
+</li>
+<li>
+<p>Be willing to adjust tasks or expectations based on their energy levels and mood.</p>
+</li>
+<li>
+<p>Make cleaning a positive experience by keeping it lighthearted and encouraging.</p>
+</li>
+</ul>
 <h2>Final Thoughts</h2>
-<p>Involving kids in regular cleaning and organizing not only lightens your load but also teaches them valuable life skills. By making it fun, engaging, and rewarding, you can transform chores into a bonding activity that strengthens your family dynamic.
-So, grab your chore charts, turn up the music, and watch your kids become proud contributors to a clean and happy home!</p>
+<p>Involving kids in regular cleaning and organizing not only lightens your load but also teaches them valuable life skills. By making it fun, engaging, and rewarding, you can transform chores into a bonding activity that strengthens your family dynamic.</p>
+<p>So, grab your chore charts, turn up the music, and watch your kids become proud contributors to a clean and happy home!</p>
 <p><div class="related-articles">
 <h2>Related articles</h2>
 <ul></p>
@@ -349,37 +434,37 @@ So, grab your chore charts, turn up the music, and watch your kids become proud 
                 </a>
             </div>
             <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="/#about-us">About us</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/terms-of-use">Terms of use</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
             </ul>
             <ul class="footer__content__socials">
-                <li><a href="#"><img src="/assets/images/icons/social/facebook.svg" alt="Facebook brand logo"></a></li>
-                <li><a href="#"><img src="/assets/images/icons/social/youtube.svg" alt="YouTube brand logo"></a></li>
-                <li><a href="#"><img src="/assets/images/icons/social/instagram.svg" alt="Instagram brand logo"></a>
+                <li><a href="https://www.facebook.com/flash.guyscleaning/"><img src="/assets/images/icons/social/facebook.svg" alt="Facebook brand logo"></a></li>
+                <li><a href="https://www.youtube.com/@flashguyscleaning"><img src="/assets/images/icons/social/youtube.svg" alt="YouTube brand logo"></a></li>
+                <li><a href="https://www.instagram.com/flashguyscleaning/"><img src="/assets/images/icons/social/instagram.svg" alt="Instagram brand logo"></a>
                 </li>
             </ul>
         </div>
         <div class="footer__content__column">
             <h3>Flash Guys</h3>
             <ul>
-                <li><a href="#">Professionals</a></li>
-                <li><a href="#">Subscription</a></li>
-                <li><a href="#">Promotions</a></li>
+                <li><a href="/#our-team">Professionals</a></li>
+                <li><a href="/#plans">Subscription</a></li>
+                <li><a href="/#coupons">Promotions</a></li>
             </ul>
         </div>
         <div class="footer__content__column">
             <h3>Services</h3>
             <ul>
-                <li><a href="http://localhost:8080/#services">Deep Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Standard Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Commercial Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Post Construction Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Move-in/out Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Airbnb Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Extreme Cleaning</a></li>
-                <li><a href="http://localhost:8080/#services">Carpets & Upholstery</a></li>
+                <li><a href="/#services">Deep Cleaning</a></li>
+                <li><a href="/#services">Standard Cleaning</a></li>
+                <li><a href="/#services">Commercial Cleaning</a></li>
+                <li><a href="/#services">Post Construction Cleaning</a></li>
+                <li><a href="/#services">Move-in/out Cleaning</a></li>
+                <li><a href="/#services">Airbnb Cleaning</a></li>
+                <li><a href="/#extreme-cleaning">Extreme Cleaning</a></li>
+                <li><a href="/#services">Carpets & Upholstery</a></li>
             </ul>
         </div>
         <div class="footer__content__column">
@@ -397,7 +482,7 @@ So, grab your chore charts, turn up the music, and watch your kids become proud 
         <div class="footer__content__column">
             <h3>Support</h3>
             <ul>
-                <li><a href="http://localhost:8080/#faq">FAQ</a></li>
+                <li><a href="/#faq">FAQ</a></li>
                 <li>+1 310 986 9840</li>
             </ul>
         </div>

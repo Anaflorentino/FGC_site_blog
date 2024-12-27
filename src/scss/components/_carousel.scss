@@ -4,7 +4,7 @@
 .carrossel {
     position: relative;
     width: 100%;
-    max-width: 960px;
+    max-width: 1080px;
     margin: 0 auto;
     padding: 24px 0;
     overflow: hidden;
@@ -18,7 +18,7 @@
 .item {
     flex: 0 0 44%; /* Exibe 3 imagens por vez por padrão */
     padding: 10px;
-    height: 348px;
+    height: 368px;
 }
 
 .item img {

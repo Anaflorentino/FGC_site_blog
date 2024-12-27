@@ -1,4 +1,5 @@
 <!-- Modal de Support -->
+
 <div id="supportModalOverlay" class="support-modal-overlay">
     <div class="support-modal-content">
         <div class="support-modal-close">
@@ -14,35 +15,39 @@
 </div>
 
 
-<!-- Navbar -->
 <nav class="navbar">
-    <ul class="nav-list">
-        <button id="menu-link">
-            <span class="material-symbols-rounded">
-                menu
-            </span>
-        </button>
-        <a class="logo" href="/"><img
-                src="https://e739e2fb18d7eef7132ae42ed4074b06.cdn.bubble.io/f1706423659687x143795025814408940/Logo.svg"
-                alt="Brand logo"></a>
-        <div class="nav-list-links">
-            <li><a class="menu-link" href="{% block services_link %}/#services{% endblock %}">Services</a></li>
-            <li><a class="menu-link" href="{% block aboutus_link %}/#about-us{% endblock %}">About us</a></li>
-            <li><a class="menu-link" href="{% block support_link %}#support{% endblock %}">Support</a></li>
-            <li><a class="menu-link" href="{% block faq_link %}/#faq{% endblock %}">FAQ</a></li>
-            <li><a class="menu-link" href="{% block blog_link %}/blog{% endblock %}">Blog</a></li>
-        </div>
-    </ul>
+    <div class="navbar-left">
+        <!-- Logo -->
+        <a href="/" class="navbar-logo">
+            <img src="/assets/images/logos/logo.png" alt="Logo" class="Brand Logo image">
+        </a>
 
-    <!-- Login e Signup -->
-    <div class="navbar-buttons">
-        <a href="https://flashguyscleaning.com/dashboard"><button
-                class="dashboard-button button button--secondary button--small"
-                id="dashboardButton">Dashboard</button></a>
+        <!-- Links (para desktop e mobile) -->
+        <ul class="navbar-links" id="navbarLinks">
+            <li><a class="menu-link" href="/#about-us">About Us</a></li>
+            <li><a class="menu-link" href="/#services">Services</a></li>
+            <li><a class="menu-link"href="/#faq">FAQ</a></li>
+            <li><a class="menu-link" href="#support">Support</a></li>
+            <li><a class="menu-link" href="/blog">Blog</a></li>
+        </ul>
+    </div>
+
+    <!-- Botões de ação (para desktop e mobile) -->
+    <div class="navbar-buttons" id="navbarButtons">
+        <a href="https://flashguyscleaning.com/dashboard">
+            <button class="dashboard-button button button--secondary button--small" id="dashboardButton">
+                Dashboard
+            </button>
+        </a>
         <div class="auth-container" id="authContainer">
             <!-- Content dynamically injected by JS -->
         </div>
     </div>
+
+    <!-- Hamburger Icon (aparece apenas no mobile) -->
+    <button class="navbar-toggle" id="navbarToggle">
+        <span class="hamburger-icon"></span>
+    </button>
 </nav>
 
 <!-- Modal de Login -->
