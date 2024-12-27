@@ -198,6 +198,18 @@
         });
     })
 </script>
+
+
+
+<script>
+    //MÁSCARA DE TELEFONE FEITA POR ÚLTIMO
+    window.addEventListener('DOMContentLoaded', (event) => {
+        var selector = document.getElementById("signupPhone");
+        var im = new Inputmask("(999) 999-9999");
+        im.mask(selector);
+    });
+</script>
+    
             
         <!-- Pages Index -->
         <nav class="pagination-links section__title article">

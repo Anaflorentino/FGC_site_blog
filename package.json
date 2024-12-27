@@ -6,8 +6,8 @@
     "sass": "sass --watch src/scss/main.scss:dist/css/main.css",
     "11ty": "npx eleventy --serve",
     "generate:posts": "node api.js",
-    "server": "node server.js", 
-    "start": "npm-run-all --parallel sass 11ty generate:posts server"  
+    "server": "node server.js",
+    "start": "npm-run-all --parallel sass 11ty generate:posts server"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +26,7 @@
     "express": "^4.21.2",
     "fs-extra": "^11.2.0",
     "glob": "^11.0.0",
+    "inputmask": "^5.0.9",
     "postmark": "^4.0.5"
   }
 }
